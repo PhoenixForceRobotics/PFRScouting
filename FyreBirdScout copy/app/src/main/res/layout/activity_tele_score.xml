@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".TeleScore">
+    tools:context="edu.phoenixforce.scouting.mobile.TeleScore">
 
     <!--<View
         android:id="@+id/divider"

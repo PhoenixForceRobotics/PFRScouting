@@ -1,4 +1,4 @@
-package com.example.fyrebirdscout11;
+package edu.phoenixforce.scouting.mobile;
 
 import org.junit.Test;
 

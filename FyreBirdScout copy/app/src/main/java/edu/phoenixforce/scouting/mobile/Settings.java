@@ -1,8 +1,10 @@
-package com.example.fyrebirdscout11;
+package edu.phoenixforce.scouting.mobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.fyrebirdscout11.R;
 
 public class Settings extends AppCompatActivity {
 
