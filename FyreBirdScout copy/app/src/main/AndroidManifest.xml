@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.phoenixforce.scouting.mobile.Settings"></activity>
-        <activity android:name="edu.phoenixforce.scouting.mobile.AutoScore" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.TeleScore" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.MainActivity">
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings"></activity>
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

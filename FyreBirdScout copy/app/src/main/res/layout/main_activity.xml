@@ -13,7 +13,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:visibility="visible"
-    tools:context="edu.phoenixforce.scouting.mobile.MainActivity">
+    tools:context="edu.phoenixforce.scouting.mobile.layouts.MainActivity">
    
     <Button
         android:id="@+id/button"

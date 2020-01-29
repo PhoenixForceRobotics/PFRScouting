@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile;
+package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.CheckBox;
 
 import com.example.fyrebirdscout11.R;
+
+import edu.phoenixforce.scouting.mobile.layouts.MainActivity;
 
 public class TeleScore extends AppCompatActivity {
 //TextViews

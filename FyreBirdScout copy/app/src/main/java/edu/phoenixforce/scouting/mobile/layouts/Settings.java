@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile;
+package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
 

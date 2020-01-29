@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile;
+package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         public void openSettings () {
 
         Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
 
         }
     }

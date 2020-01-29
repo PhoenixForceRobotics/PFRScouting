@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="edu.phoenixforce.scouting.mobile.TeleScore">
+    tools:context="edu.phoenixforce.scouting.mobile.layouts.TeleScore">
 
     <!--<View
         android:id="@+id/divider"
@@ -42,6 +42,7 @@
         android:layout_marginRight="110dp"
         android:layout_marginBottom="281dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_up" />
 
     <TextView
@@ -70,6 +71,7 @@
         android:layout_marginRight="292dp"
         android:layout_marginBottom="281dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_down" />
 
     <TextView
@@ -98,7 +100,8 @@
         android:layout_marginRight="293dp"
         android:layout_marginBottom="465dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/button_down" />
+        android:text="@string/button_down"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/integer_number2"
@@ -123,7 +126,8 @@
         android:layout_marginRight="110dp"
         android:layout_marginBottom="465dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/button_up" />
+        android:text="@string/button_up"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/downbutton3"
@@ -136,7 +140,8 @@
         android:layout_marginRight="293dp"
         android:layout_marginBottom="419dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/button_down" />
+        android:text="@string/button_down"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView5"
@@ -174,6 +179,7 @@
         android:layout_marginRight="110dp"
         android:layout_marginBottom="419dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_up" />
 
     <Button
@@ -187,6 +193,7 @@
         android:layout_marginRight="293dp"
         android:layout_marginBottom="373dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_down" />
    <TextView
         android:id="@+id/textView6"
@@ -224,6 +231,7 @@
         android:layout_marginRight="110dp"
         android:layout_marginBottom="373dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_up" />
 
     <Button
@@ -237,6 +245,7 @@
         android:layout_marginRight="293dp"
         android:layout_marginBottom="327dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_down" />
     <TextView
         android:id="@+id/textView7"
@@ -274,6 +283,7 @@
         android:layout_marginRight="110dp"
         android:layout_marginBottom="327dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_up" />
 
 
