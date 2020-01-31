@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.CheckBox;
@@ -22,7 +23,7 @@ TextView view4;
 TextView view5;
 
 //edit text for the team number
-//EditText teamNumber = (EditText) findViewById(R.id.team_number);
+EditText teamNumber;
 //String Numero = teamNumber.getText().toString();
 //int numberTeam = Integer.parseInt(Numero);
 
@@ -88,6 +89,8 @@ int buddy = 0;
         view3.setText("0");
         view4.setText("0");
         view5.setText("0");
+
+        teamNumber = findViewById(R.id.team_number);
 
 
 

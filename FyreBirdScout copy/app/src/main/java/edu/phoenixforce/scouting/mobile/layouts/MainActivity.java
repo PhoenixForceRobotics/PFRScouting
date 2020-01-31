@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                openSettings();
+            openSettings();
             }
 
         });

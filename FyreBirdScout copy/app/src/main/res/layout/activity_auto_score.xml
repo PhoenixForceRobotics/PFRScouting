@@ -43,6 +43,7 @@
         android:layout_marginRight="109dp"
         android:layout_marginBottom="280dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_up" />
 
     <TextView
@@ -71,6 +72,7 @@
         android:layout_marginRight="292dp"
         android:layout_marginBottom="281dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_down" />
 
     <ImageButton
@@ -98,7 +100,7 @@
     <Button
         android:id="@+id/downbutton2"
         android:layout_width="wrap_content"
-        android:layout_height="43dp"
+        android:layout_height="42dp"
 
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
@@ -108,7 +110,9 @@
         android:layout_marginRight="293dp"
         android:layout_marginBottom="469dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/button_down" />
+
+        android:text="@string/button_down"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/integer_number2"
@@ -133,6 +137,7 @@
         android:layout_marginRight="110dp"
         android:layout_marginBottom="469dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_up" />
 
     <Button
@@ -146,6 +151,7 @@
         android:layout_marginRight="293dp"
         android:layout_marginBottom="421dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_down" />
 
     <TextView
@@ -184,6 +190,7 @@
         android:layout_marginRight="110dp"
         android:layout_marginBottom="420dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_up" />
 
     <Button
@@ -196,6 +203,7 @@
         android:layout_marginEnd="293dp"
         android:layout_marginRight="293dp"
         android:layout_marginBottom="373dp"
+        android:textColor="#FDFCFC"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down" />
 
@@ -235,6 +243,7 @@
         android:layout_marginRight="110dp"
         android:layout_marginBottom="373dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_up" />
 
     <Button
@@ -248,6 +257,7 @@
         android:layout_marginRight="293dp"
         android:layout_marginBottom="327dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_down" />
 
     <TextView
@@ -286,6 +296,7 @@
         android:layout_marginRight="110dp"
         android:layout_marginBottom="327dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
         android:text="@string/button_up" />
 
     <Button
