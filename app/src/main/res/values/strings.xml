@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">FyreBirdScout</string>
+    <string name="button_use">Start Scoring</string>
+    <string name="button_up">+</string>
+    <string name="button_down">-</string>
+    <string name="highscore">Balls in Low Power Port</string>
+    <string name="lowscore">Balls in Two Point Port</string>
+    <string name="midscore">Balls in Three Point Port</string>
+    <string name="LeaveLine">Did the Robot Leave From the Start Line?</string>
+    <string name="Wheel">Robot Spun Wheel 3 Turns</string>
+    <string name="wheelspot">Robot Spun Wheel to Color</string>
+    <string name="Climb">Robot Succesfully Climbed</string>
+    <string name="ClimbeMe">Robot Helped a Buddy Climb</string>
+    <string name="Parked">Robot was Parked in End Zone</string>
+    <string name="Ccle">Cycle</string>
+    <string name="Shots">Shots Missed</string>
+    <string name="take">Balls Intook</string>
+    <string name="VerisonNumber">1.2</string>
+    <string name="VersionStatus">beta</string>
+    <string name="by">bypass</string>
+    <string name="Switch_name">dark mode</string>
+    <string name="Switch_name1">light mode</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">settings</string>
+</resources>
+
+

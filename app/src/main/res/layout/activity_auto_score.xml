@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="edu.phoenixforce.scouting.mobile.layouts.AutoScore">
+
+
+    <!--<View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="550dp"
+        android:background="?android:attr/listDivider" />-->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="279dp"
+        android:text="@string/lowscore"
+        android:textColor="#FDFCFC"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/upbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginRight="109dp"
+        android:layout_marginBottom="280dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
+        android:text="@string/button_up" />
+
+    <TextView
+        android:id="@+id/integer_number"
+        android:layout_width="98dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="194dp"
+        android:layout_marginRight="194dp"
+        android:layout_marginBottom="281dp"
+        android:background="@color/font"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/downbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="292dp"
+        android:layout_marginRight="292dp"
+        android:layout_marginBottom="281dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
+        android:text="@string/button_down" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="107dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="472dp"
+        android:text="@string/midscore"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/downbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="293dp"
+        android:layout_marginRight="293dp"
+        android:layout_marginBottom="469dp"
+        android:background="@color/colorPrimaryDark"
+
+        android:text="@string/button_down"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/integer_number2"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="198dp"
+        android:layout_marginRight="198dp"
+        android:layout_marginBottom="469dp"
+        android:background="#FFFFFF" />
+
+    <Button
+        android:id="@+id/upbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="469dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
+        android:text="@string/button_up" />
+
+    <Button
+        android:id="@+id/downbutton3"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="293dp"
+        android:layout_marginRight="293dp"
+        android:layout_marginBottom="421dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
+        android:text="@string/button_down" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="108dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="420dp"
+        android:text="@string/highscore"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/integer_number3"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="198dp"
+        android:layout_marginRight="198dp"
+        android:layout_marginBottom="421dp"
+        android:background="#FFFFFF" />
+
+    <Button
+        android:id="@+id/upbutton3"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="420dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
+        android:text="@string/button_up" />
+
+    <Button
+        android:id="@+id/downbutton4"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="293dp"
+        android:layout_marginRight="293dp"
+        android:layout_marginBottom="373dp"
+        android:textColor="#FDFCFC"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_down" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="108dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="373dp"
+        android:text="@string/Shots"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/integer_number4"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="198dp"
+        android:layout_marginRight="198dp"
+        android:layout_marginBottom="373dp"
+        android:background="#FFFFFF" />
+
+    <Button
+        android:id="@+id/upbutton4"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="373dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
+        android:text="@string/button_up" />
+
+    <Button
+        android:id="@+id/downbutton5"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="293dp"
+        android:layout_marginRight="293dp"
+        android:layout_marginBottom="327dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
+        android:text="@string/button_down" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="108dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="327dp"
+        android:text="@string/take"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/integer_number5"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="198dp"
+        android:layout_marginRight="198dp"
+        android:layout_marginBottom="327dp"
+        android:background="#FFFFFF" />
+
+    <Button
+        android:id="@+id/upbutton5"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="327dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FDFCFC"
+        android:text="@string/button_up" />
+
+    <Button
+        android:id="@+id/navbutton"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginBottom="79dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Lock Score In" />
+
+
+    <!-- //Checkboxes
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="108dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/ClimbeMe"
+        android:textColor="#FFFFFF" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+
+        android:layout_marginBottom="194dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/Wheel"
+        android:textColor="#FFFFFF" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="141dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/wheelspot"
+        android:textColor="#FFFFFF" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="75dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/Climb"
+        android:textColor="#FFFFFF"
+        android:visibility="visible" /> -->
+
+</RelativeLayout>
