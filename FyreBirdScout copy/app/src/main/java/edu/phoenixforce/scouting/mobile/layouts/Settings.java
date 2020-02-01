@@ -1,12 +1,15 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.Button;
 
@@ -23,18 +26,11 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 import static android.provider.Telephony.Mms.Part.FILENAME;
+import static java.sql.DriverManager.println;
 
 public class Settings extends AppCompatActivity {
 
-
-    EditText deviceId;
-
-    Button saver;
-    EditText pWord;
-
-
-
-
+    private int time = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +41,14 @@ public class Settings extends AppCompatActivity {
         saver = findViewById(R.id.save);
         pWord = findViewById(R.id.password);*/
 
-        int correct;
+        //int correct;
 
-        String answer = pWord.getText().toString();
+        //String answer = pWord.getText().toString();
 
 
-        int password = Integer.parseInt(answer);
+        // int password = Integer.parseInt(answer);
 
-        correct = 2294;
+        //correct = 2294;
 
         /*saver.setOnClickListener(new View.OnClickListener(){
 
@@ -62,8 +58,26 @@ public class Settings extends AppCompatActivity {
             }
         });*/
 
+    }
 
+    public void night_mode(View view) throws InterruptedException {
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        finish();
+        Log.d("Night mode update", "Night Mode is currently off");
+        println("Night Mode is currently off");
+        Thread.sleep(time);
+    }
+
+    public void Light_Mode(View view) throws InterruptedException {
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        finish();
+        Log.d("Night mode update", "Night Mode is currently on");
+        println("Night Mode is currently on");
+        Thread.sleep(time);
     }
 
    /* private void writeFile() {
