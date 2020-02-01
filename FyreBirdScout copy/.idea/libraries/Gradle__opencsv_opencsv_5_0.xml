@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: opencsv.opencsv-5.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/opencsv/opencsv-5.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
