@@ -18,6 +18,9 @@
     <string name="VerisonNumber">1.2</string>
     <string name="VersionStatus">beta</string>
     <string name="by">bypass</string>
+    <string name="Switch_name">dark mode</string>
+    <string name="Switch_name1">light mode</string>
+
 
 
     <!-- TODO: Remove or change this placeholder text -->
