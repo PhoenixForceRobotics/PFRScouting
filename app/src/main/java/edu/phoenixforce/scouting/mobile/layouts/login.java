@@ -12,6 +12,8 @@ import android.widget.Spinner;
 
 import com.example.fyrebirdscout11.R;
 
+import java.util.HashMap;
+
 public class login extends AppCompatActivity {
 
     Spinner nombre;
@@ -21,6 +23,8 @@ public class login extends AppCompatActivity {
     Button log;
 
     String  user,pass, Lars, hello;
+
+    HashMap<String, String> users = new HashMap();
 
 
     @Override
@@ -37,7 +41,7 @@ public class login extends AppCompatActivity {
 
         pass = pWord.getText().toString();
 
-        String[] items = new String[]{"basic", "Lars", "Leo", "Jonathan", "Emily", "Aaron", "Erin"}; //Hey andrew why is my name the second to last
+        String[] items = new String[]{"basic", "Lars", "Leo", "Jonathan", "Emily", "Aaron", "Erin", "Admin"}; //Hey andrew why is my name the second to last
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -81,21 +85,32 @@ public class login extends AppCompatActivity {
 
     public void validateUser() {
 
-        user = nombre.getSelectedItem().toString();
-        pass = pWord.getText().toString();
-        String correct = "12345";
-
-        if (user.equals("basic")) {
 
 
-        } else {
+            user = nombre.getSelectedItem().toString();
+            pass = pWord.getText().toString();
 
-            if (user.equals("Lars")){
 
-                if (pass.equals("hello")){
+            //Create the users in the HashMap;
+            users.put("Lars", "hello");
+            users.put("Emily", "7902");
+            users.put("Aaron", "2277766666");
+            users.put("Admin", "nimda");
+
+
+            if (user.equals("basic")) {
+
+
+            } else {
+
+
+
+                if (pass.equals(users.get(user))){
                     goScout();
 
+
                 }else{
+
 
 
 
@@ -103,15 +118,20 @@ public class login extends AppCompatActivity {
 
 
 
-            }else{}
+
+
+
+            }
+
+
+
+
 
 
 
             //goScout();
         }
 
-
-    }
 
     public void goScout() {
 

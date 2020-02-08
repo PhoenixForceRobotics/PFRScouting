@@ -37,29 +37,11 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-      /*  deviceId = findViewById(R.id.deviceid);
-        saver = findViewById(R.id.save);
-        pWord = findViewById(R.id.password);*/
-
-        //int correct;
-
-        //String answer = pWord.getText().toString();
-
-
-        // int password = Integer.parseInt(answer);
-
-        //correct = 2294;
-
-        /*saver.setOnClickListener(new View.OnClickListener(){
-
-            @Override public void onClick(View v) {
-                writeFile();
-
-            }
-        });*/
 
     }
 
+
+    
     public void night_mode(View view) throws InterruptedException {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
