@@ -219,7 +219,7 @@ public class ConfigActivity extends AppCompatActivity {
                     text.append("Unexpected error");
                 }
                 txt.setText(text.toString());
-            }
+              }
         });
 
         teamMediaRestCall.invokeCall();
