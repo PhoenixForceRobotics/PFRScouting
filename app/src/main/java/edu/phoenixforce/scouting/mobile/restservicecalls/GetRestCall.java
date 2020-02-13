@@ -3,8 +3,8 @@ package edu.phoenixforce.scouting.mobile.restservicecalls;
 import java.util.HashMap;
 import java.util.Map;
 
-import edu.phoenixforce.scouting.mobile.layouts.Configuration;
 import edu.phoenixforce.scouting.mobile.bluealliance.TbaApiConstants;
+import edu.phoenixforce.scouting.mobile.layouts.Configuration;
 
 public abstract class GetRestCall<T> {
 

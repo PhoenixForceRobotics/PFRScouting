@@ -100,6 +100,7 @@ public class login extends AppCompatActivity {
 
             if (user.equals("basic")) {
 
+                goScout();
 
             } else {
 
@@ -135,7 +136,7 @@ public class login extends AppCompatActivity {
 
     public void goScout() {
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ActivityMain.class);
         startActivity(intent);
 
 

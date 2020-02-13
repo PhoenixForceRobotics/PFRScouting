@@ -11,13 +11,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.fyrebirdscout11.R;
-import com.opencsv.CSVWriter;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class AutoScore extends AppCompatActivity {
@@ -216,7 +209,7 @@ public class AutoScore extends AppCompatActivity {
             }
             public void openMainActivity(){
 
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, ActivityMain.class);
                 startActivity(intent);
 
             }

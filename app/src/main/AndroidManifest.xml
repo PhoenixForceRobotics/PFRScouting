@@ -4,8 +4,9 @@
 
    <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:name="edu.phoenixforce.scouting.mobile.layouts.ScoutingApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/scoutingapp"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -13,7 +14,15 @@
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings"/>
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain"/>
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.MainActivity"/>
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ConfigActivity"
+            android:parentActivityName="edu.phoenixforce.scouting.mobile.layouts.ActivityMain">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
+        </activity>
+
 
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.login" >
         <intent-filter>

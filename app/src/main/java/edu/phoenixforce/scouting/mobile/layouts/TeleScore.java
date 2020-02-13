@@ -12,8 +12,6 @@ import android.widget.CheckBox;
 
 import com.example.fyrebirdscout11.R;
 
-import edu.phoenixforce.scouting.mobile.layouts.MainActivity;
-
 public class TeleScore extends AppCompatActivity {
 //TextViews
 TextView autoBallHigh;
@@ -247,7 +245,7 @@ int buddy = 0;
     }
     public void openMainActivity(){
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ActivityMain.class);
         startActivity(intent);
 
     }

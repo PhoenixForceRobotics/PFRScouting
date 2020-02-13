@@ -1,95 +1,84 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
-import android.net.Uri;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.example.fyrebirdscout11.R;
 
-import static java.sql.DriverManager.println;
-
-
 public class MainActivity extends AppCompatActivity {
-    private Button scores;
-    private Button skipper;
-    private Button rick;
-    private Button choice;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        skipper = (Button) findViewById(R.id.button2);
-        skipper.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openTeleScore();
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
-
-
-        scores = (Button) findViewById(R.id.button);
-        scores.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openAutoScore();
-            }
-        });
-
-        rick = (Button) findViewById(R.id.rickroll);
-        rick.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent browserIntent = new Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
-                startActivity(browserIntent);
-
-
-                //The only point of this is for Rick Astley to play
-
-            }
-
-        });
-        choice = (Button) findViewById(R.id.options);
-        choice.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
+        if (!Configuration.getInstance().isConfigured()) {
+            Snackbar.make(fab, "Device has not yet been configured. Switching to config",
+                    Snackbar.LENGTH_LONG).setAction("Action", null).show();
             openSettings();
-            }
+        }
 
-        });
 
     }
-        public void openAutoScore () {
 
-            Intent intent = new Intent(this, AutoScore.class);
-            startActivity(intent);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            openSettings();
+            return true;
         }
 
-        public void openTeleScore () {
+        return super.onOptionsItemSelected(item);
+    }
 
-            Intent intent = new Intent(this, TeleScore.class);
-            startActivity(intent);
-        }
-        public void openSettings () {
+    private void openSettings() {
+        Intent intent = new Intent(this, ConfigActivity.class);
+        startActivity(intent);
+    }
 
-        Intent intent = new Intent(this, Settings.class);
+    public void openScore(){
+
+        Intent intent = new Intent(this, AutoScore.class);
         startActivity(intent);
 
-        }
     }
+
+}
+
+
+
+
+
 
 
