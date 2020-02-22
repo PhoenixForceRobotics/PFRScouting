@@ -30,7 +30,7 @@ public class ActivityMain extends AppCompatActivity {
     private Button skipper;
     private Button rick;
     private Button choice;
-    private FloatingActionButton fab;
+
 
 
 
@@ -41,25 +41,7 @@ public class ActivityMain extends AppCompatActivity {
         setContentView(R.layout.main_activity);
 
 
-        //BROKENPART
-        Toolbar toolbar = findViewById(R.id.toolbar);
-       setSupportActionBar(toolbar);
 
-      /* fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-      /* if (!Configuration.getInstance().isConfigured()) {
-           Snackbar.make(fab, "Device has not yet been configured. Switching to config",
-                   Snackbar.LENGTH_LONG).setAction("Action", null).show();
-           openSettings();
-       }*/
-
-            //existing
             skipper = (Button) findViewById(R.id.button2);
             skipper.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -118,7 +100,7 @@ public class ActivityMain extends AppCompatActivity {
 
         public void openAutoScore () {
 
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, AutoScore.class);
             startActivity(intent);
 
 
@@ -126,7 +108,7 @@ public class ActivityMain extends AppCompatActivity {
 
         public void openTeleScore () {
 
-            Intent intent = new Intent(this, TeleScore.class);
+            Intent intent = new Intent(this, ScoreView.class);
             startActivity(intent);
         }
       private void openSettings () {

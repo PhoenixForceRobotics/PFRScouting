@@ -1,4 +1,4 @@
 package edu.phoenixforce.scouting.mobile.database;
 
-public class scores {
+public class MatchEvent {
 }

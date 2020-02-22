@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fyrebirdscout11">
 
-   <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="edu.phoenixforce.scouting.mobile.layouts.ScoutingApplication"
         android:allowBackup="true"
@@ -11,28 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings"/>
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ScoreView"></activity>
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore" />
-        <activity  android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain"
+        <activity
+            android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ConfigActivity"
+        <activity
+            android:name="edu.phoenixforce.scouting.mobile.layouts.ConfigActivity"
             android:parentActivityName="edu.phoenixforce.scouting.mobile.layouts.ActivityMain">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
         </activity>
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.login" >
-        <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
