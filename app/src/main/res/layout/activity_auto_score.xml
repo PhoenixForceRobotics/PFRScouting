@@ -311,7 +311,27 @@
         android:layout_marginRight="38dp"
         android:layout_marginBottom="79dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Lock Score In" />
+        android:text="Lock Score In"
+        android:textColor="#FFFFFF" />
+
+    <CheckBox
+        android:id="@+id/moved"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="160dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Moved Over Line"
+        android:textColor="#FFFFFF" />
 
 
     <!-- //Checkboxes
