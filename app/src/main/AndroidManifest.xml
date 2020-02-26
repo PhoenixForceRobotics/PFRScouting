@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ScoreView"></activity>
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.team_select"></activity>
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ScoreView" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore" />

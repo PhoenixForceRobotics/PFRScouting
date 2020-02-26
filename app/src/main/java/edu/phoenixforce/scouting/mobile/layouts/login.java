@@ -5,7 +5,6 @@ import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -18,7 +17,7 @@ import com.example.fyrebirdscout11.R;
 import java.util.HashMap;
 
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
-import edu.phoenixforce.scouting.mobile.database.Scores;
+import edu.phoenixforce.scouting.mobile.database.entities.Scores;
 
 public class login extends AppCompatActivity {
 
@@ -69,9 +68,12 @@ public class login extends AppCompatActivity {
                     // TODO: 2/18/20 Save to database
                 Log.d(TAG, "User:" + nombre.toString());
 
-                for (int i = 0; i < 100; i++);
+               for (int i = 0; i < 100; i++);
                 db.ballDao().insertAll(new Scores(nombre.getSelectedItem().toString()));
-                db.ballDao().insertAll();
+
+
+
+
             }
 
 

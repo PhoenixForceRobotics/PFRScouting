@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile.database;
+package edu.phoenixforce.scouting.mobile.database.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

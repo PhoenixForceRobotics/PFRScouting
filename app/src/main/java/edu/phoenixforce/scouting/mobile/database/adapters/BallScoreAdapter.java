@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile.database;
+package edu.phoenixforce.scouting.mobile.database.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fyrebirdscout11.R;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import edu.phoenixforce.scouting.mobile.database.entities.Scores;
 
 public class BallScoreAdapter extends RecyclerView.Adapter<BallScoreAdapter.ViewHolder> {
 
