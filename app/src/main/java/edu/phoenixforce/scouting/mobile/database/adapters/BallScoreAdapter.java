@@ -46,7 +46,7 @@ public class BallScoreAdapter extends RecyclerView.Adapter<BallScoreAdapter.View
         public ViewHolder(View itemView) {
 
             super(itemView);
-            scout = itemView.findViewById(R.id.Scout);
+            //scout = itemView.findViewById(R.id.Scout);
 
     }
     }

@@ -113,7 +113,8 @@
         android:layout_marginEnd="198dp"
         android:layout_marginRight="198dp"
         android:layout_marginBottom="465dp"
-        android:background="#FFFFFF" />
+        android:background="#FFFFFF"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/upbutton2"
@@ -166,7 +167,8 @@
         android:layout_marginEnd="198dp"
         android:layout_marginRight="198dp"
         android:layout_marginBottom="419dp"
-        android:background="#FFFFFF" />
+        android:background="#FFFFFF"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/upbutton3"
@@ -218,7 +220,8 @@
         android:layout_marginEnd="198dp"
         android:layout_marginRight="198dp"
         android:layout_marginBottom="373dp"
-        android:background="#FFFFFF" />
+        android:background="#FFFFFF"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/upbutton4"
@@ -270,7 +273,8 @@
         android:layout_marginEnd="198dp"
         android:layout_marginRight="198dp"
         android:layout_marginBottom="327dp"
-        android:background="#FFFFFF" />
+        android:background="#FFFFFF"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/upbutton5"
@@ -308,6 +312,24 @@
 
     <CheckBox
         android:id="@+id/checkBox3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="205dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/hello_blank_fragment"
+        android:textColor="#FFFFFF" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -366,20 +388,6 @@
         android:textColor="#FFFFFF"
         android:visibility="visible" />
 
-    <EditText
-        android:id="@+id/team_number"
-        android:layout_width="169dp"
-        android:layout_height="38dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="181dp"
-        android:layout_marginRight="181dp"
-        android:layout_marginBottom="222dp"
-        android:background="@color/colorPrimaryDark"
-        android:hint="Team Number"
-        android:inputType="number"
-        android:maxLength="4" />
     <!--<EditText
         android:layout_width="80dp"
         android:layout_height="38dp"

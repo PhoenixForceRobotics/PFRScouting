@@ -3,12 +3,14 @@ package edu.phoenixforce.scouting.mobile.layouts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 
@@ -20,8 +22,6 @@ TextView view3;
 TextView view4;
 TextView view5;
 
-//edit text for the team number
-EditText teamNumber;
 //String Numero = teamNumber.getText().toString();
 //int numberTeam = Integer.parseInt(Numero);
 
@@ -47,6 +47,7 @@ int counter4 = 0;
 int counter5 = 0;
 int spunwheel = 0; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
 int colorwheel = 0;
+int balls = 0;
 int solo = 0;
 int buddy = 0;
 
@@ -88,7 +89,6 @@ int buddy = 0;
         view4.setText("0");
         view5.setText("0");
 
-        teamNumber = findViewById(R.id.team_number);
 
 
 
@@ -97,6 +97,14 @@ int buddy = 0;
             @Override
             public void onClick(View v) {
                 openMainActivity();
+                Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
+
+                //another rickrole
+
+                Intent browserIntent = new Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+                startActivity(browserIntent);
 
             }
         });
@@ -226,7 +234,7 @@ int buddy = 0;
                     buddy = 0;
                 break;
 
-            case R.id.checkBox3:
+            case R.id.checkBox:
                 if(checked)
                     spunwheel = spunwheel + 1;
                 else
@@ -238,6 +246,13 @@ int buddy = 0;
                     colorwheel = colorwheel + 1;
                 else
                     colorwheel = 0;
+                break;
+
+            case R.id.checkBox3:
+                if(checked)
+                    balls = balls + 1;
+                else
+                    balls = 0;
                 break;
 
         }

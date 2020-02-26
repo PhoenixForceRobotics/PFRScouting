@@ -1,11 +1,9 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -16,8 +14,8 @@ import com.example.fyrebirdscout11.R;
 
 import java.util.HashMap;
 
-import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
-import edu.phoenixforce.scouting.mobile.database.entities.Scores;
+import edu.phoenixforce.scouting.mobile.database.bainlactivity;
+import edu.phoenixforce.scouting.mobile.database.bainlactivity2;
 
 public class login extends AppCompatActivity {
 
@@ -25,14 +23,11 @@ public class login extends AppCompatActivity {
 
     EditText pWord;
 
-    Button log;
+    Button log, bypass, bypassII;
 
     String  user,pass, Lars, hello;
 
     HashMap<String, String> users = new HashMap();
-
-    public static final String EXTRA_REPLY = "com.example.android.wordlistsql.REPLY";
-    private static final String TAG = "LoginActiivty";
 
 
     @Override
@@ -43,6 +38,8 @@ public class login extends AppCompatActivity {
         nombre = findViewById(R.id.name);
         pWord = findViewById(R.id.txtPassword);
         log = findViewById(R.id.btnSubmit);
+        bypass = findViewById(R.id.bypass);
+        bypassII = findViewById(R.id.bypassII);
 
         Lars = Lars;
 
@@ -56,23 +53,41 @@ public class login extends AppCompatActivity {
 //set the spinners adapter to the previously created one.
         nombre.setAdapter(adapter);
 
-        ScoreDataBase db = Room.databaseBuilder(getApplicationContext(), ScoreDataBase.class, "production")
-                .allowMainThreadQueries()
-                .build();
-
         log.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 validateUser();
-                    // TODO: 2/18/20 Save to database
-                Log.d(TAG, "User:" + nombre.toString());
 
-               for (int i = 0; i < 100; i++);
-                db.ballDao().insertAll(new Scores(nombre.getSelectedItem().toString()));
+            }
 
 
+        });
+        bypass.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                goScout();
+
+            }
+
+
+        });
+        bypass.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                goScoutII();
+
+            }
+
+
+        });
+        bypassII.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                goScoutIII();
 
             }
 
@@ -156,14 +171,22 @@ public class login extends AppCompatActivity {
 
     public void goScout() {
 
-        Intent intent = new Intent(this, ActivityMain.class);
+        Intent intent = new Intent(this, EActivity.class);
         startActivity(intent);
 
 
-
     }
 
+    public void goScoutII() {
+
+        Intent intent = new Intent(this, bainlactivity.class);
+        startActivity(intent);
+
     }
+    public void goScoutIII() {
 
+        Intent intent = new Intent(this, bainlactivity2.class);
+        startActivity(intent);
 
-
+    }
+}

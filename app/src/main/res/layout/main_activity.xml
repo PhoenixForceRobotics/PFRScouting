@@ -126,5 +126,19 @@
         android:text="Settings"
         android:textColor="#FFFFFF" />
 
+    <Button
+        android:id="@+id/options1"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="119dp"
+        android:layout_marginRight="119dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/colorPrimary"
+        android:text="options1"
+        android:textColor="#FFFFFF" />
+
 
 </RelativeLayout>

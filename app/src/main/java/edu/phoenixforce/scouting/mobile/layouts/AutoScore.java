@@ -1,24 +1,16 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 //import android.widget.CheckBox; -- Not needed during the auto period
-import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.fyrebirdscout11.R;
-
-import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
-import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
-import edu.phoenixforce.scouting.mobile.database.entities.Scores;
-
-import static java.lang.String.valueOf;
 
 
 public class AutoScore extends AppCompatActivity {
@@ -52,9 +44,6 @@ public class AutoScore extends AppCompatActivity {
             int counter8 = 0;
             int counter9 = 0;
             int counter10 = 0;
-            int solo = 0;
-
-            String str = valueOf(solo);
 
 
 
@@ -96,12 +85,7 @@ public class AutoScore extends AppCompatActivity {
                 view4.setText("0");
                 view5.setText("0");
 
-                ScoreDataBase db = Room.databaseBuilder(getApplicationContext(), ScoreDataBase.class, "production")
-                        .allowMainThreadQueries()
-                        .build();
-
                 back.setOnClickListener(new View.OnClickListener() {
-
 
                     @Override
                     public void onClick(View v) {
@@ -115,7 +99,6 @@ public class AutoScore extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         goTeleScore();
-                        db.autoDao().insertAll(new AutoData(str, view2.toString(),view3.toString(),view4.toString(),view5.toString()));
                     }
 
                 });
@@ -124,7 +107,7 @@ public class AutoScore extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         counter6 = counter6 + 1;
-                        autoBallHigh.setText(valueOf(counter6));
+                        autoBallHigh.setText(String.valueOf(counter6));
                     }
                 });
 
@@ -133,7 +116,7 @@ public class AutoScore extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         counter6 = counter6 - 1;
-                        autoBallHigh.setText(valueOf(counter6));
+                        autoBallHigh.setText(String.valueOf(counter6));
                     }
                 });
 
@@ -143,7 +126,7 @@ public class AutoScore extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         counter7 = counter7 + 1;
-                        view2.setText(valueOf(counter7));
+                        view2.setText(String.valueOf(counter7));
                     }
                 });
 
@@ -153,7 +136,7 @@ public class AutoScore extends AppCompatActivity {
                     public void onClick(View v) {
 
                         counter8 = counter8 + 1;
-                        view3.setText (valueOf(counter8));
+                        view3.setText (String.valueOf(counter8));
                     }
 
                 });
@@ -164,7 +147,7 @@ public class AutoScore extends AppCompatActivity {
                     public void onClick(View v) {
 
                         counter9 = counter9 + 1;
-                        view4.setText (valueOf(counter9));
+                        view4.setText (String.valueOf(counter9));
                     }
 
                 });
@@ -175,7 +158,7 @@ public class AutoScore extends AppCompatActivity {
                     public void onClick(View v) {
 
                         counter10 = counter10 + 1;
-                        view5.setText (valueOf(counter10));
+                        view5.setText (String.valueOf(counter10));
                     }
 
                 });
@@ -186,7 +169,7 @@ public class AutoScore extends AppCompatActivity {
                     public void onClick(View v) {
 
                         counter7 = counter7 - 1;
-                        view2.setText(valueOf(counter7));
+                        view2.setText(String.valueOf(counter7));
 
                     }
                 });
@@ -197,7 +180,7 @@ public class AutoScore extends AppCompatActivity {
                     public void onClick(View v) {
 
                         counter8 = counter8 - 1;
-                        view3.setText(valueOf(counter8));
+                        view3.setText(String.valueOf(counter8));
                     }
                 });
 
@@ -207,13 +190,10 @@ public class AutoScore extends AppCompatActivity {
                     public void onClick(View v) {
 
                         counter9 = counter9 - 1;
-                        view4.setText(valueOf(counter9));
+                        view4.setText(String.valueOf(counter9));
 
                     }
                 });
-
-
-
 
                 downButton5.setOnClickListener(new View.OnClickListener (){
 
@@ -221,9 +201,7 @@ public class AutoScore extends AppCompatActivity {
                     public void onClick(View v) {
 
                         counter10 = counter10 - 1;
-                        view5.setText (valueOf(counter10));
-
-
+                        view5.setText (String.valueOf(counter10));
                     }
 
 
@@ -245,20 +223,8 @@ public class AutoScore extends AppCompatActivity {
             }
 
 
-                    public void onCheckboxClicked(View view) { //this is for all of the checkboxes in the activity
 
-                        boolean checked = ((CheckBox) view).isChecked();
-
-                        //check for what checkbox is checked
-                        switch(view.getId()){
-                            case R.id.checkBox1:
-                                if (checked)
-                                    solo = solo + 1;
-                                else
-                                    solo = 0;
-                                break;
-
-}}}
+}
 
 
 
