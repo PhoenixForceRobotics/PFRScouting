@@ -1,4 +1,4 @@
-/*package edu.phoenixforce.scouting.mobile.database.adapters;
+package edu.phoenixforce.scouting.mobile.database.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,15 +34,21 @@ public class AutoDataAdapter extends RecyclerView.Adapter<AutoDataAdapter.ViewHo
     public void onBindViewHolder(@NonNull AutoDataAdapter.ViewHolder holder, int position) {
 
         holder.moved.setText(autoDat.get(position).getMoved());
+        holder.highBall.setText(autoDat.get(position).getHighBall());
+        holder.midBall.setText(autoDat.get(position).getMidBall());
+        holder.lowBall.setText(autoDat.get(position).getLowBall());
+        holder.touchedWheel.setText(autoDat.get(position).getTouchedWheel());
 
 
 
-       /*( this.moved = moved;
+
+       /* this.moved = moved;
         this.lowBall = lowBall;
         this.midBall = midBall;
         this.highBall = highBall;
         this.touchedWheel = touchedWheel;
-        \
+
+        */
 
 
     }
@@ -50,15 +56,23 @@ public class AutoDataAdapter extends RecyclerView.Adapter<AutoDataAdapter.ViewHo
     @Override
     public int getItemCount() {
         return autoDat.size();
+
     }
 
-    public class ViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
-        public TextView moved;
 
-        public ViewHolder() {
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView moved;
+        public TextView lowBall;
+        public TextView midBall;
+        public TextView highBall;
+        public TextView touchedWheel;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+        }
 
 
         }
     }
-}
-*/
+
+
