@@ -1,4 +1,4 @@
-/*package edu.phoenixforce.scouting.mobile.database.adapters;
+package edu.phoenixforce.scouting.mobile.database.adapters;
 
 
 import android.view.LayoutInflater;
@@ -14,31 +14,32 @@ import com.example.fyrebirdscout11.R;
 
 import java.util.List;
 
-import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
 
-public class TeleDataAdapter extends RecyclerView.Adapter<AutoDataAdapter.ViewHolder> {
+import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
-    List<AutoData> autoDat;
+public class TeleDataAdapter extends RecyclerView.Adapter<TeleDataAdapter.ViewHolder> {
 
-    public TeleDataAdapter(List<AutoData> autoDat) {
-        this.autoDat = autoDat;
+    List<TeleData> teleDat;
+
+    public TeleDataAdapter(List<TeleData> autoDat) {
+        this.teleDat = teleDat;
     }
 
     @NonNull
     @Override
-    public AutoDataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TeleDataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AutoDataAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TeleDataAdapter.ViewHolder holder, int position) {
 
-        holder.moved.setText(autoDat.get(position).getMoved());
-        holder.highBall.setText(autoDat.get(position).getHighBall());
-        holder.midBall.setText(autoDat.get(position).getMidBall());
-        holder.lowBall.setText(autoDat.get(position).getLowBall());
-        holder.touchedWheel.setText(autoDat.get(position).getTouchedWheel());
+        holder.moved.setText(teleDat.get(position).getMoved());
+        holder.highBall.setText(teleDat.get(position).getHighBall());
+        holder.midBall.setText(teleDat.get(position).getMidBall());
+        holder.lowBall.setText(teleDat.get(position).getLowBall());
+        holder.touchedWheel.setText(teleDat.get(position).getTouchedWheel());
 
 
 
@@ -50,17 +51,12 @@ public class TeleDataAdapter extends RecyclerView.Adapter<AutoDataAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return autoDat.size();
+        return teleDat.size();
 
     }
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView moved;
-        public TextView lowBall;
-        public TextView midBall;
-        public TextView highBall;
-        public TextView touchedWheel;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -71,5 +67,4 @@ public class TeleDataAdapter extends RecyclerView.Adapter<AutoDataAdapter.ViewHo
 }
 
 
- 
- */
+
