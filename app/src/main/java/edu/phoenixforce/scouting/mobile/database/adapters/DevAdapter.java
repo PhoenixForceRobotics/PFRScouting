@@ -13,7 +13,6 @@ import com.example.fyrebirdscout11.R;
 import java.util.List;
 
 import edu.phoenixforce.scouting.mobile.database.entities.DevId;
-import edu.phoenixforce.scouting.mobile.database.entities.Scores;
 
 public class DevAdapter extends RecyclerView.Adapter<DevAdapter.ViewHolder> {
 
@@ -26,7 +25,7 @@ public class DevAdapter extends RecyclerView.Adapter<DevAdapter.ViewHolder> {
     @NonNull
     @Override
     public DevAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview, parent, false);
         return new ViewHolder(view);
     }
 

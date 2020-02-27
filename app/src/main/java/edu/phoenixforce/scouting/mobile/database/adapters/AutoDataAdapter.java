@@ -13,7 +13,6 @@ import com.example.fyrebirdscout11.R;
 import java.util.List;
 
 import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
-import edu.phoenixforce.scouting.mobile.database.entities.Scores;
 
 public class AutoDataAdapter extends RecyclerView.Adapter<AutoDataAdapter.ViewHolder> {
 
@@ -26,7 +25,7 @@ public class AutoDataAdapter extends RecyclerView.Adapter<AutoDataAdapter.ViewHo
     @NonNull
     @Override
     public AutoDataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview, parent, false);
         return new ViewHolder(view);
     }
 
