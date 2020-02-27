@@ -15,31 +15,31 @@ import java.util.List;
 
 import edu.phoenixforce.scouting.mobile.database.entities.Team;
 
-public class TeamAdapter extends RecyclerView.Adapter<BallScoreAdapter.ViewHolder> {
+public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
-    List<Team> ascores;
+    List<Team> ascores1;
 
     public TeamAdapter(List<Team> ascores) {
-        this.ascores = ascores;
+        this.ascores1 = ascores;
     }
 
     @NonNull
     @Override
     public TeamAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview, parent, false);
         return new ViewHolder(view);
     }
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull BallScoreAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TeamAdapter.ViewHolder holder, int position) {
 
-        holder.scout.setText(ascores.get(position).getTeamNum() + ascores.get(position).getMatchNum());
+        holder.scout1.setText(ascores1.get(position).getTeamNum() + ascores1.get(position).getMatchNum());
     }
 
     @Override
     public int getItemCount() {
-        return ascores.size();
+        return ascores1.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

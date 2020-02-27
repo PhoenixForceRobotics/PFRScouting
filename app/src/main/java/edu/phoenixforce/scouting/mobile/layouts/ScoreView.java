@@ -14,7 +14,7 @@ import com.example.fyrebirdscout11.R;
 import java.util.List;
 
 import edu.phoenixforce.scouting.mobile.database.adapters.BallScoreAdapter;
-import edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.ScoreDataBase;
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 import edu.phoenixforce.scouting.mobile.database.entities.Scores;
 
 public class ScoreView extends AppCompatActivity {
