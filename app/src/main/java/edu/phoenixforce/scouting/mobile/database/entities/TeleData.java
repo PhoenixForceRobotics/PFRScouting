@@ -19,6 +19,29 @@ public class TeleData {
     @ColumnInfo(name = "ballLow")
     private String ballLow;
 
+    @ColumnInfo(name = "ballMid")
+    private String ballMid;
+
+    @ColumnInfo(name = "ballThree")
+    private String ballThree;
+
+    @ColumnInfo(name = "spunWheelColor")
+    private String spunWheelColor;
+
+    @ColumnInfo(name = "spunWheelTimes")
+    private String spunWheelTimes;
+
+    @ColumnInfo(name = "robotBroke")
+    private String robotBroken;
+
+    @ColumnInfo(name = "soloClimb")
+    private String soloClimb;
+
+    @ColumnInfo(name = "buddyClimb")
+    private String buddyClimb;
+
+    @ColumnInfo(name = "")
+
 
 
     @NonNull
