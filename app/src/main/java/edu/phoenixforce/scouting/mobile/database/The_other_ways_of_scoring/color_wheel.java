@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile.database;
+package edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
@@ -7,8 +7,10 @@ import androidx.room.PrimaryKey;
 
 import org.jetbrains.annotations.NotNull;
 
+import edu.phoenixforce.scouting.mobile.database.entities.Data;
+
 @Entity(tableName = "Color Wheel")
-public class color_wheel {
+public class color_wheel extends Data {
 
     public color_wheel(@NotNull String ColorWheelCanSpin, String ColorWheelCanTurnToColor) {
         this.ColorWheelCanSpin = ColorWheelCanSpin;

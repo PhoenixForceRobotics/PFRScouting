@@ -14,8 +14,8 @@ import com.example.fyrebirdscout11.R;
 
 import java.util.HashMap;
 
-import edu.phoenixforce.scouting.mobile.database.bainlactivity;
-import edu.phoenixforce.scouting.mobile.database.bainlactivity2;
+import edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity;
+import edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity2;
 
 public class login extends AppCompatActivity {
 

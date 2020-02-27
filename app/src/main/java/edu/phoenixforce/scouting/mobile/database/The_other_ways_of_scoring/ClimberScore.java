@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile.database;
+package edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring;
 
 
 import androidx.room.ColumnInfo;
@@ -7,8 +7,10 @@ import androidx.room.PrimaryKey;
 
 import org.jetbrains.annotations.NotNull;
 
+import edu.phoenixforce.scouting.mobile.database.entities.Data;
+
 @Entity(tableName = "Climber Scores")
-public class ClimberScore {
+public class ClimberScore extends Data {
 
     public ClimberScore(int CanClimb, int CanBuddyClimb, int BrokeDown, int DefenceMostOfTheTime) {
         this.CanClimb = CanClimb;

@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile.database;
+package edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring;
 
 
 import android.content.Context;
