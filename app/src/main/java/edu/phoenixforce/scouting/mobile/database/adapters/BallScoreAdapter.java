@@ -48,6 +48,6 @@ public class BallScoreAdapter extends RecyclerView.Adapter<BallScoreAdapter.View
             super(itemView);
             //scout = itemView.findViewById(R.id.Scout);
 
-    }
+        }
     }
 }
