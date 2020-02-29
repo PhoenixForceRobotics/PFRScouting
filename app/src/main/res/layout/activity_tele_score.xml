@@ -16,319 +16,22 @@
         android:layout_marginBottom="550dp"
         android:background="?android:attr/listDivider" />-->
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="106dp"
-        android:layout_height="48dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="519dp"
-        android:layout_marginRight="519dp"
-        android:layout_marginBottom="554dp"
-        android:text="@string/lowscore"
-        android:textColor="#FDFCFC"
-        tools:visibility="visible" />
-
-    <Button
-        android:id="@+id/upbutton"
-        android:layout_width="166dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="630dp"
-        android:layout_marginRight="630dp"
-        android:layout_marginBottom="554dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_up"
-        android:textColor="#FDFCFC" />
-
-    <TextView
-        android:id="@+id/integer_number"
-        android:layout_width="294dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginEnd="803dp"
-        android:layout_marginRight="803dp"
-        android:layout_marginBottom="552dp"
-        android:background="@color/font"
-        android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/downbutton"
-        android:layout_width="166dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="1105dp"
-        android:layout_marginRight="1105dp"
-        android:layout_marginBottom="550dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_down"
-        android:textColor="#FDFCFC" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="107dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="517dp"
-        android:layout_marginRight="517dp"
-        android:layout_marginBottom="751dp"
-        android:text="@string/midscore"
-        android:textColor="#FFFFFF" />
-
-    <Button
-        android:id="@+id/downbutton2"
-        android:layout_width="166dp"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="1105dp"
-        android:layout_marginRight="1105dp"
-        android:layout_marginBottom="748dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_down"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/integer_number2"
-        android:layout_width="294dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="803dp"
-        android:layout_marginRight="803dp"
-        android:layout_marginBottom="750dp"
-        android:background="#FFFFFF"
-        android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/upbutton2"
-        android:layout_width="166dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="630dp"
-        android:layout_marginRight="630dp"
-        android:layout_marginBottom="748dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_up"
-        android:textColor="#FFFFFF" />
-
-    <Button
-        android:id="@+id/downbutton3"
-        android:layout_width="166dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="1105dp"
-        android:layout_marginRight="1105dp"
-        android:layout_marginBottom="699dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_down"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="108dp"
-        android:layout_height="46dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="519dp"
-        android:layout_marginRight="519dp"
-        android:layout_marginBottom="697dp"
-        android:text="@string/highscore"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/integer_number3"
-        android:layout_width="294dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="803dp"
-        android:layout_marginRight="803dp"
-        android:layout_marginBottom="700dp"
-        android:background="#FFFFFF"
-        android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/upbutton3"
-        android:layout_width="166dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="630dp"
-        android:layout_marginRight="630dp"
-        android:layout_marginBottom="700dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_up"
-        android:textColor="#FDFCFC" />
-
-    <Button
-        android:id="@+id/downbutton4"
-        android:layout_width="166dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="1105dp"
-        android:layout_marginRight="1105dp"
-        android:layout_marginBottom="648dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_down"
-        android:textColor="#FDFCFC" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="108dp"
-        android:layout_height="46dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="519dp"
-        android:layout_marginRight="519dp"
-        android:layout_marginBottom="647dp"
-        android:text="@string/Shots"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/integer_number4"
-        android:layout_width="294dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="803dp"
-        android:layout_marginRight="803dp"
-        android:layout_marginBottom="650dp"
-        android:background="#FFFFFF"
-        android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/upbutton4"
-        android:layout_width="166dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="630dp"
-        android:layout_marginRight="630dp"
-        android:layout_marginBottom="651dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_up"
-        android:textColor="#FDFCFC" />
-
-    <Button
-        android:id="@+id/downbutton5"
-        android:layout_width="166dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="1105dp"
-        android:layout_marginRight="1105dp"
-        android:layout_marginBottom="601dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_down"
-        android:textColor="#FDFCFC" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="108dp"
-        android:layout_height="46dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="519dp"
-        android:layout_marginRight="519dp"
-        android:layout_marginBottom="602dp"
-        android:text="@string/take"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/integer_number5"
-        android:layout_width="294dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="803dp"
-        android:layout_marginRight="804dp"
-        android:layout_marginBottom="601dp"
-        android:background="#FFFFFF"
-        android:textSize="30sp" />
-
 
     //Checkboxes
-
-    <Button
-        android:id="@+id/upbutton5"
-        android:layout_width="166dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="630dp"
-        android:layout_marginRight="630dp"
-        android:layout_marginBottom="603dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_up"
-        android:textColor="#FDFCFC" />
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="643dp"
-        android:layout_height="89dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_height="49dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="636dp"
-        android:layout_marginBottom="168dp"
+        android:layout_marginEnd="637dp"
+        android:layout_marginRight="637dp"
+        android:layout_marginBottom="150dp"
         android:background="@color/colorPrimaryDark"
         android:onClick="onCheckboxClicked"
         android:text="@string/ClimbeMe"
-        android:textColor="#FFFFFF" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="643dp"
-        android:layout_height="89dp"
-        android:layout_alignParentStart="true"
-
-
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="436dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/hello_blank_fragment"
         android:textColor="#FFFFFF" />
 
     <!--<EditText
@@ -342,46 +45,59 @@
         android:-->
 
     <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="643dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="297dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/hello_blank_fragment"
+        android:textColor="#FFFFFF" />
+
+    <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="643dp"
-        android:layout_height="91dp"
+        android:layout_height="49dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
 
 
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginLeft="-1dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
 
-        android:layout_marginBottom="345dp"
+        android:layout_marginBottom="248dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/Wheel"
         android:textColor="#FFFFFF" />
 
     <CheckBox
         android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="89dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_width="643dp"
+        android:layout_height="49dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
         android:layout_marginEnd="637dp"
         android:layout_marginRight="637dp"
-        android:layout_marginBottom="257dp"
+        android:layout_marginBottom="199dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/wheelspot"
         android:textColor="#FFFFFF" />
 
     <CheckBox
         android:id="@+id/checkBox1"
-        android:layout_width="641dp"
-        android:layout_height="89dp"
+        android:layout_width="647dp"
+        android:layout_height="49dp"
 
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
@@ -389,7 +105,7 @@
 
         android:layout_marginEnd="637dp"
         android:layout_marginRight="637dp"
-        android:layout_marginBottom="79dp"
+        android:layout_marginBottom="101dp"
         android:background="@color/colorPrimaryDark"
         android:onClick="onCheckboxClicked"
         android:text="@string/Climb"
@@ -413,6 +129,297 @@
     <!-- New sections -->
 
     <Button
+        android:id="@+id/upbutton10"
+        android:layout_width="328dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="469dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_up"
+        android:textColor="#FDFCFC" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="524dp"
+        android:layout_marginRight="524dp"
+        android:layout_marginBottom="420dp"
+        android:text="@string/lowscore"
+        android:textColor="#FDFCFC"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/upbutton"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="635dp"
+        android:layout_marginRight="635dp"
+        android:layout_marginBottom="420dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_up"
+        android:textColor="#FDFCFC" />
+
+    <TextView
+        android:id="@+id/integer_number"
+        android:layout_width="294dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="808dp"
+        android:layout_marginRight="808dp"
+        android:layout_marginBottom="418dp"
+        android:background="@color/font"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/downbutton"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="1110dp"
+        android:layout_marginRight="1110dp"
+        android:layout_marginBottom="416dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_down"
+        android:textColor="#FDFCFC" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="107dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="522dp"
+        android:layout_marginRight="522dp"
+        android:layout_marginBottom="617dp"
+        android:text="@string/midscore"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/downbutton2"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="1110dp"
+        android:layout_marginRight="1110dp"
+        android:layout_marginBottom="614dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_down"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/integer_number2"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="808dp"
+        android:layout_marginRight="808dp"
+        android:layout_marginBottom="616dp"
+        android:background="#FFFFFF"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/upbutton2"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="635dp"
+        android:layout_marginRight="635dp"
+        android:layout_marginBottom="614dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_up"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/downbutton3"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="1110dp"
+        android:layout_marginRight="1110dp"
+        android:layout_marginBottom="565dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_down"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="108dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="524dp"
+        android:layout_marginRight="524dp"
+        android:layout_marginBottom="563dp"
+        android:text="@string/highscore"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/integer_number3"
+        android:layout_width="294dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="808dp"
+        android:layout_marginRight="808dp"
+        android:layout_marginBottom="566dp"
+        android:background="#FFFFFF"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/upbutton3"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="635dp"
+        android:layout_marginRight="635dp"
+        android:layout_marginBottom="566dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_up"
+        android:textColor="#FDFCFC" />
+
+    <Button
+        android:id="@+id/downbutton4"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="1110dp"
+        android:layout_marginRight="1110dp"
+        android:layout_marginBottom="514dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_down"
+        android:textColor="#FDFCFC" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="108dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="524dp"
+        android:layout_marginRight="524dp"
+        android:layout_marginBottom="513dp"
+        android:text="@string/Shots"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/integer_number4"
+        android:layout_width="294dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="808dp"
+        android:layout_marginRight="808dp"
+        android:layout_marginBottom="516dp"
+        android:background="#FFFFFF"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/upbutton4"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="635dp"
+        android:layout_marginRight="635dp"
+        android:layout_marginBottom="517dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_up"
+        android:textColor="#FDFCFC" />
+
+    <Button
+        android:id="@+id/downbutton5"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="1110dp"
+        android:layout_marginRight="1110dp"
+        android:layout_marginBottom="467dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_down"
+        android:textColor="#FDFCFC" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="108dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="524dp"
+        android:layout_marginRight="524dp"
+        android:layout_marginBottom="468dp"
+        android:text="@string/take"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/integer_number5"
+        android:layout_width="294dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="808dp"
+        android:layout_marginRight="808dp"
+        android:layout_marginBottom="467dp"
+        android:background="#FFFFFF"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/upbutton5"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="635dp"
+        android:layout_marginRight="635dp"
+        android:layout_marginBottom="469dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_up"
+        android:textColor="#FDFCFC" />
+
+    <Button
         android:id="@+id/upbutton6"
         android:layout_width="328dp"
         android:layout_height="45dp"
@@ -421,9 +428,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="553dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="419dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC" />
@@ -437,9 +444,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginEnd="327dp"
-        android:layout_marginRight="327dp"
-        android:layout_marginBottom="554dp"
+        android:layout_marginEnd="332dp"
+        android:layout_marginRight="332dp"
+        android:layout_marginBottom="420dp"
         android:background="@color/autoUp"
         android:textSize="14sp" />
 
@@ -450,9 +457,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="425dp"
-        android:layout_marginRight="424dp"
-        android:layout_marginBottom="554dp"
+        android:layout_marginEnd="430dp"
+        android:layout_marginRight="430dp"
+        android:layout_marginBottom="420dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC" />
@@ -466,9 +473,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="9dp"
-        android:layout_marginEnd="423dp"
-        android:layout_marginRight="423dp"
-        android:layout_marginBottom="748dp"
+        android:layout_marginEnd="428dp"
+        android:layout_marginRight="428dp"
+        android:layout_marginBottom="614dp"
         android:background="@color/colorPrimaryDark"
 
         android:text="@string/button_down"
@@ -481,21 +488,21 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="327dp"
-        android:layout_marginRight="327dp"
-        android:layout_marginBottom="747dp"
+        android:layout_marginEnd="332dp"
+        android:layout_marginRight="332dp"
+        android:layout_marginBottom="613dp"
         android:background="@color/autoUp" />
 
     <Button
         android:id="@+id/upbutton7"
-        android:layout_width="328dp"
-        android:layout_height="53dp"
+        android:layout_width="327dp"
+        android:layout_height="43dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="747dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="613dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC" />
@@ -507,9 +514,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="424dp"
-        android:layout_marginRight="424dp"
-        android:layout_marginBottom="700dp"
+        android:layout_marginEnd="429dp"
+        android:layout_marginRight="429dp"
+        android:layout_marginBottom="566dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC" />
@@ -521,9 +528,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="328dp"
-        android:layout_marginRight="328dp"
-        android:layout_marginBottom="700dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginRight="333dp"
+        android:layout_marginBottom="566dp"
         android:background="@color/autoUp" />
 
     <Button
@@ -533,9 +540,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="700dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="566dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC" />
@@ -547,9 +554,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="424dp"
-        android:layout_marginRight="424dp"
-        android:layout_marginBottom="651dp"
+        android:layout_marginEnd="429dp"
+        android:layout_marginRight="429dp"
+        android:layout_marginBottom="517dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC" />
@@ -561,9 +568,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="327dp"
-        android:layout_marginRight="327dp"
-        android:layout_marginBottom="650dp"
+        android:layout_marginEnd="332dp"
+        android:layout_marginRight="332dp"
+        android:layout_marginBottom="516dp"
         android:background="@color/autoUp" />
 
     <Button
@@ -573,9 +580,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="650dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="516dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC" />
@@ -587,9 +594,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="424dp"
-        android:layout_marginRight="424dp"
-        android:layout_marginBottom="603dp"
+        android:layout_marginEnd="429dp"
+        android:layout_marginRight="429dp"
+        android:layout_marginBottom="469dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC" />
@@ -601,24 +608,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="328dp"
-        android:layout_marginRight="328dp"
-        android:layout_marginBottom="603dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginRight="333dp"
+        android:layout_marginBottom="469dp"
         android:background="@color/autoUp" />
-
-    <Button
-        android:id="@+id/upbutton10"
-        android:layout_width="328dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginRight="-1dp"
-        android:layout_marginBottom="603dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/button_up"
-        android:textColor="#FDFCFC" />
 
     <CheckBox
         android:id="@+id/moved"
@@ -634,7 +627,7 @@
         android:layout_marginLeft="766dp"
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
-        android:layout_marginBottom="443dp"
+        android:layout_marginBottom="266dp"
         android:background="@color/colorPrimaryDark"
         android:text="Moved Over Line (Auto Only)"
         android:textColor="#FFFFFF" />
