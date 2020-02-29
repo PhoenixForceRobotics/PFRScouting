@@ -100,7 +100,7 @@ public class ActivityMain extends AppCompatActivity {
 
         public void openAutoScore () {
 
-            Intent intent = new Intent(this, AutoScore.class);
+            Intent intent = new Intent(this, TeleScore.class);
             startActivity(intent);
 
 

@@ -67,7 +67,7 @@ public class ClimberScore extends Data {
         return DefenceMostOfTheTime;
     }
 
-    @PrimaryKey
+
     @NotNull
     @ColumnInfo(name = "Can Climb")
     private int CanClimb;

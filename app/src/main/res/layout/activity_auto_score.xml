@@ -31,7 +31,7 @@
         tools:visibility="visible" />
 
     <Button
-        android:id="@+id/upbutton"
+        android:id="@+id/upbutton6"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_alignParentEnd="true"
@@ -74,15 +74,6 @@
         android:background="@color/colorPrimaryDark"
         android:textColor="#FDFCFC"
         android:text="@string/button_down" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="113dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="34dp"
-        app:srcCompat="?attr/homeAsUpIndicator" />
 
     <TextView
         android:id="@+id/textView2"
@@ -127,7 +118,7 @@
         android:background="#FFFFFF" />
 
     <Button
-        android:id="@+id/upbutton2"
+        android:id="@+id/upbutton7"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
         android:layout_alignParentEnd="true"
@@ -180,7 +171,7 @@
         android:background="#FFFFFF" />
 
     <Button
-        android:id="@+id/upbutton3"
+        android:id="@+id/upbutton8"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
         android:layout_alignParentEnd="true"
@@ -233,7 +224,7 @@
         android:background="#FFFFFF" />
 
     <Button
-        android:id="@+id/upbutton4"
+        android:id="@+id/upbutton9"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
         android:layout_alignParentEnd="true"
@@ -286,7 +277,7 @@
         android:background="#FFFFFF" />
 
     <Button
-        android:id="@+id/upbutton5"
+        android:id="@+id/upbutton10"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
         android:layout_alignParentEnd="true"
@@ -298,21 +289,6 @@
         android:background="@color/colorPrimaryDark"
         android:textColor="#FDFCFC"
         android:text="@string/button_up" />
-
-    <Button
-        android:id="@+id/navbutton"
-        android:layout_width="283dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="79dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Lock Score In"
-        android:textColor="#FFFFFF" />
 
     <CheckBox
         android:id="@+id/moved"

@@ -21,8 +21,7 @@
         <activity android:name="edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity2" />
         <activity android:name="edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity" />
         <activity
-            android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
         <activity
             android:name="edu.phoenixforce.scouting.mobile.layouts.ConfigActivity"
             android:parentActivityName="edu.phoenixforce.scouting.mobile.layouts.ActivityMain">

@@ -1,4 +1,6 @@
+/*
 package edu.phoenixforce.scouting.mobile.database.adapters;
+
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,3 +61,5 @@ public class DevAdapter extends RecyclerView.Adapter<DevAdapter.ViewHolder> {
 
     }
 }
+
+ */

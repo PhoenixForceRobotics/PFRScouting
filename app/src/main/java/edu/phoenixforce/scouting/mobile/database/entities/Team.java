@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile.database.entities;
+/*package edu.phoenixforce.scouting.mobile.database.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
@@ -43,3 +43,6 @@ public class Team {
         this.matchNum = matchNum;
     }
 }
+
+
+ */

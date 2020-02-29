@@ -17,7 +17,7 @@ public class color_wheel extends Data {
         this.ColorWheelCanTurnToColor = ColorWheelCanTurnToColor;
     }
 
-    @PrimaryKey
+
     @NonNull
     @ColumnInfo(name = "Can Spin Color Wheel")
     private String ColorWheelCanSpin;

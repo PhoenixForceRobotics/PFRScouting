@@ -1,5 +1,6 @@
 package edu.phoenixforce.scouting.mobile.database.daos;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -16,7 +17,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 public interface TeleDao {
 
     @Query("SELECT * FROM teleData")
-    List<TeleData> getAllScores();
+    LiveData<List<TeleData>> getAllScores();
 
 
     @Insert

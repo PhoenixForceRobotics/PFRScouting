@@ -5,11 +5,16 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
 @Entity
 public class TeleData {
 
-    public TeleData(String ballLow){
+    public TeleData(String ballLow, String ballMid, String ballThree, String timeStamp){
         this.ballLow = ballLow;
+        this.ballMid = ballMid;
+        this.ballThree = ballThree;
+        //Cats are cute! ;)
+        this.timeStamp = timeStamp;
 
 
 
@@ -25,22 +30,43 @@ public class TeleData {
     @ColumnInfo(name = "ballThree")
     private String ballThree;
 
-    @ColumnInfo(name = "spunWheelColor")
-    private String spunWheelColor;
+    public String getBallMid() {
+        return ballMid;
+    }
 
-    @ColumnInfo(name = "spunWheelTimes")
-    private String spunWheelTimes;
+    public void setBallMid(String ballMid) {
+        this.ballMid = ballMid;
+    }
 
-    @ColumnInfo(name = "robotBroke")
-    private String robotBroken;
+    public String getBallThree() {
+        return ballThree;
+    }
 
-    @ColumnInfo(name = "soloClimb")
-    private String soloClimb;
+    public void setBallThree(String ballThree) {
+        this.ballThree = ballThree;
+    }
 
-    @ColumnInfo(name = "buddyClimb")
-    private String buddyClimb;
+    public String getMissedShot() {
+        return missedShot;
+    }
 
-    @ColumnInfo(name = "")
+    public void setMissedShot(String missedShot) {
+        this.missedShot = missedShot;
+    }
+
+    public String getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    @ColumnInfo(name = "missedShot")
+    private String missedShot;
+
+    @ColumnInfo(name = "timeStamp")
+    private String timeStamp;
 
 
 

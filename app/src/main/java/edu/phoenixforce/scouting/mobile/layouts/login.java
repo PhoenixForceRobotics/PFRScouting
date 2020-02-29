@@ -77,7 +77,7 @@ public class login extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                goScoutII();
+                goScout();
 
             }
 
@@ -87,7 +87,7 @@ public class login extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                goScoutIII();
+                goScout();
 
             }
 
@@ -171,22 +171,11 @@ public class login extends AppCompatActivity {
 
     public void goScout() {
 
-        Intent intent = new Intent(this, EActivity.class);
+        Intent intent = new Intent(this, ActivityMain.class);
         startActivity(intent);
 
 
     }
 
-    public void goScoutII() {
 
-        Intent intent = new Intent(this, bainlactivity.class);
-        startActivity(intent);
-
-    }
-    public void goScoutIII() {
-
-        Intent intent = new Intent(this, bainlactivity2.class);
-        startActivity(intent);
-
-    }
 }

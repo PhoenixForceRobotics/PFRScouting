@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile.database.daos;
+/* package edu.phoenixforce.scouting.mobile.database.daos;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
@@ -23,3 +23,5 @@ public interface DevDao {
     @Query("DELETE FROM DevId")
     void nukeTable();
 }
+
+ */

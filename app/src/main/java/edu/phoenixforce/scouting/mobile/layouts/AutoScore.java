@@ -17,25 +17,25 @@ public class AutoScore extends AppCompatActivity {
 
 
     //TextViews
-            TextView autoBallHigh;
-            TextView view2;
-            TextView view3;
-            TextView view4;
-            TextView view5;
+            TextView autoBallHighA;
+            TextView view7;
+            TextView view8;
+            TextView view9;
+            TextView view10;
 
 
             //Buttons
-            Button autoHighUp; //upButton in camel case
-            Button autoHighDown; //downButton in camel case
-            Button upButton2;
-            Button upButton3;
-            Button upButton4;
-            Button upButton5;
-            Button downButton2;
-            Button downButton3;
-            Button downButton4;
-            Button downButton5;
-            ImageButton back;
+            Button autoHighUpA; //upButton in camel case
+            Button autoHighDownB; //downButton in camel case
+            Button upButton7;
+            Button upButton8;
+            Button upButton9;
+            Button upButton10;
+            Button downButton7;
+            Button downButton8;
+            Button downButton9;
+            Button downButton10;
+            ImageButton backA;
             Button navme;
 
             //integers
@@ -55,37 +55,37 @@ public class AutoScore extends AppCompatActivity {
                 setContentView(R.layout.activity_auto_score);
 
                 //TextViews
-                autoBallHigh = findViewById(R.id.integer_number);
-                view2 = findViewById(R.id.integer_number2);
-                view3 = findViewById(R.id.integer_number3);
-                view4 = findViewById(R.id.integer_number4);
-                view5 = findViewById(R.id.integer_number5);
+                autoBallHighA = findViewById(R.id.integer_number);
+                view7 = findViewById(R.id.integer_number2);
+                view8 = findViewById(R.id.integer_number3);
+                view9 = findViewById(R.id.integer_number4);
+                view10 = findViewById(R.id.integer_number5);
 
                 //Buttons
-                autoHighUp = findViewById(R.id.upbutton);
-                autoHighDown = findViewById(R.id.downbutton);
+                autoHighUpA = findViewById(R.id.upbutton6);
+                autoHighDownB = findViewById(R.id.downbutton);
 
-                back = findViewById(R.id.imageButton);
-                navme = findViewById(R.id.navbutton);
+               // back = findViewById(R.id.imageButton);
+                //navme = findViewById(R.id.navbutton);
 
-                upButton2 = findViewById(R.id.upbutton2);
-                upButton3 = findViewById(R.id.upbutton3);
-                upButton4 = findViewById(R.id.upbutton4);
-                upButton5 = findViewById(R.id.upbutton5);
+                upButton7 = findViewById(R.id.upbutton7);
+                upButton8 = findViewById(R.id.upbutton8);
+                upButton9 = findViewById(R.id.upbutton9);
+                upButton10 = findViewById(R.id.upbutton10);
 
-                downButton2 = findViewById(R.id.downbutton2);
-                downButton3 = findViewById(R.id.downbutton3);
-                downButton4 = findViewById(R.id.downbutton4);
-                downButton5 = findViewById(R.id.downbutton5);
+                downButton7 = findViewById(R.id.downbutton7);
+                downButton8 = findViewById(R.id.downbutton8);
+                downButton9 = findViewById(R.id.downbutton9);
+                downButton10 = findViewById(R.id.downbutton10);
 
                 //on app launch Text View Must show zero
-                autoBallHigh.setText("0");
-                view2.setText("0");
-                view3.setText("0");
-                view4.setText("0");
-                view5.setText("0");
+                autoBallHighA.setText("0");
+                view7.setText("0");
+                view8.setText("0");
+                view9.setText("0");
+                view10.setText("0");
 
-                back.setOnClickListener(new View.OnClickListener() {
+                backA.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
@@ -102,106 +102,106 @@ public class AutoScore extends AppCompatActivity {
                     }
 
                 });
-                autoHighUp.setOnClickListener(new View.OnClickListener() {
+                autoHighUpA.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
                         counter6 = counter6 + 1;
-                        autoBallHigh.setText(String.valueOf(counter6));
+                        autoBallHighA.setText(String.valueOf(counter6));
                     }
                 });
 
-                autoHighDown.setOnClickListener(new View.OnClickListener() {
+                autoHighDownB.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
                         counter6 = counter6 - 1;
-                        autoBallHigh.setText(String.valueOf(counter6));
+                        autoBallHighA.setText(String.valueOf(counter6));
                     }
                 });
 
                 //upbuttons
-                upButton2.setOnClickListener(new View.OnClickListener(){
+                upButton7.setOnClickListener(new View.OnClickListener(){
 
                     @Override
                     public void onClick(View v) {
                         counter7 = counter7 + 1;
-                        view2.setText(String.valueOf(counter7));
+                        view7.setText(String.valueOf(counter7));
                     }
                 });
 
-                upButton3.setOnClickListener(new View.OnClickListener(){
+                upButton8.setOnClickListener(new View.OnClickListener(){
 
                     @Override
                     public void onClick(View v) {
 
                         counter8 = counter8 + 1;
-                        view3.setText (String.valueOf(counter8));
+                        view8.setText (String.valueOf(counter8));
                     }
 
                 });
 
-                upButton4.setOnClickListener(new View.OnClickListener(){
+                upButton9.setOnClickListener(new View.OnClickListener(){
 
                     @Override
                     public void onClick(View v) {
 
                         counter9 = counter9 + 1;
-                        view4.setText (String.valueOf(counter9));
+                        view9.setText (String.valueOf(counter9));
                     }
 
                 });
 
-                upButton5.setOnClickListener(new View.OnClickListener (){
+                upButton10.setOnClickListener(new View.OnClickListener (){
 
                     @Override
                     public void onClick(View v) {
 
                         counter10 = counter10 + 1;
-                        view5.setText (String.valueOf(counter10));
+                        view10.setText (String.valueOf(counter10));
                     }
 
                 });
 
-                downButton2.setOnClickListener(new View.OnClickListener (){
+                downButton7.setOnClickListener(new View.OnClickListener (){
 
                     @Override
                     public void onClick(View v) {
 
                         counter7 = counter7 - 1;
-                        view2.setText(String.valueOf(counter7));
+                        view7.setText(String.valueOf(counter7));
 
                     }
                 });
 
-                downButton3.setOnClickListener(new View.OnClickListener (){
+                downButton8.setOnClickListener(new View.OnClickListener (){
 
                     @Override
                     public void onClick(View v) {
 
                         counter8 = counter8 - 1;
-                        view3.setText(String.valueOf(counter8));
+                        view8.setText(String.valueOf(counter8));
                     }
                 });
 
-                downButton4.setOnClickListener(new View.OnClickListener (){
+                downButton9.setOnClickListener(new View.OnClickListener (){
 
                     @Override
                     public void onClick(View v) {
 
                         counter9 = counter9 - 1;
-                        view4.setText(String.valueOf(counter9));
+                        view9.setText(String.valueOf(counter9));
 
                     }
                 });
 
-                downButton5.setOnClickListener(new View.OnClickListener (){
+                downButton10.setOnClickListener(new View.OnClickListener (){
 
                     @Override
                     public void onClick(View v) {
 
                         counter10 = counter10 - 1;
-                        view5.setText (String.valueOf(counter10));
+                        view10.setText (String.valueOf(counter10));
                     }
 
 

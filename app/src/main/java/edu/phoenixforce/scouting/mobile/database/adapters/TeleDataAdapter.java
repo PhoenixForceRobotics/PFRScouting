@@ -35,11 +35,18 @@ public class TeleDataAdapter extends RecyclerView.Adapter<TeleDataAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull TeleDataAdapter.ViewHolder holder, int position) {
 
-        holder.moved.setText(teleDat.get(position).getMoved());
-        holder.highBall.setText(teleDat.get(position).getHighBall());
-        holder.midBall.setText(teleDat.get(position).getMidBall());
-        holder.lowBall.setText(teleDat.get(position).getLowBall());
-        holder.touchedWheel.setText(teleDat.get(position).getTouchedWheel());
+
+
+
+
+       holder.ballLow.setText(teleDat.get(position).getBallLow());
+       holder.ballMid.setText(teleDat.get(position).getBallMid());
+       holder.ballThree.setText(teleDat.get(position).getBallThree());
+       holder.timeStamp.setText(teleDat.get(position).getTimeStamp());
+       holder.missedShot.setText(teleDat.get(position).getMissedShot());
+
+
+
 
 
 
@@ -57,6 +64,12 @@ public class TeleDataAdapter extends RecyclerView.Adapter<TeleDataAdapter.ViewHo
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView ballLow;
+        public TextView ballMid;
+        public TextView ballThree;
+        public TextView timeStamp;
+        public TextView missedShot;
 
         public ViewHolder(View itemView) {
             super(itemView);
