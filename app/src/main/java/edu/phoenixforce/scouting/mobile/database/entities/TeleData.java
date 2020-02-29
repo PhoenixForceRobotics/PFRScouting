@@ -5,30 +5,13 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-
 @Entity
 public class TeleData {
 
-    public TeleData(String ballLow, String ballMid, String ballThree, String timeStamp){
+    public TeleData(String ballLow){
         this.ballLow = ballLow;
-        this.ballMid = ballMid;
-        this.ballThree = ballThree;
-        //Cats are cute! ;)
-        this.timeStamp = timeStamp;
-
-
 
     }
-    @PrimaryKey
-    @NonNull
-    @ColumnInfo(name = "ballLow")
-    private String ballLow;
-
-    @ColumnInfo(name = "ballMid")
-    private String ballMid;
-
-    @ColumnInfo(name = "ballThree")
-    private String ballThree;
 
     public String getBallMid() {
         return ballMid;
@@ -46,36 +29,75 @@ public class TeleData {
         this.ballThree = ballThree;
     }
 
-    public String getMissedShot() {
-        return missedShot;
+    public String getSpunWheelColor() {
+        return spunWheelColor;
     }
 
-    public void setMissedShot(String missedShot) {
-        this.missedShot = missedShot;
+    public void setSpunWheelColor(String spunWheelColor) {
+        this.spunWheelColor = spunWheelColor;
     }
 
-    public String getTimeStamp() {
-        return timeStamp;
+    public String getSpunWheelTimes() {
+        return spunWheelTimes;
     }
 
-    public void setTimeStamp(String timeStamp) {
-        this.timeStamp = timeStamp;
+    public void setSpunWheelTimes(String spunWheelTimes) {
+        this.spunWheelTimes = spunWheelTimes;
     }
 
-    @ColumnInfo(name = "missedShot")
-    private String missedShot;
+    public String getRobotBroken() {
+        return robotBroken;
+    }
 
-    @ColumnInfo(name = "timeStamp")
-    private String timeStamp;
+    public void setRobotBroken(String robotBroken) {
+        this.robotBroken = robotBroken;
+    }
 
+    public String getSoloClimb() {
+        return soloClimb;
+    }
 
+    public void setSoloClimb(String soloClimb) {
+        this.soloClimb = soloClimb;
+    }
+
+    public String getBuddyClimb() {
+        return buddyClimb;
+    }
+
+    public void setBuddyClimb(String buddyClimb) {
+        this.buddyClimb = buddyClimb;
+    }
 
     @NonNull
     public String getBallLow() {
         return ballLow;
     }
 
-    public void setBallLow(@NonNull String ballLow) {
-        this.ballLow = ballLow;
-    }
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "ballLow")
+    private String ballLow;
+
+    @ColumnInfo(name = "ballMid")
+    private String ballMid;
+
+    @ColumnInfo(name = "ballThree")
+    private String ballThree;
+
+    @ColumnInfo(name = "spunWheelColor")
+    private String spunWheelColor;
+
+    @ColumnInfo(name = "spunWheelTimes")
+    private String spunWheelTimes;
+
+    @ColumnInfo(name = "robotBroke")
+    private String robotBroken;
+
+    @ColumnInfo(name = "soloClimb")
+    private String soloClimb;
+
+    @ColumnInfo(name = "buddyClimb")
+    private String buddyClimb;
+
 }

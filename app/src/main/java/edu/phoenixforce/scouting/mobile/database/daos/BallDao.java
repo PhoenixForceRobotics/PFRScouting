@@ -17,12 +17,10 @@ public interface BallDao {
    @Query("SELECT * FROM scores")
    List<Scores> getAllScores();
 
-
    @Insert
     void insertAll(Scores scores);
 
     @Query("DELETE FROM Scores")
     void nukeTable();
-
 
 }

@@ -42,8 +42,8 @@ public class TeleDataAdapter extends RecyclerView.Adapter<TeleDataAdapter.ViewHo
        holder.ballLow.setText(teleDat.get(position).getBallLow());
        holder.ballMid.setText(teleDat.get(position).getBallMid());
        holder.ballThree.setText(teleDat.get(position).getBallThree());
-       holder.timeStamp.setText(teleDat.get(position).getTimeStamp());
-       holder.missedShot.setText(teleDat.get(position).getMissedShot());
+       //holder.timeStamp.setText(teleDat.get(position).getTimeStamp());
+       //holder.missedShot.setText(teleDat.get(position).getMissedShot());
 
 
 

@@ -17,7 +17,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 public interface TeleDao {
 
     @Query("SELECT * FROM teleData")
-    LiveData<List<TeleData>> getAllScores();
+    List<TeleData> getAllScores();
 
 
     @Insert

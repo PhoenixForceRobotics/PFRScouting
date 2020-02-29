@@ -1,4 +1,4 @@
-/*package edu.phoenixforce.scouting.mobile.database.adapters;
+package edu.phoenixforce.scouting.mobile.database.adapters;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -54,4 +54,3 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
     }
 }
 
- */
