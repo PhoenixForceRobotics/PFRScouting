@@ -3,9 +3,15 @@ package edu.phoenixforce.scouting.mobile.layouts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,9 +26,14 @@ import com.google.android.material.snackbar.Snackbar;
 
 import static java.sql.DriverManager.println;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import edu.phoenixforce.scouting.mobile.common.Constants;
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 
 
 public class ActivityMain extends AppCompatActivity {
@@ -39,7 +50,7 @@ public class ActivityMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-
+        final ActivityMain thisActivity = this;
 
 
             skipper = (Button) findViewById(R.id.button2);
@@ -70,7 +81,38 @@ public class ActivityMain extends AppCompatActivity {
 
             });
 
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                if (ContextCompat.checkSelfPermission(thisActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                        != PackageManager.PERMISSION_GRANTED) {
+
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(thisActivity,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                        Snackbar.make(fab, "We can't copy the database without permission to store it to your external storage.",
+                                Snackbar.LENGTH_INDEFINITE).setAction("Action", null).show();
+                        // No explanation needed; request the permission
+                        String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                        ActivityCompat.requestPermissions(thisActivity, permissions, Constants.EXTERNAL_FILE_STORAGE_PERMISSION);
+
+                    } else {
+                        // No explanation needed; request the permission
+                        String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                        ActivityCompat.requestPermissions(thisActivity, permissions, Constants.EXTERNAL_FILE_STORAGE_PERMISSION);
+                    }
+                } else {
+                    copyDatabase();
+                }
+            }
+        });
+
+        if (!Configuration.getInstance().isConfigured()) {
+            Snackbar.make(fab, "Device has not yet been configured. Switching to config",
+                    Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            openSettings();
+        }
         }
 
        /* @Override
@@ -97,8 +139,44 @@ public class ActivityMain extends AppCompatActivity {
         }*/
 
 
+    private void copyDatabase() {
+        try
+        {
 
-        public void openAutoScore () {
+            File sourceDb = new File(getApplicationContext().getDatabasePath(ScoreDataBase.DBNAME).getAbsolutePath());
+            File targetDb = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/"
+                    + ScoreDataBase.DBNAME + "_" + Configuration.getInstance().getTbaTeamId() + "_"
+                    + Configuration.getInstance().getDeviceId() + ".db");
+
+            FileInputStream fis = new FileInputStream(sourceDb);
+            FileOutputStream fos = new FileOutputStream(targetDb);
+
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = fis.read(buffer))>0){
+                fos.write(buffer, 0, length);
+            }
+
+            // Close the streams
+            fos.flush();
+            fos.close();
+            fis.close();
+
+            Snackbar.make(this.findViewById(R.id.fab), "Copy complete.", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+
+        }
+        catch (Exception e) {
+            Snackbar.make(findViewById(R.id.fab), "Exception copying data " + e.getMessage(), Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
+
+
+    }
+
+
+
+    public void openAutoScore () {
 
             Intent intent = new Intent(this, TeleScore.class);
             startActivity(intent);
@@ -116,7 +194,23 @@ public class ActivityMain extends AppCompatActivity {
         Intent intent = new Intent(this,  ConfigActivity.class);
         startActivity(intent);
 
-        }}
+        }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case Constants.EXTERNAL_FILE_STORAGE_PERMISSION:
+                if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    copyDatabase();
+                }
+                else{
+                    //Denied.
+                }
+                break;
+        }
+    }
+
+}
 
 
 

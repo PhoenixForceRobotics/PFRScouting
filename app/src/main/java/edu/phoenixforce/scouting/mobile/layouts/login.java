@@ -25,7 +25,9 @@ public class login extends AppCompatActivity {
 
     Button log, bypass, bypassII;
 
-    String  user,pass, Lars, hello;
+    String  pass, Lars, hello;
+
+    public static String user;
 
     HashMap<String, String> users = new HashMap();
 

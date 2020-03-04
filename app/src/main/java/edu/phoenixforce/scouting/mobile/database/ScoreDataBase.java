@@ -35,6 +35,8 @@ public abstract class ScoreDataBase extends RoomDatabase {
     public static final ExecutorService databaseWriteExecutor =
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
+    public static final String DBNAME = "scouting_database";
+
     public abstract BallDao ballDao();
 
     public abstract AutoDao autoDao();

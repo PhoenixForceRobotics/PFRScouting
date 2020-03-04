@@ -50,7 +50,10 @@
         android:background="@color/colorPrimaryDark"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#FFFFFF"
+        android:textSize="100sp"
+        android:text="User "/>
 
     <TextView
         android:id="@+id/lblPassword"
@@ -63,8 +66,10 @@
         android:layout_marginRight="0dp"
         android:layout_marginBottom="375dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Password"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="Password "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="100sp" />
 
     <EditText
         android:id="@+id/txtPassword"

@@ -8,10 +8,17 @@ import androidx.room.PrimaryKey;
 @Entity
 public class TeleData {
 
-    public TeleData(String ballLow){
+    public TeleData(String ballLow, String ballMid, String ballThree, String spunWheelColor, String spunWheelTimes, String robotBroken, String soloClimb, String buddyClimb) {
         this.ballLow = ballLow;
-
+        this.ballMid = ballMid;
+        this.ballThree = ballThree;
+        this.spunWheelColor = spunWheelColor;
+        this.spunWheelTimes = spunWheelTimes;
+        this.robotBroken = robotBroken;
+        this.soloClimb = soloClimb;
+        this.buddyClimb = buddyClimb;
     }
+
 
     public String getBallMid() {
         return ballMid;

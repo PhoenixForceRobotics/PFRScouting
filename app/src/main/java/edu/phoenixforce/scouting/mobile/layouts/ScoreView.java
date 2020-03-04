@@ -49,9 +49,9 @@ Button deleter;
             .build();
 
 
-    List<Scores> ascores = db.ballDao().getAllScores();
+    //List<Scores> ascores = db.ballDao().getAllScores();
     recyclerView.setLayoutManager(new LinearLayoutManager(this));
-    adapter = new BallScoreAdapter(ascores);
+    //adapter = new BallScoreAdapter(ascores);
     recyclerView.setAdapter(adapter);
 
 
@@ -60,7 +60,7 @@ Button deleter;
     @Override
     public void onClick(View v){
 
-        db.ballDao().nukeTable();
+       // db.ballDao().nukeTable();
 
 
 

@@ -28,10 +28,12 @@ import edu.phoenixforce.scouting.mobile.restservicecalls.ICollectionResponseHand
 import edu.phoenixforce.scouting.mobile.restservicecalls.IObjectResponseHandler;
 
 public class ConfigActivity extends AppCompatActivity {
-
+    public static int deviceId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         // Set the layout.
         setContentView(R.layout.activity_config);
@@ -96,7 +98,7 @@ public class ConfigActivity extends AppCompatActivity {
         Configuration config = Configuration.getInstance();
 
         // Get a number for the device id and save it.
-        int deviceId = Integer.parseInt(getEditTextValue(R.id.editDeviceId));
+        deviceId = Integer.parseInt(getEditTextValue(R.id.editDeviceId));
         config.setDeviceId(deviceId);
 
         // Get a number for he team ID and save it.

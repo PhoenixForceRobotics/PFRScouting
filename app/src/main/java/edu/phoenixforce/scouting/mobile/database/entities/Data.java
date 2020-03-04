@@ -1,9 +1,17 @@
 package edu.phoenixforce.scouting.mobile.database.entities;
 
+import android.widget.EditText;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import com.example.fyrebirdscout11.R;
+
+import edu.phoenixforce.scouting.mobile.layouts.login;
+import edu.phoenixforce.scouting.mobile.layouts.ConfigActivity;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -11,11 +19,15 @@ import java.util.Date;
 //@Entity(tableName = "data_table")
 public class Data {
 
+
     public Data( ){
 
+
         //this.timeStamp = new Date();
-        this.currentScout = currentScout;
-        this.devNum = devNum;
+        this.currentScout = (login.user);
+        this.devNum = (ConfigActivity.deviceId);
+       // this.matchKey = TODO finish this!
+       // this.teamKey =  TODO Finish this!
 
         //Here we can get things like the device id and time number
 
