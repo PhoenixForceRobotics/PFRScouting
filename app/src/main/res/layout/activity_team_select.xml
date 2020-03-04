@@ -4,21 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:visibility="visible"
     tools:context="edu.phoenixforce.scouting.mobile.layouts.team_select">\
 
 
     <EditText
         android:id="@+id/matchNum"
         android:layout_width="match_parent"
-        android:layout_height="66dp"
+        android:layout_height="177dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginRight="-2dp"
-        android:layout_marginBottom="289dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="408dp"
         android:background="@color/colorPrimaryDark"
-        android:inputType="textPassword">
+        android:hint="Enter Match Number!"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF">
 
         <requestFocus />
     </EditText>
@@ -34,15 +40,63 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="540dp"
+        android:layout_marginBottom="173dp"
         android:background="@color/colorPrimaryDark"
         android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="User "
         android:textColor="#FFFFFF"
         android:textSize="100sp"
-        android:text="User "/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="402dp"
+        android:layout_marginRight="402dp"
+        android:layout_marginBottom="598dp"
+        android:background="#00000000"
+        android:text="Type Match Number"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="436dp"
+        android:layout_marginRight="436dp"
+        android:layout_marginBottom="348dp"
+        android:background="#00000000"
+        android:text="Set Team Number"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/goScout"
+        android:layout_width="314dp"
+        android:layout_height="112dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="484dp"
+        android:layout_marginRight="484dp"
+        android:layout_marginBottom="49dp"
+        android:background="#581515"
+        android:text="Start Scouting!"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
 
 
 </RelativeLayout>

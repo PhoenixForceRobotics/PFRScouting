@@ -288,12 +288,8 @@ int buddy = 0;
                 openMainActivity();
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
 
-                //another rickrole
+                //another rickrole - no more, sorry Aaron!
 
-                Intent browserIntent = new Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
-                startActivity(browserIntent);
 
             }
         });
@@ -449,7 +445,7 @@ int buddy = 0;
     }
     public void openMainActivity(){
 
-        Intent intent = new Intent(this, ActivityMain.class);
+        Intent intent = new Intent(this, team_select.class);
         startActivity(intent);
 
     }

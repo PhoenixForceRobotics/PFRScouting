@@ -40,15 +40,16 @@ public class login extends AppCompatActivity {
         nombre = findViewById(R.id.name);
         pWord = findViewById(R.id.txtPassword);
         log = findViewById(R.id.btnSubmit);
-        bypass = findViewById(R.id.bypass);
-        bypassII = findViewById(R.id.bypassII);
+        //bypass = findViewById(R.id.bypass);
+        //bypassII = findViewById(R.id.bypassII);
 
         Lars = Lars;
 
 
         pass = pWord.getText().toString();
 
-        String[] items = new String[]{"basic", "Lars", "Leo", "Jonathan", "Emily", "Aaron", "Erin", "Admin"}; //Hey andrew why is my name the second to last
+        String[] items = new String[]{"basic", "Andrew", "Admin", "Aaron", "Cap", "Leo",
+        "Guthrie", "Emily", "Jonathan", "Edward", "Susan", "Harpreet", "Christian", "Katie", "Bert", "Alexander", "Luci"}; //Hey andrew why is my name the second to last
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -65,7 +66,7 @@ public class login extends AppCompatActivity {
 
 
         });
-        bypass.setOnClickListener(new View.OnClickListener() {
+       /* bypass.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -96,6 +97,8 @@ public class login extends AppCompatActivity {
 
         });
 
+
+        */
 
     }
 
@@ -129,15 +132,27 @@ public class login extends AppCompatActivity {
 
 
             //Create the users in the HashMap;
-            users.put("Lars", "hello");
-            users.put("Emily", "7902");
-            users.put("Aaron", "2277766666");
-            users.put("Admin", "nimda");
 
+            users.put("Emily", "1116");
+            users.put("Aaron", "1112");
+            users.put("Admin", "nimda");
+            users.put("Andrew", "1111");
+            users.put("Cap", "1113");
+            users.put("Leo", "1114");
+            users.put("Guthrie", "1115");
+            users.put("Jonathan", "1117");
+            users.put("Edward", "1118");
+            users.put("Susan", "1119");
+            users.put("Harpreet", "1110");
+            users.put("Christian", "1120");
+            users.put("Katie", "1121");
+            users.put("Bert", "1122");
+            users.put("Alexander", "1123");
+            users.put("Luci", "1124");
 
             if (user.equals("basic")) {
 
-                goScout();
+
 
             } else {
 
@@ -173,7 +188,7 @@ public class login extends AppCompatActivity {
 
     public void goScout() {
 
-        Intent intent = new Intent(this, ActivityMain.class);
+        Intent intent = new Intent(this, team_select.class);
         startActivity(intent);
 
 
