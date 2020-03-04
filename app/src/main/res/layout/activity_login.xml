@@ -19,7 +19,7 @@
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginBottom="389dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#AC1626"
         android:spinnerMode="dropdown"
         android:text="User "
         android:textColor="#FFFFFF"
@@ -37,7 +37,7 @@
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
         android:layout_marginBottom="138dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#AC1626"
         android:inputType="textPassword">
 
         <requestFocus />
@@ -71,7 +71,7 @@
         android:text="Type password below! "
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#FFFFFF"
-        android:textSize="100sp" />
+        android:textSize="60sp" />
 
     <TextView
         android:id="@+id/lblPassword2"
@@ -87,7 +87,7 @@
         android:text="Touch below to select user!"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#FFFFFF"
-        android:textSize="100sp" />
+        android:textSize="60sp" />
 
 </RelativeLayout>
 
