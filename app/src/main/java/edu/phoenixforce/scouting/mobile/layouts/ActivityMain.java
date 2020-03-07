@@ -36,12 +36,12 @@ import edu.phoenixforce.scouting.mobile.common.Constants;
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 
 
-public class ActivityMain extends AppCompatActivity {
+public class ActivityMain extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     private Button scores;
     private Button skipper;
     private Button rick;
     private Button choice;
-
+    private FloatingActionButton fab;
 
 
 
@@ -120,7 +120,7 @@ public class ActivityMain extends AppCompatActivity {
         }
         }
 
-       /* @Override
+        @Override
         public boolean onCreateOptionsMenu (Menu menu){
             // Inflate the menu; this adds items to the action bar if it is present.
             getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -141,7 +141,7 @@ public class ActivityMain extends AppCompatActivity {
             }
 
             return super.onOptionsItemSelected(item);
-        }*/
+        }
 
 
     private void copyDatabase() {

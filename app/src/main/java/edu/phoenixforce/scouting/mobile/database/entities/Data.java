@@ -1,9 +1,11 @@
 package edu.phoenixforce.scouting.mobile.database.entities;
 
+import android.content.SharedPreferences;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -12,22 +14,31 @@ import com.example.fyrebirdscout11.R;
 
 import edu.phoenixforce.scouting.mobile.layouts.login;
 import edu.phoenixforce.scouting.mobile.layouts.ConfigActivity;
+import edu.phoenixforce.scouting.mobile.layouts.team_select;
 
 import java.util.Calendar;
 import java.util.Date;
 
+import static android.content.Context.MODE_PRIVATE;
+import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
+import static edu.phoenixforce.scouting.mobile.layouts.login.TEXT;
+
 //@Entity(tableName = "data_table")
-public class Data {
+public class Data  {
 
 
-    public Data( ){
+
+    public  Data(){
+
+
+
 
 
         //this.timeStamp = new Date();
-        this.currentScout = (login.user);
+        this.currentScout = (login.text)  ;
         this.devNum = (ConfigActivity.deviceId);
-       // this.matchKey = TODO finish this!
-       // this.teamKey =  TODO Finish this!
+        this.match = (team_select.matchNumber);
+        this.team =  (team_select.teamNumber);
 
         //Here we can get things like the device id and time number
 
@@ -49,27 +60,43 @@ public class Data {
     @ColumnInfo(name = "devId")
     private int devNum;
 
+    @ColumnInfo(name = "team")
+    private String team;
+
+    @ColumnInfo(name = "match")
+    private String match;
     public String getTeamKey() {
-        return teamKey;
+        return team;
     }
 
-    public void setTeamKey(String teamKey) {
-        this.teamKey = teamKey;
+    public void setTeamKey(String team) {
+        this.team = team;
     }
 
     public String getMatchKey() {
-        return matchKey;
+        return match;
     }
 
-    public void setMatchKey(String matchKey) {
-        this.matchKey = matchKey;
+    public void setMatchKey(String match) {
+        this.match = match;
     }
 
-    @ColumnInfo(name = "team_Key")
-    private String teamKey;
+    public String getTeam() {
+        return team;
+    }
 
-    @ColumnInfo(name = "match_Key")
-    private String matchKey;
+    public void setTeam(String team) {
+        this.team = team;
+    }
+
+    public String getMatch() {
+        return match;
+    }
+
+    public void setMatch(String match) {
+        this.match = match;
+    }
+
 
    /* @NonNull
     public Date getTimeStamp() {
@@ -103,7 +130,11 @@ public class Data {
 
 
 
+public void scoutName(){
 
+
+
+}
 
 
 }

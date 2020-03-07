@@ -6,9 +6,9 @@ import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.view.View;
@@ -17,17 +17,13 @@ import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 
-import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
+import java.util.Calendar;
+
 import edu.phoenixforce.scouting.mobile.database.ViewModels.TeleView;
-import edu.phoenixforce.scouting.mobile.database.adapters.TeleDataAdapter;
-import edu.phoenixforce.scouting.mobile.database.daos.TeleDao;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
 
 public class TeleScore extends AppCompatActivity {
-    //IGNORE ME
-    public static final String EXTRA_REPLY = "com.example.android.wordlistsql.REPLY";
-
 //TextViews
 TextView autoBallHigh;
 TextView view2;
@@ -51,6 +47,7 @@ Button downButton3;
 Button downButton4;
 Button downButton5;
 Button back;
+Button timer;
 
 //integers
 public static int counter = 0;
@@ -160,12 +157,16 @@ public static int counter = 0;
         downButton9 = findViewById(R.id.downbutton9);
         downButton10 = findViewById(R.id.downbutton10);
 
+        timer =findViewById(R.id.timer);
+
         //on app launch Text View Must show zero
         autoBallHighA.setText("0");
         view7.setText("0");
         view8.setText("0");
         view9.setText("0");
         view10.setText("0");
+
+
 
 
 
@@ -182,6 +183,16 @@ public static int counter = 0;
 
        */
 
+      timer.setOnClickListener(new View.OnClickListener(){
+          @Override
+          public void onClick(View v){
+
+              writeTime();
+
+          }
+
+
+      });
 
         autoHighUpA.setOnClickListener(new View.OnClickListener() {
 
@@ -295,6 +306,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                openMainActivity();
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 TeleData teleData = new TeleData(String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
                         String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),
@@ -470,6 +482,16 @@ public static int counter = 0;
 
         Intent intent = new Intent(this, RecyclerViewViewer.class);
         startActivity(intent);
+
+    }
+
+           public void writeTime(){
+
+               //creating Calendar instance
+               Calendar calendar = Calendar.getInstance();
+               //Returns current time in millis
+               long timeMilli2 = calendar.getTimeInMillis();
+               System.out.println("Time in milliseconds using Calendar: " + timeMilli2);
 
     }
 }

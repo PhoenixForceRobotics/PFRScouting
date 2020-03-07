@@ -2,17 +2,21 @@ package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 
 import java.util.HashMap;
+
 
 public class login extends AppCompatActivity {
 
@@ -20,9 +24,14 @@ public class login extends AppCompatActivity {
 
     EditText pWord;
 
-    Button log, bypass, bypassII;
+    Button log;
 
-    String  pass, Lars, hello;
+    String  pass;
+
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String TEXT = "user";
+
+    public static String text;
 
     public static String user;
 
@@ -31,6 +40,8 @@ public class login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        loadData();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -40,7 +51,7 @@ public class login extends AppCompatActivity {
         //bypass = findViewById(R.id.bypass);
         //bypassII = findViewById(R.id.bypassII);
 
-        Lars = Lars;
+
 
 
         pass = pWord.getText().toString();
@@ -58,6 +69,7 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 validateUser();
+
 
             }
 
@@ -98,6 +110,8 @@ public class login extends AppCompatActivity {
         */
 
     }
+
+
 
     /*public void validateUser(){
 
@@ -156,7 +170,7 @@ public class login extends AppCompatActivity {
 
 
                 if (pass.equals(users.get(user))){
-                    goScout();
+                    saveUser();
 
 
                 }else{
@@ -182,7 +196,19 @@ public class login extends AppCompatActivity {
             //goScout();
         }
 
+        public void saveUser(){
 
+SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+SharedPreferences.Editor editor = myPrefs.edit();
+
+editor.putString(TEXT, user);
+
+editor.apply();
+
+Toast.makeText(this, "Logged In", Toast.LENGTH_SHORT);
+
+goScout();
+        }
     public void goScout() {
 
         Intent intent = new Intent(this, team_select.class);
@@ -190,6 +216,19 @@ public class login extends AppCompatActivity {
 
 
     }
+
+    public void loadData(){
+
+
+
+        SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        text = myPrefs.getString(TEXT, "");
+
+
+
+    }
+
+
 
 
 }

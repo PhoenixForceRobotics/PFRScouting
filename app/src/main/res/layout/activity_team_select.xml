@@ -18,18 +18,19 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="408dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="413dp"
+        android:background="#8B0818"
         android:hint="Enter Match Number!"
-        android:inputType="numberPassword"
+        android:inputType="number"
         android:maxLength="3"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF">
+        android:textColor="#FFFFFF"
+        android:textSize="100sp">
 
         <requestFocus />
-    </EditText>
+</EditText>
 
-    <Spinner
+<EditText
         android:id="@+id/teams"
         android:layout_width="match_parent"
 
@@ -41,11 +42,13 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="173dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#8B0818"
+        android:hint="Input team number"
+        android:inputType="text"
         android:spinnerMode="dropdown"
-        android:text="User "
         android:textColor="#FFFFFF"
         android:textSize="100sp"
+        android:maxLength="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

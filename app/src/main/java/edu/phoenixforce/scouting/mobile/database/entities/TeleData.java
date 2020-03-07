@@ -83,27 +83,11 @@ public class TeleData extends Data{
         this.buddyClimb = buddyClimb;
     }
 
-    public String getBallsIntook() {
-        return BallsIntook;
-    }
-
-    public void setBallsIntook(String ballsIntook) {
-        BallsIntook = ballsIntook;
-    }
-
-    public String getShotsMissed() {
-        return ShotsMissed;
-    }
-
-    public void setShotsMissed(String shotsMissed) {
-        ShotsMissed = shotsMissed;
-    }
-
     public String getBallLow() {
         return ballLow;
     }
 
-    @PrimaryKey
+
     @NotNull
     @ColumnInfo(name = "ballLow")
     private String ballLow;
@@ -128,6 +112,27 @@ public class TeleData extends Data{
 
     @ColumnInfo(name = "buddyClimb")
     private String buddyClimb;
+
+
+    public void setBallLow(@NotNull String ballLow) {
+        this.ballLow = ballLow;
+    }
+
+    public String getBallsIntook() {
+        return BallsIntook;
+    }
+
+    public void setBallsIntook(String ballsIntook) {
+        BallsIntook = ballsIntook;
+    }
+
+    public String getShotsMissed() {
+        return ShotsMissed;
+    }
+
+    public void setShotsMissed(String shotsMissed) {
+        ShotsMissed = shotsMissed;
+    }
 
     @ColumnInfo(name = "BallsInook")
     private String BallsIntook;

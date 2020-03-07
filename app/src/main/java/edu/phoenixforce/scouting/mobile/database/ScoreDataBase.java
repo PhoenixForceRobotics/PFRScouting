@@ -38,7 +38,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
     public static final ExecutorService databaseWriteExecutor =
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
-    public static final String DBNAME = "scouting_database";
+    public static final String DBNAME = "ScoreDatabase";
 
     public abstract BallDao ballDao();
 
@@ -56,7 +56,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
             synchronized (ScoreDataBase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), ScoreDataBase.class,
-                            "ScoreDatabase").addCallback(RoomDatabaseCallBack).build();
+                            DBNAME).addCallback(RoomDatabaseCallBack).build();
                 }
             }
         }

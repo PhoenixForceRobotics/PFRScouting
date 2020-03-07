@@ -1,5 +1,7 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -7,9 +9,11 @@ import android.util.Base64;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,17 +31,38 @@ import edu.phoenixforce.scouting.mobile.bluealliance.resources.TeamMedia;
 import edu.phoenixforce.scouting.mobile.restservicecalls.ICollectionResponseHandler;
 import edu.phoenixforce.scouting.mobile.restservicecalls.IObjectResponseHandler;
 
+import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
+;
+
 public class ConfigActivity extends AppCompatActivity {
     public static int deviceId;
+    Button saver;
+
+    public EditText devNum;
+    public static final String TEXT = "devNum";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        devNum = findViewById(R.id.editDeviceId);
 
 
 
         // Set the layout.
         setContentView(R.layout.activity_config);
+        saver = findViewById(R.id.btnSave);
 
+        saver.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                saveDev();
+
+
+            }
+
+
+        });
 
         // The TbaTeamId editor has the team ID in it and we need to look up the team details
         // when it changes. The following code attaches listeners to the editor.
@@ -72,6 +97,24 @@ public class ConfigActivity extends AppCompatActivity {
 
     }
 
+  public void saveDev(){
+
+
+
+      SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+      SharedPreferences.Editor editor = myPrefs.edit();
+
+      editor.putString(TEXT, devNum.getText().toString());
+
+      editor.apply();
+
+      Toast.makeText(this, "Saved Device Number", Toast.LENGTH_SHORT);
+
+      Intent intent = new Intent(this, ActivityMain.class);
+
+      startActivity(intent);
+
+  }
     // Set the values of the editTexts to match the configuration values.
     private void setScreenValues() {
         Configuration config = Configuration.getInstance();
@@ -227,4 +270,5 @@ public class ConfigActivity extends AppCompatActivity {
         teamMediaRestCall.invokeCall();
 
     }
+
 }
