@@ -6,6 +6,7 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,7 +30,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
 
 
-@Database(entities = {Scores.class, AutoData.class, Team.class, TeleData.class, DevId.class} , version = 1, exportSchema = false)
+@Database(entities = {Scores.class, AutoData.class, Team.class, TeleData.class, DevId.class} , version = 2, exportSchema = false)
 public abstract class ScoreDataBase extends RoomDatabase {
 
     private static volatile ScoreDataBase INSTANCE;
@@ -70,9 +71,9 @@ public abstract class ScoreDataBase extends RoomDatabase {
             databaseWriteExecutor.execute(() -> {
 
                 TeleDao dao1 = INSTANCE.teleDao();
-                dao1.nukeTable();
-                TeleData teleData = new TeleData("hi", "hui", "lkdbnc", "csvs", "scdsv", "cvsdv", "svdvs", "vcsdvsdv");
-                dao1.insert(teleData);
+                //dao1.nukeTable();
+                //TeleData teleData = new TeleData("hi", "hui", "lkdbnc", "csvs", "scdsv", "cvsdv", "svdvs", "vcsdvsdv");
+                //dao1.insert(teleData);
 
                 //unless you want something to happen when the application opens, dont mess with this
             });

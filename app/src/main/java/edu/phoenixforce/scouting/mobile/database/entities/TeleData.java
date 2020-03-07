@@ -8,9 +8,11 @@ import androidx.room.PrimaryKey;
 import org.jetbrains.annotations.NotNull;
 
 @Entity
-public class TeleData {
+public class TeleData extends Data{
 
-    public TeleData(String ballLow, String ballMid, String ballThree, String spunWheelColor, String spunWheelTimes, String robotBroken, String soloClimb, String buddyClimb) {
+    public TeleData(@NotNull String ballLow, String ballMid, String ballThree, String spunWheelColor,
+                    String spunWheelTimes, String robotBroken, String soloClimb,
+                    String buddyClimb, String BallsIntook, String ShotsMissed) {
         this.ballLow = ballLow;
         this.ballMid = ballMid;
         this.ballThree = ballThree;
@@ -19,6 +21,9 @@ public class TeleData {
         this.robotBroken = robotBroken;
         this.soloClimb = soloClimb;
         this.buddyClimb = buddyClimb;
+        this.BallsIntook = BallsIntook;
+        this.ShotsMissed = ShotsMissed;
+
     }
 
 
@@ -78,6 +83,22 @@ public class TeleData {
         this.buddyClimb = buddyClimb;
     }
 
+    public String getBallsIntook() {
+        return BallsIntook;
+    }
+
+    public void setBallsIntook(String ballsIntook) {
+        BallsIntook = ballsIntook;
+    }
+
+    public String getShotsMissed() {
+        return ShotsMissed;
+    }
+
+    public void setShotsMissed(String shotsMissed) {
+        ShotsMissed = shotsMissed;
+    }
+
     public String getBallLow() {
         return ballLow;
     }
@@ -107,5 +128,11 @@ public class TeleData {
 
     @ColumnInfo(name = "buddyClimb")
     private String buddyClimb;
+
+    @ColumnInfo(name = "BallsInook")
+    private String BallsIntook;
+
+    @ColumnInfo(name = "ShotsMissed")
+    private String ShotsMissed;
 
 }

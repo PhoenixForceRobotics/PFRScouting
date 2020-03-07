@@ -52,10 +52,13 @@ public class TeleDataAdapter extends RecyclerView.Adapter<TeleDataAdapter.ViewHo
             TeleData current = teleDat.get(position);
             TeleData lessCurrent = teleDat.get(position);
             TeleData EvenLessCurrent = teleDat.get(position);
+            TeleData TheEvenMostCurrent = teleDat.get(position);
+            TeleData TheLeastCurrent = teleDat.get(position);
             holder.ItemView.setText(lessCurrent1.getBallLow() + " - " + current1.getBallMid() + " - "
                     + EvenLessCurrent1.getBallThree() + " - " + TheMostCurrent1.getBuddyClimb() + " - "
                     + TheMostCurrent.getRobotBroken() + " - " + current.getSoloClimb() + " - " +
-                    lessCurrent.getSpunWheelColor() + " - " + EvenLessCurrent.getSpunWheelTimes()
+                    lessCurrent.getSpunWheelColor() + " - " + EvenLessCurrent.getSpunWheelTimes() + " - " +
+                    TheLeastCurrent.getShotsMissed()  + " - " + TheEvenMostCurrent.getBallsIntook()
             );
 
         }
