@@ -3,6 +3,7 @@ package edu.phoenixforce.scouting.mobile.database.daos;
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import java.util.List;
@@ -17,11 +18,11 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 public interface TeleDao {
 
     @Query("SELECT * FROM teleData")
-    List<TeleData> getAllScores();
+    LiveData<List<TeleData>> getAllScores();
 
 
-    @Insert
-    void insertAll(TeleData teleData);
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    void insert(TeleData teleData);
 
     @Query("DELETE FROM TeleData")
     void nukeTable();

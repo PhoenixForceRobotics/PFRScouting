@@ -2,6 +2,8 @@ package edu.phoenixforce.scouting.mobile.database.Repositories;
 
 import android.app.Application;
 
+import androidx.lifecycle.LiveData;
+
 import java.util.List;
 
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
@@ -11,7 +13,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 public class TeleRepo {
 
     private TeleDao Tele;
-    private List<TeleData> todos;
+    private LiveData<List<TeleData>> todos;
 
     public TeleRepo(Application application) {
         ScoreDataBase data = ScoreDataBase.getDatabase(application);
@@ -19,13 +21,13 @@ public class TeleRepo {
         todos = Tele.getAllScores();
     }
 
-    public List<TeleData> getTele() {
+    public LiveData<List<TeleData>> getTele() {
         return todos;
     }
 
     public void insert(TeleData teleData){
         ScoreDataBase.databaseWriteExecutor.execute(() -> {
-            Tele.insertAll(teleData);
+            Tele.insert(teleData);
         });
     }
 }

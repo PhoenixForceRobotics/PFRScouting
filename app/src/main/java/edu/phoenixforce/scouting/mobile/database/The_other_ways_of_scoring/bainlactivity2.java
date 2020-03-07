@@ -32,12 +32,12 @@ public class bainlactivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bctivity_main);
+        setContentView(R.layout.bctivity_main2);
 
         mWordViewModel = new ViewModelProvider(this).get(ViewModel.class);
 
         WordListAdapter adapter = new WordListAdapter(this);
-        RecyclerView recyclerView = findViewById(R.id.recyclerview);
+        RecyclerView recyclerView = findViewById(R.id.bctivity_maine);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(llm);

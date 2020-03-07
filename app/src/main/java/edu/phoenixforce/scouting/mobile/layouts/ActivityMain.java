@@ -50,6 +50,11 @@ public class ActivityMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+        Log.d("Night mode update", TeleScore.spunwheel + "" + TeleScore.counter4 + "" + String.valueOf(TeleScore.colorwheel)+ ""
+                +String.valueOf(TeleScore.counter3) + TeleScore.colorwheel + "" + String.valueOf(TeleScore.spunwheel)+ "" + String.valueOf(TeleScore.solo)+ "" +
+                String.valueOf(TeleScore.counter2) + "" + TeleScore.buddy + "" +
+                String.valueOf(TeleScore.counter) + String.valueOf(TeleScore.balls) + String.valueOf(TeleScore.counter6) + String.valueOf(TeleScore.counter7)
+                + String.valueOf(TeleScore.counter8) + String.valueOf(TeleScore.counter9) + String.valueOf(TeleScore.counter10));
         final ActivityMain thisActivity = this;
 
 

@@ -20,7 +20,7 @@ class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolde
 
         private WordViewHolder(View itemView) {
             super(itemView);
-            wordItemView = itemView.findViewById(R.id.textView);
+            wordItemView = itemView.findViewById(R.id.textView10);
         }
     }
 
@@ -50,26 +50,6 @@ class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolde
             holder.wordItemView.setText("No Word");
         }
     }
-    /*
-    @SuppressLint("SetTextI18n")
-    @Override
-    public void onBindViewHolder(WordViewHolder holder, int position) {
-        if (mWords == null && mWords1 == null) {
-            holder.wordItemView.setText("No Word");
-        } else {
-            ClimberScore TheMostCurrent1 = mWords.get(position);
-            ClimberScore current1 = mWords.get(position);
-            ClimberScore lessCurrent1 = mWords.get(position);
-            ClimberScore EvenLessCurrent1 = mWords.get(position);
-            color_wheel current = mWords1.get(position);
-            color_wheel lessCurrent = mWords1.get(position);
-            holder.wordItemView.setText(lessCurrent1.isBrokeDown() + ", " + current1.isCanBuddyClimb() + ", "
-                    + EvenLessCurrent1.isCanClimb() + ", " + TheMostCurrent1.isDefenceMostOfTheTime() +" - " +
-                    current.getColorWheelCanSpin() + ", " + lessCurrent.getColorWheelCanTurnToColor());
-
-        }
-    }
-     */
 
     void setWords(List<color_wheel> words){
         mWords = words;

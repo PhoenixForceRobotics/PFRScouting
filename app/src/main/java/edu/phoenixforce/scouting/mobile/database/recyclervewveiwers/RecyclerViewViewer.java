@@ -1,4 +1,11 @@
-package edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring;
+package edu.phoenixforce.scouting.mobile.database.recyclervewveiwers;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,46 +14,42 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
-
 import com.example.fyrebirdscout11.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
+import edu.phoenixforce.scouting.mobile.database.ViewModels.TeleView;
+import edu.phoenixforce.scouting.mobile.database.adapters.TeleDataAdapter;
+import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.layouts.EActivity;
+import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
 
-import static java.util.Objects.requireNonNull;
 
 @SuppressLint("Registered")
-public class bainlactivity extends AppCompatActivity {
-
-    private ViewModelII mWordViewModelII;
+public class RecyclerViewViewer extends AppCompatActivity {
+    public static TeleView mWordViewModelII;
     public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bctivity_main);
+        setContentView(R.layout.bctivity_main32);
 
-        mWordViewModelII = new ViewModelProvider(this).get(ViewModelII.class);
+        mWordViewModelII = new ViewModelProvider(this).get(TeleView.class);
 
-        ListAdapter adapterII = new ListAdapter(this);
-        RecyclerView recyclerView1 = findViewById(R.id.bctivity_maine2);
+        TeleDataAdapter adapterII = new TeleDataAdapter(this);
+        RecyclerView recyclerView1 = findViewById(R.id.recyclerview32);
         LinearLayoutManager llmII = new LinearLayoutManager(this);
         llmII.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView1.setLayoutManager(llmII);
         recyclerView1.setAdapter( adapterII );
 
 
-        mWordViewModelII.getAllWords().observe(this, new Observer<List<ClimberScore>>(){
+        mWordViewModelII.getAllWords().observe(this, new Observer<List<TeleData>>(){
             @Override
-            public void onChanged(@Nullable final List<ClimberScore> wordsII) {
-                adapterII.setWords(wordsII);
+            public void onChanged(List<TeleData> teleData) {
+                adapterII.setData1(teleData);
             }
         });
 
@@ -54,7 +57,7 @@ public class bainlactivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(bainlactivity.this, EActivity.class);
+                Intent intent = new Intent(RecyclerViewViewer.this, EActivity.class);
                 startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE);
             }
         });
@@ -64,8 +67,12 @@ public class bainlactivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == NEW_WORD_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
-            ClimberScore climberScore = new ClimberScore(EActivity.oof, 1, 1, 1);
-            mWordViewModelII.insert(climberScore);
+            TeleData teleData = new TeleData(String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),
+                    String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),
+                    String.valueOf(TeleScore.solo),String.valueOf(TeleScore.buddy));
+                //TODO this /\
+            mWordViewModelII.insert(teleData);
+            Log.d("Night Mode Update", teleData.toString());
         } else {
             Toast.makeText(
                     getApplicationContext(),
@@ -75,3 +82,4 @@ public class bainlactivity extends AppCompatActivity {
     }
 
 }
+

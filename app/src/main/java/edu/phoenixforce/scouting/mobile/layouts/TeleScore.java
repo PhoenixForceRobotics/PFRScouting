@@ -1,10 +1,13 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -14,7 +17,17 @@ import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
+import edu.phoenixforce.scouting.mobile.database.ViewModels.TeleView;
+import edu.phoenixforce.scouting.mobile.database.adapters.TeleDataAdapter;
+import edu.phoenixforce.scouting.mobile.database.daos.TeleDao;
+import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
+import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
+
 public class TeleScore extends AppCompatActivity {
+    //IGNORE ME
+    public static final String EXTRA_REPLY = "com.example.android.wordlistsql.REPLY";
+
 //TextViews
 TextView autoBallHigh;
 TextView view2;
@@ -40,16 +53,16 @@ Button downButton5;
 Button back;
 
 //integers
-int counter = 0;
-int counter2 = 0;
-int counter3 = 0;
-int counter4 = 0;
-int counter5 = 0;
-int spunwheel = 0; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
-int colorwheel = 0;
-int balls = 0;
-int solo = 0;
-int buddy = 0;
+public static int counter = 0;
+    public static int counter2 = 0;
+    public static int counter3 = 0;
+    public static int counter4 = 0;
+    public int counter5 = 0;
+    public static int spunwheel = 0; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
+    public static int colorwheel = 0;
+    public static int balls = 0;
+    public static int solo = 0;
+    public static int buddy = 0;
 
 //FOR ADDING THE AUTOSCORE STUFF
 
@@ -76,22 +89,19 @@ int buddy = 0;
     Button navme;
 
     //integers
-    int counter6 = 0;
-    int counter7 = 0;
-    int counter8 = 0;
-    int counter9 = 0;
-    int counter10 = 0;
-
-
-
-
+    public static int counter6 = 0;
+    public static int counter7 = 0;
+    public static int counter8 = 0;
+    public static int counter9 = 0;
+    public static int counter10 = 0;
+    public static int X = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tele_score);
-
+        RecyclerViewViewer.mWordViewModelII = new ViewModelProvider(this).get(TeleView.class);
 
 
 
@@ -285,11 +295,16 @@ int buddy = 0;
 
             @Override
             public void onClick(View v) {
-                openMainActivity();
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-
-                //another rickrole - no more, sorry Aaron!
-
+                TeleData teleData = new TeleData(String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),
+                        String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),
+                        String.valueOf(TeleScore.solo),String.valueOf(TeleScore.buddy));
+                //TODO this /\
+                RecyclerViewViewer.mWordViewModelII.insert(teleData);
+                Log.d("Night Mode Update", teleData.toString());
+                X = 1;
+                goScoutIII();
+                //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
 
             }
         });
@@ -445,7 +460,14 @@ int buddy = 0;
     }
     public void openMainActivity(){
 
-        Intent intent = new Intent(this, team_select.class);
+        Intent intent = new Intent(this, ActivityMain.class);
+        startActivity(intent);
+
+    }
+
+    public void goScoutIII() {
+
+        Intent intent = new Intent(this, RecyclerViewViewer.class);
         startActivity(intent);
 
     }

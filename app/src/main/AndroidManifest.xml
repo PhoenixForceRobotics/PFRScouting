@@ -22,6 +22,7 @@
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.EActivity" />
         <activity android:name="edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity2" />
         <activity android:name="edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer" />
         <activity
             android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
         <activity

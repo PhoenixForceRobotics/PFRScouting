@@ -17,7 +17,7 @@
         android:background="?android:attr/listDivider" />-->
 
 
-    //Checkboxes
+    <!--//Checkboxes-->
 
     <!--<EditText
         android:layout_width="80dp"
