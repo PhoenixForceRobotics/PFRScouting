@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +24,11 @@ import edu.phoenixforce.scouting.mobile.database.ViewModels.TeleView;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
 
+import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
+import static edu.phoenixforce.scouting.mobile.layouts.login.TEXT;
+import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
+import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
+
 public class TeleScore extends AppCompatActivity {
 //TextViews
 TextView autoBallHigh;
@@ -30,6 +36,7 @@ TextView view2;
 TextView view3;
 TextView view4;
 TextView view5;
+TextView user;
 
 //String Numero = teamNumber.getText().toString();
 //int numberTeam = Integer.parseInt(Numero);
@@ -84,6 +91,10 @@ public static int counter = 0;
     Button downButton10;
    // ImageButton backA;
     Button navme;
+
+    String scoutname;
+    String teamnum;
+    String match;
 
     //integers
     public static int counter6 = 0;
@@ -167,6 +178,16 @@ public static int counter = 0;
         view10.setText("0");
 
 
+
+        SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        scoutname = myPrefs.getString(TEXT, "No User");
+        //dev = myPrefs.getString(dEVNUM, "Device Number Not Set");
+        teamnum = myPrefs.getString(teamNum, "No Team Number");
+
+        match = myPrefs.getString(matchNum, "No Match Number");
+
+
+        user.setText(scoutname +  " Team " + teamnum + " Match " + match);
 
 
 
@@ -315,7 +336,7 @@ public static int counter = 0;
                 RecyclerViewViewer.mWordViewModelII.insert(teleData);
                 Log.d("Night Mode Update", teleData.toString());
                 X = 1;
-                goScoutIII();
+
                 //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
 
             }

@@ -36,7 +36,7 @@ public class Data  {
 
         //this.timeStamp = new Date();
         this.currentScout = (login.text)  ;
-        this.devNum = (ConfigActivity.deviceId);
+        //this.devNum = (ConfigActivity.deviceId);
         this.match = (team_select.matchNumber);
         this.team =  (team_select.teamNumber);
 

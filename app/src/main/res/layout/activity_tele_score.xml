@@ -744,5 +744,20 @@
         android:textAllCaps="true"
         android:textColor="#FFFFFF" />
 
+    <TextView
+        android:id="@+id/show_user"
+        android:layout_width="307dp"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="22dp"
+        android:background="#FFFFFF"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>

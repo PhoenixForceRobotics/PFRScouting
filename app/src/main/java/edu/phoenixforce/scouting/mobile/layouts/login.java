@@ -205,7 +205,7 @@ editor.putString(TEXT, user);
 
 editor.apply();
 
-Toast.makeText(this, "Logged In", Toast.LENGTH_SHORT);
+Toast.makeText(this, "Logged In as" + user, Toast.LENGTH_SHORT).show();
 
 goScout();
         }

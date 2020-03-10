@@ -30,7 +30,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
 
 
-@Database(entities = {Scores.class, AutoData.class, Team.class, TeleData.class, DevId.class} , version = 2, exportSchema = false)
+@Database(entities = {Scores.class, AutoData.class, Team.class, TeleData.class, DevId.class} , version = 3, exportSchema = false)
 public abstract class ScoreDataBase extends RoomDatabase {
 
     private static volatile ScoreDataBase INSTANCE;

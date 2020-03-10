@@ -1,10 +1,12 @@
 package edu.phoenixforce.scouting.mobile.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity
-public class AutoData extends Data {
+public class AutoData  {
 
 
     public AutoData(String moved, String lowBall, String midBall, String highBall, String touchedWheel) {
@@ -19,6 +21,8 @@ public class AutoData extends Data {
 
 
 
+    @PrimaryKey
+    @NonNull
 
     @ColumnInfo(name = "moved")
     private String moved;

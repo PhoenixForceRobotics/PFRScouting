@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,11 +20,17 @@ import android.view.View;
 import android.widget.Button;
 
 import android.net.Uri;
+import android.widget.TextView;
 
 import com.example.fyrebirdscout11.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+//import static edu.phoenixforce.scouting.mobile.layouts.ConfigActivity.dEVNUM;
+import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
+import static edu.phoenixforce.scouting.mobile.layouts.login.TEXT;
+import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
+import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
 import static java.sql.DriverManager.println;
 
 import java.io.File;
@@ -34,14 +41,19 @@ import java.util.TimerTask;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
+import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
 
 
 public class ActivityMain extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     private Button scores;
     private Button skipper;
     private Button rick;
-    private Button choice;
+    private Button choice, test;
     private FloatingActionButton fab;
+    public String text ;
+    public String dev, teamnum, match;
+
+    public TextView user;
 
 
 
@@ -50,6 +62,22 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+
+        user = findViewById(R.id.textView17);
+        test = findViewById(R.id.testBtn);
+
+        SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        text = myPrefs.getString(TEXT, "No User");
+        //dev = myPrefs.getString(dEVNUM, "Device Number Not Set");
+        teamnum = myPrefs.getString(teamNum, "No Team Number" );
+
+        match = myPrefs.getString(matchNum, "No Match Number");
+
+
+        user.setText(text +  "Team " + teamnum + "Match " + match);
+
+
+
         Log.d("Night mode update", TeleScore.spunwheel + "" + TeleScore.counter4 + "" + String.valueOf(TeleScore.colorwheel)+ ""
                 +String.valueOf(TeleScore.counter3) + TeleScore.colorwheel + "" + String.valueOf(TeleScore.spunwheel)+ "" + String.valueOf(TeleScore.solo)+ "" +
                 String.valueOf(TeleScore.counter2) + "" + TeleScore.buddy + "" +
@@ -72,6 +100,13 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
                 @Override
                 public void onClick(View v) {
                     openAutoScore();
+                }
+            });
+
+            test.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    seeData();
                 }
             });
 
@@ -191,7 +226,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
         public void openTeleScore () {
 
-            Intent intent = new Intent(this, ScoreView.class);
+            Intent intent = new Intent(this, login.class);
             startActivity(intent);
         }
       private void openSettings () {
@@ -213,6 +248,13 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
                 }
                 break;
         }
+    }
+
+    public void seeData(){
+
+        Intent intent = new Intent(this,  RecyclerViewViewer.class);
+        startActivity(intent);
+
     }
 
 }

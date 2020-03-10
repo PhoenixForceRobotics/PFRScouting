@@ -21,7 +21,7 @@ public class team_select extends AppCompatActivity {
 
     Button finished;
 
-    EditText match, team;
+    TextView match, team;
 
     public static  String matchNumber, teamNumber;
 
@@ -42,8 +42,10 @@ public class team_select extends AppCompatActivity {
         //loadData();
 
         SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        show1 = myPrefs.getString(matchNum, "");
-        show2 = myPrefs.getString(teamNum, "");
+        show1 = myPrefs.getString(matchNum, "0");
+        show2 = myPrefs.getString(teamNum, "0");
+
+
 
 
 
@@ -51,11 +53,9 @@ public class team_select extends AppCompatActivity {
         finished = findViewById(R.id.goScout);
         match = findViewById(R.id.matchNum);
         team = findViewById(R.id.teams);
-        matchNumber = match.getText().toString();
-        teamNumber = team.getText().toString();
 
-        match.setText(show1);
-        team.setText(show2);
+
+
 
         finished.setOnClickListener(new View.OnClickListener(){
 
@@ -71,7 +71,8 @@ public class team_select extends AppCompatActivity {
 
     public void saveData(){
 
-
+            matchNumber = match.getText().toString();
+            teamNumber = team.getText().toString();
 
             SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
             SharedPreferences.Editor editor = myPrefs.edit();
@@ -81,7 +82,7 @@ public class team_select extends AppCompatActivity {
 
             editor.apply();
 
-            Toast.makeText(this, "Saved Data", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Saved Data" + matchNumber + teamNumber, Toast.LENGTH_SHORT).show();
 
 
             goScore();

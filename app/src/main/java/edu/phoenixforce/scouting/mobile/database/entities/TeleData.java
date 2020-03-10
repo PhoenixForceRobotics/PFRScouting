@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 import org.jetbrains.annotations.NotNull;
 
 @Entity
-public class TeleData extends Data{
+public class TeleData {
 
     public TeleData(@NotNull String ballLow, String ballMid, String ballThree, String spunWheelColor,
                     String spunWheelTimes, String robotBroken, String soloClimb,
@@ -88,7 +88,9 @@ public class TeleData extends Data{
     }
 
 
+    @PrimaryKey
     @NotNull
+
     @ColumnInfo(name = "ballLow")
     private String ballLow;
 

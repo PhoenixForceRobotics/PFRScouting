@@ -35,34 +35,14 @@ import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 ;
 
 public class ConfigActivity extends AppCompatActivity {
-    public static int deviceId;
-    Button saver;
 
-    public EditText devNum;
-    public static final String TEXT = "devNum";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        devNum = findViewById(R.id.editDeviceId);
-
-
-
         // Set the layout.
         setContentView(R.layout.activity_config);
-        saver = findViewById(R.id.btnSave);
 
-        saver.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                saveDev();
-
-
-            }
-
-
-        });
 
         // The TbaTeamId editor has the team ID in it and we need to look up the team details
         // when it changes. The following code attaches listeners to the editor.
@@ -93,28 +73,8 @@ public class ConfigActivity extends AppCompatActivity {
         // Get the team information from The Blue Alliance API's
         fetchTeamDetails();
 
-
-
     }
 
-  public void saveDev(){
-
-
-
-      SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-      SharedPreferences.Editor editor = myPrefs.edit();
-
-      editor.putString(TEXT, devNum.getText().toString());
-
-      editor.apply();
-
-      Toast.makeText(this, "Saved Device Number", Toast.LENGTH_SHORT);
-
-      Intent intent = new Intent(this, ActivityMain.class);
-
-      startActivity(intent);
-
-  }
     // Set the values of the editTexts to match the configuration values.
     private void setScreenValues() {
         Configuration config = Configuration.getInstance();
@@ -141,7 +101,7 @@ public class ConfigActivity extends AppCompatActivity {
         Configuration config = Configuration.getInstance();
 
         // Get a number for the device id and save it.
-        deviceId = Integer.parseInt(getEditTextValue(R.id.editDeviceId));
+        int deviceId = Integer.parseInt(getEditTextValue(R.id.editDeviceId));
         config.setDeviceId(deviceId);
 
         // Get a number for he team ID and save it.
@@ -152,6 +112,8 @@ public class ConfigActivity extends AppCompatActivity {
         // config from the config parameters, and redisplay them. That guarantees
         // that what you see on the screen matches what is stored.
         setScreenValues();
+
+        this.finish();
     }
 
     // Fetches team information from the Blue Alliance services.
@@ -256,7 +218,9 @@ public class ConfigActivity extends AppCompatActivity {
                 TextView txt = (TextView) findViewById(R.id.textTeamInfo);
                 if (error != null) {
                     text.append("Url: " + MessageFormat.format(TeamMedia.TBA_TEAM_MEDIA_URL, Team.getTeamKeyFromTeamId(teamId), year));
-                    text.append("\nError fetching data on GetTeamMedia: " + error.getCause().getMessage());
+                    if (error.getCause() != null) {
+                        text.append("\nError fetching data on GetTeamMedia: " + error.getCause().getMessage());
+                    }
                     if (error.networkResponse != null) {
                         text.append("\nNetwork Response: " + error.networkResponse.statusCode + " " + (error.networkResponse.headers != null ? error.networkResponse.headers : ""));
                     }
@@ -264,11 +228,10 @@ public class ConfigActivity extends AppCompatActivity {
                     text.append("Unexpected error");
                 }
                 txt.setText(text.toString());
-              }
+            }
         });
 
         teamMediaRestCall.invokeCall();
 
     }
-
 }
