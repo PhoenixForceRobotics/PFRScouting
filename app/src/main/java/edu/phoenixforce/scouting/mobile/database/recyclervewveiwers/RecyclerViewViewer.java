@@ -69,12 +69,15 @@ public class RecyclerViewViewer extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == NEW_WORD_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
+            /*
             TeleData teleData = new TeleData(String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
                     String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),
                     String.valueOf(TeleScore.solo),String.valueOf(TeleScore.buddy),String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5));
+                    */
+
                 //TODO this /\
-            mWordViewModelII.insert(teleData);
-            Log.d("Night Mode Update", teleData.toString());
+            //mWordViewModelII.insert(teleData);
+            //Log.d("Night Mode Update", teleData.toString());
         } else {
             Toast.makeText(
                     getApplicationContext(),

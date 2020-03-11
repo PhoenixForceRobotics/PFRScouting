@@ -1,5 +1,7 @@
 package edu.phoenixforce.scouting.mobile.database.entities;
 
+import android.service.autofill.FieldClassification;
+
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -8,9 +10,9 @@ import androidx.room.PrimaryKey;
 import org.jetbrains.annotations.NotNull;
 
 @Entity
-public class TeleData {
+public class TeleData{
 
-    public TeleData(@NotNull String ballLow, String ballMid, String ballThree, String spunWheelColor,
+    public TeleData(String Match, @NotNull String ballLow, String ballMid, String ballThree, String spunWheelColor,
                     String spunWheelTimes, String robotBroken, String soloClimb,
                     String buddyClimb, String BallsIntook, String ShotsMissed) {
         this.ballLow = ballLow;
@@ -23,6 +25,7 @@ public class TeleData {
         this.buddyClimb = buddyClimb;
         this.BallsIntook = BallsIntook;
         this.ShotsMissed = ShotsMissed;
+        this.Match = Match;
 
     }
 
@@ -87,7 +90,6 @@ public class TeleData {
         return ballLow;
     }
 
-
     @PrimaryKey
     @NotNull
 
@@ -115,8 +117,17 @@ public class TeleData {
     @ColumnInfo(name = "buddyClimb")
     private String buddyClimb;
 
+    @ColumnInfo(name = "BallsInook")
+    private String BallsIntook;
 
-    public void setBallLow(@NotNull String ballLow) {
+    @ColumnInfo(name = "ShotsMissed")
+    private String ShotsMissed;
+
+    @ColumnInfo(name = "match")
+    private String Match;
+
+
+    public void setBallLow(String ballLow) {
         this.ballLow = ballLow;
     }
 
@@ -136,10 +147,12 @@ public class TeleData {
         ShotsMissed = shotsMissed;
     }
 
-    @ColumnInfo(name = "BallsInook")
-    private String BallsIntook;
+    public String getMatch() {
+        return Match;
+    }
 
-    @ColumnInfo(name = "ShotsMissed")
-    private String ShotsMissed;
+    public void setMatch(String match) {
+        Match = match;
+    }
 
 }

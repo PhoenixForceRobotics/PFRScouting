@@ -25,7 +25,8 @@ public class team_select extends AppCompatActivity {
 
     public static  String matchNumber, teamNumber;
 
-    public String show1, show2;
+    public static String show1;
+    public String show2;
 
     public static final String matchNum = "matchNumber";
     public static final String teamNum = "teamNumber";

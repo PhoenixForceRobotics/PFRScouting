@@ -63,7 +63,7 @@ public static int counter = 0;
     public static int counter4 = 0;
     public static int counter5 = 0;
     public static int spunwheel = 0; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
-    public static int colorwheel = 1;
+    public static int colorwheel = 0;
     public static int balls = 0;
     public static int solo = 0;
     public static int buddy = 0;
@@ -110,6 +110,22 @@ public static int counter = 0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tele_score);
         RecyclerViewViewer.mWordViewModelII = new ViewModelProvider(this).get(TeleView.class);
+
+           counter6 = 0;
+           counter7 = 0;
+           counter8 = 0;
+           counter9 = 0;
+           counter10 = 0;
+           counter = 0;
+           counter2 = 0;
+           counter3 = 0;
+           counter4 = 0;
+           counter5 = 0;
+           spunwheel = 0;
+           colorwheel = 0;
+           balls = 0;
+           solo = 0;
+           buddy = 0;
 
 
 
@@ -187,7 +203,7 @@ public static int counter = 0;
         match = myPrefs.getString(matchNum, "No Match Number");
 
 
-        user.setText(scoutname +  " Team " + teamnum + " Match " + match);
+        //user.setText(scoutname +  " Team " + teamnum + " Match " + match);
 
 
 
@@ -329,12 +345,13 @@ public static int counter = 0;
             public void onClick(View v) {
                 openMainActivity();
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-                TeleData teleData = new TeleData(String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
+                TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
                         String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),
                         String.valueOf(TeleScore.solo),String.valueOf(TeleScore.buddy),String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5));
                 //TODO this /\
                 RecyclerViewViewer.mWordViewModelII.insert(teleData);
-                Log.d("Night Mode Update", teleData.toString());
+                //Log.d("Night Mode Update", teleData.toString());
+                Log.d("Night Mode Update", String.valueOf(team_select.show1));
                 X = 1;
 
                 //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
@@ -450,7 +467,7 @@ public static int counter = 0;
     public void onCheckboxClicked(View view) { //this is for all of the checkboxes in the activity
 
         boolean checked = ((CheckBox) view).isChecked();
-        Log.d("hola",String.valueOf(colorwheel));
+        //Log.d("hola",String.valueOf(colorwheel));
         //check for what checkbox is checked
         switch(view.getId()){
             case R.id.checkBox1:

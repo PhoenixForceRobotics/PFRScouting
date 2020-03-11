@@ -28,7 +28,7 @@ public class Data  {
 
 
 
-    public  Data(){
+    Data(){
 
 
 

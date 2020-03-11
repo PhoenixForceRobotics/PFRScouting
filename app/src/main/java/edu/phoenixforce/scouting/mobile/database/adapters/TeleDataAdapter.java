@@ -19,6 +19,7 @@ import java.util.List;
 
 
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
+import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
 
 public class TeleDataAdapter extends RecyclerView.Adapter<TeleDataAdapter.ViewHolder> {
 
@@ -54,11 +55,13 @@ public class TeleDataAdapter extends RecyclerView.Adapter<TeleDataAdapter.ViewHo
             TeleData EvenLessCurrent = teleDat.get(position);
             TeleData TheEvenMostCurrent = teleDat.get(position);
             TeleData TheLeastCurrent = teleDat.get(position);
-            holder.ItemView.setText(lessCurrent1.getBallLow() + " - " + current1.getBallMid() + " - "
+            TeleData TheLeasterCurrent = teleDat.get(position);
+            holder.ItemView.setText(TheLeasterCurrent.getMatch() + " - " + current1.getBallMid() + " - "
                     + EvenLessCurrent1.getBallThree() + " - " + TheMostCurrent1.getBuddyClimb() + " - "
                     + TheMostCurrent.getRobotBroken() + " - " + current.getSoloClimb() + " - " +
                     lessCurrent.getSpunWheelColor() + " - " + EvenLessCurrent.getSpunWheelTimes() + " - " +
-                    TheLeastCurrent.getShotsMissed()  + " - " + TheEvenMostCurrent.getBallsIntook()
+                    TheLeastCurrent.getShotsMissed()  + " - " + TheEvenMostCurrent.getBallsIntook() + " - " +
+                    lessCurrent1.getBallLow()
             );
 
         }

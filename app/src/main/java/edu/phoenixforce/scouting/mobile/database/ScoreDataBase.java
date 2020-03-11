@@ -71,8 +71,8 @@ public abstract class ScoreDataBase extends RoomDatabase {
             databaseWriteExecutor.execute(() -> {
 
                 TeleDao dao1 = INSTANCE.teleDao();
-                //dao1.nukeTable();
-                //TeleData teleData = new TeleData("hi", "hui", "lkdbnc", "csvs", "scdsv", "cvsdv", "svdvs", "vcsdvsdv");
+                dao1.nukeTable();
+                //TeleData teleData = new TeleData("hi", "hui", "lkdbnc", "csvs", "scdsv", "cvsdv", "svdvs", "vcsdvsdv","yeet","csdghci");
                 //dao1.insert(teleData);
 
                 //unless you want something to happen when the application opens, dont mess with this
