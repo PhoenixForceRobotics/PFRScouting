@@ -21,6 +21,7 @@ import com.example.fyrebirdscout11.R;
 import java.util.Calendar;
 
 import edu.phoenixforce.scouting.mobile.database.ViewModels.TeleView;
+import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
 
@@ -62,6 +63,8 @@ public static int counter = 0;
     public static int counter3 = 0;
     public static int counter4 = 0;
     public static int counter5 = 0;
+
+    public static int moved = 0;
     public static String spunwheel = "No"; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
     public static String colorwheel = "No";
     public static String balls = "No";
@@ -194,6 +197,9 @@ public static int counter = 0;
         view10.setText("0");
 
 
+        user = findViewById(R.id.show_user);
+
+
 
         SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         scoutname = myPrefs.getString(TEXT, "No User");
@@ -203,7 +209,7 @@ public static int counter = 0;
         match = myPrefs.getString(matchNum, "No Match Number");
 
 
-        //user.setText(scoutname +  " Team " + teamnum + " Match " + match);
+        user.setText(scoutname +  " Team " + teamnum + " Match " + match);
 
 
 
@@ -354,6 +360,9 @@ public static int counter = 0;
                 Log.d("Night Mode Update", String.valueOf(team_select.show1));
                 X = 1;
 
+                AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6), String.valueOf(TeleScore.counter10));
+
+                Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
 
             }
@@ -507,6 +516,14 @@ public static int counter = 0;
                 else
                     balls = "No";
                 break;
+
+            case R.id.moved:
+                if(checked)
+                    moved = moved + 1;
+                else
+                    moved = 0;
+                break;
+
 
         }
 

@@ -9,13 +9,22 @@ import androidx.room.PrimaryKey;
 public class AutoData  {
 
 
-    public AutoData(String moved, String lowBall, String midBall, String highBall, String touchedWheel) {
+    public String getMissed() {
+        return missed;
+    }
+
+    public void setMissed(String missed) {
+        this.missed = missed;
+    }
+
+    public AutoData(String moved, String lowBall, String midBall, String highBall, String ballsIntook, String missed ) {
 
         this.moved = moved;
         this.lowBall = lowBall;
         this.midBall = midBall;
         this.highBall = highBall;
-        this.touchedWheel = touchedWheel;
+        this.ballsIntook = ballsIntook;
+        this.missed = missed;
 
     }
 
@@ -36,8 +45,11 @@ public class AutoData  {
     @ColumnInfo (name = "highBall")
     private String highBall;
 
-    @ColumnInfo(name = "touchedWheel")
-    private String touchedWheel;
+    @ColumnInfo(name = "ballsIntook")
+    private String ballsIntook;
+
+    @ColumnInfo(name = "missed")
+    private String missed;
 
 
     public String getMoved() {
@@ -72,11 +84,11 @@ public class AutoData  {
         this.highBall = highBall;
     }
 
-    public String getTouchedWheel() {
-        return touchedWheel;
+    public String getBallsIntook() {
+        return ballsIntook;
     }
 
-    public void setTouchedWheel(String touchedWheel) {
-        this.touchedWheel = touchedWheel;
+    public void setBallsIntook(String ballsIntook) {
+        this.ballsIntook = ballsIntook;
     }
 }
