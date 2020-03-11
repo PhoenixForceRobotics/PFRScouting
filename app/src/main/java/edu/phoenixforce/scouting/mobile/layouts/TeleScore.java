@@ -62,11 +62,11 @@ public static int counter = 0;
     public static int counter3 = 0;
     public static int counter4 = 0;
     public static int counter5 = 0;
-    public static int spunwheel = 0; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
-    public static int colorwheel = 0;
-    public static int balls = 0;
-    public static int solo = 0;
-    public static int buddy = 0;
+    public static String spunwheel = "No"; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
+    public static String colorwheel = "No";
+    public static String balls = "No";
+    public static String solo = "No";
+    public static String buddy = "No";
 
 //FOR ADDING THE AUTOSCORE STUFF
 
@@ -121,11 +121,11 @@ public static int counter = 0;
            counter3 = 0;
            counter4 = 0;
            counter5 = 0;
-           spunwheel = 0;
-           colorwheel = 0;
-           balls = 0;
-           solo = 0;
-           buddy = 0;
+           spunwheel = "No";
+           colorwheel = "No";
+           balls = "No";
+           solo = "No";
+           buddy = "No";
 
 
 
@@ -194,9 +194,6 @@ public static int counter = 0;
         view10.setText("0");
 
 
-        user = findViewById(R.id.show_user);
-
-
 
         SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         scoutname = myPrefs.getString(TEXT, "No User");
@@ -206,7 +203,7 @@ public static int counter = 0;
         match = myPrefs.getString(matchNum, "No Match Number");
 
 
-        user.setText("Scout: " + scoutname  +  ", Team: " + teamnum + ", Match: " + match);
+        //user.setText(scoutname +  " Team " + teamnum + " Match " + match);
 
 
 
@@ -350,9 +347,6 @@ public static int counter = 0;
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
                         String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),
-
-                TeleData teleData = new TeleData(String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
-                        String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),// Balls and spunwheel are workin
                         String.valueOf(TeleScore.solo),String.valueOf(TeleScore.buddy),String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5));
                 //TODO this /\
                 RecyclerViewViewer.mWordViewModelII.insert(teleData);
@@ -360,7 +354,6 @@ public static int counter = 0;
                 Log.d("Night Mode Update", String.valueOf(team_select.show1));
                 X = 1;
 
-                Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
 
             }
@@ -479,40 +472,40 @@ public static int counter = 0;
         switch(view.getId()){
             case R.id.checkBox1:
                 if (checked)
-                    solo = solo + 1;
+                    solo = "Yes";
                 else
-                    solo = 0;
+                    solo = "no";
                 break;
 
             case R.id.checkBox2:
                 if (checked)
-                    buddy = buddy + 1;
+                    buddy = "Yes";
                 else
-                    buddy = 0;
+                    buddy = "No";
                 break;
 
             case R.id.checkBox:
                 if(checked)
-                    spunwheel = spunwheel + 1;
+                    spunwheel = "Yes";
                 else
-                    spunwheel = 0;
+                    spunwheel = "No";
                 break;
 
 
 
             case R.id.checkBox4:
                 if(checked)
-                    colorwheel = colorwheel + 1;
+                    colorwheel = "Yes";
                 else
-                    colorwheel = 0;
+                    colorwheel = "No";
                 break;
 
 
             case R.id.checkBox3:
                 if(checked)
-                    balls = balls + 1;
+                    balls = "Yes";
                 else
-                    balls = 0;
+                    balls = "No";
                 break;
 
         }

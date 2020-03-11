@@ -7,14 +7,15 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 @Entity
 public class TeleData{
 
-    public TeleData(@NotNull String Match, String ballLow, String ballMid, String ballThree, String spunWheelColor,
-                    String spunWheelTimes, String robotBroken, String soloClimb,
-                    String buddyClimb, String BallsIntook, String ShotsMissed) {
+    public TeleData(@NotNull String Match, String ballLow, String ballMid, String ballThree,
+                    String BallsIntook, String ShotsMissed, String spunWheelColor,
+                    String spunWheelTimes, String robotBroken, String soloClimb, String buddyClimb) {
         this.ballLow = ballLow;
         this.ballMid = ballMid;
         this.ballThree = ballThree;
