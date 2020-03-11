@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 @Entity
 public class TeleData{
 
-    public TeleData(String Match, @NotNull String ballLow, String ballMid, String ballThree, String spunWheelColor,
+    public TeleData(@NotNull String Match, String ballLow, String ballMid, String ballThree, String spunWheelColor,
                     String spunWheelTimes, String robotBroken, String soloClimb,
                     String buddyClimb, String BallsIntook, String ShotsMissed) {
         this.ballLow = ballLow;
@@ -90,9 +90,6 @@ public class TeleData{
         return ballLow;
     }
 
-    @PrimaryKey
-    @NotNull
-
     @ColumnInfo(name = "ballLow")
     private String ballLow;
 
@@ -122,6 +119,9 @@ public class TeleData{
 
     @ColumnInfo(name = "ShotsMissed")
     private String ShotsMissed;
+
+    @PrimaryKey
+    @NotNull
 
     @ColumnInfo(name = "match")
     private String Match;
