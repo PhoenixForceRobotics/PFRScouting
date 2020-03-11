@@ -194,6 +194,9 @@ public static int counter = 0;
         view10.setText("0");
 
 
+        user = findViewById(R.id.show_user);
+
+
 
         SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         scoutname = myPrefs.getString(TEXT, "No User");
@@ -203,7 +206,7 @@ public static int counter = 0;
         match = myPrefs.getString(matchNum, "No Match Number");
 
 
-        //user.setText(scoutname +  " Team " + teamnum + " Match " + match);
+        user.setText("Scout: " + scoutname  +  ", Team: " + teamnum + ", Match: " + match);
 
 
 
@@ -347,6 +350,9 @@ public static int counter = 0;
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
                         String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),
+
+                TeleData teleData = new TeleData(String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
+                        String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),// Balls and spunwheel are workin
                         String.valueOf(TeleScore.solo),String.valueOf(TeleScore.buddy),String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5));
                 //TODO this /\
                 RecyclerViewViewer.mWordViewModelII.insert(teleData);
@@ -354,6 +360,7 @@ public static int counter = 0;
                 Log.d("Night Mode Update", String.valueOf(team_select.show1));
                 X = 1;
 
+                Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
 
             }
@@ -467,7 +474,7 @@ public static int counter = 0;
     public void onCheckboxClicked(View view) { //this is for all of the checkboxes in the activity
 
         boolean checked = ((CheckBox) view).isChecked();
-        //Log.d("hola",String.valueOf(colorwheel));
+        Log.d("hola",String.valueOf(colorwheel));
         //check for what checkbox is checked
         switch(view.getId()){
             case R.id.checkBox1:
@@ -490,6 +497,8 @@ public static int counter = 0;
                 else
                     spunwheel = 0;
                 break;
+
+
 
             case R.id.checkBox4:
                 if(checked)
