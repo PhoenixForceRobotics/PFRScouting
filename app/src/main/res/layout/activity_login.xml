@@ -9,34 +9,23 @@
 
     <Spinner
         android:id="@+id/name"
-        android:layout_width="406dp"
+        android:layout_width="match_parent"
 
 
-        android:layout_height="61dp"
+        android:layout_height="162dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="426dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="389dp"
+        android:background="#AC1626"
         android:spinnerMode="dropdown"
+        android:text="User "
+        android:textColor="#FFFFFF"
+        android:textSize="100sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/lblPassword"
-        android:layout_width="243dp"
-        android:layout_height="45dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="117dp"
-        android:layout_marginRight="117dp"
-        android:layout_marginBottom="360dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Password"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
         android:id="@+id/txtPassword"
@@ -45,10 +34,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginRight="-2dp"
-        android:layout_marginBottom="289dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="138dp"
+        android:background="#AC1626"
         android:inputType="textPassword">
 
         <requestFocus />
@@ -56,17 +45,49 @@
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="122dp"
-        android:layout_marginRight="122dp"
-        android:layout_marginBottom="234dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="14dp"
         android:text="submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lblPassword"
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="224dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Type password below! "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/lblPassword2"
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginRight="-2dp"
+        android:layout_marginBottom="559dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Touch below to select user!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp" />
 
 </RelativeLayout>
 

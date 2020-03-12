@@ -3,20 +3,37 @@
     package="com.example.fyrebirdscout11">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name="edu.phoenixforce.scouting.mobile.layouts.ScoutingApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/scoutingapp"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.teamSelect"></activity>
+        android:theme="@style/Theme.AppCompat.Light"
+        >
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.team_select"></activity>
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ScoreView" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.MainActivity" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.login">
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore"
+        />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.EActivity" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity2" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer" />
+        <activity
+            android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
+        <activity
+            android:name="edu.phoenixforce.scouting.mobile.layouts.ConfigActivity"
+            android:parentActivityName="edu.phoenixforce.scouting.mobile.layouts.ActivityMain">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
+        </activity>
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.login"  android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

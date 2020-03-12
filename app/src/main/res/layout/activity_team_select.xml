@@ -5,49 +5,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="edu.phoenixforce.scouting.mobile.layouts.teamSelect">
+    android:visibility="visible"
+    tools:context="edu.phoenixforce.scouting.mobile.layouts.team_select">\
 
 
-    <Spinner
-        android:id="@+id/match"
+    <EditText
+        android:id="@+id/matchNum"
         android:layout_width="match_parent"
-
-
-        android:layout_height="75dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginRight="-2dp"
-        android:layout_marginBottom="293dp"
-        android:background="@color/colorPrimaryDark"
-        android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/team"
-        android:layout_width="match_parent"
-        android:layout_height="84dp"
+        android:layout_height="177dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="436dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="TeamNumber" />
+        android:layout_marginBottom="413dp"
+        android:background="#8B0818"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="100sp">
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="327dp"
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/teams"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="162dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="173dp"
+        android:background="#8B0818"
+        android:inputType="number"
+        android:maxLength="4"
+        android:spinnerMode="dropdown"
+        android:textColor="#FFFFFF"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:layout_marginBottom="123dp"
-        android:text="Next" />
+        android:layout_marginEnd="402dp"
+        android:layout_marginRight="402dp"
+        android:layout_marginBottom="598dp"
+        android:background="#00000000"
+        android:text="Type Match Number"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="436dp"
+        android:layout_marginRight="436dp"
+        android:layout_marginBottom="348dp"
+        android:background="#00000000"
+        android:text="Set Team Number"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/goScout"
+        android:layout_width="314dp"
+        android:layout_height="112dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="484dp"
+        android:layout_marginRight="484dp"
+        android:layout_marginBottom="49dp"
+        android:background="#581515"
+        android:text="Start Scouting!"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
 
 </RelativeLayout>

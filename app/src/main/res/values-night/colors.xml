@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dayNight_textColor2">#FFFFFF</color>
-    <color name="colorAccent">#00AD9D</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#3D9970</color>
+    <color name="colorAccent">#001f3f</color>
+    <color name="colorAuto">#01FF70</color>
+    <color name="font">#000000</color>
+    <color name="HighContrastText">#2ECC40</color>
+    <color name="Orange">#FFFFFF</color>
+    <color name="OrangeDark">#FF9800</color>
+    <color name="dayNight_textColor2">#616161</color>
     <color name="SwitchColor">#911DEE</color>
-    <color name="BackgroundNight">#FFFFFF</color>
-    <color name="Orange">#FF9800</color>
-    <color name="OrangeDark">#A75E00</color>
-    <color name="dayNight_textColor">#FFFFFF</color>
-
-
-
+    <color name="BackgroundNight">#292929</color>
+    <color name="dayNight_textColor">#000000</color>
 </resources>
