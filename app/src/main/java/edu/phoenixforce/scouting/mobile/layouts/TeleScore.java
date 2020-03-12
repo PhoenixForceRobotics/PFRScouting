@@ -95,9 +95,9 @@ public static int counter = 0;
    // ImageButton backA;
     Button navme;
 
-    String scoutname;
-    String teamnum;
-    String match;
+    private static String scoutname;
+    private static String teamnum;
+    private static String match;
 
     //integers
     public static int counter6 = 0;
@@ -361,7 +361,8 @@ public static int counter = 0;
                 Log.d("Night Mode Update", String.valueOf(team_select.show1));
                 X = 1;
 
-                AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6), String.valueOf(TeleScore.counter10));
+                AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6),
+                        String.valueOf(TeleScore.counter10), String.valueOf(TeleScore.scoutname), String.valueOf(TeleScore.match), String.valueOf(teamnum));
 
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
@@ -424,7 +425,7 @@ public static int counter = 0;
             public void onClick(View v) {
 
                 counter5 = counter5 + 1;
-                view5.setText (String.valueOf(counter5));
+               view5.setText (String.valueOf(counter5));
             }
 
         });
