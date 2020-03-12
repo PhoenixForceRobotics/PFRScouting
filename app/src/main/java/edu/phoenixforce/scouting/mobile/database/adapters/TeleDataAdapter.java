@@ -56,11 +56,11 @@ public class TeleDataAdapter extends RecyclerView.Adapter<TeleDataAdapter.ViewHo
             TeleData TheEvenMostCurrent = teleDat.get(position);
             TeleData TheLeastCurrent = teleDat.get(position);
             TeleData TheLeasterCurrent = teleDat.get(position);
-            holder.ItemView.setText("Time:" + TheLeasterCurrent.getMatch() + " - Ball Low:" + current1.getBallLow() + " - Ball Mid:"
-                    + EvenLessCurrent1.getBallMid() + " - Ball High" + TheMostCurrent1.getBallThree() +
-                    " - Balls Intook" + TheEvenMostCurrent.getBallsIntook() + " - Shots Missed" + lessCurrent1.getShotsMissed()
-                    + " - Robot Broke Down:" + TheMostCurrent.getRobotBroken() + " - Solo" + current.getSoloClimb() + " - Spun to color" +
-                    lessCurrent.getSpunWheelColor() + " - Buddy Climb" + EvenLessCurrent.getBuddyClimb() + " - Times Spun Wheel" +
+            holder.ItemView.setText("Time: " + TheLeasterCurrent.getMatch() + " - Ball Low: " + current1.getBallLow() + " - Ball Mid: "
+                    + EvenLessCurrent1.getBallMid() + " - Ball High: " + TheMostCurrent1.getBallThree() +
+                    " - Balls Intook: " + TheEvenMostCurrent.getBallsIntook() + " - Shots Missed: " + lessCurrent1.getShotsMissed()
+                    + " - Robot Broke Down: " + TheMostCurrent.getRobotBroken() + " - Solo: " + current.getSoloClimb() + " - Spun to color: " +
+                    lessCurrent.getSpunWheelColor() + " - Buddy Climb: " + EvenLessCurrent.getBuddyClimb() + " - Spun Wheel: " +
                     TheLeastCurrent.getSpunWheelTimes()
             );
 

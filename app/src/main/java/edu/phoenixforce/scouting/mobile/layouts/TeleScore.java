@@ -351,9 +351,10 @@ public static int counter = 0;
             public void onClick(View v) {
                 openMainActivity();
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-                TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
-                        String.valueOf(TeleScore.spunwheel),String.valueOf(TeleScore.colorwheel),String.valueOf(TeleScore.balls),
-                        String.valueOf(TeleScore.solo),String.valueOf(TeleScore.buddy),String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5));
+                TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
+                        String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
+                        String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5),
+                        spunwheel,colorwheel,balls,solo,buddy);
                 //TODO this /\
                 RecyclerViewViewer.mWordViewModelII.insert(teleData);
                 //Log.d("Night Mode Update", teleData.toString());
@@ -474,48 +475,59 @@ public static int counter = 0;
     }
 
     public void onCheckboxClicked(View view) { //this is for all of the checkboxes in the activity
-
+        //Log.d("hola",String.valueOf(colorwheel));
         boolean checked = ((CheckBox) view).isChecked();
-        Log.d("hola",String.valueOf(colorwheel));
+        //Log.d("hola",String.valueOf(colorwheel));
         //check for what checkbox is checked
         switch(view.getId()){
-            case R.id.checkBox1:
-                if (checked)
+            case R.id.Climbed: {
+                if (checked) {
                     solo = "Yes";
-                else
+                } else {
                     solo = "no";
+                }
                 break;
+            }
 
-            case R.id.checkBox2:
-                if (checked)
+            case R.id.HelpedClimb: {
+                if (checked) {
                     buddy = "Yes";
-                else
+                }
+                else {
                     buddy = "No";
+                }
                 break;
+            }
 
-            case R.id.checkBox:
-                if(checked)
+            case R.id.RobotSpun: {
+                if (checked) {
                     spunwheel = "Yes";
-                else
+                }
+                else {
                     spunwheel = "No";
+                }
                 break;
+            }
 
-
-
-            case R.id.checkBox4:
-                if(checked)
+            case R.id.Color: {
+                if (checked) {
                     colorwheel = "Yes";
-                else
+                }
+                else {
                     colorwheel = "No";
+                }
                 break;
+            }
 
-
-            case R.id.checkBox3:
-                if(checked)
+            case R.id.RobotBroke: {
+                if (checked) {
                     balls = "Yes";
-                else
+                }
+                else {
                     balls = "No";
+                }
                 break;
+            }
 
             case R.id.moved:
                 if(checked)

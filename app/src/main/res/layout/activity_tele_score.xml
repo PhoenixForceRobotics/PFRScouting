@@ -30,50 +30,44 @@
         android:-->
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/RobotSpun"
         android:layout_width="643dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-
-
         android:layout_alignParentBottom="true"
         android:layout_marginStart="772dp"
         android:layout_marginLeft="772dp"
         android:layout_marginTop="0dp"
-
         android:layout_marginBottom="244dp"
         android:background="@color/colorPrimaryDark"
+        android:onClick="onCheckboxClicked"
         android:text="@string/Wheel"
         android:textColor="#FFFFFF" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/RobotBroke"
         android:layout_width="643dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
-
-
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="772dp"
         android:layout_marginLeft="772dp"
-
         android:layout_marginTop="0dp"
         android:layout_marginBottom="293dp"
         android:background="@color/colorPrimaryDark"
+        android:onClick="onCheckboxClicked"
         android:text="@string/hello_blank_fragment"
         android:textColor="#FFFFFF" />
 
     <CheckBox
-        android:id="@+id/checkBox1"
+        android:id="@+id/Climbed"
         android:layout_width="647dp"
         android:layout_height="49dp"
-
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-
         android:layout_marginEnd="-139dp"
         android:layout_marginRight="-139dp"
         android:layout_marginBottom="97dp"
@@ -84,7 +78,7 @@
         android:visibility="visible" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/Color"
         android:layout_width="643dp"
         android:layout_height="49dp"
         android:layout_alignParentEnd="true"
@@ -94,11 +88,12 @@
         android:layout_marginRight="-136dp"
         android:layout_marginBottom="195dp"
         android:background="@color/colorPrimaryDark"
+        android:onClick="onCheckboxClicked"
         android:text="@string/wheelspot"
         android:textColor="#FFFFFF" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/HelpedClimb"
         android:layout_width="643dp"
         android:layout_height="49dp"
         android:layout_alignParentEnd="true"
