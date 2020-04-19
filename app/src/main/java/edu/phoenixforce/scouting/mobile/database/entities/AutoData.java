@@ -35,16 +35,16 @@ public class AutoData  {
         this.matchNum = matchNum;
     }
 
-    public String getTeamNum() {
+    public int getTeamNum() {
         return teamNum;
     }
 
-    public void setTeamNum(String teamNum) {
+    public void setTeamNum(int teamNum) {
         this.teamNum = teamNum;
     }
 
     public AutoData(String moved, String lowBall, String midBall, String highBall, String ballsIntook, String missed,
-                    String scoutName, String matchNum, String teamNum) {
+                    String scoutName, String matchNum, int teamNum) {
 
         this.moved = moved;
         this.lowBall = lowBall;
@@ -52,13 +52,13 @@ public class AutoData  {
         this.highBall = highBall;
         this.ballsIntook = ballsIntook;
         this.missed = missed;
+        this.scoutName = scoutName;
+        this.matchNum = matchNum;
+        this.teamNum = teamNum;
 
     }
 
 
-
-    @PrimaryKey(autoGenerate = true)
-    @NonNull
 
     @ColumnInfo(name = "moved")
     private String moved;
@@ -85,8 +85,11 @@ public class AutoData  {
     @ColumnInfo(name = "MatchNum")
     private String matchNum;
 
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+
     @ColumnInfo(name = "TeamNum")
-    private String teamNum;
+    private int teamNum;
 
 
 

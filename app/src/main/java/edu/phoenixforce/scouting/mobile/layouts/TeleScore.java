@@ -107,6 +107,8 @@ public static int counter = 0;
     public static int counter10 = 0;
     public static int X = 0;
 
+    public static int matchnumber;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -208,6 +210,7 @@ public static int counter = 0;
 
         match = myPrefs.getString(matchNum, "No Match Number");
 
+        matchnumber = Integer.valueOf(match);
 
         user.setText(scoutname +  " Team " + teamnum + " Match " + match);
 
@@ -345,11 +348,11 @@ public static int counter = 0;
         });
 
 
-        back.setOnClickListener(new View.OnClickListener() {
+        timer.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                openMainActivity();
+               // openMainActivity();
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
                         String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
@@ -362,12 +365,27 @@ public static int counter = 0;
                 X = 1;
 
                 AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6),
-                        String.valueOf(TeleScore.counter10), String.valueOf(TeleScore.scoutname), String.valueOf(TeleScore.match), String.valueOf(teamnum));
+                        String.valueOf(TeleScore.counter10), String.valueOf(TeleScore.scoutname), String.valueOf(TeleScore.match), Integer.valueOf(TeleScore.matchnumber) );
 
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
 
+
+
             }
+        });
+
+        back.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v){
+
+                openMainActivity();
+
+
+            }
+
+
         });
         autoHighUp.setOnClickListener(new View.OnClickListener() {
 
@@ -543,8 +561,26 @@ public static int counter = 0;
     }
     public void openMainActivity(){
 
-        Intent intent = new Intent(this, ActivityMain.class);
+        Intent intent = new Intent(this, team_select.class);
         startActivity(intent);
+
+        Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
+        TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
+                String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
+                String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5),
+                spunwheel,colorwheel,balls,solo,buddy);
+        //TODO this /\
+        RecyclerViewViewer.mWordViewModelII.insert(teleData);
+        //Log.d("Night Mode Update", teleData.toString());
+        Log.d("Night Mode Update", String.valueOf(team_select.show1));
+        X = 1;
+
+        AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6),
+                String.valueOf(TeleScore.counter10), String.valueOf(TeleScore.scoutname), String.valueOf(TeleScore.match),/*String.valueOf(TeleScore.teamnum)*/ Integer.valueOf(TeleScore.matchnumber) );
+
+        Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
+        //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
+
 
     }
 

@@ -36,7 +36,7 @@ public class AutoDataAdapter extends RecyclerView.Adapter<AutoDataAdapter.ViewHo
         holder.highBall.setText(autoDat.get(position).getHighBall());
         holder.midBall.setText(autoDat.get(position).getMidBall());
         holder.lowBall.setText(autoDat.get(position).getLowBall());
-        holder.touchedWheel.setText(autoDat.get(position).getTouchedWheel());
+
 
 
 

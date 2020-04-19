@@ -15,9 +15,9 @@
     <string name="Ccle">Cycle</string>
     <string name="Shots">Shots Missed</string>
     <string name="take">Balls Intook</string>
-    <string name="VerisonNumber">2.1</string>
+    <string name="VerisonNumber">2.2</string>
     <string name="VersionStatus">beta</string>
-    <string name="by">bypass</string>
+    <string name="by">Logout</string>
     <string name="Switch_name">dark mode</string>
     <string name="Switch_name1">light mode</string>
     <string name="action_settings">Settings</string>

@@ -34,7 +34,8 @@
         android:layout_marginBottom="77dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_use"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/nasalization_rg"/>
 
     <Button
         android:id="@+id/button2"
@@ -52,12 +53,13 @@
         android:layout_marginBottom="14dp"
         android:background="@color/colorPrimary"
         android:text="@string/by"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/nasalization_rg"/>
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="1278dp"
+        android:layout_height="233dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -66,7 +68,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginTop="3dp"
         android:background="#00FFFFFF"
-        app:srcCompat="@mipmap/picture1" />
+        app:srcCompat="@mipmap/picture2" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -97,7 +99,8 @@
         android:layout_marginRight="37dp"
         android:layout_marginBottom="9dp"
         android:text="@string/VersionStatus"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/nasalization_rg"/>
 
     <Button
         android:id="@+id/rickroll"
@@ -108,8 +111,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/colorPrimary"
+        android:fontFamily="@font/nasalization_rg"
         android:text="@string/VerisonNumber"
         android:textColor="#FFFFFF" />
 
@@ -120,10 +124,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="928dp"
-        android:layout_marginRight="928dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="931dp"
+        android:layout_marginRight="931dp"
+        android:layout_marginBottom="14dp"
         android:background="@color/colorPrimary"
+        android:fontFamily="@font/nasalization_rg"
         android:text="Settings"
         android:textColor="#FFFFFF" />
 
@@ -138,7 +143,8 @@
         android:layout_marginRight="185dp"
         android:layout_marginBottom="14dp"
         android:clickable="true"
-        app:srcCompat="@drawable/picture1" />
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:srcCompat="@mipmap/picture2" />
 
     <TextView
         android:id="@+id/textView17"
@@ -151,13 +157,15 @@
         android:layout_marginRight="564dp"
         android:layout_marginBottom="32dp"
         android:background="#FFFFFF"
-        android:text="TextView" />
+        android:text="TextView"
+        android:fontFamily="@font/nasalization_rg"/>
 
     <Button
         android:id="@+id/testBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Button"
+        android:fontFamily="@font/nasalization_rg"/>
 
 
 </RelativeLayout>
