@@ -56,8 +56,8 @@ public class login extends AppCompatActivity {
 
         pass = pWord.getText().toString();
 
-        String[] items = new String[]{"Select User", "Andrew", "Admin", "Aaron", "Cap", "Leo",
-        "Guthrie", "Emily", "Jonathan", "Edward", "Susan", "Harpreet", "Christian", "Katie", "Bert", "Alexander", "Luci"}; //Hey andrew why is my name the second to last
+        String[] items = new String[]{"Select User", "Andrew", "Admin", "Cap", "Leo",
+        "Guthrie", "Emily", "Jonathan", "Edward", "Harpreet", "Christian", "Katie", "Alexander", "Luci"}; //Hey andrew why is my name the second to last
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
