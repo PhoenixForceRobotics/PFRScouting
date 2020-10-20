@@ -23,7 +23,9 @@ public class team_select extends AppCompatActivity {
 
     TextView match, team;
 
-    public static  String matchNumber, teamNumber;
+
+
+    public static String matchNumber, teamNumber;
 
     public static String show1;
     public String show2;
@@ -31,7 +33,9 @@ public class team_select extends AppCompatActivity {
     public static final String matchNum = "matchNumber";
     public static final String teamNum = "teamNumber";
 
-
+    public int matchTrue = 0;
+    public int teamTrue = 0;
+    public int Validator = teamTrue + matchTrue + 0;
 
 
     @Override
@@ -47,66 +51,66 @@ public class team_select extends AppCompatActivity {
         show2 = myPrefs.getString(teamNum, "0");
 
 
-
-
-
-
         finished = findViewById(R.id.goScout);
         match = findViewById(R.id.matchNum);
         team = findViewById(R.id.teams);
 
 
-
-
-        finished.setOnClickListener(new View.OnClickListener(){
+        finished.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 saveData();
 
 
-            }});
+            }
+        });
 
 
     }
 
-    public void saveData(){
+    public void saveData() {
 
-            matchNumber = match.getText().toString();
-            teamNumber = team.getText().toString();
+        matchNumber = match.getText().toString();
+        teamNumber = team.getText().toString();
 
-            SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-            SharedPreferences.Editor editor = myPrefs.edit();
+        SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = myPrefs.edit();
 
-            editor.putString(matchNum, matchNumber);
-            editor.putString(teamNum, teamNumber);
+        editor.putString(matchNum, matchNumber);
+        editor.putString(teamNum, teamNumber);
 
-            editor.apply();
+        editor.apply();
 
-            Toast.makeText(this, "Saved Data" + matchNumber + teamNumber, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Saved Data" + matchNumber + teamNumber, Toast.LENGTH_SHORT).show();
+        //Above line is redundant
+
+        goScore();
+    }
 
 
-            goScore();
+    public void goScore() {
+
+
+
+
+       /* teamTrue = Integer.parseInt(teamNumber);
+        matchTrue = Integer.parseInt(matchNumber); */
+
+        //This toast is for debuggin;
+        //Toast.makeText(this, "Got to here", Toast.LENGTH_SHORT).show();
+
+        if (teamNumber.isEmpty()) {
+        //verifies that there is an entered teamNumber - avoids a crash furhter down the line - Verified working 10/20/20
+
+            Toast.makeText(this, "You must enter a teamNumber/matchNumber", Toast.LENGTH_SHORT).show();
+        } else {
+
+            Toast.makeText(this, "Saved Data - Match Number:" + matchNumber + " Team Number:" + teamNumber, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ActivityMain.class);
+            startActivity(intent);
+
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public void goScore(){
-
-        Intent intent = new Intent(this, ActivityMain.class);
-        startActivity(intent);
-
     }
 }
 
