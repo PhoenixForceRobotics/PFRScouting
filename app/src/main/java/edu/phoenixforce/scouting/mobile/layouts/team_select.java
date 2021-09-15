@@ -23,8 +23,8 @@ public class team_select extends AppCompatActivity {
 
     TextView match, team;
 
-    public static  String matchNumber, teamNumber;
-
+    public static  String matchNumber = "0";
+    public static String teamNumber = "0";
     public static String show1;
     public String show2;
 
@@ -55,8 +55,16 @@ public class team_select extends AppCompatActivity {
         match = findViewById(R.id.matchNum);
         team = findViewById(R.id.teams);
 
+        mediatorMethod();
 
 
+
+
+
+
+    }
+
+    public void mediatorMethod(){
 
         finished.setOnClickListener(new View.OnClickListener(){
 
@@ -67,7 +75,6 @@ public class team_select extends AppCompatActivity {
 
             }});
 
-
     }
 
     public void saveData(){
@@ -75,6 +82,22 @@ public class team_select extends AppCompatActivity {
             matchNumber = match.getText().toString();
             teamNumber = team.getText().toString();
 
+
+
+            if(teamNumber == null){
+
+               Toast.makeText(this,"No input detected :(", Toast.LENGTH_SHORT).show();
+                mediatorMethod();
+
+            }
+
+            else if(matchNumber == null){
+
+                Toast.makeText(this,"No input detected :(", Toast.LENGTH_SHORT).show();
+                mediatorMethod();
+            }
+
+            else{
             SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
             SharedPreferences.Editor editor = myPrefs.edit();
 
@@ -87,6 +110,8 @@ public class team_select extends AppCompatActivity {
 
 
             goScore();
+
+        }
         }
 
 

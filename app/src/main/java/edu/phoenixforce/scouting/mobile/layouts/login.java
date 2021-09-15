@@ -56,6 +56,8 @@ public class login extends AppCompatActivity {
 
         pass = pWord.getText().toString();
 
+        String name;
+
         String[] items = new String[]{"Select User", "Andrew", "Admin", "Aaron", "Cap", "Leo",
         "Guthrie", "Emily", "Jonathan", "Edward", "Susan", "Harpreet", "Christian", "Katie", "Bert", "Alexander", "Luci"}; //Hey andrew why is my name the second to last
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
@@ -135,6 +137,8 @@ public class login extends AppCompatActivity {
     }*/ //Something that I was playing with
 
     public void validateUser() {
+
+
 
 
 

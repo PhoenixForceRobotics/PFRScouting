@@ -111,11 +111,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="9dp"
         android:background="@color/colorPrimary"
-        android:fontFamily="@font/nasalization_rg"
         android:text="@string/VerisonNumber"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/nasalization_rg"/>
 
     <Button
         android:id="@+id/options"

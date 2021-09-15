@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+
 import com.example.fyrebirdscout11.R;
 
 import java.util.Calendar;
@@ -109,6 +110,8 @@ public static int counter = 0;
 
     public static int matchnumber;
 
+    private static String tag = "TeleScore";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -183,6 +186,7 @@ public static int counter = 0;
         upButton8 = findViewById(R.id.upbutton8);
         upButton9 = findViewById(R.id.upbutton9);
         upButton10 = findViewById(R.id.upbutton10);
+
 
         downButton7 = findViewById(R.id.downbutton7);
         downButton8 = findViewById(R.id.downbutton8);
@@ -353,6 +357,7 @@ public static int counter = 0;
             @Override
             public void onClick(View v) {
                // openMainActivity();
+                Log.d(tag,"This button is timer");
                 Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
                 TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
                         String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
@@ -361,7 +366,7 @@ public static int counter = 0;
                 //TODO this /\
                 RecyclerViewViewer.mWordViewModelII.insert(teleData);
                 //Log.d("Night Mode Update", teleData.toString());
-                Log.d("Night Mode Update", String.valueOf(team_select.show1));
+                //Log.d("Night Mode Update", String.valueOf(team_select.show1));
                 X = 1;
 
                 AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6),
@@ -379,6 +384,8 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v){
+
+                Log.d(tag, "this is back");
 
                 openMainActivity();
 
