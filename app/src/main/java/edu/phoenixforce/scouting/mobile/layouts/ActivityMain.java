@@ -47,7 +47,7 @@ import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerView
 public class ActivityMain extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     private Button scores;
     private Button skipper;
-    private Button rick;
+    //private Button rick;
     private Button choice, test;
     private FloatingActionButton fab;
     public String text ;

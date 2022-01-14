@@ -25,13 +25,14 @@ import edu.phoenixforce.scouting.mobile.database.ViewModels.TeleView;
 import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
+import edu.phoenixforce.scouting.mobile.functions.Timer;
 
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 import static edu.phoenixforce.scouting.mobile.layouts.login.TEXT;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
 
-public class TeleScore extends AppCompatActivity {
+public class TeleScore extends AppCompatActivity{
 //TextViews
 TextView autoBallHigh;
 TextView view2;
@@ -64,6 +65,10 @@ public static int counter = 0;
     public static int counter3 = 0;
     public static int counter4 = 0;
     public static int counter5 = 0;
+
+    public int differnce;
+    public int parsedOldTime;
+
 
     public static int moved = 0;
     public static String spunwheel = "No"; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
@@ -112,6 +117,13 @@ public static int counter = 0;
 
     private static String tag = "TeleScore";
 
+    public int timeTime;
+
+    Timer clock = new Timer();
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,6 +147,7 @@ public static int counter = 0;
            solo = "No";
            buddy = "No";
 
+           timeTime = clock.currentTime;
 
 
         //TextViews
@@ -205,6 +218,9 @@ public static int counter = 0;
 
         user = findViewById(R.id.show_user);
 
+        SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editorTwo = scorePrefs.edit();
+
 
 
         SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
@@ -233,6 +249,7 @@ public static int counter = 0;
 
        */
 
+      /* Not sure why this one exists?
       timer.setOnClickListener(new View.OnClickListener(){
           @Override
           public void onClick(View v){
@@ -241,8 +258,7 @@ public static int counter = 0;
 
           }
 
-
-      });
+      }); */
 
         autoHighUpA.setOnClickListener(new View.OnClickListener() {
 
@@ -351,7 +367,23 @@ public static int counter = 0;
 
         });
 
+       timer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                SharedPreferences timePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                String oldTime = timePrefs.getString("time", "0");
+
+
+
+
+                SharedPreferences.Editor editorThree = timePrefs.edit();
+                editorThree.putInt("time", timeTime);
+
+            }
+        });
+
+     /*
         timer.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -380,12 +412,14 @@ public static int counter = 0;
             }
         });
 
+*/
+
         back.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v){
 
-                Log.d(tag, "this is back");
+                Log.e(tag, "this is back");
 
                 openMainActivity();
 
