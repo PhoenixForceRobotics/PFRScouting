@@ -121,7 +121,7 @@
         android:layout_marginEnd="533dp"
         android:layout_marginRight="533dp"
         android:layout_marginBottom="450dp"
-        app:srcCompat="@mipmap/picture2" />
+        app:srcCompat="@mipmap/picture1" />
 
 
 </RelativeLayout>
