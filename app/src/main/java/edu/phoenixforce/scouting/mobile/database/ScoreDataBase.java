@@ -16,8 +16,10 @@ import java.util.concurrent.Executors;
 
 import edu.phoenixforce.scouting.mobile.database.Repositories.TeleRepo;
 import edu.phoenixforce.scouting.mobile.database.daos.BallDao;
+import edu.phoenixforce.scouting.mobile.database.daos.GameDao;
 import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
 import edu.phoenixforce.scouting.mobile.database.entities.DevId;
+import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 import edu.phoenixforce.scouting.mobile.database.entities.Scores;
 
 
@@ -30,7 +32,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
 
 
-@Database(entities = {Scores.class, AutoData.class, Team.class, TeleData.class, DevId.class} , version = 3, exportSchema = false)
+@Database(entities = {Scores.class, AutoData.class, Team.class, TeleData.class, DevId.class, GameData.class} , version = 3, exportSchema = false)
 public abstract class ScoreDataBase extends RoomDatabase {
 
     private static volatile ScoreDataBase INSTANCE;
@@ -49,6 +51,8 @@ public abstract class ScoreDataBase extends RoomDatabase {
     public abstract TeamDao teamDao();
 
     public abstract DevDao devIdDao();
+
+    public abstract GameDao gameDao();
 
     public static ScoreDataBase getDatabase(final Context context) {
 
@@ -71,11 +75,13 @@ public abstract class ScoreDataBase extends RoomDatabase {
             databaseWriteExecutor.execute(() -> {
 
                 TeleDao dao1 = INSTANCE.teleDao();
+                GameDao dao2 = INSTANCE.gameDao();
                 //dao1.nukeTable();
                 //TeleData teleData = new TeleData("hi", "hui", "lkdbnc", "csvs", "scdsv", "cvsdv", "svdvs", "vcsdvsdv","yeet","csdghci");
                 //dao1.insert(teleData);
 
                 //unless you want something to happen when the application opens, dont mess with this
+                //To clarify, in this case do NOT add nuke-table calls or it will all break.
             });
         }
     };

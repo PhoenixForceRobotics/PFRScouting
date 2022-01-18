@@ -26,6 +26,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
 import edu.phoenixforce.scouting.mobile.functions.Timer;
+import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 import static edu.phoenixforce.scouting.mobile.layouts.login.TEXT;
@@ -419,7 +420,7 @@ public static int counter = 0;
             @Override
             public void onClick(View v){
 
-                Log.e(tag, "this is back");
+                Log.d(tag, "this is back");
 
                 openMainActivity();
 
@@ -602,6 +603,7 @@ public static int counter = 0;
     }
     public void openMainActivity(){
 
+        Log.d("Testing", "openMainRan");
         Intent intent = new Intent(this, team_select.class);
         startActivity(intent);
 
@@ -611,10 +613,17 @@ public static int counter = 0;
                 String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5),
                 spunwheel,colorwheel,balls,solo,buddy);
         //TODO this /\
+
+       // GameData gameData = new GameData(balls,balls, balls, balls, balls,balls,balls,balls,balls,balls,balls,balls,balls,balls);
+       //Crashing error causing here ^
+
         RecyclerViewViewer.mWordViewModelII.insert(teleData);
+
+
         //Log.d("Night Mode Update", teleData.toString());
         Log.d("Night Mode Update", String.valueOf(team_select.show1));
         X = 1;
+
 
         AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6),
                 String.valueOf(TeleScore.counter10), String.valueOf(TeleScore.scoutname), String.valueOf(TeleScore.match),/*String.valueOf(TeleScore.teamnum)*/ Integer.valueOf(TeleScore.matchnumber) );
