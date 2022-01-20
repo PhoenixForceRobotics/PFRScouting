@@ -22,9 +22,9 @@ import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
 
-public class GameDataAdapter  {
+public class GameDataAdapter extends RecyclerView.Adapter<GameDataAdapter.ViewHolder> {
 
-    List<GameData> gameData;
+    List<GameData> gameDat;
     private final LayoutInflater Layout;
 
     public GameDataAdapter(Context context) {
@@ -41,22 +41,40 @@ public class GameDataAdapter  {
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull TeleDataAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull GameDataAdapter.ViewHolder holder, int position) {
 
-        if (gameData == null) {
-            holder.ItemView.setText("No Word");
+        if (gameDat == null) {
+            holder.textView.setText("No Word");
         } else {
-            GameData TheMostCurrent1 = gameData.get(position);
-            GameData current1 = gameData.get(position);
-            GameData lessCurrent1 = gameData.get(position);
-            GameData EvenLessCurrent1 = gameData.get(position);
-            GameData TheMostCurrent = gameData.get(position);
-            GameData current = gameData.get(position);
-            GameData lessCurrent = gameData.get(position);
-            GameData EvenLessCurrent = teleDat.get(position);
-            GameData TheEvenMostCurrent = teleDat.get(position);
-            GameData TheLeastCurrent = teleDat.get(position);
-            GameData TheLeasterCurrent = teleDat.get(position);
+
+            GameData currentMatchNum = gameDat.get(position);
+            GameData currentTeamNum = gameDat.get(position);
+            GameData currentMoved = gameDat.get(position);
+            GameData currentStalled = gameDat.get(position);
+            GameData currentClimbLow = gameDat.get(position);
+            GameData currentClimbMid = gameDat.get(position);
+            GameData currentClimbHigh = gameDat.get(position);
+            GameData currentClimbHigher = gameDat.get(position);
+            GameData currentBallLow = gameDat.get(position);
+            GameData currentBallHigh = gameDat.get(position);
+            GameData currentAutoBallHigh = gameDat.get(position);
+            GameData currentAutoBallLow = gameDat.get(position);
+            GameData currentDevNum = gameDat.get(position);
+            GameData currentScout = gameDat.get(position);
+            holder.textView.setText("Scout + ", currentMatchNum.getMatchNum());
+
+            /*
+           TeleData TheMostCurrent1 = teleDat.get(position);
+            TeleData current1 = teleDat.get(position);
+            TeleData lessCurrent1 = teleDat.get(position);
+            TeleData EvenLessCurrent1 = teleDat.get(position);
+            TeleData TheMostCurrent = teleDat.get(position);
+            TeleData current = teleDat.get(position);
+            TeleData lessCurrent = teleDat.get(position);
+            TeleData EvenLessCurrent = teleDat.get(position);
+            TeleData TheEvenMostCurrent = teleDat.get(position);
+            TeleData TheLeastCurrent = teleDat.get(position);
+            TeleData TheLeasterCurrent = teleDat.get(position);
             holder.ItemView.setText("Time: " + TheLeasterCurrent.getMatch() + " - Ball Low: " + current1.getBallLow() + " - Ball Mid: "
                     + EvenLessCurrent1.getBallMid() + " - Ball High: " + TheMostCurrent1.getBallThree() +
                     " - Balls Intook: " + TheEvenMostCurrent.getBallsIntook() + " - Shots Missed: " + lessCurrent1.getShotsMissed()
@@ -97,30 +115,31 @@ public class GameDataAdapter  {
        }
 
          */
-        //holder.timeStamp.setText(teleDat.get(position).getTimeStamp());
-        //holder.missedShot.setText(teleDat.get(position).getMissedShot());
-   /* }
+            //holder.timeStamp.setText(teleDat.get(position).getTimeStamp());
+            //holder.missedShot.setText(teleDat.get(position).getMissedShot());
+      /*   }
 
-    @Override
-    public int getItemCount() {
-        if (gameData != null)
-            return teleDat.size();
-        else return 0;
-    }
 
-    public void setData1(List<GameData> data){
-        gameData = data;
-        notifyDataSetChanged();
-    }
-
-    class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView ItemView;
-
-        private ViewHolder(View itemView) {
-            super(itemView);
-            ItemView = itemView.findViewById(R.id.textView11);
+        @Override
+        public int getItemCount () {
+            if (gameDat != null)
+                return gameDat.size();
+            else return 0;
         }
-    }
+
+        public void setData1 (List < GameData > data) {
+            gameDat = data;
+            notifyDataSetChanged();
+        }
+
+        class ViewHolder extends RecyclerView.ViewHolder {
+            private final TextView textView;
+
+            private ViewHolder(View itemView) {
+                super(itemView);
+                //textView = textView.findViewById(R.id.textView11);
+            }
+        }
 
 /*
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -144,5 +163,8 @@ public class GameDataAdapter  {
     }
 
 
-} */
+    }
+}
+
+*/
 

@@ -17,14 +17,14 @@ import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 
 public interface GameDao {
 
-    /*@Query("SELECT * FROM gameData")
+    @Query("SELECT * FROM gameData")
     LiveData<List<GameData>> getAllScores();
-     */
+
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(GameData gameData);
+    void insertAll(GameData gameData);
 
-    /*
+
     @Query("DELETE FROM GameData")
-    void nukeTable(); */
+    void nukeTable();
 }

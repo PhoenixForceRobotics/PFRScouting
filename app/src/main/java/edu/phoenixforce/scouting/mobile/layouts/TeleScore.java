@@ -614,7 +614,7 @@ public static int counter = 0;
                 spunwheel,colorwheel,balls,solo,buddy);
         //TODO this /\
 
-       // GameData gameData = new GameData(balls,balls, balls, balls, balls,balls,balls,balls,balls,balls,balls,balls,balls,balls);
+       GameData gameData = new GameData("test", String.valueOf(balls), solo, buddy, "hi",balls, balls, "high", "mid", "higher", "this", "that", "hi","medium");
        //Crashing error causing here ^
 
         RecyclerViewViewer.mWordViewModelII.insert(teleData);

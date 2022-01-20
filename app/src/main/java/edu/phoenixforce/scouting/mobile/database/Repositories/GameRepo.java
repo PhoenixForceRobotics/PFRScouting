@@ -20,16 +20,41 @@ public class GameRepo {
     public GameRepo(Application application) {
         ScoreDataBase data = ScoreDataBase.getDatabase(application);
         Game = data.gameDao();
-        //todos = Game.getAllScores();
+        todos = Game.getAllScores();
     }
+
+    // creating a method to insert the data to our database.
+    public void insert(GameData gameData) {
+        new InsertCourseAsyncTask(Game).execute(gameData);
+    }
+
 
     public LiveData<List<GameData>> getGame() {
         return todos;
     }
 
-    public void insert(GameData gameData){
+   /* public void insert(GameData gameData){
         ScoreDataBase.databaseWriteExecutor.execute(() -> {
-            Game.insert(gameData);
+            Game.insertAll(gameData);
         });
+    } */
+
+
+    // we are creating a async task method to insert new course.
+    private static class InsertCourseAsyncTask extends AsyncTask<CourseModal, Void, Void> {
+        private GameDao gameDao;
+
+        private InsertCourseAsyncTask(GameDao gameDao) {
+            this.gameDao = gameDao;
+        }
+
+        @Override
+        protected Void doInBackground(GameData... gameData) {
+            // below line is use to insert our modal in dao.
+            gameDao.insert(gameData[0]);
+            return null;
+        }
     }
 }
+
+

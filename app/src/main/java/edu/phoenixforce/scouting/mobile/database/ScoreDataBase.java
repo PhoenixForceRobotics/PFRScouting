@@ -2,6 +2,7 @@ package edu.phoenixforce.scouting.mobile.database;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.AsyncTask;
 
 import androidx.room.Database;
 import androidx.room.Room;
@@ -54,7 +55,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
 
     public abstract GameDao gameDao();
 
-    public static ScoreDataBase getDatabase(final Context context) {
+    public static ScoreDataBase getDatabase(Context context) {
 
         if (INSTANCE == null) {
             synchronized (ScoreDataBase.class) {
@@ -76,6 +77,8 @@ public abstract class ScoreDataBase extends RoomDatabase {
 
                 TeleDao dao1 = INSTANCE.teleDao();
                 GameDao dao2 = INSTANCE.gameDao();
+
+
                 //dao1.nukeTable();
                 //TeleData teleData = new TeleData("hi", "hui", "lkdbnc", "csvs", "scdsv", "cvsdv", "svdvs", "vcsdvsdv","yeet","csdghci");
                 //dao1.insert(teleData);
@@ -85,6 +88,16 @@ public abstract class ScoreDataBase extends RoomDatabase {
             });
         }
     };
+
+    private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
+        PopulateDbAsyncTask(ScoreDataBase INSTANCE) {
+            GameDao gameDao = INSTANCE.gameDao();
+        }
+        @Override
+        protected Void doInBackground(Void... voids) {
+            return null;
+        }
+    }
 }
 
 

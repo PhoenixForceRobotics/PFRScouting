@@ -151,7 +151,7 @@ public class GameData{
     }
 
     @PrimaryKey
-    @NonNull
+    @NotNull
     @ColumnInfo(name = "MatchNum")
     private String MatchNum;
 
