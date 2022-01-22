@@ -79,7 +79,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
                 TeleDao dao1 = INSTANCE.teleDao();
                 GameDao dao2 = INSTANCE.gameDao();
 
-                new PopulateDbAsyncTask(INSTANCE).execute();
+                //new PopulateDbAsyncTask(INSTANCE).execute(); //99% chance that this line is useless
 
                 //dao1.nukeTable();
                 //TeleData teleData = new TeleData("hi", "hui", "lkdbnc", "csvs", "scdsv", "cvsdv", "svdvs", "vcsdvsdv","yeet","csdghci");
@@ -92,7 +92,8 @@ public abstract class ScoreDataBase extends RoomDatabase {
     };
 
 
-    private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
+    //99% chance that this line is useless as well
+    /*private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
         PopulateDbAsyncTask(ScoreDataBase INSTANCE) {
             GameDao gameDao = INSTANCE.gameDao();
         }
@@ -100,7 +101,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
         protected Void doInBackground(Void... voids) {
             return null;
         }
-    }
+    } */
 }
 
 

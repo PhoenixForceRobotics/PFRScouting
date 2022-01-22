@@ -33,9 +33,9 @@
         android:layout_marginRight="1dp"
         android:layout_marginBottom="77dp"
         android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_use"
-        android:textColor="#FFFFFF"
-        android:fontFamily="@font/nasalization_rg"/>
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/button2"
@@ -87,7 +87,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/ifrlogo" />
+        app:srcCompat="@drawable/rrlogo" />
 
     <TextView
         android:id="@+id/textView8"
