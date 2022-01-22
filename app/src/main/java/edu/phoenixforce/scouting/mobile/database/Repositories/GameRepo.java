@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
+import android.os.AsyncTask;
+
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 import edu.phoenixforce.scouting.mobile.database.daos.GameDao;
 import edu.phoenixforce.scouting.mobile.database.daos.TeleDao;
@@ -41,7 +43,7 @@ public class GameRepo {
 
 
     // we are creating a async task method to insert new course.
-    private static class InsertCourseAsyncTask extends AsyncTask<CourseModal, Void, Void> {
+    private static class InsertCourseAsyncTask extends AsyncTask<GameData, Void, Void> {
         private GameDao gameDao;
 
         private InsertCourseAsyncTask(GameDao gameDao) {
@@ -51,7 +53,7 @@ public class GameRepo {
         @Override
         protected Void doInBackground(GameData... gameData) {
             // below line is use to insert our modal in dao.
-            gameDao.insert(gameData[0]);
+            gameDao.insertAll(gameData[0]);
             return null;
         }
     }

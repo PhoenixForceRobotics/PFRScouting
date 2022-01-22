@@ -61,12 +61,13 @@ public abstract class ScoreDataBase extends RoomDatabase {
             synchronized (ScoreDataBase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), ScoreDataBase.class,
-                            DBNAME).addCallback(RoomDatabaseCallBack).build();
+                            DBNAME).addCallback(RoomDatabaseCallBack).allowMainThreadQueries().build();
                 }
             }
         }
         return INSTANCE;
     }
+
 
 
     private static ScoreDataBase.Callback RoomDatabaseCallBack = new ScoreDataBase.Callback(){
@@ -78,6 +79,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
                 TeleDao dao1 = INSTANCE.teleDao();
                 GameDao dao2 = INSTANCE.gameDao();
 
+                new PopulateDbAsyncTask(INSTANCE).execute();
 
                 //dao1.nukeTable();
                 //TeleData teleData = new TeleData("hi", "hui", "lkdbnc", "csvs", "scdsv", "cvsdv", "svdvs", "vcsdvsdv","yeet","csdghci");
@@ -88,6 +90,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
             });
         }
     };
+
 
     private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
         PopulateDbAsyncTask(ScoreDataBase INSTANCE) {

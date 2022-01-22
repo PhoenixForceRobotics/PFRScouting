@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -21,6 +22,7 @@ import com.example.fyrebirdscout11.R;
 
 import java.util.Calendar;
 
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 import edu.phoenixforce.scouting.mobile.database.ViewModels.TeleView;
 import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
@@ -607,6 +609,8 @@ public static int counter = 0;
         Intent intent = new Intent(this, team_select.class);
         startActivity(intent);
 
+        saveGameData();
+
         Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
         TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
                 String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
@@ -614,8 +618,8 @@ public static int counter = 0;
                 spunwheel,colorwheel,balls,solo,buddy);
         //TODO this /\
 
-       GameData gameData = new GameData("test", String.valueOf(balls), solo, buddy, "hi",balls, balls, "high", "mid", "higher", "this", "that", "hi","medium");
-       //Crashing error causing here ^
+       //GameData gameData = new GameData("test", String.valueOf(balls), solo, buddy, "hi",balls, balls, "high", "mid", "higher", "this", "that", "hi","medium");
+
 
         RecyclerViewViewer.mWordViewModelII.insert(teleData);
 
@@ -633,6 +637,21 @@ public static int counter = 0;
 
 
     }
+
+    public void saveGameData(){
+
+        ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
+
+        GameData gameData = new GameData("1","2","3","4", "5", "6", "7", "8", "9"
+        , "10", "11", "12", "13", "14");
+
+        SDB.gameDao().insertAll(gameData);
+
+
+    }
+
+
+
 
     public void goScoutIII() {
 
