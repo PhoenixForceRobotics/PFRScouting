@@ -5,13 +5,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.Chronometer;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.CheckBox;
@@ -23,10 +19,8 @@ import com.example.fyrebirdscout11.R;
 import java.util.Calendar;
 
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
-import edu.phoenixforce.scouting.mobile.database.ViewModels.TeleView;
-import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
+import edu.phoenixforce.scouting.mobile.database.legacy.ViewModels.TeleView;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
-import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
 import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 
@@ -132,7 +126,7 @@ public static int counter = 0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tele_score);
-        RecyclerViewViewer.mWordViewModelII = new ViewModelProvider(this).get(TeleView.class);
+        //RecyclerViewViewer.mWordViewModelII = new ViewModelProvider(this).get(TeleView.class);
 
            counter6 = 0;
            counter7 = 0;
@@ -621,7 +615,7 @@ public static int counter = 0;
        //GameData gameData = new GameData("test", String.valueOf(balls), solo, buddy, "hi",balls, balls, "high", "mid", "higher", "this", "that", "hi","medium");
 
 
-        RecyclerViewViewer.mWordViewModelII.insert(teleData);
+        //RecyclerViewViewer.mWordViewModelII.insert(teleData);
 
 
         //Log.d("Night Mode Update", teleData.toString());
@@ -629,11 +623,6 @@ public static int counter = 0;
         X = 1;
 
 
-        AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6),
-                String.valueOf(TeleScore.counter10), String.valueOf(TeleScore.scoutname), String.valueOf(TeleScore.match),/*String.valueOf(TeleScore.teamnum)*/ Integer.valueOf(TeleScore.matchnumber) );
-
-        Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-        //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
 
 
     }
@@ -653,12 +642,7 @@ public static int counter = 0;
 
 
 
-    public void goScoutIII() {
 
-        Intent intent = new Intent(this, RecyclerViewViewer.class);
-        startActivity(intent);
-
-    }
 
            public void writeTime(){
 

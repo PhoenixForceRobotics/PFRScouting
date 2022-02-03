@@ -3,7 +3,6 @@ package edu.phoenixforce.scouting.mobile.layouts;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -13,8 +12,6 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fyrebirdscout11.R;
-
-import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
 
 @SuppressLint("Registered")
 public class EActivity extends AppCompatActivity {
@@ -48,7 +45,7 @@ public class EActivity extends AppCompatActivity {
                     Log.d("Night mode update", word);
                 }
                 finish();
-                goScoutIII();
+               // goScoutIII();
             }
         });
         mEditWordView1.setOnClickListener(new View.OnClickListener() {
@@ -58,10 +55,10 @@ public class EActivity extends AppCompatActivity {
         });
 
     }
-    private void goScoutIII() {
+   /* private void goScoutIII() {
 
         Intent intent = new Intent(this, RecyclerViewViewer.class);
         startActivity(intent);
 
-    }
+    } */
 }

@@ -87,7 +87,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/rrlogo2" />
+        app:srcCompat="@drawable/ifrlogo" />
 
     <TextView
         android:id="@+id/textView8"

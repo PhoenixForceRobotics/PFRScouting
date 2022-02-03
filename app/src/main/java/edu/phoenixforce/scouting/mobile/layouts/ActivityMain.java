@@ -1,13 +1,10 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -19,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import android.net.Uri;
 import android.widget.TextView;
 
 import com.example.fyrebirdscout11.R;
@@ -31,17 +27,13 @@ import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 import static edu.phoenixforce.scouting.mobile.layouts.login.TEXT;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
-import static java.sql.DriverManager.println;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
-import edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer;
 
 
 public class ActivityMain extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
@@ -78,11 +70,11 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
 
 
-        Log.d("Night mode update", TeleScore.spunwheel + "" + TeleScore.counter4 + "" + String.valueOf(TeleScore.colorwheel)+ ""
+        /*(Log.d("Night mode update", TeleScore.spunwheel + "" + TeleScore.counter4 + "" + String.valueOf(TeleScore.colorwheel)+ ""
                 +String.valueOf(TeleScore.counter3) + TeleScore.colorwheel + "" + String.valueOf(TeleScore.spunwheel)+ "" + String.valueOf(TeleScore.solo)+ "" +
                 String.valueOf(TeleScore.counter2) + "" + TeleScore.buddy + "" +
                 String.valueOf(TeleScore.counter) + String.valueOf(TeleScore.balls) + String.valueOf(TeleScore.counter6) + String.valueOf(TeleScore.counter7)
-                + String.valueOf(TeleScore.counter8) + String.valueOf(TeleScore.counter9) + String.valueOf(TeleScore.counter10));
+                + String.valueOf(TeleScore.counter8) + String.valueOf(TeleScore.counter9) + String.valueOf(TeleScore.counter10));*/
         final ActivityMain thisActivity = this;
 
 
@@ -106,7 +98,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
             test.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    seeData();
+                    //seeData();
                 }
             });
 
@@ -250,12 +242,12 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         }
     }
 
-    public void seeData(){
+   /* public void seeData(){
 
         Intent intent = new Intent(this,  RecyclerViewViewer.class);
         startActivity(intent);
 
-    }
+    } */
 
 }
 

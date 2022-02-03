@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 public class TeleData{
     // apple sucks :)
     // this is the class in which we write data and save it to the database - as of right now this is the only known working entitiy
-    // While in theory using different tables for different secrtions of scoring is ideal for workign with the database, in the case of this it is going to be...
+    // While in theory using different tables for different sections of scoring is ideal for workign with the database, in the case of this it is going to be...
     // ... in our best interest to use one so that it only has to be exported to one csv file in DBViewerforSQL
 
 

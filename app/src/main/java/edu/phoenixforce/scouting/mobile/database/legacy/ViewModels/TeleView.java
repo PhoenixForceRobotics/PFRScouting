@@ -1,4 +1,4 @@
-package edu.phoenixforce.scouting.mobile.database.ViewModels;
+package edu.phoenixforce.scouting.mobile.database.legacy.ViewModels;
 
 import android.app.Application;
 

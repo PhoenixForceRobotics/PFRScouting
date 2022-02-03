@@ -11,11 +11,7 @@ import android.widget.Button;
 
 import com.example.fyrebirdscout11.R;
 
-import java.util.List;
-
-import edu.phoenixforce.scouting.mobile.database.adapters.BallScoreAdapter;
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
-import edu.phoenixforce.scouting.mobile.database.entities.Scores;
 
 public class ScoreView extends AppCompatActivity {
 

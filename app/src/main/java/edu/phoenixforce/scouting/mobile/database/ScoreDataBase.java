@@ -1,13 +1,10 @@
 package edu.phoenixforce.scouting.mobile.database;
 
-import android.app.Application;
 import android.content.Context;
-import android.os.AsyncTask;
 
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import org.jetbrains.annotations.NotNull;
@@ -15,25 +12,17 @@ import org.jetbrains.annotations.NotNull;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import edu.phoenixforce.scouting.mobile.database.Repositories.TeleRepo;
-import edu.phoenixforce.scouting.mobile.database.daos.BallDao;
 import edu.phoenixforce.scouting.mobile.database.daos.GameDao;
-import edu.phoenixforce.scouting.mobile.database.entities.AutoData;
-import edu.phoenixforce.scouting.mobile.database.entities.DevId;
+import edu.phoenixforce.scouting.mobile.database.daos.PitDao;
 import edu.phoenixforce.scouting.mobile.database.entities.GameData;
-import edu.phoenixforce.scouting.mobile.database.entities.Scores;
 
 
-import edu.phoenixforce.scouting.mobile.database.daos.DevDao;
-import edu.phoenixforce.scouting.mobile.database.daos.TeamDao;
 import edu.phoenixforce.scouting.mobile.database.daos.TeleDao;
-import edu.phoenixforce.scouting.mobile.database.daos.AutoDao;
-import edu.phoenixforce.scouting.mobile.database.entities.Team;
+import edu.phoenixforce.scouting.mobile.database.entities.PitData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
-import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
 
 
-@Database(entities = {Scores.class, AutoData.class, Team.class, TeleData.class, DevId.class, GameData.class} , version = 3, exportSchema = false)
+@Database(entities = {TeleData.class, GameData.class, PitData.class} , version = 4, exportSchema = false)
 public abstract class ScoreDataBase extends RoomDatabase {
 
     private static volatile ScoreDataBase INSTANCE;
@@ -43,17 +32,12 @@ public abstract class ScoreDataBase extends RoomDatabase {
 
     public static final String DBNAME = "ScoreDatabase";
 
-    public abstract BallDao ballDao();
-
-    public abstract AutoDao autoDao();
 
     public abstract TeleDao teleDao();
 
-    public abstract TeamDao teamDao();
-
-    public abstract DevDao devIdDao();
-
     public abstract GameDao gameDao();
+
+    public abstract PitDao pitDao();
 
     public static ScoreDataBase getDatabase(Context context) {
 
@@ -62,6 +46,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), ScoreDataBase.class,
                             DBNAME).addCallback(RoomDatabaseCallBack).allowMainThreadQueries().build();
+                                                //allowMainThreadQueries is not best practice but it works
                 }
             }
         }
@@ -78,6 +63,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
 
                 TeleDao dao1 = INSTANCE.teleDao();
                 GameDao dao2 = INSTANCE.gameDao();
+                PitDao dao3 = INSTANCE.pitDao();
 
                 //new PopulateDbAsyncTask(INSTANCE).execute(); //99% chance that this line is useless
 
