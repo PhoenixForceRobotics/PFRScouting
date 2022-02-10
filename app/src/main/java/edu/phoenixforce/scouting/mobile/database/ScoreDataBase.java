@@ -47,6 +47,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), ScoreDataBase.class,
                             DBNAME).addCallback(RoomDatabaseCallBack).allowMainThreadQueries().build();
                                                 //allowMainThreadQueries is not best practice but it works
+                                                //barook was here
                 }
             }
         }
