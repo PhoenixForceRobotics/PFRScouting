@@ -203,7 +203,7 @@ public static int counter = 0;
         downButton9 = findViewById(R.id.downbutton9);
         downButton10 = findViewById(R.id.downbutton10);
 
-        timer =findViewById(R.id.timer);
+        //timer =findViewById(R.id.timer);
 
         //on app launch Text View Must show zero
         autoBallHighA.setText("0");

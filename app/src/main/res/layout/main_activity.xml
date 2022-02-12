@@ -68,7 +68,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginTop="3dp"
         android:background="#00FFFFFF"
-        app:srcCompat="@mipmap/picture2" />
+        app:srcCompat="@mipmap/picture1" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -145,7 +145,7 @@
         android:layout_marginBottom="14dp"
         android:clickable="true"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:srcCompat="@mipmap/picture2" />
+        app:srcCompat="@mipmap/picture1" />
 
     <TextView
         android:id="@+id/textView17"
