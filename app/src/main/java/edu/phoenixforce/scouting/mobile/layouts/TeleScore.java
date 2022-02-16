@@ -5,12 +5,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.Chronometer;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.CheckBox;
@@ -136,9 +133,9 @@ public static int counter = 0;
 
         //TextViews
         autoBallHigh = findViewById(R.id.integer_number);
-        view2 = findViewById(R.id.integer_number2);
+        view2 = findViewById(R.id.integer_number);
         view3 = findViewById(R.id.integer_number3);
-        view4 = findViewById(R.id.integer_number4);
+        view4 = findViewById(R.id.integer_number2);
         view5 = findViewById(R.id.integer_number5);
 
         //Buttons
@@ -167,7 +164,7 @@ public static int counter = 0;
         //AUTOSCORE STUFF
 
         view7 = findViewById(R.id.integer_number7);
-        view8 = findViewById(R.id.integer_number8);
+        view8 = findViewById(R.id.integer_number2);
         view9 = findViewById(R.id.integer_number9);
         view10 = findViewById(R.id.integer_number10);
         autoBallHighA = findViewById(R.id.integer_number6);

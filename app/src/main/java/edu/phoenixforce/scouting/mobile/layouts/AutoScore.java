@@ -56,9 +56,9 @@ public class AutoScore extends AppCompatActivity {
 
                 //TextViews
                 autoBallHighA = findViewById(R.id.integer_number);
-                view7 = findViewById(R.id.integer_number2);
+                view7 = findViewById(R.id.integer_number);
                 view8 = findViewById(R.id.integer_number3);
-                view9 = findViewById(R.id.integer_number4);
+                view9 = findViewById(R.id.integer_number2);
                 view10 = findViewById(R.id.integer_number5);
 
                 //Buttons
