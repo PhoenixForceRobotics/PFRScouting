@@ -218,7 +218,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
     public void openAutoScore () {
 
-            Intent intent = new Intent(this, TeleScore.class);
+            Intent intent = new Intent(this, AutoScore.class);
             startActivity(intent);
 
 

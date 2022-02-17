@@ -5,12 +5,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.Chronometer;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.CheckBox;
@@ -135,15 +132,15 @@ public static int counter = 0;
 
 
         //TextViews
-        autoBallHigh = findViewById(R.id.integer_number);
-        view2 = findViewById(R.id.integer_number2);
-        view3 = findViewById(R.id.integer_number3);
+        autoBallHigh = findViewById(R.id.integer_number4);
+        view2 = findViewById(R.id.integer_number4);
+        view3 = findViewById(R.id.integer_number1);
         view4 = findViewById(R.id.integer_number4);
-        view5 = findViewById(R.id.integer_number5);
+        view5 = findViewById(R.id.integer_number4);
 
         //Buttons
         autoHighUp = findViewById(R.id.upbutton);
-        autoHighDown = findViewById(R.id.downbutton);
+        autoHighDown = findViewById(R.id.downbutton1);
 
         back = findViewById(R.id.donebutton);
 
@@ -153,9 +150,9 @@ public static int counter = 0;
         upButton5 = findViewById(R.id.upbutton5);
 
         downButton2 = findViewById(R.id.downbutton2);
-        downButton3 = findViewById(R.id.downbutton3);
-        downButton4 = findViewById(R.id.downbutton4);
-        downButton5 = findViewById(R.id.downbutton5);
+        downButton3 = findViewById(R.id.downbutton4);
+        downButton4 = findViewById(R.id.downbutton2);
+        downButton5 = findViewById(R.id.downbutton4);
 
         //on app launch Text View Must show zero
         autoBallHigh.setText("0");
@@ -173,23 +170,23 @@ public static int counter = 0;
         autoBallHighA = findViewById(R.id.integer_number6);
 
         //Buttons
-        autoHighUpA = findViewById(R.id.upbutton6);
+        autoHighUpA = findViewById(R.id.upbutton2);
         autoHighDownB = findViewById(R.id.downbutton6);
 
         // back = findViewById(R.id.imageButton);
         //navme = findViewById(R.id.navbutton);
 
-        upButton7 = findViewById(R.id.upbutton7);
+        upButton7 = findViewById(R.id.upbutton1);
         upButton8 = findViewById(R.id.upbutton8);
-        upButton9 = findViewById(R.id.upbutton9);
-        upButton10 = findViewById(R.id.upbutton10);
+        upButton9 = findViewById(R.id.upbutton4);
+        upButton10 = findViewById(R.id.upbutton3);
 
         downButton7 = findViewById(R.id.downbutton7);
         downButton8 = findViewById(R.id.downbutton8);
         downButton9 = findViewById(R.id.downbutton9);
         downButton10 = findViewById(R.id.downbutton10);
 
-        timer =findViewById(R.id.timer);
+        //timer =findViewById(R.id.timer);
 
         //on app launch Text View Must show zero
         autoBallHighA.setText("0");
