@@ -132,15 +132,15 @@ public static int counter = 0;
 
 
         //TextViews
-        autoBallHigh = findViewById(R.id.integer_number4);
-        view2 = findViewById(R.id.integer_number4);
-        view3 = findViewById(R.id.integer_number1);
-        view4 = findViewById(R.id.integer_number4);
-        view5 = findViewById(R.id.integer_number4);
+        autoBallHigh = findViewById(R.id.integer_number);
+        view2 = findViewById(R.id.integer_number);
+        view3 = findViewById(R.id.integer_number3);
+        view4 = findViewById(R.id.integer_number2);
+        view5 = findViewById(R.id.integer_number5);
 
         //Buttons
         autoHighUp = findViewById(R.id.upbutton);
-        autoHighDown = findViewById(R.id.downbutton1);
+        autoHighDown = findViewById(R.id.downbutton);
 
         back = findViewById(R.id.donebutton);
 
@@ -150,9 +150,9 @@ public static int counter = 0;
         upButton5 = findViewById(R.id.upbutton5);
 
         downButton2 = findViewById(R.id.downbutton2);
-        downButton3 = findViewById(R.id.downbutton4);
-        downButton4 = findViewById(R.id.downbutton2);
-        downButton5 = findViewById(R.id.downbutton4);
+        downButton3 = findViewById(R.id.downbutton3);
+        downButton4 = findViewById(R.id.downbutton4);
+        downButton5 = findViewById(R.id.downbutton5);
 
         //on app launch Text View Must show zero
         autoBallHigh.setText("0");
@@ -164,22 +164,22 @@ public static int counter = 0;
         //AUTOSCORE STUFF
 
         view7 = findViewById(R.id.integer_number7);
-        view8 = findViewById(R.id.integer_number8);
+        view8 = findViewById(R.id.integer_number2);
         view9 = findViewById(R.id.integer_number9);
         view10 = findViewById(R.id.integer_number10);
         autoBallHighA = findViewById(R.id.integer_number6);
 
         //Buttons
-        autoHighUpA = findViewById(R.id.upbutton2);
+        autoHighUpA = findViewById(R.id.upbutton6);
         autoHighDownB = findViewById(R.id.downbutton6);
 
         // back = findViewById(R.id.imageButton);
         //navme = findViewById(R.id.navbutton);
 
-        upButton7 = findViewById(R.id.upbutton1);
+        upButton7 = findViewById(R.id.upbutton7);
         upButton8 = findViewById(R.id.upbutton8);
-        upButton9 = findViewById(R.id.upbutton4);
-        upButton10 = findViewById(R.id.upbutton3);
+        upButton9 = findViewById(R.id.upbutton9);
+        upButton10 = findViewById(R.id.upbutton10);
 
         downButton7 = findViewById(R.id.downbutton7);
         downButton8 = findViewById(R.id.downbutton8);
