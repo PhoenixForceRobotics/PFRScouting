@@ -55,23 +55,23 @@ public class AutoScore extends AppCompatActivity {
                 setContentView(R.layout.activity_auto_score);
 
                 //TextViews
-                autoBallHighA = findViewById(R.id.integer_number);
-                view7 = findViewById(R.id.integer_number2);
-                view8 = findViewById(R.id.integer_number3);
+                autoBallHighA = findViewById(R.id.integer_number4);
+                view7 = findViewById(R.id.integer_number4);
+                view8 = findViewById(R.id.integer_number1);
                 view9 = findViewById(R.id.integer_number4);
-                view10 = findViewById(R.id.integer_number5);
+                view10 = findViewById(R.id.integer_number4);
 
                 //Buttons
-                autoHighUpA = findViewById(R.id.upbutton6);
-                autoHighDownB = findViewById(R.id.downbutton);
+                autoHighUpA = findViewById(R.id.upbutton2);
+                autoHighDownB = findViewById(R.id.downbutton1);
 
                // back = findViewById(R.id.imageButton);
                 //navme = findViewById(R.id.navbutton);
 
-                upButton7 = findViewById(R.id.upbutton7);
+                upButton7 = findViewById(R.id.upbutton1);
                 upButton8 = findViewById(R.id.upbutton8);
-                upButton9 = findViewById(R.id.upbutton9);
-                upButton10 = findViewById(R.id.upbutton10);
+                upButton9 = findViewById(R.id.upbutton4);
+                upButton10 = findViewById(R.id.upbutton3);
 
                 downButton7 = findViewById(R.id.downbutton7);
                 downButton8 = findViewById(R.id.downbutton8);
@@ -85,7 +85,7 @@ public class AutoScore extends AppCompatActivity {
                 view9.setText("0");
                 view10.setText("0");
 
-                backA.setOnClickListener(new View.OnClickListener() {
+/*                backA.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
@@ -94,14 +94,9 @@ public class AutoScore extends AppCompatActivity {
                     }
                 });
 
-                navme.setOnClickListener(new View.OnClickListener(){
+ */
 
-                    @Override
-                    public void onClick(View v) {
-                        goTeleScore();
-                    }
 
-                });
                 autoHighUpA.setOnClickListener(new View.OnClickListener() {
 
                     @Override
@@ -130,7 +125,7 @@ public class AutoScore extends AppCompatActivity {
                     }
                 });
 
-                upButton8.setOnClickListener(new View.OnClickListener(){
+/*                upButton8.setOnClickListener(new View.OnClickListener(){
 
                     @Override
                     public void onClick(View v) {
@@ -141,6 +136,10 @@ public class AutoScore extends AppCompatActivity {
 
                 });
 
+
+ */
+
+           /*
                 upButton9.setOnClickListener(new View.OnClickListener(){
 
                     @Override
@@ -205,7 +204,7 @@ public class AutoScore extends AppCompatActivity {
                     }
 
 
-                });
+                }); */
             }
             public void openMainActivity(){
 
