@@ -131,7 +131,7 @@
         android:background="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline45"
-        app:layout_constraintEnd_toStartOf="@+id/guideline20"
+        app:layout_constraintEnd_toStartOf="@+id/guideline65"
         app:layout_constraintStart_toStartOf="@+id/guideline47"
         app:layout_constraintTop_toTopOf="@+id/guideline44" />
 
@@ -144,9 +144,9 @@
         android:layout_alignParentBottom="true"
         android:background="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline60"
-        app:layout_constraintEnd_toStartOf="@+id/guideline38"
-        app:layout_constraintStart_toStartOf="@+id/guideline93"
+        app:layout_constraintBottom_toTopOf="@+id/guideline127"
+        app:layout_constraintEnd_toStartOf="@+id/guideline43"
+        app:layout_constraintStart_toStartOf="@+id/guideline39"
         app:layout_constraintTop_toBottomOf="@+id/downbutton4" />
 
     <Button
@@ -160,7 +160,7 @@
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toTopOf="@+id/downbutton"
-        app:layout_constraintEnd_toStartOf="@+id/guideline38"
+        app:layout_constraintEnd_toStartOf="@+id/guideline43"
         app:layout_constraintStart_toStartOf="@+id/guideline39"
         app:layout_constraintTop_toTopOf="@+id/guideline36" />
 
@@ -176,7 +176,7 @@
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toTopOf="@+id/guideline41"
         app:layout_constraintEnd_toStartOf="@+id/guideline43"
-        app:layout_constraintStart_toStartOf="@+id/guideline42"
+        app:layout_constraintStart_toStartOf="@+id/guideline39"
         app:layout_constraintTop_toTopOf="@+id/guideline37" />
 
     <TextView
@@ -223,8 +223,8 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline45"
         app:layout_constraintEnd_toStartOf="@+id/guideline43"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline42"
-        app:layout_constraintTop_toTopOf="@+id/guideline103" />
+        app:layout_constraintStart_toStartOf="@+id/guideline39"
+        app:layout_constraintTop_toTopOf="@+id/guideline44" />
 
     <Button
         android:id="@+id/upbutton2"
@@ -284,8 +284,8 @@
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toTopOf="@+id/guideline108"
-        app:layout_constraintEnd_toStartOf="@+id/guideline38"
-        app:layout_constraintStart_toStartOf="@+id/guideline73"
+        app:layout_constraintEnd_toStartOf="@+id/guideline43"
+        app:layout_constraintStart_toStartOf="@+id/guideline39"
         app:layout_constraintTop_toTopOf="@+id/guideline56" />
 
     <Button
@@ -328,8 +328,8 @@
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toTopOf="@+id/guideline116"
-        app:layout_constraintEnd_toStartOf="@+id/guideline38"
-        app:layout_constraintStart_toStartOf="@+id/guideline73"
+        app:layout_constraintEnd_toStartOf="@+id/guideline43"
+        app:layout_constraintStart_toStartOf="@+id/guideline39"
         app:layout_constraintTop_toTopOf="@+id/guideline55" />
 
     <Button
@@ -344,7 +344,7 @@
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toTopOf="@+id/guideline108"
         app:layout_constraintEnd_toStartOf="@+id/guideline51"
-        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintStart_toStartOf="@+id/guideline50"
         app:layout_constraintTop_toTopOf="@+id/guideline56" />
 
     <TextView
@@ -402,7 +402,7 @@
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toTopOf="@+id/guideline116"
         app:layout_constraintEnd_toStartOf="@+id/guideline51"
-        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintStart_toStartOf="@+id/guideline50"
         app:layout_constraintTop_toTopOf="@+id/guideline55" />
 
     <Button
@@ -412,7 +412,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="4dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
@@ -450,7 +449,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline116"
         app:layout_constraintEnd_toStartOf="@+id/guideline65"
         app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/guideline49"
+        app:layout_constraintStart_toStartOf="@+id/guideline47"
         app:layout_constraintTop_toTopOf="@+id/guideline61" />
 
     <TextView
@@ -539,7 +538,7 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/guideline79"
+        app:layout_constraintBottom_toTopOf="@+id/downbutton10"
         app:layout_constraintEnd_toStartOf="@+id/guideline38"
         app:layout_constraintStart_toStartOf="@+id/guideline39"
         app:layout_constraintTop_toTopOf="@+id/guideline78" />
@@ -556,7 +555,7 @@
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toTopOf="@+id/guideline58"
         app:layout_constraintEnd_toStartOf="@+id/guideline65"
-        app:layout_constraintStart_toStartOf="@+id/guideline49"
+        app:layout_constraintStart_toStartOf="@+id/guideline47"
         app:layout_constraintTop_toTopOf="@+id/guideline56" />
 
     <Button
@@ -573,7 +572,7 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline118"
         app:layout_constraintEnd_toStartOf="@+id/guideline43"
-        app:layout_constraintStart_toStartOf="@+id/guideline42"
+        app:layout_constraintStart_toStartOf="@+id/guideline39"
         app:layout_constraintTop_toBottomOf="@+id/upbutton7" />
 
     <TextView
@@ -587,8 +586,8 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline92"
         app:layout_constraintEnd_toStartOf="@+id/guideline43"
-        app:layout_constraintStart_toStartOf="@+id/guideline42"
-        app:layout_constraintTop_toTopOf="@+id/guideline70" />
+        app:layout_constraintStart_toStartOf="@+id/guideline39"
+        app:layout_constraintTop_toBottomOf="@+id/downbutton7" />
 
     <Button
         android:id="@+id/upbutton7"
@@ -602,7 +601,7 @@
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toTopOf="@+id/guideline117"
         app:layout_constraintEnd_toStartOf="@+id/guideline43"
-        app:layout_constraintStart_toStartOf="@+id/guideline42"
+        app:layout_constraintStart_toStartOf="@+id/guideline39"
         app:layout_constraintTop_toTopOf="@+id/guideline85" />
 
     <Button
@@ -655,10 +654,10 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:background="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/guideline77"
+        app:layout_constraintBottom_toTopOf="@+id/guideline92"
         app:layout_constraintEnd_toStartOf="@+id/guideline65"
         app:layout_constraintStart_toStartOf="@+id/guideline47"
-        app:layout_constraintTop_toTopOf="@+id/guideline76" />
+        app:layout_constraintTop_toTopOf="@+id/guideline118" />
 
     <Button
         android:id="@+id/upbutton9"
@@ -670,10 +669,10 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/guideline67"
+        app:layout_constraintBottom_toTopOf="@+id/guideline117"
         app:layout_constraintEnd_toStartOf="@+id/guideline65"
         app:layout_constraintStart_toStartOf="@+id/guideline47"
-        app:layout_constraintTop_toTopOf="@+id/guideline75" />
+        app:layout_constraintTop_toTopOf="@+id/guideline85" />
 
     <Button
         android:id="@+id/downbutton10"
@@ -701,7 +700,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline81"
         app:layout_constraintEnd_toStartOf="@+id/guideline38"
         app:layout_constraintStart_toStartOf="@+id/guideline39"
-        app:layout_constraintTop_toTopOf="@+id/guideline80" />
+        app:layout_constraintTop_toBottomOf="@+id/downbutton10" />
 
     <Button
         android:id="@+id/downbutton9"
@@ -713,10 +712,10 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/guideline83"
+        app:layout_constraintBottom_toTopOf="@+id/guideline118"
         app:layout_constraintEnd_toStartOf="@+id/guideline65"
-        app:layout_constraintStart_toStartOf="@+id/guideline49"
-        app:layout_constraintTop_toTopOf="@+id/guideline67"
+        app:layout_constraintStart_toStartOf="@+id/guideline47"
+        app:layout_constraintTop_toTopOf="@+id/guideline117"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -730,7 +729,7 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline60"
         app:layout_constraintEnd_toStartOf="@+id/guideline65"
-        app:layout_constraintStart_toStartOf="@+id/guideline49"
+        app:layout_constraintStart_toStartOf="@+id/guideline47"
         app:layout_constraintTop_toTopOf="@+id/guideline59" />
 
     <TextView
@@ -1064,14 +1063,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5609375" />
+        app:layout_constraintGuide_percent=".55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline57"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".5609" />
+        app:layout_constraintGuide_percent=".55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline58"

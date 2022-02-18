@@ -24,6 +24,7 @@ public interface TeleDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(TeleData teleData);
 
+
     @Query("DELETE FROM TeleData")
     void nukeTable();
 }
