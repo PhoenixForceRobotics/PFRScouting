@@ -485,38 +485,6 @@
         app:layout_constraintTop_toTopOf="@+id/guideline35" />
 
     <TextView
-        android:id="@+id/textView15"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:text="Auto Scoring"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline100"
-        app:layout_constraintEnd_toStartOf="@+id/guideline34"
-        app:layout_constraintStart_toStartOf="@+id/guideline99"
-        app:layout_constraintTop_toTopOf="@+id/guideline89" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:text="Tele Scoring"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline30"
-        app:layout_constraintEnd_toStartOf="@+id/guideline34"
-        app:layout_constraintStart_toStartOf="@+id/guideline97"
-        app:layout_constraintTop_toTopOf="@+id/guideline98" />
-
-    <TextView
         android:id="@+id/textView1"
         android:layout_width="0dp"
         android:layout_height="0dp"

@@ -63,7 +63,8 @@ public static int counter = 0;
 
     public static int moved = 0;
     public static String spunwheel = "No"; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
-    public static String colorwheel = "No";
+    public static String
+                  colorwheel = "No";
     public static String balls = "No";
     public static String solo = "No";
     public static String buddy = "No";
