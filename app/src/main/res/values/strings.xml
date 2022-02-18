@@ -1,4 +1,5 @@
 <resources>
+    <string name="Finished">Finished</string>
     <string name="app_name">FyreBirdScout</string>
     <string name="button_use">Start Scoring</string>
     <string name="button_up">+</string>

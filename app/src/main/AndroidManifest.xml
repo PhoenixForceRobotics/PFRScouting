@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:andriod="http://schemas.android.com/apk/distribution"
     package="com.example.fyrebirdscout11">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <usees-feature android:name="andriod.hardware.camera"
+                   andriod:required="true" />
 
     <application
         android:name="edu.phoenixforce.scouting.mobile.layouts.ScoutingApplication"
@@ -21,8 +24,6 @@
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore"
         />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.EActivity" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity2" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.database.The_other_ways_of_scoring.bainlactivity" />
         <activity android:name="edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer" />
         <activity
             android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
