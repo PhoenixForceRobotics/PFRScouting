@@ -69,7 +69,8 @@ public static int counter = 0;
 
     public static int moved = 0;
     public static String spunwheel = "No"; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
-    public static String colorwheel = "No";
+    public static String
+                  colorwheel = "No";
     public static String balls = "No";
     public static String solo = "No";
     public static String buddy = "No";
@@ -149,9 +150,9 @@ public static int counter = 0;
 
         //TextViews
         autoBallHigh = findViewById(R.id.integer_number);
-        view2 = findViewById(R.id.integer_number2);
+        view2 = findViewById(R.id.integer_number);
         view3 = findViewById(R.id.integer_number3);
-        view4 = findViewById(R.id.integer_number4);
+        view4 = findViewById(R.id.integer_number2);
         view5 = findViewById(R.id.integer_number5);
 
         //Buttons
@@ -180,7 +181,7 @@ public static int counter = 0;
         //AUTOSCORE STUFF
 
         view7 = findViewById(R.id.integer_number7);
-        view8 = findViewById(R.id.integer_number8);
+        view8 = findViewById(R.id.integer_number2);
         view9 = findViewById(R.id.integer_number9);
         view10 = findViewById(R.id.integer_number10);
         autoBallHighA = findViewById(R.id.integer_number6);
