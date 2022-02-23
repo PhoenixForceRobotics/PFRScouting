@@ -5,7 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <usees-feature android:name="andriod.hardware.camera"
+    <uses-feature android:name="andriod.hardware.camera"
                    andriod:required="true" />
 
     <application
@@ -27,6 +27,8 @@
         <activity android:name="edu.phoenixforce.scouting.mobile.database.recyclervewveiwers.RecyclerViewViewer" />
         <activity
             android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityPitView"
+            />
         <activity
             android:name="edu.phoenixforce.scouting.mobile.layouts.ConfigActivity"
             android:parentActivityName="edu.phoenixforce.scouting.mobile.layouts.ActivityMain">

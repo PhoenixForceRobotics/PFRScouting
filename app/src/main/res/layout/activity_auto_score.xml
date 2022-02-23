@@ -103,7 +103,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline109"
         app:layout_constraintTop_toTopOf="@+id/guideline106"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView3"
@@ -1067,7 +1067,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="370dp" />
+        app:layout_constraintGuide_percent="0.3015625" />
 
 
     <!-- //Checkboxes

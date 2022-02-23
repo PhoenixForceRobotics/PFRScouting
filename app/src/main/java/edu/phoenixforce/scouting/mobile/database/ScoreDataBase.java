@@ -1,5 +1,7 @@
 package edu.phoenixforce.scouting.mobile.database;
 
+import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
+
 import android.content.Context;
 
 import androidx.room.Database;
@@ -65,6 +67,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
                 TeleDao dao1 = INSTANCE.teleDao();
                 GameDao dao2 = INSTANCE.gameDao();
                 PitDao dao3 = INSTANCE.pitDao();
+
 
                 //new PopulateDbAsyncTask(INSTANCE).execute(); //99% chance that this line is useless
 

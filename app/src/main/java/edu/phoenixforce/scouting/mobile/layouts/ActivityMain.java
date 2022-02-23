@@ -218,7 +218,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
         public void openTeleScore () {
 
-            Intent intent = new Intent(this, login.class);
+            Intent intent = new Intent(this, ActivityPitView.class);
             startActivity(intent);
         }
       private void openSettings () {
