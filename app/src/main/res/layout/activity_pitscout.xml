@@ -42,8 +42,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline53"
         app:layout_constraintEnd_toStartOf="@+id/guideline43"
         app:layout_constraintStart_toStartOf="@+id/guideline42"
-        app:layout_constraintTop_toTopOf="@+id/guideline48"
-        app:srcCompat="@drawable/picture1" />
+        app:layout_constraintTop_toTopOf="@+id/guideline48" />
 
     <EditText
 

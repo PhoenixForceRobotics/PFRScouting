@@ -23,6 +23,7 @@
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore"
         />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityPitScout"/>
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.EActivity" />
 
         <activity
