@@ -23,7 +23,7 @@ import edu.phoenixforce.scouting.mobile.database.legacy.ViewModels.TeleView;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.database.entities.GameData;
-
+import edu.phoenixforce.scouting.mobile.common.*;
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 import static edu.phoenixforce.scouting.mobile.layouts.login.TEXT;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
@@ -127,6 +127,7 @@ public static int counter = 0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tele_score);
+        Constants constants = new Constants();
         //RecyclerViewViewer.mWordViewModelII = new ViewModelProvider(this).get(TeleView.class);
 
            counter6 = 0;
@@ -264,6 +265,9 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter6 = counter6 + 1;
                 autoBallHighA.setText(String.valueOf(counter6));
+                constants.setTwentyOne(counter6);
+
+
             }
         });
 
@@ -273,6 +277,7 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter6 = counter6 - 1;
                 autoBallHighA.setText(String.valueOf(counter6));
+                constants.setOne(counter6);
             }
         });
 
@@ -283,6 +288,7 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter7 = counter7 + 1;
                 view7.setText(String.valueOf(counter7));
+                constants.setTwo(counter7);
             }
         });
 
@@ -293,6 +299,8 @@ public static int counter = 0;
 
                 counter8 = counter8 + 1;
                 view8.setText (String.valueOf(counter8));
+                constants.setThree(counter8);
+
             }
 
         });
@@ -304,6 +312,7 @@ public static int counter = 0;
 
                 counter9 = counter9 + 1;
                 view9.setText (String.valueOf(counter9));
+                constants.setFour(counter9);
             }
 
         });
@@ -315,6 +324,7 @@ public static int counter = 0;
 
                 counter10 = counter10 + 1;
                 view10.setText (String.valueOf(counter10));
+                constants.setFive(counter10);
             }
 
         });
@@ -326,6 +336,7 @@ public static int counter = 0;
 
                 counter7 = counter7 - 1;
                 view7.setText(String.valueOf(counter7));
+                constants.setSix(counter7);
 
 
 
@@ -339,6 +350,7 @@ public static int counter = 0;
 
                 counter8 = counter8 - 1;
                 view8.setText(String.valueOf(counter8));
+                constants.setSeven(counter8);
             }
         });
 
@@ -349,6 +361,7 @@ public static int counter = 0;
 
                 counter9 = counter9 - 1;
                 view9.setText(String.valueOf(counter9));
+                constants.setEight(counter9);
 
             }
         });
@@ -360,6 +373,7 @@ public static int counter = 0;
 
                 counter10 = counter10 - 1;
                 view10.setText (String.valueOf(counter10));
+                constants.setNine(counter10);
             }
 
 
@@ -432,6 +446,8 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter = counter + 1;
                 autoBallHigh.setText(String.valueOf(counter));
+                constants.setTen(counter);
+
             }
         });
 
@@ -441,6 +457,7 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter = counter - 1;
                 autoBallHigh.setText(String.valueOf(counter));
+                constants.setEleven(counter);
             }
         });
 
@@ -451,6 +468,8 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter2 = counter2 + 1;
                 view2.setText(String.valueOf(counter2));
+                constants.setThirteen(counter2);
+
             }
         });
 
@@ -461,6 +480,7 @@ public static int counter = 0;
 
                 counter3 = counter3 + 1;
                 view3.setText (String.valueOf(counter3));
+                constants.setFourteen(counter3);
             }
 
         });
@@ -472,6 +492,7 @@ public static int counter = 0;
 
                 counter4 = counter4 + 1;
                 view4.setText (String.valueOf(counter4));
+                constants.setFifteen(counter4);
             }
 
         });
@@ -483,6 +504,7 @@ public static int counter = 0;
 
                 counter5 = counter5 + 1;
                view5.setText (String.valueOf(counter5));
+                constants.setSixteen(counter5);
             }
 
         });
@@ -494,6 +516,7 @@ public static int counter = 0;
 
                 counter2 = counter2 - 1;
                 view2.setText(String.valueOf(counter2));
+                constants.setSeventeen(counter2);
 
             }
         });
@@ -505,6 +528,7 @@ public static int counter = 0;
 
                 counter3 = counter3 - 1;
                 view3.setText(String.valueOf(counter3));
+                constants.setEighteen(counter3);
             }
         });
 
@@ -515,6 +539,7 @@ public static int counter = 0;
 
                counter4 = counter4 - 1;
                view4.setText(String.valueOf(counter4));
+               constants.setNineteen(counter4);
 
            }
         });
@@ -526,6 +551,7 @@ public static int counter = 0;
 
                 counter5 = counter5 - 1;
                 view5.setText (String.valueOf(counter5));
+                constants.setTwenty(counter5);
             }
 
 
