@@ -84,14 +84,14 @@ public class team_select extends AppCompatActivity {
 
 
 
-            if(teamNumber == null){
+            if(teamNumber.toString().length() == 0){
 
                Toast.makeText(this,"No input detected :(", Toast.LENGTH_SHORT).show();
                 mediatorMethod();
 
             }
 
-            else if(matchNumber == null){
+            else if(matchNumber.toString().length() == 0){
 
                 Toast.makeText(this,"No input detected :(", Toast.LENGTH_SHORT).show();
                 mediatorMethod();

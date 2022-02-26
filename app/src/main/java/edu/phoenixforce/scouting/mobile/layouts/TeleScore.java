@@ -1,7 +1,6 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,7 +18,6 @@ import com.example.fyrebirdscout11.R;
 import java.util.Calendar;
 
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
-import edu.phoenixforce.scouting.mobile.database.legacy.ViewModels.TeleView;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.database.entities.GameData;
@@ -32,9 +30,9 @@ import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
 public class TeleScore extends AppCompatActivity{
     //TextViews
     TextView autoBallHigh;
-    TextView view2;
+    TextView view1;
     TextView view3;
-    TextView view4;
+    TextView view2;
     TextView view5;
     TextView user;
 
@@ -151,9 +149,9 @@ public class TeleScore extends AppCompatActivity{
 
         //TextViews
         autoBallHigh = findViewById(R.id.integer_number);
-        view2 = findViewById(R.id.integer_number);
+        view1 = findViewById(R.id.integer_number);
         view3 = findViewById(R.id.integer_number3);
-        view4 = findViewById(R.id.integer_number2);
+        view2 = findViewById(R.id.integer_number2);
         view5 = findViewById(R.id.integer_number5);
 
         //Buttons
@@ -174,15 +172,15 @@ public class TeleScore extends AppCompatActivity{
 
         //on app launch Text View Must show zero
         autoBallHigh.setText("0");
-        view2.setText("0");
+        view1.setText("0");
         view3.setText("0");
-        view4.setText("0");
+        view2.setText("0");
         view5.setText("0");
 
         //AUTOSCORE STUFF
 
         view7 = findViewById(R.id.integer_number7);
-        view8 = findViewById(R.id.integer_number2);
+        view8 = findViewById(R.id.integer_number8);
         view9 = findViewById(R.id.integer_number9);
         view10 = findViewById(R.id.integer_number10);
         autoBallHighA = findViewById(R.id.integer_number6);
@@ -265,7 +263,7 @@ public class TeleScore extends AppCompatActivity{
             public void onClick(View v) {
                 counter6 = counter6 + 1;
                 autoBallHighA.setText(String.valueOf(counter6));
-                constants.setTwentyOne(counter6);
+                constants.setSix(counter6);
 
 
             }
@@ -277,7 +275,7 @@ public class TeleScore extends AppCompatActivity{
             public void onClick(View v) {
                 counter6 = counter6 - 1;
                 autoBallHighA.setText(String.valueOf(counter6));
-                constants.setOne(counter6);
+                constants.setSix(counter6);
             }
         });
 
@@ -288,7 +286,21 @@ public class TeleScore extends AppCompatActivity{
             public void onClick(View v) {
                 counter7 = counter7 + 1;
                 view7.setText(String.valueOf(counter7));
-                constants.setTwo(counter7);
+                constants.setSeven(counter7);
+            }
+        });
+
+        downButton7.setOnClickListener(new View.OnClickListener (){
+
+            @Override
+            public void onClick(View v) {
+
+                counter7 = counter7 - 1;
+                view7.setText(String.valueOf(counter7));
+                constants.setSeven(counter7);
+
+
+
             }
         });
 
@@ -299,48 +311,10 @@ public class TeleScore extends AppCompatActivity{
 
                 counter8 = counter8 + 1;
                 view8.setText (String.valueOf(counter8));
-                constants.setThree(counter8);
+                constants.setEight(counter8);
 
             }
 
-        });
-
-        upButton9.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-
-                counter9 = counter9 + 1;
-                view9.setText (String.valueOf(counter9));
-                constants.setFour(counter9);
-            }
-
-        });
-
-        upButton10.setOnClickListener(new View.OnClickListener (){
-
-            @Override
-            public void onClick(View v) {
-
-                counter10 = counter10 + 1;
-                view10.setText (String.valueOf(counter10));
-                constants.setFive(counter10);
-            }
-
-        });
-
-        downButton7.setOnClickListener(new View.OnClickListener (){
-
-            @Override
-            public void onClick(View v) {
-
-                counter7 = counter7 - 1;
-                view7.setText(String.valueOf(counter7));
-                constants.setSix(counter7);
-
-
-
-            }
         });
 
         downButton8.setOnClickListener(new View.OnClickListener (){
@@ -350,8 +324,20 @@ public class TeleScore extends AppCompatActivity{
 
                 counter8 = counter8 - 1;
                 view8.setText(String.valueOf(counter8));
-                constants.setSeven(counter8);
+                constants.setEight(counter8);
             }
+        });
+
+        upButton9.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                counter9 = counter9 + 1;
+                view9.setText (String.valueOf(counter9));
+                constants.setNine(counter9);
+            }
+
         });
 
         downButton9.setOnClickListener(new View.OnClickListener (){
@@ -361,10 +347,25 @@ public class TeleScore extends AppCompatActivity{
 
                 counter9 = counter9 - 1;
                 view9.setText(String.valueOf(counter9));
-                constants.setEight(counter9);
+                constants.setNine(counter9);
 
             }
         });
+
+        upButton10.setOnClickListener(new View.OnClickListener (){
+
+            @Override
+            public void onClick(View v) {
+
+                counter10 = counter10 + 1;
+                view10.setText (String.valueOf(counter10));
+                constants.setTen(counter10);
+            }
+
+        });
+
+
+
 
         downButton10.setOnClickListener(new View.OnClickListener (){
 
@@ -373,7 +374,7 @@ public class TeleScore extends AppCompatActivity{
 
                 counter10 = counter10 - 1;
                 view10.setText (String.valueOf(counter10));
-                constants.setNine(counter10);
+                constants.setTen(counter10);
             }
 
 
@@ -467,7 +468,7 @@ public class TeleScore extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 counter2 = counter2 + 1;
-                view2.setText(String.valueOf(counter2));
+                view1.setText(String.valueOf(counter2));
                 constants.setThirteen(counter2);
 
             }
@@ -491,7 +492,7 @@ public class TeleScore extends AppCompatActivity{
             public void onClick(View v) {
 
                 counter4 = counter4 + 1;
-                view4.setText (String.valueOf(counter4));
+                view2.setText (String.valueOf(counter4));
                 constants.setFifteen(counter4);
             }
 
@@ -515,7 +516,7 @@ public class TeleScore extends AppCompatActivity{
             public void onClick(View v) {
 
                 counter2 = counter2 - 1;
-                view2.setText(String.valueOf(counter2));
+                view1.setText(String.valueOf(counter2));
                 constants.setSeventeen(counter2);
 
             }
@@ -538,7 +539,7 @@ public class TeleScore extends AppCompatActivity{
             public void onClick(View v) {
 
                 counter4 = counter4 - 1;
-                view4.setText(String.valueOf(counter4));
+                view2.setText(String.valueOf(counter4));
                 constants.setNineteen(counter4);
 
             }
@@ -566,7 +567,7 @@ public class TeleScore extends AppCompatActivity{
         switch(view.getId()){
             case R.id.Climbed: {
                 if (checked) {
-                    solo = "Yes";
+                    solo = "yes";
                 } else {
                     solo = "no";
                 }
@@ -629,6 +630,8 @@ public class TeleScore extends AppCompatActivity{
         Log.d("Testing", "openMainRan");
         Intent intent = new Intent(this, team_select.class);
         startActivity(intent);
+
+
 
         saveGameData();
 

@@ -24,6 +24,9 @@ public class Constants {
     int thirteen = 0;
     int fourteen = 0;
 
+    public void setOne(int one )
+    {this.one = one;}
+
     public void setSeventeen(int seventeen) {
         this.seventeen = seventeen;
     }
@@ -100,6 +103,18 @@ public class Constants {
         this.eight = eight;
     }
 
+    public void setNine (int nine)
+    {this.nine = nine;}
+
+    int fifteen = 0;
+    int sixteen = 0;
+    int seventeen = 0;
+    int eighteen = 0;
+    int nineteen = 0;
+    int twenty = 0;
+    int twentyOne = 0;
+
+}
 
 
 

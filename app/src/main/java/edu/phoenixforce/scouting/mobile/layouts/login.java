@@ -50,9 +50,9 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
        Constants constants = new Constants();
 
-       constants.setVal();
+       //constants.setVal();
 
-       constants.createVal(New);
+       //constants.createVal(New);
 
 
 
