@@ -23,41 +23,41 @@ import edu.phoenixforce.scouting.mobile.database.legacy.ViewModels.TeleView;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.database.entities.GameData;
-
+import edu.phoenixforce.scouting.mobile.common.*;
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 import static edu.phoenixforce.scouting.mobile.layouts.login.TEXT;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
 
 public class TeleScore extends AppCompatActivity{
-//TextViews
-TextView autoBallHigh;
-TextView view2;
-TextView view3;
-TextView view4;
-TextView view5;
-TextView user;
+    //TextViews
+    TextView autoBallHigh;
+    TextView view2;
+    TextView view3;
+    TextView view4;
+    TextView view5;
+    TextView user;
 
 //String Numero = teamNumber.getText().toString();
 //int numberTeam = Integer.parseInt(Numero);
 
 
-//Buttons
-Button autoHighUp; //upButton in camel case
-Button autoHighDown; //downButton in camel case
-Button upButton2;
-Button upButton3;
-Button upButton4;
-Button upButton5;
-Button downButton2;
-Button downButton3;
-Button downButton4;
-Button downButton5;
-Button back;
-Button timer;
+    //Buttons
+    Button autoHighUp; //upButton in camel case
+    Button autoHighDown; //downButton in camel case
+    Button upButton2;
+    Button upButton3;
+    Button upButton4;
+    Button upButton5;
+    Button downButton2;
+    Button downButton3;
+    Button downButton4;
+    Button downButton5;
+    Button back;
+    Button timer;
 
-//integers
-public static int counter = 0;
+    //integers
+    public static int counter = 0;
     public static int counter2 = 0;
     public static int counter3 = 0;
     public static int counter4 = 0;
@@ -70,7 +70,7 @@ public static int counter = 0;
     public static int moved = 0;
     public static String spunwheel = "No"; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
     public static String
-                  colorwheel = "No";
+            colorwheel = "No";
     public static String balls = "No";
     public static String solo = "No";
     public static String buddy = "No";
@@ -96,7 +96,7 @@ public static int counter = 0;
     Button downButton8;
     Button downButton9;
     Button downButton10;
-   // ImageButton backA;
+    // ImageButton backA;
     Button navme;
 
     private static String scoutname;
@@ -127,25 +127,26 @@ public static int counter = 0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tele_score);
+        Constants constants = new Constants();
         //RecyclerViewViewer.mWordViewModelII = new ViewModelProvider(this).get(TeleView.class);
 
-           counter6 = 0;
-           counter7 = 0;
-           counter8 = 0;
-           counter9 = 0;
-           counter10 = 0;
-           counter = 0;
-           counter2 = 0;
-           counter3 = 0;
-           counter4 = 0;
-           counter5 = 0;
-           spunwheel = "No";
-           colorwheel = "No";
-           balls = "No";
-           solo = "No";
-           buddy = "No";
+        counter6 = 0;
+        counter7 = 0;
+        counter8 = 0;
+        counter9 = 0;
+        counter10 = 0;
+        counter = 0;
+        counter2 = 0;
+        counter3 = 0;
+        counter4 = 0;
+        counter5 = 0;
+        spunwheel = "No";
+        colorwheel = "No";
+        balls = "No";
+        solo = "No";
+        buddy = "No";
 
-           timeTime = clock.currentTime;
+        timeTime = clock.currentTime;
 
 
         //TextViews
@@ -236,27 +237,27 @@ public static int counter = 0;
 
 
 
-      /*  backA.setOnClickListener(new View.OnClickListener() {
+     /*  backA.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                openMainActivity();
+           @Override
+           public void onClick(View v) {
+               openMainActivity();
 
-            }
-        });
+           }
+       });
 
-       */
+      */
 
-      /* Not sure why this one exists?
-      timer.setOnClickListener(new View.OnClickListener(){
-          @Override
-          public void onClick(View v){
+     /* Not sure why this one exists?
+     timer.setOnClickListener(new View.OnClickListener(){
+         @Override
+         public void onClick(View v){
 
-              writeTime();
+             writeTime();
 
-          }
+         }
 
-      }); */
+     }); */
 
         autoHighUpA.setOnClickListener(new View.OnClickListener() {
 
@@ -264,6 +265,9 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter6 = counter6 + 1;
                 autoBallHighA.setText(String.valueOf(counter6));
+                constants.setTwentyOne(counter6);
+
+
             }
         });
 
@@ -273,6 +277,7 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter6 = counter6 - 1;
                 autoBallHighA.setText(String.valueOf(counter6));
+                constants.setOne(counter6);
             }
         });
 
@@ -283,6 +288,7 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter7 = counter7 + 1;
                 view7.setText(String.valueOf(counter7));
+                constants.setTwo(counter7);
             }
         });
 
@@ -293,6 +299,8 @@ public static int counter = 0;
 
                 counter8 = counter8 + 1;
                 view8.setText (String.valueOf(counter8));
+                constants.setThree(counter8);
+
             }
 
         });
@@ -304,6 +312,7 @@ public static int counter = 0;
 
                 counter9 = counter9 + 1;
                 view9.setText (String.valueOf(counter9));
+                constants.setFour(counter9);
             }
 
         });
@@ -315,6 +324,7 @@ public static int counter = 0;
 
                 counter10 = counter10 + 1;
                 view10.setText (String.valueOf(counter10));
+                constants.setFive(counter10);
             }
 
         });
@@ -326,6 +336,7 @@ public static int counter = 0;
 
                 counter7 = counter7 - 1;
                 view7.setText(String.valueOf(counter7));
+                constants.setSix(counter7);
 
 
 
@@ -339,6 +350,7 @@ public static int counter = 0;
 
                 counter8 = counter8 - 1;
                 view8.setText(String.valueOf(counter8));
+                constants.setSeven(counter8);
             }
         });
 
@@ -349,6 +361,7 @@ public static int counter = 0;
 
                 counter9 = counter9 - 1;
                 view9.setText(String.valueOf(counter9));
+                constants.setEight(counter9);
 
             }
         });
@@ -360,12 +373,13 @@ public static int counter = 0;
 
                 counter10 = counter10 - 1;
                 view10.setText (String.valueOf(counter10));
+                constants.setNine(counter10);
             }
 
 
         });
 
-       timer.setOnClickListener(new View.OnClickListener() {
+        timer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -381,34 +395,34 @@ public static int counter = 0;
             }
         });
 
-     /*
-        timer.setOnClickListener(new View.OnClickListener() {
+    /*
+       timer.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-               // openMainActivity();
-                Log.d(tag,"This button is timer");
-                Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-                TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
-                        String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
-                        String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5),
-                        spunwheel,colorwheel,balls,solo,buddy);
-                //TODO this /\
-                RecyclerViewViewer.mWordViewModelII.insert(teleData);
-                //Log.d("Night Mode Update", teleData.toString());
-                //Log.d("Night Mode Update", String.valueOf(team_select.show1));
-                X = 1;
+           @Override
+           public void onClick(View v) {
+              // openMainActivity();
+               Log.d(tag,"This button is timer");
+               Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
+               TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
+                       String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
+                       String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5),
+                       spunwheel,colorwheel,balls,solo,buddy);
+               //TODO this /\
+               RecyclerViewViewer.mWordViewModelII.insert(teleData);
+               //Log.d("Night Mode Update", teleData.toString());
+               //Log.d("Night Mode Update", String.valueOf(team_select.show1));
+               X = 1;
 
-                AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6),
-                        String.valueOf(TeleScore.counter10), String.valueOf(TeleScore.scoutname), String.valueOf(TeleScore.match), Integer.valueOf(TeleScore.matchnumber) );
+               AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6),
+                       String.valueOf(TeleScore.counter10), String.valueOf(TeleScore.scoutname), String.valueOf(TeleScore.match), Integer.valueOf(TeleScore.matchnumber) );
 
-                Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-                //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
+               Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
+               //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
 
 
 
-            }
-        });
+           }
+       });
 
 */
 
@@ -432,6 +446,8 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter = counter + 1;
                 autoBallHigh.setText(String.valueOf(counter));
+                constants.setTen(counter);
+
             }
         });
 
@@ -441,6 +457,7 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter = counter - 1;
                 autoBallHigh.setText(String.valueOf(counter));
+                constants.setEleven(counter);
             }
         });
 
@@ -451,6 +468,8 @@ public static int counter = 0;
             public void onClick(View v) {
                 counter2 = counter2 + 1;
                 view2.setText(String.valueOf(counter2));
+                constants.setThirteen(counter2);
+
             }
         });
 
@@ -461,6 +480,7 @@ public static int counter = 0;
 
                 counter3 = counter3 + 1;
                 view3.setText (String.valueOf(counter3));
+                constants.setFourteen(counter3);
             }
 
         });
@@ -472,6 +492,7 @@ public static int counter = 0;
 
                 counter4 = counter4 + 1;
                 view4.setText (String.valueOf(counter4));
+                constants.setFifteen(counter4);
             }
 
         });
@@ -482,7 +503,8 @@ public static int counter = 0;
             public void onClick(View v) {
 
                 counter5 = counter5 + 1;
-               view5.setText (String.valueOf(counter5));
+                view5.setText (String.valueOf(counter5));
+                constants.setSixteen(counter5);
             }
 
         });
@@ -494,6 +516,7 @@ public static int counter = 0;
 
                 counter2 = counter2 - 1;
                 view2.setText(String.valueOf(counter2));
+                constants.setSeventeen(counter2);
 
             }
         });
@@ -505,18 +528,20 @@ public static int counter = 0;
 
                 counter3 = counter3 - 1;
                 view3.setText(String.valueOf(counter3));
+                constants.setEighteen(counter3);
             }
         });
 
         downButton4.setOnClickListener(new View.OnClickListener (){
 
-           @Override
-           public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
-               counter4 = counter4 - 1;
-               view4.setText(String.valueOf(counter4));
+                counter4 = counter4 - 1;
+                view4.setText(String.valueOf(counter4));
+                constants.setNineteen(counter4);
 
-           }
+            }
         });
 
         downButton5.setOnClickListener(new View.OnClickListener (){
@@ -526,6 +551,7 @@ public static int counter = 0;
 
                 counter5 = counter5 - 1;
                 view5.setText (String.valueOf(counter5));
+                constants.setTwenty(counter5);
             }
 
 
@@ -613,7 +639,7 @@ public static int counter = 0;
                 spunwheel,colorwheel,balls,solo,buddy);
         //TODO this /\
 
-       //GameData gameData = new GameData("test", String.valueOf(balls), solo, buddy, "hi",balls, balls, "high", "mid", "higher", "this", "that", "hi","medium");
+        //GameData gameData = new GameData("test", String.valueOf(balls), solo, buddy, "hi",balls, balls, "high", "mid", "higher", "this", "that", "hi","medium");
 
 
         //RecyclerViewViewer.mWordViewModelII.insert(teleData);
@@ -633,7 +659,7 @@ public static int counter = 0;
         ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
         GameData gameData = new GameData("1","2","3","4", "5", "6", "7", "8", "9"
-        , "10", "11", "12", "13", "14");
+                , "10", "11", "12", "13", "14");
 
         SDB.gameDao().insertAll(gameData);
 
@@ -647,14 +673,21 @@ public static int counter = 0;
 
 
 
-           public void writeTime(){
+    public void writeTime(){
 
-               //creating Calendar instance
-               Calendar calendar = Calendar.getInstance();
-               //Returns current time in millis
-               long timeMilli2 = calendar.getTimeInMillis();
-               System.out.println("Time in milliseconds using Calendar: " + timeMilli2);
+        //creating Calendar instance
+        Calendar calendar = Calendar.getInstance();
+        //Returns current time in millis
+        long timeMilli2 = calendar.getTimeInMillis();
+        System.out.println("Time in milliseconds using Calendar: " + timeMilli2);
 
     }
 }
+
+
+
+
+
+
+
 
