@@ -23,8 +23,12 @@ import edu.phoenixforce.scouting.mobile.common.Constants;
 public class ActivityPitScout extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     String text1;
     String text2;
-    EditText topbox;
-    EditText bottombox;
+    String text3;
+    String text4;
+    EditText topRightBox;
+    EditText bottomRightBox;
+    EditText leftTopBox;
+    EditText leftBottomBox;
     Button Finished;
     Button Activate_Camera;
     ImageView imageView;
@@ -38,21 +42,30 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
         setContentView(R.layout.activity_pitscout);
         imageView = findViewById(R.id.imageView6);
 
-        topbox = findViewById(R.id.textView9);
-        bottombox = findViewById(R.id.textView18);
-
+        topRightBox = findViewById(R.id.textView9);
+        bottomRightBox = findViewById(R.id.textView18);
+        leftTopBox = findViewById(R.id.textView21);
+        leftBottomBox = findViewById(R.id.textView23);
         Finished = findViewById(R.id.finished);
         Finished.setOnClickListener(new View.OnClickListener (){
             @Override
             public void onClick(View v) {
-                text1 = topbox.getText().toString();
-                text2 = bottombox.getText().toString();
+                text1 = topRightBox.getText().toString();
+                text2 = bottomRightBox.getText().toString();
+                text3 = leftTopBox.getText().toString();
+                text4 = leftBottomBox.getText().toString();
                 constants.setUserThoughts(text2);
                 constants.setRobotInfo(text1);
+                constants.setProjectedClimbLevel(text4);
+                constants.setProjectedCycleTime(text3);
                 String one = constants.getRobotInfo();
                 String two = constants.getUserThoughts();
-                Log.d("pitscout", "Topbox: " + one);
-                Log.d("pitscout","Bottombox: " + two);
+                String three = constants.getProjectedClimbLevel();
+                String four = constants.getProjectedCycleTime();
+                Log.d("pitscout", "TopRightbox: " + one);
+                Log.d("pitscout","BottomRightbox: " + two);
+                Log.d("pitscout", "TopLeftbox: " + three);
+                Log.d("pitscout","BottomLeftBox: " + four);
                 navigate();
 
 
