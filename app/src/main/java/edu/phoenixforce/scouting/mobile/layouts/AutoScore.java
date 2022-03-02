@@ -17,73 +17,58 @@ public class AutoScore extends AppCompatActivity {
 
 
     //TextViews
-            TextView autoBallHighA;
-            TextView view7;
-            TextView view8;
-            TextView view9;
-            TextView view10;
+    TextView autoBallHighA;
+    TextView view1;
+    TextView view2;
+    TextView view3;
+    TextView view4;
 
 
-            //Buttons
-            Button autoHighUpA; //upButton in camel case
-            Button autoHighDownB; //downButton in camel case
-            Button upButton7;
-            Button upButton8;
-            Button upButton9;
-            Button upButton10;
-            Button downButton7;
-            Button downButton8;
-            Button downButton9;
-            Button downButton10;
-            ImageButton backA;
-            Button navme;
+    //Buttons
+    Button upButton1; //upButton in camel case
+    Button upButton2;
+    Button upButton3;
+    Button upButton4;
 
-            //integers
-            int counter6 = 0;
-            int counter7 = 0;
-            int counter8 = 0;
-            int counter9 = 0;
-            int counter10 = 0;
+    Button downButton1;
+    Button downButton2;
+    Button downButton3;
+    Button downButton4;
+    //integers
+    int counter1 = 0;
+    int counter2 = 0;
+    int counter3 = 0;
+    int counter4 = 0;
 
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_auto_score);
 
+        //TextViews
+        view1 = findViewById(R.id.integer_number1);
+        view2 = findViewById(R.id.integer_number2);
+        view3 = findViewById(R.id.integer_number3);
+        view4 = findViewById(R.id.integer_number4);
 
+        //Buttons
+        upButton1 = findViewById(R.id.upbutton1);
+        upButton2 = findViewById(R.id.upbutton2);
+        upButton3 = findViewById(R.id.upbutton3);
+        upButton4 = findViewById(R.id.upbutton3);
 
-            @Override
-            protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_auto_score);
+        downButton1 = findViewById(R.id.downbutton1);
+        downButton2 = findViewById(R.id.downbutton2);
+        downButton3 = findViewById(R.id.downbutton3);
+        downButton4 = findViewById(R.id.downbutton4);
 
-                //TextViews
-                autoBallHighA = findViewById(R.id.integer_number4);
-                view7 = findViewById(R.id.integer_number4);
-                view8 = findViewById(R.id.integer_number1);
-                view9 = findViewById(R.id.integer_number4);
-                view10 = findViewById(R.id.integer_number4);
-
-                //Buttons
-                autoHighUpA = findViewById(R.id.upbutton2);
-                autoHighDownB = findViewById(R.id.downbutton1);
-
-               // back = findViewById(R.id.imageButton);
-                //navme = findViewById(R.id.navbutton);
-
-                upButton7 = findViewById(R.id.upbutton1);
-                upButton8 = findViewById(R.id.upbutton8);
-                upButton9 = findViewById(R.id.upbutton4);
-                upButton10 = findViewById(R.id.upbutton3);
-
-                downButton7 = findViewById(R.id.downbutton7);
-                downButton8 = findViewById(R.id.downbutton8);
-                downButton9 = findViewById(R.id.downbutton9);
-                downButton10 = findViewById(R.id.downbutton10);
-
-                //on app launch Text View Must show zero
-                autoBallHighA.setText("0");
-                view7.setText("0");
-                view8.setText("0");
-                view9.setText("0");
-                view10.setText("0");
+        //on app launch Text View Must show zero
+        autoBallHighA.setText("0");
+        view1.setText("0");
+        view2.setText("0");
+        view3.setText("0");
+        view4.setText("0");
 
 /*                backA.setOnClickListener(new View.OnClickListener() {
 
@@ -97,140 +82,89 @@ public class AutoScore extends AppCompatActivity {
  */
 
 
-                autoHighUpA.setOnClickListener(new View.OnClickListener() {
+        upButton1.setOnClickListener(new View.OnClickListener() {
 
-                    @Override
-                    public void onClick(View v) {
-                        counter6 = counter6 + 1;
-                        autoBallHighA.setText(String.valueOf(counter6));
-                    }
-                });
-
-                autoHighDownB.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        counter6 = counter6 - 1;
-                        autoBallHighA.setText(String.valueOf(counter6));
-                    }
-                });
-
-                //upbuttons
-                upButton7.setOnClickListener(new View.OnClickListener(){
-
-                    @Override
-                    public void onClick(View v) {
-                        counter7 = counter7 + 1;
-                        view7.setText(String.valueOf(counter7));
-                    }
-                });
-
-/*                upButton8.setOnClickListener(new View.OnClickListener(){
-
-                    @Override
-                    public void onClick(View v) {
-
-                        counter8 = counter8 + 1;
-                        view8.setText (String.valueOf(counter8));
-                    }
-
-                });
-
-
- */
-
-           /*
-                upButton9.setOnClickListener(new View.OnClickListener(){
-
-                    @Override
-                    public void onClick(View v) {
-
-                        counter9 = counter9 + 1;
-                        view9.setText (String.valueOf(counter9));
-                    }
-
-                });
-
-                upButton10.setOnClickListener(new View.OnClickListener (){
-
-                    @Override
-                    public void onClick(View v) {
-
-                        counter10 = counter10 + 1;
-                        view10.setText (String.valueOf(counter10));
-                    }
-
-                });
-
-                downButton7.setOnClickListener(new View.OnClickListener (){
-
-                    @Override
-                    public void onClick(View v) {
-
-                        counter7 = counter7 - 1;
-                        view7.setText(String.valueOf(counter7));
-
-                    }
-                });
-
-                downButton8.setOnClickListener(new View.OnClickListener (){
-
-                    @Override
-                    public void onClick(View v) {
-
-                        counter8 = counter8 - 1;
-                        view8.setText(String.valueOf(counter8));
-                    }
-                });
-
-                downButton9.setOnClickListener(new View.OnClickListener (){
-
-                    @Override
-                    public void onClick(View v) {
-
-                        counter9 = counter9 - 1;
-                        view9.setText(String.valueOf(counter9));
-
-                    }
-                });
-
-                downButton10.setOnClickListener(new View.OnClickListener (){
-
-                    @Override
-                    public void onClick(View v) {
-
-                        counter10 = counter10 - 1;
-                        view10.setText (String.valueOf(counter10));
-                    }
-
-
-                }); */
+            @Override
+            public void onClick(View v) {
+                counter1 = counter1 + 1;
+                view1.setText(String.valueOf(counter1));
             }
-            public void openMainActivity(){
+        });
 
-                Intent intent = new Intent(this, ActivityMain.class);
-                startActivity(intent);
+        downButton1.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                counter1 = counter1 - 1;
+                view1.setText(String.valueOf(counter1));
             }
-            public void goTeleScore(){
+        });
 
-                Intent intent = new Intent(this, TeleScore.class);
-                startActivity(intent);
+        //upbuttons
+        upButton2.setOnClickListener(new View.OnClickListener() {
 
-
+            @Override
+            public void onClick(View v) {
+                counter2 = counter2 + 1;
+                view2.setText(String.valueOf(counter2));
 
             }
 
+        });
 
 
+        upButton3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                counter3 = counter3 + 1;
+                view3.setText(String.valueOf(counter3));
+            }
+
+        });
+
+        upButton4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                counter4 = counter4 + 1;
+                view4.setText(String.valueOf(counter4));
+            }
+
+        });
+
+
+        downButton2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                counter2 = counter2 - 1;
+                view2.setText(String.valueOf(counter2));
+            }
+
+        });
+
+
+        downButton3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                counter3 = counter3 - 1;
+                view3.setText(String.valueOf(counter3));
+            }
+
+        });
+
+        downButton4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                counter4 = counter1 - 1;
+                view4.setText(String.valueOf(counter4));
+            }
+
+        });
+
+
+    }
 }
-
-
-
-
-
-
-
-
-
-
