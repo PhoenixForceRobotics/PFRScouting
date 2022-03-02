@@ -151,7 +151,7 @@ public class TeleScore extends AppCompatActivity{
         autoBallHigh = findViewById(R.id.integer_number);
         view1 = findViewById(R.id.integer_number);
         view3 = findViewById(R.id.integer_number3);
-        view2 = findViewById(R.id.integer_number2);
+        view2 = findViewById(R.id.integer_number4);
         view5 = findViewById(R.id.integer_number5);
 
         //Buttons
@@ -380,7 +380,7 @@ public class TeleScore extends AppCompatActivity{
 
         });
 
-        timer.setOnClickListener(new View.OnClickListener() {
+/*        timer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -396,7 +396,7 @@ public class TeleScore extends AppCompatActivity{
             }
         });
 
-    /*
+
        timer.setOnClickListener(new View.OnClickListener() {
 
            @Override

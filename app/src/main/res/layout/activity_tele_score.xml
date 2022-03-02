@@ -620,7 +620,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline117" />
 
     <TextView
-        android:id="@+id/integer_number2"
+        android:id="@+id/integer_number4"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_alignParentEnd="true"

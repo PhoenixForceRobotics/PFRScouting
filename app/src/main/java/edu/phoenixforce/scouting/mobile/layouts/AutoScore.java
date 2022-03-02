@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 //import android.widget.CheckBox; -- Not needed during the auto period
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.fyrebirdscout11.R;
@@ -62,7 +61,7 @@ public class AutoScore extends AppCompatActivity {
         upButton1 = findViewById(R.id.upbutton1);
         upButton2 = findViewById(R.id.upbutton2);
         upButton3 = findViewById(R.id.upbutton3);
-        upButton4 = findViewById(R.id.upbutton3);
+        upButton4 = findViewById(R.id.upbutton4);
 
         downButton1 = findViewById(R.id.downbutton1);
         downButton2 = findViewById(R.id.downbutton2);
@@ -72,7 +71,7 @@ public class AutoScore extends AppCompatActivity {
         finishButton = findViewById(R.id.finishedbutton);
 
         //on app launch Text View Must show zero
-        autoBallHighA.setText("0");
+
         view1.setText("0");
         view2.setText("0");
         view3.setText("0");
@@ -176,7 +175,7 @@ public class AutoScore extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                counter4 = counter1 - 1;
+                counter4 = counter4 - 1;
                 view4.setText(String.valueOf(counter4));
                 constants.setAutoFour(counter4);
             }
@@ -189,9 +188,22 @@ public class AutoScore extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
+            navigate();
 
         }
 
     });
+
+
+
+    }
+
+
+    public void navigate(){
+
+        Intent intent = new Intent(this, TeleScore.class);
+        startActivity(intent);
+
+
     }
 }
