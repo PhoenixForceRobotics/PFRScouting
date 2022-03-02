@@ -14,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
+import edu.phoenixforce.scouting.*;
+import edu.phoenixforce.scouting.mobile.common.Constants;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -32,6 +34,8 @@ public class login extends AppCompatActivity {
 
     String snoqualmie;
 
+    int New = 2;
+
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String TEXT = "user";
 
@@ -44,6 +48,15 @@ public class login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+       Constants constants = new Constants();
+
+       //constants.setVal();
+
+       //constants.createVal(New);
+
+
+
+
 
         loadData();
         super.onCreate(savedInstanceState);

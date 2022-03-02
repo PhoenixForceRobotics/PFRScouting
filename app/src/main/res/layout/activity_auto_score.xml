@@ -932,7 +932,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Button"
+        android:text="Finish"
+        android:textColor="#F3EAE1E1"
         app:layout_constraintBottom_toTopOf="@+id/guideline140"
         app:layout_constraintEnd_toStartOf="@+id/guideline138"
         app:layout_constraintStart_toStartOf="@+id/guideline137"
@@ -1067,7 +1068,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="370dp" />
+        app:layout_constraintGuide_percent="0.34" />
 
 
     <!-- //Checkboxes
