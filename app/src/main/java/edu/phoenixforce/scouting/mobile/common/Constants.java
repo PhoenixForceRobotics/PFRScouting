@@ -24,6 +24,98 @@ public class Constants {
     int thirteen = 0;
     int fourteen = 0;
 
+    int autoOne = 0;
+    int autoTwo = 0;
+    int autoThree = 0;
+    int autoFour = 0;
+    int autoFive = 0;
+    int autoSix = 0;
+
+    public int getAutoOne() {
+        return autoOne;
+    }
+
+    public void setAutoOne(int autoOne) {
+        this.autoOne = autoOne;
+    }
+
+    public int getAutoTwo() {
+        return autoTwo;
+    }
+
+    public void setAutoTwo(int autoTwo) {
+        this.autoTwo = autoTwo;
+    }
+
+    public int getAutoThree() {
+        return autoThree;
+    }
+
+    public void setAutoThree(int autoThree) {
+        this.autoThree = autoThree;
+    }
+
+    public int getAutoFour() {
+        return autoFour;
+    }
+
+    public void setAutoFour(int autoFour) {
+        this.autoFour = autoFour;
+    }
+
+    public int getAutoFive() {
+        return autoFive;
+    }
+
+    public void setAutoFive(int autoFive) {
+        this.autoFive = autoFive;
+    }
+
+    public int getAutoSix() {
+        return autoSix;
+    }
+
+    public void setAutoSix(int autoSix) {
+        this.autoSix = autoSix;
+    }
+
+    public int getAutoSeven() {
+        return autoSeven;
+    }
+
+    public void setAutoSeven(int autoSeven) {
+        this.autoSeven = autoSeven;
+    }
+
+    public int getAutoEight() {
+        return autoEight;
+    }
+
+    public void setAutoEight(int autoEight) {
+        this.autoEight = autoEight;
+    }
+
+    public int getAutoNine() {
+        return autoNine;
+    }
+
+    public void setAutoNine(int autoNine) {
+        this.autoNine = autoNine;
+    }
+
+    public int getAutoTen() {
+        return autoTen;
+    }
+
+    public void setAutoTen(int autoTen) {
+        this.autoTen = autoTen;
+    }
+
+    int autoSeven = 0;
+    int autoEight = 0;
+    int autoNine = 0;
+    int autoTen = 0;
+
     public void setOne(int one )
     {this.one = one;}
 
