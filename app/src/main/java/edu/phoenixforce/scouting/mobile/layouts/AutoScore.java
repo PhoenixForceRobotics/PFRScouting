@@ -12,9 +12,12 @@ import android.widget.TextView;
 
 import com.example.fyrebirdscout11.R;
 
+import edu.phoenixforce.scouting.mobile.common.Constants;
+
 
 public class AutoScore extends AppCompatActivity {
 
+    Constants constants = new Constants();
 
     //TextViews
     TextView autoBallHighA;
@@ -34,11 +37,14 @@ public class AutoScore extends AppCompatActivity {
     Button downButton2;
     Button downButton3;
     Button downButton4;
+    Button finishButton;
     //integers
     int counter1 = 0;
     int counter2 = 0;
     int counter3 = 0;
     int counter4 = 0;
+
+
 
 
     @Override
@@ -62,6 +68,8 @@ public class AutoScore extends AppCompatActivity {
         downButton2 = findViewById(R.id.downbutton2);
         downButton3 = findViewById(R.id.downbutton3);
         downButton4 = findViewById(R.id.downbutton4);
+
+        finishButton = findViewById(R.id.finishedbutton);
 
         //on app launch Text View Must show zero
         autoBallHighA.setText("0");
@@ -88,6 +96,7 @@ public class AutoScore extends AppCompatActivity {
             public void onClick(View v) {
                 counter1 = counter1 + 1;
                 view1.setText(String.valueOf(counter1));
+                constants.setAutoOne(counter1);
             }
         });
 
@@ -97,6 +106,9 @@ public class AutoScore extends AppCompatActivity {
             public void onClick(View v) {
                 counter1 = counter1 - 1;
                 view1.setText(String.valueOf(counter1));
+                constants.setAutoOne(counter1);
+
+
             }
         });
 
@@ -107,6 +119,7 @@ public class AutoScore extends AppCompatActivity {
             public void onClick(View v) {
                 counter2 = counter2 + 1;
                 view2.setText(String.valueOf(counter2));
+                constants.setAutoTwo(counter2);
 
             }
 
@@ -119,6 +132,7 @@ public class AutoScore extends AppCompatActivity {
             public void onClick(View v) {
                 counter3 = counter3 + 1;
                 view3.setText(String.valueOf(counter3));
+                constants.setAutoThree(counter3);
             }
 
         });
@@ -129,6 +143,7 @@ public class AutoScore extends AppCompatActivity {
             public void onClick(View v) {
                 counter4 = counter4 + 1;
                 view4.setText(String.valueOf(counter4));
+                constants.setAutoFour(counter4);
             }
 
         });
@@ -140,6 +155,7 @@ public class AutoScore extends AppCompatActivity {
             public void onClick(View v) {
                 counter2 = counter2 - 1;
                 view2.setText(String.valueOf(counter2));
+                constants.setAutoTwo(counter2);
             }
 
         });
@@ -151,6 +167,7 @@ public class AutoScore extends AppCompatActivity {
             public void onClick(View v) {
                 counter3 = counter3 - 1;
                 view3.setText(String.valueOf(counter3));
+                constants.setAutoThree(counter3);
             }
 
         });
@@ -161,10 +178,20 @@ public class AutoScore extends AppCompatActivity {
             public void onClick(View v) {
                 counter4 = counter1 - 1;
                 view4.setText(String.valueOf(counter4));
+                constants.setAutoFour(counter4);
             }
 
         });
 
+    //upbuttons
+        finishButton.setOnClickListener(new View.OnClickListener() {
 
+        @Override
+        public void onClick(View v) {
+
+
+        }
+
+    });
     }
 }
