@@ -44,7 +44,7 @@ public class login extends AppCompatActivity {
     public static String user;
 
     HashMap<String, String> users = new HashMap();
-
+    Constants constants = new Constants();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +89,7 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 validateUser();
+
             }
         });
     }
@@ -159,6 +160,7 @@ editor.apply();
 Toast.makeText(this, "Logged In as" + user, Toast.LENGTH_SHORT).show();
 
 goScout();
+constants.setUser(user);
         }
     public void goScout() {
 

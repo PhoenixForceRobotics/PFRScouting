@@ -9,10 +9,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
 import edu.phoenixforce.scouting.mobile.bluealliance.resources.Team;
+import edu.phoenixforce.scouting.mobile.common.Constants;
 import edu.phoenixforce.scouting.mobile.exceptions.InvalidStateException;
 
 public class Configuration {
-
+    Constants constants = new Constants();
     private static volatile Configuration config;
     private static final String CONFIG_FILE_NAME = "edu.phoenixforce.scouting.mobile";
     private static final String KEY_DEVICE_ID = CONFIG_FILE_NAME + ".DeviceId";
@@ -82,7 +83,7 @@ public class Configuration {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(KEY_DEVICE_ID, deviceId);
         editor.apply();
-        this.deviceId = prefs.getInt(KEY_DEVICE_ID, this.deviceId);
+
     }
 
     public int getTbaTeamId() {

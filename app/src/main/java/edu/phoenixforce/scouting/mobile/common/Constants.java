@@ -1,15 +1,24 @@
 package edu.phoenixforce.scouting.mobile.common;
 
-import android.util.Log;
+import static android.content.Context.MODE_PRIVATE;
+import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 
+import android.content.Context;
+import android.util.Log;
+import android.content.SharedPreferences;
 import edu.phoenixforce.scouting.*;
 import edu.phoenixforce.scouting.mobile.layouts.login;
+
 
 public class Constants {
     String robotInfo;
     String userThoughts;
     String projectedCycleTime;
     String projectedClimbLevel;
+    String matchNumber;
+    String teamNumber;
+    String user;
+    int devId;
     public void setRobotInfo(String text1) {
         this.robotInfo = text1;
     }
@@ -227,6 +236,28 @@ public class Constants {
     public void setNine (int nine)
     {this.nine = nine;}
 
+    public void setMatchNumber (String matchNumber){
+        this.matchNumber = matchNumber;
+    }
+    public void setTeamNumber (String teamNumber){
+        this.teamNumber = teamNumber;
+    }
+    public void setUser (String user){
+        this.user = user;
+    }
+
+    public String getMatchNumber() {
+        return matchNumber;
+    }
+    public String getTeamNumber() {
+        return teamNumber;
+    }
+    public String getUser (String user){
+        return user;
+    }
+
+
+
     int fifteen = 0;
     int sixteen = 0;
     int seventeen = 0;
@@ -234,6 +265,12 @@ public class Constants {
     int nineteen = 0;
     int twenty = 0;
     int twentyOne = 0;
+
+    public void getPrefs(){
+        SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        int devId = myPrefs.getInt(edu.phoenixforce.scouting.mobile.DeviceId);
+    }
+
 
 }
 
