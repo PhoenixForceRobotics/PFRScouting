@@ -14,7 +14,7 @@ import com.example.fyrebirdscout11.R;
 import edu.phoenixforce.scouting.mobile.common.Constants;
 
 
-public class AutoScore extends AppCompatActivity {
+public class AutoScore<moved> extends AppCompatActivity {
 
     Constants constants = new Constants();
 
@@ -42,8 +42,6 @@ public class AutoScore extends AppCompatActivity {
     int counter2 = 0;
     int counter3 = 0;
     int counter4 = 0;
-
-
 
 
     @Override
@@ -182,28 +180,42 @@ public class AutoScore extends AppCompatActivity {
 
         });
 
-    //upbuttons
+        //upbuttons
         finishButton.setOnClickListener(new View.OnClickListener() {
 
-        @Override
-        public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
-            navigate();
+                navigate();
 
-        }
+            }
 
-    });
-
+        });
 
 
     }
 
 
-    public void navigate(){
+    public void navigate() {
 
         Intent intent = new Intent(this, TeleScore.class);
         startActivity(intent);
 
 
+    }
+
+    public void onCheckboxClicked(View view) {
+
+        boolean checked = ((CheckBox).isChecked();
+
+  switch (view.getId()) {
+            case R.id.moved:
+                if (checked) ;
+
+                else
+
+                    break;
+
+        }
     }
 }
