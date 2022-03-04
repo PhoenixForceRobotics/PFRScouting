@@ -7,6 +7,7 @@ import android.content.Context;
 import android.util.Log;
 import android.content.SharedPreferences;
 import edu.phoenixforce.scouting.*;
+import edu.phoenixforce.scouting.mobile.layouts.Configuration;
 import edu.phoenixforce.scouting.mobile.layouts.login;
 
 
@@ -44,6 +45,12 @@ public class Constants {
     public String getProjectedClimbLevel() { return projectedClimbLevel; }
 
     public static final int EXTERNAL_FILE_STORAGE_PERMISSION = 1;
+
+
+    private static final String CONFIG_FILE_NAME = "edu.phoenixforce.scouting.mobile";
+    private static final String KEY_DEVICE_ID = CONFIG_FILE_NAME + ".DeviceId";
+    private static final String KEY_TBA_TEAM_ID = CONFIG_FILE_NAME + ".TbaTeamId";
+    private static final String KEY_TBA_LAST_MODIFIED = CONFIG_FILE_NAME + ".TbaLastModified";
 
     int one = 0;
     int two = 0;
@@ -266,9 +273,11 @@ public class Constants {
     int twenty = 0;
     int twentyOne = 0;
 
-    public void getPrefs(){
-        SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        int devId = myPrefs.getInt(edu.phoenixforce.scouting.mobile.DeviceId);
+    int deviceId = 0;
+
+   public void getPrefs(){
+        SharedPreferences myPrefs = getSharedPreferences(KEY_DEVICE_ID, MODE_PRIVATE);
+       int devId = myPrefs.getInt();;
     }
 
 

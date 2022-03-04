@@ -95,6 +95,10 @@ public class Configuration {
         editor.putInt(KEY_TBA_TEAM_ID, tbaTeamId);
         editor.apply();
         this.tbaTeamId = prefs.getInt(KEY_TBA_TEAM_ID, this.tbaTeamId);
+
+
+
+
     }
 
     public String getTbaLastModified() {
