@@ -222,7 +222,7 @@ public class TeleScore extends AppCompatActivity{
 
         SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         scoutname = myPrefs.getString(TEXT, "No User");
-        //dev = myPrefs.getString(dEVNUM, "Device Number Not Set");
+        //dev = myPrefs.getString(devNUM, "Device Number Not Set");
         teamnum = myPrefs.getString(teamNum, "No Team Number");
 
         match = myPrefs.getString(matchNum, "No Match Number");

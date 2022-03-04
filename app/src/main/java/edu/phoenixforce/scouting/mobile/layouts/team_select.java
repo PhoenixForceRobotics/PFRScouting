@@ -16,6 +16,8 @@ import com.example.fyrebirdscout11.R;
 
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 
+import edu.phoenixforce.scouting.mobile.common.Constants;
+
 public class team_select extends AppCompatActivity {
 
 
@@ -30,7 +32,7 @@ public class team_select extends AppCompatActivity {
 
     public static final String matchNum = "matchNumber";
     public static final String teamNum = "teamNumber";
-
+    Constants constants = new Constants();
 
 
 
@@ -81,8 +83,8 @@ public class team_select extends AppCompatActivity {
 
             matchNumber = match.getText().toString();
             teamNumber = team.getText().toString();
-
-
+            constants.setMatchNumber(matchNumber);
+            constants.setTeamNumber(teamNumber);
 
             if(teamNumber.toString().length() == 0){
 
