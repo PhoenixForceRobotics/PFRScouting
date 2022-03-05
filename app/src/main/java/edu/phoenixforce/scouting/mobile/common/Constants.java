@@ -20,6 +20,9 @@ public class Constants {
     String teamNumber;
     String user;
     int devId;
+
+
+
     public void setRobotInfo(String text1) {
         this.robotInfo = text1;
     }
@@ -273,12 +276,19 @@ public class Constants {
     int twenty = 0;
     int twentyOne = 0;
 
-    int deviceId = 0;
+    int deviceId;
 
-   public void getPrefs(){
-        SharedPreferences myPrefs = getSharedPreferences(KEY_DEVICE_ID, MODE_PRIVATE);
-       int devId = myPrefs.getInt();;
+
+
+    public void getPrefs(Context context){
+
+        SharedPreferences myPrefs = context.getSharedPreferences(CONFIG_FILE_NAME, MODE_PRIVATE);
+        deviceId = myPrefs.getInt(KEY_DEVICE_ID, 0);
+
+        Log.d("constants", String.valueOf(deviceId));
     }
+
+
 
 
 }

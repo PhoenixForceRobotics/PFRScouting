@@ -179,10 +179,7 @@ public class TeleScore extends AppCompatActivity{
 
         //AUTOSCORE STUFF
 
-        view7 = findViewById(R.id.integer_number7);
-        view8 = findViewById(R.id.integer_number8);
-        view9 = findViewById(R.id.integer_number9);
-        view10 = findViewById(R.id.integer_number10);
+
         autoBallHighA = findViewById(R.id.integer_number6);
 
         //Buttons
@@ -192,25 +189,12 @@ public class TeleScore extends AppCompatActivity{
         // back = findViewById(R.id.imageButton);
         //navme = findViewById(R.id.navbutton);
 
-        upButton7 = findViewById(R.id.upbutton7);
-        upButton8 = findViewById(R.id.upbutton8);
-        upButton9 = findViewById(R.id.upbutton9);
-        upButton10 = findViewById(R.id.upbutton10);
 
-
-        downButton7 = findViewById(R.id.downbutton7);
-        downButton8 = findViewById(R.id.downbutton8);
-        downButton9 = findViewById(R.id.downbutton9);
-        downButton10 = findViewById(R.id.downbutton10);
 
         //timer =findViewById(R.id.timer);
 
         //on app launch Text View Must show zero
         autoBallHighA.setText("0");
-        view7.setText("0");
-        view8.setText("0");
-        view9.setText("0");
-        view10.setText("0");
 
 
         user = findViewById(R.id.show_user);
@@ -229,8 +213,12 @@ public class TeleScore extends AppCompatActivity{
 
         matchnumber = Integer.valueOf(match);
 
-        user.setText(scoutname +  " Team " + teamnum + " Match " + match);
-
+        if(teamnum == "2097"){
+            user.setText("Hi " + scoutname + " GO PHOENIX FORCe!");
+        }
+        else {
+            user.setText("Hi " + scoutname + ", Score Team " + teamnum + " During TeleOp Below!");
+        }
 
 
 
@@ -273,111 +261,13 @@ public class TeleScore extends AppCompatActivity{
 
             @Override
             public void onClick(View v) {
-                counter6 = counter6 - 1;
-                autoBallHighA.setText(String.valueOf(counter6));
-                constants.setSix(counter6);
+                if(counter6 < 1){}
+                else {
+                    counter6 = counter6 - 1;
+                    autoBallHighA.setText(String.valueOf(counter6));
+                    constants.setSix(counter6);
+                }
             }
-        });
-
-        //upbuttons
-        upButton7.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                counter7 = counter7 + 1;
-                view7.setText(String.valueOf(counter7));
-                constants.setSeven(counter7);
-            }
-        });
-
-        downButton7.setOnClickListener(new View.OnClickListener (){
-
-            @Override
-            public void onClick(View v) {
-
-                counter7 = counter7 - 1;
-                view7.setText(String.valueOf(counter7));
-                constants.setSeven(counter7);
-
-
-
-            }
-        });
-
-        upButton8.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-
-                counter8 = counter8 + 1;
-                view8.setText (String.valueOf(counter8));
-                constants.setEight(counter8);
-
-            }
-
-        });
-
-        downButton8.setOnClickListener(new View.OnClickListener (){
-
-            @Override
-            public void onClick(View v) {
-
-                counter8 = counter8 - 1;
-                view8.setText(String.valueOf(counter8));
-                constants.setEight(counter8);
-            }
-        });
-
-        upButton9.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-
-                counter9 = counter9 + 1;
-                view9.setText (String.valueOf(counter9));
-                constants.setNine(counter9);
-            }
-
-        });
-
-        downButton9.setOnClickListener(new View.OnClickListener (){
-
-            @Override
-            public void onClick(View v) {
-
-                counter9 = counter9 - 1;
-                view9.setText(String.valueOf(counter9));
-                constants.setNine(counter9);
-
-            }
-        });
-
-        upButton10.setOnClickListener(new View.OnClickListener (){
-
-            @Override
-            public void onClick(View v) {
-
-                counter10 = counter10 + 1;
-                view10.setText (String.valueOf(counter10));
-                constants.setTen(counter10);
-            }
-
-        });
-
-
-
-
-        downButton10.setOnClickListener(new View.OnClickListener (){
-
-            @Override
-            public void onClick(View v) {
-
-                counter10 = counter10 - 1;
-                view10.setText (String.valueOf(counter10));
-                constants.setTen(counter10);
-            }
-
-
         });
 
 /*        timer.setOnClickListener(new View.OnClickListener() {
@@ -515,10 +405,15 @@ public class TeleScore extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                counter2 = counter2 - 1;
-                view1.setText(String.valueOf(counter2));
-                constants.setSeventeen(counter2);
+                if(counter2 < 1){
 
+
+                }
+                else {
+                    counter2 = counter2 - 1;
+                    view1.setText(String.valueOf(counter2));
+                    constants.setSeventeen(counter2);
+                }
             }
         });
 
@@ -565,56 +460,32 @@ public class TeleScore extends AppCompatActivity{
         //Log.d("hola",String.valueOf(colorwheel));
         //check for what checkbox is checked
         switch(view.getId()){
-            case R.id.Climbed: {
-                if (checked) {
-                    solo = "yes";
-                } else {
-                    solo = "no";
-                }
-                break;
-            }
 
-            case R.id.HelpedClimb: {
+            case R.id.checkOne: {
                 if (checked) {
-                    buddy = "Yes";
+                    buddy = "1";
                 }
                 else {
-                    buddy = "No";
+                    buddy = "0";
                 }
                 break;
             }
 
-            case R.id.RobotSpun: {
+            case R.id.checkTwo: {
                 if (checked) {
-                    spunwheel = "Yes";
+                    spunwheel = "1";
                 }
                 else {
-                    spunwheel = "No";
+                    spunwheel = "0";
                 }
                 break;
             }
 
-            case R.id.Color: {
-                if (checked) {
-                    colorwheel = "Yes";
-                }
-                else {
-                    colorwheel = "No";
-                }
-                break;
-            }
 
-            case R.id.RobotBroke: {
-                if (checked) {
-                    balls = "Yes";
-                }
-                else {
-                    balls = "No";
-                }
-                break;
-            }
 
-            case R.id.moved:
+
+
+            case R.id.checkThree:
                 if(checked)
                     moved = moved + 1;
                 else

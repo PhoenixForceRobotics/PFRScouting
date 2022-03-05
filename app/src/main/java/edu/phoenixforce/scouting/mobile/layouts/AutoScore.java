@@ -2,8 +2,11 @@ package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 //import android.widget.CheckBox; -- Not needed during the auto period
@@ -14,9 +17,14 @@ import com.example.fyrebirdscout11.R;
 import edu.phoenixforce.scouting.mobile.common.Constants;
 
 
-public class AutoScore<moved> extends AppCompatActivity {
+public class AutoScore extends AppCompatActivity {
 
     Constants constants = new Constants();
+
+    private static final String CONFIG_FILE_NAME = "edu.phoenixforce.scouting.mobile";
+    private static final String KEY_DEVICE_ID = CONFIG_FILE_NAME + ".DeviceId";
+    private static final String KEY_TBA_TEAM_ID = CONFIG_FILE_NAME + ".TbaTeamId";
+    private static final String KEY_TBA_LAST_MODIFIED = CONFIG_FILE_NAME + ".TbaLastModified";
 
     //TextViews
     TextView autoBallHighA;
@@ -48,6 +56,10 @@ public class AutoScore<moved> extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_score);
+
+        Constants constants = new Constants();
+
+        constants.getPrefs(this.getApplicationContext());
 
         //TextViews
         view1 = findViewById(R.id.integer_number1);
@@ -204,9 +216,9 @@ public class AutoScore<moved> extends AppCompatActivity {
 
     }
 
-    public void onCheckboxClicked(View view) {
+    //public void onCheckboxClicked(View view) {
 
-        boolean checked = ((CheckBox).isChecked();
+       /* boolean checked = ((CheckBox).isChecked();
 
   switch (view.getId()) {
             case R.id.moved:
@@ -216,6 +228,7 @@ public class AutoScore<moved> extends AppCompatActivity {
 
                     break;
 
-        }
+        } */
+
+
     }
-}

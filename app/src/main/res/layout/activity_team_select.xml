@@ -44,6 +44,7 @@
         android:maxLength="3"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
+        android:textColorHint="@color/OffWhite"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline159"
         app:layout_constraintEnd_toStartOf="@+id/guideline161"
@@ -57,7 +58,7 @@
         android:id="@+id/teams"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
+        android:textColorHint="@color/OffWhite"
 
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
@@ -129,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="@+id/guideline166"
         app:layout_constraintTop_toTopOf="@+id/guideline168"
-        app:srcCompat="@mipmap/picture1" />
+        app:srcCompat="@mipmap/pfrlogolight" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline136"
@@ -171,7 +172,7 @@
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline149"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrapz_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".85" />
 

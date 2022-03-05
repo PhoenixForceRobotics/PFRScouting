@@ -32,7 +32,7 @@ public class login extends AppCompatActivity {
 
     String  pass;
 
-    String snoqualmie;
+    //String snoqualmie;
 
     int New = 2;
 
