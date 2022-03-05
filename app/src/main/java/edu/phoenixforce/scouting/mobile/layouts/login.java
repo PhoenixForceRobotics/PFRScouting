@@ -125,6 +125,7 @@ public class login extends AppCompatActivity {
                     saveUser();
 
 
+
                 }else{
 
 
@@ -154,7 +155,8 @@ SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 SharedPreferences.Editor editor = myPrefs.edit();
 
 editor.putString(TEXT, user);
-
+Constants constants = new Constants();
+constants.setUser(user);
 editor.apply();
 
 Toast.makeText(this, "Logged In as" + user, Toast.LENGTH_SHORT).show();

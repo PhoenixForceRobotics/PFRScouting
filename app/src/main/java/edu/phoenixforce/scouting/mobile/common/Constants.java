@@ -41,6 +41,12 @@ public class Constants {
         this.projectedCycleTime = text3;
     }
 
+    public void setUser(String user) { this.user  = user;}
+
+    public void setMatchNumber(String MatchNumber) { this.matchNumber = MatchNumber;}
+
+    public void setTeamNumber(String TeamNumber) { this.teamNumber = TeamNumber;}
+
     public void setProjectedClimbLevel(String text4) {
         this.projectedClimbLevel = text4;
     }
@@ -52,6 +58,8 @@ public class Constants {
     public String getUserThoughts() {
         return userThoughts;
     }
+
+
 
     public String getProjectedCycleTime() {
         return projectedCycleTime;

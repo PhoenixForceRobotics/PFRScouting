@@ -34,8 +34,6 @@ public class team_select extends AppCompatActivity {
     public static final String teamNum = "teamNumber";
     Constants constants = new Constants();
 
-
-
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +103,12 @@ public class team_select extends AppCompatActivity {
 
             editor.putString(matchNum, matchNumber);
             editor.putString(teamNum, teamNumber);
+
+
+            constants.setMatchNumber(matchNumber);
+
+
+            constants.setTeamNumber(teamNumber);
 
             editor.apply();
 
