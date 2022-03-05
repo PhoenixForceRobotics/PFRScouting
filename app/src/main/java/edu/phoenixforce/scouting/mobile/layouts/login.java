@@ -49,6 +49,9 @@ public class login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
        Constants constants = new Constants();
+       Context context = this;
+
+       constants.getPrefs(this.getApplicationContext());
 
        //constants.setVal();
 

@@ -27,6 +27,8 @@ public class Constants {
     String teamNumber;
     String user;
     int devId;
+    int deviceId;
+
 
 
     public void setRobotInfo(String text1) {
@@ -65,9 +67,7 @@ public class Constants {
         return projectedCycleTime;
     }
 
-    public String getProjectedClimbLevel() {
-        return projectedClimbLevel;
-    }
+    public String getProjectedClimbLevel() { return projectedClimbLevel; }
 
     public static final int EXTERNAL_FILE_STORAGE_PERMISSION = 1;
 
@@ -194,6 +194,8 @@ public class Constants {
     }
 
 
+
+
     public void setTen(int ten) {
         this.ten = ten;
     }
@@ -250,16 +252,15 @@ public class Constants {
         this.eight = eight;
     }
 
-    public void setNine(int nine) {
-        this.nine = nine;
-    }
+    public void setNine (int nine)
+    {this.nine = nine;}
 
     int fifteen = 0;
     int sixteen = 0;
     int seventeen = 0;
 
 
-    int deviceId;
+
 
 
     public void getPrefs(Context context) {

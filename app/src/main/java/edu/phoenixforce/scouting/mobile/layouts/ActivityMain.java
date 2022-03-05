@@ -66,7 +66,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         match = myPrefs.getString(matchNum, "No Match Number");
 
 
-        user.setText(text +  "Team " + teamnum + "Match " + match);
+        user.setText(text +  " Team: " + teamnum + " Match: " + match);
 
 
 
