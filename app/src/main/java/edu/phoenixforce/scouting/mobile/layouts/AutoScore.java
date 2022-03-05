@@ -63,7 +63,7 @@ public class AutoScore extends AppCompatActivity {
 
         //TextViews
         view1 = findViewById(R.id.integer_number1);
-        view2 = findViewById(R.id.integer_number2);
+        view2 = findViewById(R.id.integer_number4);
         view3 = findViewById(R.id.integer_number3);
         view4 = findViewById(R.id.integer_number4);
 
@@ -113,9 +113,13 @@ public class AutoScore extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                counter1 = counter1 - 1;
-                view1.setText(String.valueOf(counter1));
-                constants.setAutoOne(counter1);
+                if (counter1 < 1){
+                }
+                else {
+                    counter1 = counter1 - 1;
+                    view1.setText(String.valueOf(counter1));
+                    constants.setAutoOne(counter1);
+                }
 
 
             }
@@ -162,9 +166,13 @@ public class AutoScore extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                counter2 = counter2 - 1;
-                view2.setText(String.valueOf(counter2));
-                constants.setAutoTwo(counter2);
+                if (counter2 < 1){
+                }
+                else {
+                    counter2 = counter2 - 1;
+                    view2.setText(String.valueOf(counter2));
+                    constants.setAutoTwo(counter2);
+                }
             }
 
         });
@@ -174,9 +182,13 @@ public class AutoScore extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                counter3 = counter3 - 1;
-                view3.setText(String.valueOf(counter3));
-                constants.setAutoThree(counter3);
+                if (counter3 < 1){
+                }
+                else {
+                    counter3 = counter3 - 1;
+                    view3.setText(String.valueOf(counter3));
+                    constants.setAutoThree(counter3);
+                }
             }
 
         });
@@ -185,11 +197,14 @@ public class AutoScore extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                counter4 = counter4 - 1;
-                view4.setText(String.valueOf(counter4));
-                constants.setAutoFour(counter4);
-            }
+                if (counter4 < 1) {
+                } else {
 
+                    counter4 = counter4 - 1;
+                    view4.setText(String.valueOf(counter4));
+                    constants.setAutoFour(counter4);
+                }
+            }
         });
 
         //upbuttons
@@ -218,6 +233,7 @@ public class AutoScore extends AppCompatActivity {
 
     //public void onCheckboxClicked(View view) {
 
+      /*  boolean checked = ((CheckBox).isChecked();
        /* boolean checked = ((CheckBox).isChecked();
 
   switch (view.getId()) {
@@ -231,4 +247,5 @@ public class AutoScore extends AppCompatActivity {
         } */
 
 
+        } */
     }

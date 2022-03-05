@@ -83,8 +83,8 @@ public class team_select extends AppCompatActivity {
 
             matchNumber = match.getText().toString();
             teamNumber = team.getText().toString();
-            constants.setMatchNumber(matchNumber);
-            constants.setTeamNumber(teamNumber);
+            //constants.setMatchNumber(matchNumber);
+           // constants.setTeamNumber(teamNumber); TODO
 
             if(teamNumber.toString().length() == 0){
 

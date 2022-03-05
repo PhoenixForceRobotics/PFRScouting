@@ -4,12 +4,19 @@ import static android.content.Context.MODE_PRIVATE;
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 
 import android.content.Context;
+import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 import android.content.SharedPreferences;
 import edu.phoenixforce.scouting.*;
 import edu.phoenixforce.scouting.mobile.layouts.Configuration;
 import edu.phoenixforce.scouting.mobile.layouts.login;
 
+
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
+import edu.phoenixforce.scouting.mobile.database.entities.GameData;
+import edu.phoenixforce.scouting.mobile.functions.Timer;
+import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 
 public class Constants {
     String robotInfo;
@@ -69,6 +76,7 @@ public class Constants {
     int twelve = 0;
     int thirteen = 0;
     int fourteen = 0;
+    private android.app.Application Application;
 
     int autoOne = 0;
     int autoTwo = 0;
@@ -169,23 +177,8 @@ public class Constants {
         this.seventeen = seventeen;
     }
 
-    public void setEighteen(int eighteen) {
-        this.eighteen = eighteen;
-    }
 
 
-
-    public void setNineteen(int nineteen) {
-        this.nineteen = nineteen;
-    }
-
-    public void setTwenty(int twenty) {
-        this.twenty = twenty;
-    }
-
-    public void setTwentyOne(int twentyOne) {
-        this.twentyOne = twentyOne;
-    }
 
     public void setTen(int ten) {
         this.ten = ten;
@@ -246,35 +239,10 @@ public class Constants {
     public void setNine (int nine)
     {this.nine = nine;}
 
-    public void setMatchNumber (String matchNumber){
-        this.matchNumber = matchNumber;
-    }
-    public void setTeamNumber (String teamNumber){
-        this.teamNumber = teamNumber;
-    }
-    public void setUser (String user){
-        this.user = user;
-    }
-
-    public String getMatchNumber() {
-        return matchNumber;
-    }
-    public String getTeamNumber() {
-        return teamNumber;
-    }
-    public String getUser (String user){
-        return user;
-    }
-
-
-
     int fifteen = 0;
     int sixteen = 0;
     int seventeen = 0;
-    int eighteen = 0;
-    int nineteen = 0;
-    int twenty = 0;
-    int twentyOne = 0;
+
 
     int deviceId;
 
@@ -284,12 +252,12 @@ public class Constants {
 
         SharedPreferences myPrefs = context.getSharedPreferences(CONFIG_FILE_NAME, MODE_PRIVATE);
         deviceId = myPrefs.getInt(KEY_DEVICE_ID, 0);
+    public void writeData(){
+ScoreDataBase SDB = ScoreDataBase.getDatabase(Application);
 
-        Log.d("constants", String.valueOf(deviceId));
+//GameData gameData = new GameData(String.valueOf(eleven),String.valueOf(twelve),String.valueOf(one),String.valueOf(two), String.valueOf(three),String.valueOf(four),String.valueOf(five),String.valueOf(six));
+
     }
-
-
-
 
 }
 

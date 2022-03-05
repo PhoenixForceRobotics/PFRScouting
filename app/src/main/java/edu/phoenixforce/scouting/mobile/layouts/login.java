@@ -160,7 +160,7 @@ editor.apply();
 Toast.makeText(this, "Logged In as" + user, Toast.LENGTH_SHORT).show();
 
 goScout();
-constants.setUser(user);
+//constants.setUser(user);
         }
     public void goScout() {
 

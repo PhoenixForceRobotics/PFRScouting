@@ -16,9 +16,9 @@ import org.jetbrains.annotations.NotNull;
 public class GameData{
 
     //Create the variable for the columns in the table
-    public GameData(@NotNull String Scout,String DevNum, String MatchNum, String TeamNum, String Moved, String Stalled, String ClimbLow,
-                    String ClimbMid, String ClimbHigh, String ClimbHigher, String BallLow, String BallHigh, String AutoBallLow,
-                    String AutoBallHigh){
+    public GameData(@NotNull String Scout,String DevNum, String MatchNum, String TeamNum, String Moved, String Stalled, String ClimbLevel,
+                     String BallLow, String BallHigh, String AutoBallLow,
+                    String AutoBallHigh, String CycleAttempted, String Dropped, String Missed) {
     //Create our getters and setters - will we ever use them tho???
 
 
@@ -26,10 +26,10 @@ public class GameData{
         this.TeamNum = TeamNum;
         this.Moved = Moved;
         this.Stalled = Stalled;
-        this.ClimbLow = ClimbLow;
-        this.ClimbMid = ClimbMid;
-        this.ClimbHigh = ClimbHigh;
-        this.ClimbHigher = ClimbHigher;
+        this.ClimbLevel = ClimbLevel;
+        this.CycleAttempted = CycleAttempted;
+        this.Dropped = Dropped;
+        this.Missed = Missed;
         this.BallLow = BallLow;
         this.BallHigh = BallHigh;
         this.AutoBallHigh = AutoBallHigh;
@@ -78,37 +78,12 @@ public class GameData{
         Stalled = stalled;
     }
 
-    public String getClimbLow() {
-        return ClimbLow;
+    public String getClimbLevel() {
+        return ClimbLevel;
     }
 
-    public void setClimbLow(String climbLow) {
-        ClimbLow = climbLow;
-    }
 
-    public String getClimbMid() {
-        return ClimbMid;
-    }
 
-    public void setClimbMid(String climbMid) {
-        ClimbMid = climbMid;
-    }
-
-    public String getClimbHigh() {
-        return ClimbHigh;
-    }
-
-    public void setClimbHigh(String climbHigh) {
-        ClimbHigh = climbHigh;
-    }
-
-    public String getClimbHigher() {
-        return ClimbHigher;
-    }
-
-    public void setClimbHigher(String climbHigher) {
-        ClimbHigher = climbHigher;
-    }
 
     public String getBallLow() {
         return BallLow;
@@ -167,17 +142,10 @@ public class GameData{
     @ColumnInfo(name = "Stalled")
     private String Stalled;
 
-    @ColumnInfo(name = "ClimbLow")
-    private String ClimbLow;
+    @ColumnInfo(name = "ClimbLevel")
+    private String ClimbLevel;
 
-    @ColumnInfo(name = "ClimbMid")
-    private String ClimbMid;
 
-    @ColumnInfo(name = "ClimbHigh")
-    private String ClimbHigh;
-
-    @ColumnInfo(name = "ClimbHigher")
-    private String ClimbHigher;
 
     @ColumnInfo(name = "BalLLow")
     private String BallLow;
@@ -194,4 +162,34 @@ public class GameData{
     @ColumnInfo(name = "DevNum")
     private String DevNum;
 
+    public String getCycleAttempted() {
+        return CycleAttempted;
+    }
+
+    public void setCycleAttempted(String cycleAttempted) {
+        CycleAttempted = cycleAttempted;
+    }
+
+    @ColumnInfo(name = "CycleAttempted")
+    private String CycleAttempted;
+
+    @ColumnInfo(name = "Dropped")
+    private String Dropped;
+
+    public String getDropped() {
+        return Dropped;
+    }
+
+
+
+    public String getMissed() {
+        return Missed;
+    }
+
+    public void setMissed(String missed) {
+        Missed = missed;
+    }
+
+    @ColumnInfo(name = "Missed")
+    private String Missed;
 }
