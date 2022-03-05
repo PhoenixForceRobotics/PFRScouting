@@ -15,8 +15,6 @@ import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 
-import java.util.Calendar;
-
 import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.common.*;
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
@@ -177,7 +175,7 @@ public class TeleScore extends AppCompatActivity{
 
         //AUTOSCORE STUFF
 
-        view10 = findViewById(R.id.integer_number10);
+
         autoBallHighA = findViewById(R.id.integer_number6);
 
         //Buttons
@@ -326,7 +324,7 @@ public class TeleScore extends AppCompatActivity{
 
                 Log.d(tag, "this is back");
 
-                openMainActivity();
+                //openMainActivity();
 
 
             }
@@ -518,106 +516,92 @@ public class TeleScore extends AppCompatActivity{
         boolean checked = ((CheckBox) view).isChecked();
         //Log.d("hola",String.valueOf(colorwheel));
         //check for what checkbox is checked
-        switch(view.getId()){
+        switch (view.getId()) {
+
 
             case R.id.checkOne: {
-                  case R.id.HelpedClimb: {
                 if (checked) {
                     buddy = 1;
-                }
-                else {
+                } else {
                     buddy = 0;
                 }
                 break;
             }
 
-            case R.id.RobotSpun: {
+            case R.id.check2: {
                 if (checked) {
                     buddy = 1;
                     spunwheel = 1;
-                }
-                else {
+                } else {
                     buddy = 0;
                     spunwheel = 0;
                 }
                 break;
             }
 
-            case R.id.checkTwo: {
+            case R.id.check3: {
                 if (checked) {
-                    spunwheel = 1;
-                }
-                else {
-                    spunwheel = 0;
+
+
+                } else {
+
+
                 }
                 break;
             }
+        }
 
 
+        /*public void openMainActivity() {
+
+            Constants constantsone = new Constants();
+
+            constantsone.setEleven(solo);
+            constantsone.setTwelve(buddy);
+            constantsone.setThirteen(spunwheel);
+            constantsone.setFourteen(colorwheel);
+            constantsone.setFifteen(balls);
+            constantsone.setSixteen(moved);
 
 
+            Log.d("Testing", "openMainRan");
+            Intent intent = new Intent(this, team_select.class);
+            startActivity(intent);
 
-            case R.id.checkThree:
-                if(checked)
-                    moved = moved + 1;
-                else
-                    moved = 0;
-                break;
+            //  saveGameData();
+
+            Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
+        TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
+                String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
+                String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5),
+//                spunwheel,colorwheel,balls,solo,buddy);
+            //TODO this /
+
+            //GameData gameData = new GameData("test", String.valueOf(balls), solo, buddy, "hi",balls, balls, "high", "mid", "higher", "this", "that", "hi","medium");
+
+
+            //RecyclerViewViewer.mWordViewModelII.insert(teleData);
+
+
+            //Log.d("Night Mode Update", teleData.toString());
+            Log.d("Night Mode Update", String.valueOf(team_select.show1));
+            X = 1;
 
 
         }
 
-    }
-    public void openMainActivity(){
-
-        Constants constantsone = new Constants();
-
-        constantsone.setEleven(solo);
-        constantsone.setTwelve(buddy);
-        constantsone.setThirteen(spunwheel);
-        constantsone.setFourteen(colorwheel);
-        constantsone.setFifteen(balls);
-        constantsone.setSixteen(moved);
 
 
-        Log.d("Testing", "openMainRan");
-        Intent intent = new Intent(this, team_select.class);
-        startActivity(intent);
+        public void saveGameData() {
 
-        saveGameData();
-
-        Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-        /*TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
-                String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
-                String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5),
-//                spunwheel,colorwheel,balls,solo,buddy);*/
-        //TODO this /
-
-        //GameData gameData = new GameData("test", String.valueOf(balls), solo, buddy, "hi",balls, balls, "high", "mid", "higher", "this", "that", "hi","medium");
-
-
-        //RecyclerViewViewer.mWordViewModelII.insert(teleData);
-
-
-        //Log.d("Night Mode Update", teleData.toString());
-        Log.d("Night Mode Update", String.valueOf(team_select.show1));
-        X = 1;
-
-
-
-
-    }
-
-    public void saveGameData(){
-
-      /*  ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
+      ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
         GameData gameData = new GameData("1","2","3","4", "5", "6", "7", "8", "9"
                 , "10", "11", "12", "13", "14");
 
         SDB.gameDao().insertAll(gameData);
 
-        */
+
 
 
         //this is a new comment, this better work!
@@ -625,21 +609,11 @@ public class TeleScore extends AppCompatActivity{
 
     }
 
+       */
 
 
-
-
-
-    public void writeTime(){
-
-        //creating Calendar instance
-        Calendar calendar = Calendar.getInstance();
-        //Returns current time in millis
-        long timeMilli2 = calendar.getTimeInMillis();
-        System.out.println("Time in milliseconds using Calendar: " + timeMilli2);
-
+        }
     }
-}
 
 
 
