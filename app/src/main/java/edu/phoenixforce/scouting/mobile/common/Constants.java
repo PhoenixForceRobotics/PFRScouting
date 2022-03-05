@@ -29,7 +29,6 @@ public class Constants {
     int devId;
 
 
-
     public void setRobotInfo(String text1) {
         this.robotInfo = text1;
     }
@@ -38,9 +37,13 @@ public class Constants {
         this.userThoughts = text2;
     }
 
-    public void setProjectedCycleTime(String text3) { this.projectedCycleTime = text3; }
+    public void setProjectedCycleTime(String text3) {
+        this.projectedCycleTime = text3;
+    }
 
-    public void setProjectedClimbLevel(String text4) { this.projectedClimbLevel = text4; }
+    public void setProjectedClimbLevel(String text4) {
+        this.projectedClimbLevel = text4;
+    }
 
     public String getRobotInfo() {
         return robotInfo;
@@ -50,9 +53,13 @@ public class Constants {
         return userThoughts;
     }
 
-    public String getProjectedCycleTime() { return projectedCycleTime; }
+    public String getProjectedCycleTime() {
+        return projectedCycleTime;
+    }
 
-    public String getProjectedClimbLevel() { return projectedClimbLevel; }
+    public String getProjectedClimbLevel() {
+        return projectedClimbLevel;
+    }
 
     public static final int EXTERNAL_FILE_STORAGE_PERMISSION = 1;
 
@@ -170,14 +177,13 @@ public class Constants {
     int autoNine = 0;
     int autoTen = 0;
 
-    public void setOne(int one )
-    {this.one = one;}
+    public void setOne(int one) {
+        this.one = one;
+    }
 
     public void setSeventeen(int seventeen) {
         this.seventeen = seventeen;
     }
-
-
 
 
     public void setTen(int ten) {
@@ -236,8 +242,9 @@ public class Constants {
         this.eight = eight;
     }
 
-    public void setNine (int nine)
-    {this.nine = nine;}
+    public void setNine(int nine) {
+        this.nine = nine;
+    }
 
     int fifteen = 0;
     int sixteen = 0;
@@ -247,19 +254,18 @@ public class Constants {
     int deviceId;
 
 
-
-    public void getPrefs(Context context){
+    public void getPrefs(Context context) {
 
         SharedPreferences myPrefs = context.getSharedPreferences(CONFIG_FILE_NAME, MODE_PRIVATE);
         deviceId = myPrefs.getInt(KEY_DEVICE_ID, 0);
-    public void writeData(){
-ScoreDataBase SDB = ScoreDataBase.getDatabase(Application);
+
 
 //GameData gameData = new GameData(String.valueOf(eleven),String.valueOf(twelve),String.valueOf(one),String.valueOf(two), String.valueOf(three),String.valueOf(four),String.valueOf(five),String.valueOf(six));
 
     }
-
 }
+
+
 
 
 

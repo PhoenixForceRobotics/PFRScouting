@@ -59,11 +59,10 @@ public class AutoScore extends AppCompatActivity {
 
         Constants constants = new Constants();
 
-        constants.getPrefs(this.getApplicationContext());
 
         //TextViews
         view1 = findViewById(R.id.integer_number1);
-        view2 = findViewById(R.id.integer_number4);
+        view2 = findViewById(R.id.integer_number2);
         view3 = findViewById(R.id.integer_number3);
         view4 = findViewById(R.id.integer_number4);
 

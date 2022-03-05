@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 
+import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.common.*;
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
@@ -214,8 +215,6 @@ public class TeleScore extends AppCompatActivity{
         else {
             user.setText("Hi " + scoutname + ", Score Team " + teamnum + " During TeleOp Below!");
         }
-        user.setText(scoutname + " Team " + teamnum + " Match " + match);
-
 
 
 
@@ -324,7 +323,7 @@ public class TeleScore extends AppCompatActivity{
 
                 Log.d(tag, "this is back");
 
-                //openMainActivity();
+                openMainActivity();
 
 
             }
@@ -550,9 +549,9 @@ public class TeleScore extends AppCompatActivity{
                 break;
             }
         }
+    }
 
-
-        /*public void openMainActivity() {
+        public void openMainActivity() {
 
             Constants constantsone = new Constants();
 
@@ -571,26 +570,17 @@ public class TeleScore extends AppCompatActivity{
             //  saveGameData();
 
             Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-        TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
-                String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
-                String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5),
-//                spunwheel,colorwheel,balls,solo,buddy);
+
             //TODO this /
 
-            //GameData gameData = new GameData("test", String.valueOf(balls), solo, buddy, "hi",balls, balls, "high", "mid", "higher", "this", "that", "hi","medium");
 
-
-            //RecyclerViewViewer.mWordViewModelII.insert(teleData);
-
-
-            //Log.d("Night Mode Update", teleData.toString());
             Log.d("Night Mode Update", String.valueOf(team_select.show1));
             X = 1;
 
 
         }
 
-
+/*r
 
         public void saveGameData() {
 
@@ -609,10 +599,10 @@ public class TeleScore extends AppCompatActivity{
 
     }
 
-       */
 
 
-        }
+
+        }*/
     }
 
 

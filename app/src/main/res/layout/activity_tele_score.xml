@@ -226,8 +226,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline196"
         app:layout_constraintEnd_toStartOf="@+id/guideline127"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline79"
-        app:layout_constraintTop_toTopOf="@+id/guideline195" />
+        app:layout_constraintTop_toTopOf="@+id/guideline195"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/upbutton2"
@@ -512,21 +514,6 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline170"
         app:layout_constraintStart_toStartOf="@+id/guideline176"
         app:layout_constraintTop_toBottomOf="@+id/upbutton6" />
-
-    <TextView
-        android:id="@+id/integer_number4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:autoSizeTextType="uniform"
-        android:background="#FFFFFF"
-        android:fontFamily="@font/nasalization_rg"
-        app:layout_constraintBottom_toTopOf="@+id/guideline196"
-        app:layout_constraintEnd_toStartOf="@+id/guideline152"
-        app:layout_constraintStart_toStartOf="@+id/guideline189"
-        app:layout_constraintTop_toBottomOf="@+id/downbutton2" />
 
     <TextView
         android:id="@+id/integer_number6"
