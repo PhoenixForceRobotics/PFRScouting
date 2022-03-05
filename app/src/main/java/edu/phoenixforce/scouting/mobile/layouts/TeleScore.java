@@ -533,11 +533,11 @@ public class TeleScore extends AppCompatActivity{
 
             case R.id.RobotSpun: {
                 if (checked) {
-                    buddy = "1";
+                    buddy = 1;
                     spunwheel = 1;
                 }
                 else {
-                    buddy = "0";
+                    buddy = 0;
                     spunwheel = 0;
                 }
                 break;
@@ -545,10 +545,10 @@ public class TeleScore extends AppCompatActivity{
 
             case R.id.checkTwo: {
                 if (checked) {
-                    spunwheel = "1";
+                    spunwheel = 1;
                 }
                 else {
-                    spunwheel = "0";
+                    spunwheel = 0;
                 }
                 break;
             }

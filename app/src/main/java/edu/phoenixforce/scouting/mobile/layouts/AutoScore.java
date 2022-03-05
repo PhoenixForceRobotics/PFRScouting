@@ -247,5 +247,4 @@ public class AutoScore extends AppCompatActivity {
         } */
 
 
-        } */
-    }
+        }
