@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -46,7 +47,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
     public String dev, teamnum, match;
 
     public TextView user;
-
+    public String userNombre;
 
 
 
@@ -64,6 +65,8 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         teamnum = myPrefs.getString(teamNum, "No Team Number" );
 
         match = myPrefs.getString(matchNum, "No Match Number");
+
+
 
 
         user.setText(text +  " Team: " + teamnum + " Match: " + match);
@@ -248,6 +251,18 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         startActivity(intent);
 
     } */
+
+    public void clearData(){
+
+        if(TEXT == "Admin"){
+
+
+            ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
+
+        }
+
+
+    }
 
 }
 

@@ -32,10 +32,10 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
-        android:background="@color/colorPrimaryDark"
-        android:text="Moved"
-        android:fontFamily="@font/nasalization_rg"
         android:autoSizeTextType="uniform"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/nasalization_rg"
+        android:text="Moved"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline124"
         app:layout_constraintEnd_toStartOf="@+id/guideline125"
@@ -247,6 +247,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
@@ -255,9 +256,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline113"
         app:layout_constraintTop_toTopOf="@+id/guideline111"
-        app:layout_constraintVertical_bias="1.0"
-        android:autoSizeTextType="uniform"
-        />
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline102"
@@ -313,6 +312,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
@@ -321,9 +321,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline100"
         app:layout_constraintTop_toTopOf="@+id/guideline98"
-        app:layout_constraintVertical_bias="0.0"
-        android:autoSizeTextType="uniform"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline122"
@@ -361,6 +359,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
@@ -369,9 +368,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline103"
         app:layout_constraintTop_toTopOf="@+id/guideline101"
-        app:layout_constraintVertical_bias="0.0"
-        android:autoSizeTextType="uniform"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline59"
@@ -419,6 +416,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
@@ -427,9 +425,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline86"
         app:layout_constraintTop_toTopOf="@+id/guideline80"
-        app:layout_constraintVertical_bias="0.0"
-        android:autoSizeTextType="uniform"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline111"
@@ -445,10 +441,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
-        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline50"
         app:layout_constraintEnd_toStartOf="@+id/guideline60"
         app:layout_constraintHorizontal_bias="0.0"
@@ -463,6 +459,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
@@ -471,9 +468,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline119"
         app:layout_constraintTop_toTopOf="@+id/guideline114"
-        app:layout_constraintVertical_bias="1.0"
-        android:autoSizeTextType="uniform"
-        />
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline124"
@@ -503,6 +498,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
@@ -511,9 +507,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline129"
         app:layout_constraintTop_toTopOf="@+id/guideline131"
-        app:layout_constraintVertical_bias="0.0"
-        android:autoSizeTextType="uniform"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline97"
@@ -586,6 +580,23 @@
         app:layout_constraintStart_toStartOf="@+id/guideline61"
         app:layout_constraintTop_toTopOf="@+id/guideline114" />
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/nasalization_rg"
+        android:text="Balls Collected"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/guideline105"
+        app:layout_constraintEnd_toStartOf="@+id/guideline62"
+        app:layout_constraintStart_toStartOf="@+id/guideline61"
+        app:layout_constraintTop_toTopOf="@+id/guideline98" />
+
     <Button
         android:id="@+id/downbutton1"
         android:layout_width="0dp"
@@ -593,6 +604,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
@@ -601,9 +613,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline113"
         app:layout_constraintTop_toTopOf="@+id/guideline133"
-        app:layout_constraintVertical_bias="0.0"
-        android:autoSizeTextType="uniform"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"
@@ -944,16 +954,16 @@
         android:id="@+id/finishedbutton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Finish"
-        android:textColor="#FFFF"
-        android:fontFamily="@font/nasalization_rg"
         android:autoSizeTextType="uniform"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/nasalization_rg"
+        android:text="Tele-Op"
+        android:textColor="#FFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline140"
         app:layout_constraintEnd_toStartOf="@+id/guideline138"
         app:layout_constraintStart_toStartOf="@+id/guideline137"
         app:layout_constraintTop_toTopOf="@+id/guideline139"
-        tools:text="Finish" />
+        tools:text="Tele-Op" />
 
     <ImageView
         android:id="@+id/imageView5"

@@ -1,6 +1,7 @@
 package edu.phoenixforce.scouting.mobile.common;
 
 import static android.content.Context.MODE_PRIVATE;
+import edu.phoenixforce.scouting.mobile.common.Constants;
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 
 import android.content.Context;
@@ -8,8 +9,12 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 import android.content.SharedPreferences;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import edu.phoenixforce.scouting.*;
 import edu.phoenixforce.scouting.mobile.layouts.Configuration;
+import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
 import edu.phoenixforce.scouting.mobile.layouts.login;
 
 
@@ -268,13 +273,16 @@ public class Constants {
         SharedPreferences myPrefs = context.getSharedPreferences(CONFIG_FILE_NAME, MODE_PRIVATE);
         deviceId = myPrefs.getInt(KEY_DEVICE_ID, 0);
 
-ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
-
-
-GameData gameData = new GameData(user, String.valueOf(deviceId), matchNumber, teamNumber,String.valueOf(autoThree),String.valueOf(twelve),String.valueOf(one),String.valueOf(two), String.valueOf(three), String.valueOf(autoOne), String.valueOf(autoTwo),String.valueOf(four),String.valueOf(five),String.valueOf(six), String.valueOf(eleven),String.valueOf(thirteen));
-SDB.gameDao().insertAll(gameData);
-
     }
+
+    public void setData(Context context) {
+        ScoreDataBase SDB = ScoreDataBase.getDatabase(this.Application);
+
+
+        GameData gameData = new GameData(user, String.valueOf(deviceId), matchNumber, teamNumber, String.valueOf(autoThree), String.valueOf(twelve), String.valueOf(one), String.valueOf(two), String.valueOf(three), String.valueOf(autoOne), String.valueOf(autoTwo), String.valueOf(four), String.valueOf(five), String.valueOf(six), String.valueOf(eleven), String.valueOf(thirteen));
+        SDB.gameDao().insertAll(gameData);
+    }
+
 }
 
 

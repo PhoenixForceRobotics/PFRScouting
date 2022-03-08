@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.widget.CheckBox;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import com.example.fyrebirdscout11.R;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 
 
 public class AutoScore extends AppCompatActivity {
@@ -50,6 +52,7 @@ public class AutoScore extends AppCompatActivity {
     int counter2 = 0;
     int counter3 = 0;
     int counter4 = 0;
+    int counter5 = 0;
 
 
     @Override
@@ -78,6 +81,9 @@ public class AutoScore extends AppCompatActivity {
         downButton4 = findViewById(R.id.downbutton4);
 
         finishButton = findViewById(R.id.finishedbutton);
+
+
+
 
         //on app launch Text View Must show zero
 
@@ -230,21 +236,26 @@ public class AutoScore extends AppCompatActivity {
 
     }
 
-    //public void onCheckboxClicked(View view) {
+    public void onCheckboxClicked(View view) {
 
-      /*  boolean checked = ((CheckBox).isChecked();
-       /* boolean checked = ((CheckBox).isChecked();
+        boolean checked = (((CheckBox) view).isChecked());
+
 
   switch (view.getId()) {
             case R.id.moved:
-                if (checked) ;
-
-                else
+                if (checked) {
+                    counter5 = 1;
+                    constants.setAutoFive(counter5);
+                }
+                else{
+                    counter5 = 0;
+                    constants.setAutoFive(counter5);
+                }
 
                     break;
 
-        } */
+        }
 
 
         }
-
+}

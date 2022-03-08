@@ -2,6 +2,7 @@ package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -210,8 +211,27 @@ public class TeleScore extends AppCompatActivity{
         matchnumber = Integer.valueOf(match);
 
         if(teamnum == "2097"){
-            user.setText("Hi " + scoutname + " GO PHOENIX FORCe!");
+            user.setText("Hi " + scoutname + " GO PHOENIX FORCE!");
         }
+        else if(scoutname == "Admin"){
+            user.setText("Keep up the hard work");
+        }
+        else if(scoutname == "Malia"){
+            user.setText("Thanks for the help, Malia! Scouting team: " + teamnum);
+        }
+        else if(scoutname == "Syed"){
+            user.setText("Thanks for the help, Syed! Scouting team: " + teamnum);
+        }
+        else if(scoutname.equals("Noam")){
+            user.setText("Thanks for the help, Noam! Scouting team: " + teamnum);
+        }
+        else if(scoutname == "Gabriel"){
+            user.setText("Thanks for the help, Gabriel! Scouting team:" + teamnum);
+        }
+        else if(scoutname == "Emily"){
+            user.setText("Fergalicious definition scouting team: " + teamnum);
+        }
+
         else {
             user.setText("Hi " + scoutname + ", Score Team " + teamnum + " During TeleOp Below!");
         }
@@ -334,9 +354,17 @@ public class TeleScore extends AppCompatActivity{
 
             @Override
             public void onClick(View v) {
-                counter = counter + 1;
-                view1.setText(String.valueOf(counter));
-                constants.setOne(counter);
+                if(counter <= 3) {
+                    counter = counter + 1;
+                    view1.setText(String.valueOf(counter));
+                    constants.setOne(counter);
+                }
+                else{
+                    Context context =getApplicationContext();
+                    Toast toast = Toast.makeText(context, "Max Climb Level is 4 - Verify Climb Level", Toast.LENGTH_SHORT);
+                    toast.show();
+
+                }
 
             }
         });
@@ -529,10 +557,10 @@ public class TeleScore extends AppCompatActivity{
 
             case R.id.check2: {
                 if (checked) {
-                    buddy = 1;
+
                     spunwheel = 1;
                 } else {
-                    buddy = 0;
+
                     spunwheel = 0;
                 }
                 break;
@@ -562,6 +590,7 @@ public class TeleScore extends AppCompatActivity{
             constantsone.setFifteen(balls);
             constantsone.setSixteen(moved);
 
+            constantsone.setData(this);
 
             Log.d("Testing", "openMainRan");
             Intent intent = new Intent(this, team_select.class);
@@ -580,7 +609,7 @@ public class TeleScore extends AppCompatActivity{
 
         }
 
-/*r
+/*
 
         public void saveGameData() {
 
