@@ -268,8 +268,11 @@ public class Constants {
         SharedPreferences myPrefs = context.getSharedPreferences(CONFIG_FILE_NAME, MODE_PRIVATE);
         deviceId = myPrefs.getInt(KEY_DEVICE_ID, 0);
 
+ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
-//GameData gameData = new GameData(String.valueOf(eleven),String.valueOf(twelve),String.valueOf(one),String.valueOf(two), String.valueOf(three),String.valueOf(four),String.valueOf(five),String.valueOf(six));
+
+GameData gameData = new GameData(user, String.valueOf(deviceId), matchNumber, teamNumber,String.valueOf(autoThree),String.valueOf(twelve),String.valueOf(one),String.valueOf(two), String.valueOf(three), String.valueOf(autoOne), String.valueOf(autoTwo),String.valueOf(four),String.valueOf(five),String.valueOf(six), String.valueOf(eleven),String.valueOf(thirteen));
+SDB.gameDao().insertAll(gameData);
 
     }
 }

@@ -16,9 +16,10 @@ import org.jetbrains.annotations.NotNull;
 public class GameData{
 
     //Create the variable for the columns in the table
-    public GameData(@NotNull String Scout,String DevNum, String MatchNum, String TeamNum, String Moved, String Stalled, String ClimbLevel,
+    public GameData(@NotNull String Scout,String DevNum, String MatchNum, String TeamNum,
+                    String Moved, String Stalled, String ClimbLevel,
                      String BallLow, String BallHigh, String AutoBallLow,
-                    String AutoBallHigh, String CycleAttempted, String Dropped, String Missed) {
+                    String AutoBallHigh, String CycleAttempted, String Dropped, String Missed, String TeleMoved, String NoShow) {
     //Create our getters and setters - will we ever use them tho???
 
 
@@ -36,6 +37,8 @@ public class GameData{
         this.AutoBallLow = AutoBallLow;
         this.DevNum = DevNum;
         this.Scout = Scout;
+        this.TeleMoved = TeleMoved;
+        this.NoShow = NoShow;
     }
 
     public String getScout() {
@@ -175,6 +178,28 @@ public class GameData{
 
     @ColumnInfo(name = "Dropped")
     private String Dropped;
+
+    @ColumnInfo(name = "TeleMoved")
+    private String TeleMoved;
+
+    public String getTeleMoved() {
+        return TeleMoved;
+    }
+
+    public void setTeleMoved(String teleMoved) {
+        TeleMoved = teleMoved;
+    }
+
+    public String getNoShow() {
+        return NoShow;
+    }
+
+    public void setNoShow(String noShow) {
+        NoShow = noShow;
+    }
+
+    @ColumnInfo(name = "NoShow")
+    private String NoShow;
 
     public String getDropped() {
         return Dropped;
