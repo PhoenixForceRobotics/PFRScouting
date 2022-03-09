@@ -29,6 +29,83 @@ public class Constants {
     String projectedCycleTime;
     String projectedClimbLevel;
     String matchNumber;
+
+    public String getMatchNumber() {
+        return matchNumber;
+    }
+
+    public String getTeamNumber() {
+        return teamNumber;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public int getDevId() {
+        return devId;
+    }
+
+    public int getDeviceId() {
+        return deviceId;
+    }
+
+    public static int getExternalFileStoragePermission() {
+        return EXTERNAL_FILE_STORAGE_PERMISSION;
+    }
+
+    public int getOne() {
+        return one;
+    }
+
+    public int getTwo() {
+        return two;
+    }
+
+    public int getThree() {
+        return three;
+    }
+
+    public int getFour() {
+        return four;
+    }
+
+    public int getFive() {
+        return five;
+    }
+
+    public int getSix() {
+        return six;
+    }
+
+    public int getEleven() {
+        return eleven;
+    }
+
+    public int getTwelve() {
+        return twelve;
+    }
+
+    public int getThirteen() {
+        return thirteen;
+    }
+
+    public int getFourteen() {
+        return fourteen;
+    }
+
+    public int getFifteen() {
+        return fifteen;
+    }
+
+    public int getSixteen() {
+        return sixteen;
+    }
+
+    public int getSeventeen() {
+        return seventeen;
+    }
+
     String teamNumber;
     String user;
     int devId;
@@ -258,6 +335,8 @@ public class Constants {
     public void setEight(int eight) {
         this.eight = eight;
     }
+
+
 
     public void setNine (int nine)
     {this.nine = nine;}

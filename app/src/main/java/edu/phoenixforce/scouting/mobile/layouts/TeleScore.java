@@ -616,9 +616,11 @@ public class TeleScore extends AppCompatActivity{
 
         public void saveGameData() {
 
+        Constants constants = new Constants();
+
       ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
-        GameData gameData = new GameData("1","2","3","4", "5", "6", "7", "8", "9"
+        GameData gameData = new GameData(constants.getUser(),"2","3","4", "5", "6", "7", "8", "9"
                 , "10", "11", "12", "13", "14", "15", "16");
 
         SDB.gameDao().insertAll(gameData);
