@@ -20,9 +20,9 @@ public class GameRepo {
     private LiveData<List<GameData>> todos;
 
     public GameRepo(Application application) {
-        ScoreDataBase data = ScoreDataBase.getDatabase(application);
-        Game = data.gameDao();
-        todos = Game.getAllScores();
+        //ScoreDataBase data = ScoreDataBase.getDatabase();
+//        Game = data.gameDao();
+      //  todos = Game.getAllScores();
     }
 
     // creating a method to insert the data to our database.

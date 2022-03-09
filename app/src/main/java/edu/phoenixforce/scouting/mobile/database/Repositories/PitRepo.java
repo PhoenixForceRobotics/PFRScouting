@@ -17,11 +17,11 @@ public class PitRepo {
     private PitDao Pit;
     private LiveData<List<PitData>> todos;
 
-    public PitRepo(Application application) {
-        ScoreDataBase data = ScoreDataBase.getDatabase(application);
-        Pit = data.pitDao();
-        todos = Pit.getAllScores();
-    }
+    //public PitRepo(Application application) {
+     //   ScoreDataBase data = ScoreDataBase.getDatabase(Application);
+     //   Pit = data.pitDao();
+    //    todos = Pit.getAllScores();
+   // }
 
     public LiveData<List<PitData>> getPit() {
         return todos;
