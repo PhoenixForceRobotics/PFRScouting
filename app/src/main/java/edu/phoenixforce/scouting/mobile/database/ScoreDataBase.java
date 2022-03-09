@@ -1,6 +1,7 @@
 package edu.phoenixforce.scouting.mobile.database;
 
 import android.app.Application;
+import android.content.Context;
 
 import androidx.room.Database;
 import androidx.room.Room;
@@ -36,10 +37,9 @@ public abstract class ScoreDataBase extends RoomDatabase {
     public abstract TeleDao teleDao();
 
     public abstract GameDao gameDao();
-
     public abstract PitDao pitDao();
 
-    public static ScoreDataBase getDatabase(Application context) {
+    public static ScoreDataBase getDatabase(final Context context) {
 
         if (INSTANCE == null) {
             synchronized (ScoreDataBase.class) {

@@ -135,7 +135,7 @@ public class team_select extends AppCompatActivity {
 
     public void goScore(){
 
-        Intent intent = new Intent(this, ActivityMain.class);
+        Intent intent = new Intent(this, AutoScore.class);
         startActivity(intent);
 
     }

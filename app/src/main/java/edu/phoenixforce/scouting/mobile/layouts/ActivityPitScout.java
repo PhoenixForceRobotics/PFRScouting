@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat;
 import com.example.fyrebirdscout11.R;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 
 public class ActivityPitScout extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     String text1;

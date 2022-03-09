@@ -20,8 +20,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="1216dp"
-        android:layout_height="174dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -31,6 +31,7 @@
         android:layout_centerHorizontal="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:autoSizeTextType="uniform"
         android:text="@string/button_use"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
@@ -40,15 +41,16 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="178dp"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
+        android:background="@color/Orange"
         android:fontFamily="@font/nasalization_rg"
+        android:autoSizeTextType="uniform"
         android:text="@string/by"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
@@ -70,7 +72,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline26"
         app:layout_constraintVertical_bias="0.818"
-        app:srcCompat="@mipmap/picture1" />
+        app:srcCompat="@mipmap/pfrlogolight" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -121,15 +123,16 @@
 
     <Button
         android:id="@+id/options"
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
+        android:background="@color/Orange"
         android:fontFamily="@font/nasalization_rg"
         android:text="Settings"
         android:textColor="#FFFFFF"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
         app:layout_constraintEnd_toStartOf="@+id/guideline30"
         app:layout_constraintStart_toStartOf="@+id/guideline32"
@@ -266,28 +269,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25859374" />
+        app:layout_constraintGuide_percent="0.18" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.82" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.49" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline33"
@@ -329,7 +332,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.39" />
+        app:layout_constraintGuide_percent="0.4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

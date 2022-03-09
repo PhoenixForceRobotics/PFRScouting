@@ -169,7 +169,7 @@ goScout();
         }
     public void goScout() {
 
-        Intent intent = new Intent(this, team_select.class);
+        Intent intent = new Intent(this, ActivityMain.class);
         startActivity(intent);
 
 

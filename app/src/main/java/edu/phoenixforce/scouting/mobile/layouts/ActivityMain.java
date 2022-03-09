@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.Button;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -56,6 +57,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
+
         user = findViewById(R.id.textView17);
         test = findViewById(R.id.testBtn);
 
@@ -69,7 +71,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
 
 
-        user.setText(text +  " Team: " + teamnum + " Match: " + match);
+        user.setText("Signed in as " + text + ". Is this you?");
 
 
 
@@ -101,7 +103,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
             test.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //seeData();
+                    clearData();
                 }
             });
 
@@ -213,7 +215,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
     public void openAutoScore () {
 
-            Intent intent = new Intent(this, AutoScore.class);
+            Intent intent = new Intent(this, team_select.class);
             startActivity(intent);
 
 
@@ -221,13 +223,20 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
         public void openTeleScore () {
 
-            Intent intent = new Intent(this, AutoScore.class);
+            Intent intent = new Intent(this, login.class);
             startActivity(intent);
         }
       private void openSettings () {
 
-        Intent intent = new Intent(this,  ConfigActivity.class);
-        startActivity(intent);
+        if(text.equals("Admin")) {
+
+            Intent intent = new Intent(this, ConfigActivity.class);
+            startActivity(intent);
+        }
+        else{
+            Toast.makeText(this, "Permission denied - 100 - ADMIN required", Toast.LENGTH_LONG).show();
+
+        }
 
         }
 
@@ -245,22 +254,23 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         }
     }
 
-   /* public void seeData(){
-
-        Intent intent = new Intent(this,  RecyclerViewViewer.class);
-        startActivity(intent);
-
-    } */
-
     public void clearData(){
 
-        if(TEXT == "Admin"){
-
+        if(text.equals("Admin")) {
 
             ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
+            SDB.gameDao().nukeTable();
+
+            Toast.makeText(this, "Table cleared", Toast.LENGTH_LONG).show();
+            Log.v("ActivityMain", "Table Cleared");
         }
 
+        else{
+            Toast.makeText(this, "Permission denied - 100 - Must be run as ADMIN", Toast.LENGTH_LONG).show();
+            Log.e("ActiivityMain", "Non-Admin tried to run clear data");
+
+        }
 
     }
 

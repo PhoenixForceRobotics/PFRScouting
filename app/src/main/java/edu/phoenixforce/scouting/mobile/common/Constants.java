@@ -44,6 +44,8 @@ public class Constants {
         this.userThoughts = text2;
     }
 
+
+
     public void setProjectedCycleTime(String text3) {
         this.projectedCycleTime = text3;
     }
@@ -276,11 +278,16 @@ public class Constants {
     }
 
     public void setData(Context context) {
-        ScoreDataBase SDB = ScoreDataBase.getDatabase(this.Application);
+        ScoreDataBase SDB = ScoreDataBase.getDatabase(context);
+        GameData gameData = new GameData(user, String.valueOf(deviceId), matchNumber, teamNumber,
+                String.valueOf(autoThree), String.valueOf(twelve), String.valueOf(one), String.valueOf(two),
+                String.valueOf(three), String.valueOf(autoOne), String.valueOf(autoTwo),
+                String.valueOf(four), String.valueOf(five), String.valueOf(six), String.valueOf(eleven),
+                String.valueOf(thirteen));
 
-
-        GameData gameData = new GameData(user, String.valueOf(deviceId), matchNumber, teamNumber, String.valueOf(autoThree), String.valueOf(twelve), String.valueOf(one), String.valueOf(two), String.valueOf(three), String.valueOf(autoOne), String.valueOf(autoTwo), String.valueOf(four), String.valueOf(five), String.valueOf(six), String.valueOf(eleven), String.valueOf(thirteen));
         SDB.gameDao().insertAll(gameData);
+
+        Log.v("Physics notes:", "V = D/T");
     }
 
 }

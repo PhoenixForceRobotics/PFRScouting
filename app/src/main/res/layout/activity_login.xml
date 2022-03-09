@@ -82,7 +82,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:srcCompat="@mipmap/picture1" />
+        app:srcCompat="@mipmap/pfrlogolight" />
 
     <EditText
         android:id="@+id/txtPassword"

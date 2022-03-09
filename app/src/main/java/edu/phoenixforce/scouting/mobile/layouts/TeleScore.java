@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
+import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.common.*;
@@ -591,9 +593,10 @@ public class TeleScore extends AppCompatActivity{
             constantsone.setSixteen(moved);
 
             constantsone.setData(this);
+            saveGameData();
 
             Log.d("Testing", "openMainRan");
-            Intent intent = new Intent(this, team_select.class);
+            Intent intent = new Intent(this, ActivityMain.class);
             startActivity(intent);
 
             //  saveGameData();
@@ -609,14 +612,14 @@ public class TeleScore extends AppCompatActivity{
 
         }
 
-/*
+
 
         public void saveGameData() {
 
       ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
         GameData gameData = new GameData("1","2","3","4", "5", "6", "7", "8", "9"
-                , "10", "11", "12", "13", "14");
+                , "10", "11", "12", "13", "14", "15", "16");
 
         SDB.gameDao().insertAll(gameData);
 
@@ -631,8 +634,8 @@ public class TeleScore extends AppCompatActivity{
 
 
 
-        }*/
-    }
+        }
+
 
 
 
