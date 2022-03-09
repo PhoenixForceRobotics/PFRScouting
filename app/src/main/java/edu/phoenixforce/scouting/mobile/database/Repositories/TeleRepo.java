@@ -12,14 +12,15 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
 public class TeleRepo {
 
+
     private TeleDao Tele;
     private LiveData<List<TeleData>> todos;
 
-    public TeleRepo(Application application) {
-        ScoreDataBase data = ScoreDataBase.getDatabase(application);
-        Tele = data.teleDao();
-        todos = Tele.getAllScores();
-    }
+   // public TeleRepo(Application application) {
+       // ScoreDataBase data = ScoreDataBase.getDatabase(application);
+       // Tele = data.teleDao();
+       // todos = Tele.getAllScores();
+  //  }
 
     public LiveData<List<TeleData>> getTele() {
         return todos;
