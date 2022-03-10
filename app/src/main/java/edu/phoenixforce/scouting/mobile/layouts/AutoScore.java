@@ -1,5 +1,7 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
+import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -230,6 +232,17 @@ public class AutoScore extends AppCompatActivity {
 
     public void navigate() {
 
+        SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editorTwo = scorePrefs.edit();
+
+        editorTwo.putString("autoOne", String.valueOf(counter1));
+        editorTwo.putString("autoTwo", String.valueOf(counter2));
+        editorTwo.putString("autoThree", String.valueOf(counter3));
+        editorTwo.putString("autoFour", String.valueOf(counter4));
+        editorTwo.putString("autoMoved", String.valueOf(counter5));
+
+        editorTwo.apply();
+
         Intent intent = new Intent(this, TeleScore.class);
         startActivity(intent);
 
@@ -241,11 +254,13 @@ public class AutoScore extends AppCompatActivity {
         boolean checked = (((CheckBox) view).isChecked());
 
 
-  switch (view.getId()) {
+        switch (view.getId()) {
+
             case R.id.moved:
                 if (checked) {
                     counter5 = 1;
                     constants.setAutoFive(counter5);
+                    Log.d("counter5auto", String.valueOf(counter5));
                 }
                 else{
                     counter5 = 0;

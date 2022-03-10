@@ -52,6 +52,7 @@ public class TeleScore extends AppCompatActivity{
     Button downButton4;
     Button downButton5;
     Button back;
+
     Button timer;
 
     //integers
@@ -100,6 +101,19 @@ public class TeleScore extends AppCompatActivity{
     private static String scoutname;
     private static String teamnum;
     private static String match;
+    String importedTeamNum;
+    String importedMatchNum;
+    String checkone;
+    String checktwo;
+    String checkthree;
+
+    public void setImportedTeamNum(String importedTeamNum) {
+        this.importedTeamNum = importedTeamNum;
+    }
+
+    public void setImportedMatchNum(String importedMatchNum) {
+        this.importedMatchNum = importedMatchNum;
+    }
 
     //integers
     public static int counter6 = 0;
@@ -108,6 +122,12 @@ public class TeleScore extends AppCompatActivity{
     public static int counter9 = 0;
     public static int counter10 = 0;
     public static int X = 0;
+
+    private static final String CONFIG_FILE_NAME = "edu.phoenixforce.scouting.mobile";
+    private static final String KEY_DEVICE_ID = CONFIG_FILE_NAME + ".DeviceId";
+    private static final String KEY_TBA_TEAM_ID = CONFIG_FILE_NAME + ".TbaTeamId";
+    private static final String KEY_TBA_LAST_MODIFIED = CONFIG_FILE_NAME + ".TbaLastModified";
+
 
     public static int matchnumber;
 
@@ -551,9 +571,9 @@ public class TeleScore extends AppCompatActivity{
 
             case R.id.checkOne: {
                 if (checked) {
-                    buddy = 1;
+                    checkone = "1";
                 } else {
-                    buddy = 0;
+                    checkone = "0";
                 }
                 break;
             }
@@ -561,20 +581,20 @@ public class TeleScore extends AppCompatActivity{
             case R.id.check2: {
                 if (checked) {
 
-                    spunwheel = 1;
+                    checktwo = "1";
                 } else {
 
-                    spunwheel = 0;
+                    checktwo = "0";
                 }
                 break;
             }
 
             case R.id.check3: {
                 if (checked) {
-
+                    checkthree = "1";
 
                 } else {
-
+                    checkthree = "0";
 
                 }
                 break;
@@ -593,7 +613,7 @@ public class TeleScore extends AppCompatActivity{
             constantsone.setFifteen(balls);
             constantsone.setSixteen(moved);
 
-            constantsone.setData(this);
+            //constantsone.setData(this);
             saveGameData();
 
             Log.d("Testing", "openMainRan");
@@ -619,17 +639,40 @@ public class TeleScore extends AppCompatActivity{
 
         Constants constants = new Constants();
 
+        constants.getPrefs(this);
       ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
-        //GameData gameData = new GameData(constants.getUser(),"2","3","4", "5", "6", "7", "8", "9"
-                //, "10", "11", "12", "13", "14", "15", "16");
+      //  GameData gameData = new GameData(constants.getUser(),"2","3","4", "5", "6", "7", "8", "9"
+       //        , "10", "11", "12", "13", "14", "15", "16");
 
-            GameData gameData = new GameData(text, String.valueOf(constants.getDeviceId()), constants.getMatchNumber(), constants.getTeamNumber(),
-                    String.valueOf(constants.getAutoThree()), String.valueOf(constants.getTwelve()), String.valueOf(constants.getOne()), String.valueOf(constants.getTwo()),
-                    String.valueOf(constants.getThree()), String.valueOf(constants.getAutoOne()), String.valueOf(constants.getAutoTwo()),
-                    String.valueOf(constants.getFour()), String.valueOf(constants.getFive()), String.valueOf(constants.getSix()), String.valueOf(constants.getEleven()),
-                    String.valueOf(constants.getThirteen()));
+            SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 
+            String autoCounter1 = scorePrefs.getString("autoOne", "0");
+            String autoCounter2 = scorePrefs.getString("autoTwo", "0");
+            String autoCounter3 = scorePrefs.getString("autoThree", "0");
+            String autoCounter4 = scorePrefs.getString("autoFour", "0");
+            String autoCounter5 = scorePrefs.getString("autoMoved", "0");
+
+
+            GameData gameData = new GameData(scoutname, String.valueOf(constants.getDeviceId()), match, teamnum,
+                    autoCounter5, checkone, String.valueOf(counter), String.valueOf(counter2),
+                    String.valueOf(counter3), autoCounter1, autoCounter2, autoCounter3, autoCounter4,
+                    String.valueOf(counter4), String.valueOf(counter5), String.valueOf(counter6),checktwo, checkthree);
+
+
+
+
+
+      /*      Log.d("tele", text + constants.getDeviceId() +  match + teamnum +
+                    constants.getAutoThree() + constants.getTwelve() + constants.getOne() + constants.getTwo() +
+                constants.getThree() + constants.getAutoOne() + constants.getAutoTwo() +
+                    constants.getFour() + constants.getFive() + constants.getSix()  + constants.getEleven() +
+                    constants.getThirteen());
+
+
+       */
+
+            Log.d("counter5", autoCounter5);
         SDB.gameDao().insertAll(gameData);
 
 

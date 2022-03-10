@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -105,14 +106,15 @@ public class team_select extends AppCompatActivity {
             editor.putString(teamNum, teamNumber);
 
 
-            constants.setMatchNumber(matchNumber);
 
-
-            constants.setTeamNumber(teamNumber);
 
             editor.apply();
+            TeleScore teleScore = new TeleScore();
+            teleScore.setImportedTeamNum(teamNumber);
+            teleScore.setImportedMatchNum(matchNumber);
 
-            Toast.makeText(this, "Saved Data" + matchNumber + teamNumber, Toast.LENGTH_SHORT).show();
+            Log.d("team_select", teamNumber + matchNumber);
+
 
 
             goScore();
@@ -135,9 +137,21 @@ public class team_select extends AppCompatActivity {
 
     public void goScore(){
 
+
+
+        constants.setMatchNumber(matchNumber);
+
+
+        constants.setTeamNumber(teamNumber);
+
+        Log.d("constants check", constants.getMatchNumber() + constants.getTeamNumber());
+        Toast.makeText(this, "Saved Data" + constants.getMatchNumber() + constants.getTeamNumber(), Toast.LENGTH_SHORT).show();
+
+
+
+
         Intent intent = new Intent(this, AutoScore.class);
         startActivity(intent);
-
     }
 }
 

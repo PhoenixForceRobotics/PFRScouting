@@ -2,6 +2,7 @@ package edu.phoenixforce.scouting.mobile.layouts;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -81,9 +82,10 @@ public class Configuration {
 
     public void setDeviceId(int deviceId) {
         SharedPreferences.Editor editor = prefs.edit();
+        Log.d("constants", String.valueOf(deviceId));
         editor.putInt(KEY_DEVICE_ID, deviceId);
         editor.apply();
-
+        this.deviceId = prefs.getInt(KEY_DEVICE_ID, this.deviceId);
     }
 
     public int getTbaTeamId() {

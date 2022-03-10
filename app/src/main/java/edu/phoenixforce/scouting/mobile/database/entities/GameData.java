@@ -19,7 +19,7 @@ public class GameData{
     public GameData(@NotNull String Scout,String DevNum, String MatchNum, String TeamNum,
                     String Moved, String Stalled, String ClimbLevel,
                      String BallLow, String BallHigh, String AutoBallLow,
-                    String AutoBallHigh, String CycleAttempted, String Dropped, String Missed, String TeleMoved, String NoShow) {
+                    String AutoBallHigh, String AutoBallCollected, String AutoBallMissed, String CycleAttempted, String Dropped, String Missed, String TeleMoved, String NoShow) {
     //Create our getters and setters - will we ever use them tho???
         //TODO THIS ^
 
@@ -40,6 +40,8 @@ public class GameData{
         this.Scout = Scout;
         this.TeleMoved = TeleMoved;
         this.NoShow = NoShow;
+        this.AutoBallCollected = AutoBallCollected;
+        this.AutoBallMissed = AutoBallMissed;
     }
 
     public String getScout() {
@@ -163,6 +165,12 @@ public class GameData{
     @ColumnInfo(name = "AutoBallHigh")
     private String AutoBallHigh;
 
+    @ColumnInfo(name = "AutoBallCollected")
+    private String AutoBallCollected;
+
+    @ColumnInfo(name = "AutoBallMissed")
+    private String AutoBallMissed;
+
     @ColumnInfo(name = "DevNum")
     private String DevNum;
 
@@ -218,4 +226,29 @@ public class GameData{
 
     @ColumnInfo(name = "Missed")
     private String Missed;
+
+
+    public void setClimbLevel(String climbLevel) {
+        ClimbLevel = climbLevel;
+    }
+
+    public String getAutoBallCollected() {
+        return AutoBallCollected;
+    }
+
+    public void setAutoBallCollected(String autoBallCollected) {
+        AutoBallCollected = autoBallCollected;
+    }
+
+    public String getAutoBallMissed() {
+        return AutoBallMissed;
+    }
+
+    public void setAutoBallMissed(String autoBallMissed) {
+        AutoBallMissed = autoBallMissed;
+    }
+
+    public void setDropped(String dropped) {
+        Dropped = dropped;
+    }
 }

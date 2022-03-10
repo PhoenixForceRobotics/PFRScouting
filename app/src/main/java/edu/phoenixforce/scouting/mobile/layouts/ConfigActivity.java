@@ -104,6 +104,7 @@ public class ConfigActivity extends AppCompatActivity {
         int deviceId = Integer.parseInt(getEditTextValue(R.id.editDeviceId));
         config.setDeviceId(deviceId);
 
+
         // Get a number for he team ID and save it.
         int tbaTeamId = Integer.parseInt(getEditTextValue(R.id.editTbaTeamId));
         config.setTbaTeamId(tbaTeamId);

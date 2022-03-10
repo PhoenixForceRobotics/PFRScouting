@@ -1,26 +1,13 @@
 package edu.phoenixforce.scouting.mobile.common;
 
 import static android.content.Context.MODE_PRIVATE;
-import edu.phoenixforce.scouting.mobile.common.Constants;
-import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 
-import android.content.Context;
-import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 import android.content.SharedPreferences;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import edu.phoenixforce.scouting.*;
-import edu.phoenixforce.scouting.mobile.layouts.Configuration;
-import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
-import edu.phoenixforce.scouting.mobile.layouts.login;
-
 
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
-import edu.phoenixforce.scouting.mobile.database.entities.GameData;
-import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 
 public class Constants {
@@ -109,7 +96,7 @@ public class Constants {
     String teamNumber;
     String user;
     int devId;
-    int deviceId;
+    int deviceId = 0;
 
 
 
@@ -352,19 +339,23 @@ public class Constants {
     public void getPrefs(Context context) {
 
         SharedPreferences myPrefs = context.getSharedPreferences(CONFIG_FILE_NAME, MODE_PRIVATE);
-        deviceId = myPrefs.getInt(KEY_DEVICE_ID, 0);
+        deviceId = myPrefs.getInt(KEY_DEVICE_ID, deviceId);
+        Log.d("constants", String.valueOf(deviceId));
 
     }
 
     public void setData(Context context) {
         ScoreDataBase SDB = ScoreDataBase.getDatabase(context);
-        GameData gameData = new GameData(user, String.valueOf(deviceId), matchNumber, teamNumber,
+     /*   GameData gameData = new GameData(user, String.valueOf(deviceId), matchNumber, teamNumber,
                 String.valueOf(autoThree), String.valueOf(twelve), String.valueOf(one), String.valueOf(two),
                 String.valueOf(three), String.valueOf(autoOne), String.valueOf(autoTwo),
                 String.valueOf(four), String.valueOf(five), String.valueOf(six), String.valueOf(eleven),
                 String.valueOf(thirteen));
 
-        SDB.gameDao().insertAll(gameData);
+
+      */
+
+        //SDB.gameDao().insertAll(gameData);
 
         Log.v("Physics notes:", "V = D/T");
     }

@@ -51,7 +51,6 @@ public class login extends AppCompatActivity {
        Constants constants = new Constants();
        Context context = this;
 
-       constants.getPrefs(this.getApplicationContext());
 
        //constants.setVal();
 
@@ -104,17 +103,19 @@ public class login extends AppCompatActivity {
             //Create the users in the HashMap!
 
             users.put("Admin", "nimda"); users.put("Andrew", "1111"); users.put("Gabriel", "1112"); users.put("Andy", "1113"); users.put("Alem", "1114");
-            users.put("Syed", "1116"); users.put("Lauren A", "1115"); users.put("Kheana", "1117"); users.put("Shou", "1118"); users.put("Vish", "1119"); users.put("Elsdon", "1120");
-            users.put("J", "1121"); users.put("Christian", "1122"); users.put("Katie", "1123"); users.put("Nova", "1124"); users.put("Ethan", "1125"); users.put("Cameron", "1126");
-            users.put("Nicky", "1127"); users.put("Katelyn", "1128"); users.put("Edward", "1129"); users.put("Hudson", "1130"); users.put("Mustaf", "1131"); users.put("Leon Alfonso", "1132");
-            users.put("Maddi", "1133"); users.put("Chloe", "1134"); users.put("Alex notProgramming", "1135"); users.put("Ryan", "1136"); users.put("Eleanor", "1137");
-            users.put("Dalen", "1138"); users.put("John", "1139"); users.put("Elena", "1140"); users.put("Jonathan", "1141"); users.put("Anan", "1142"); users.put("Jordan", "1143");
-            users.put("Saturn", "1144"); users.put("Oskar", "1145"); users.put("Maria", "1146"); users.put("Maxwell", "1147"); users.put("Colm", "1148"); users.put("Esther", "1149");
-            users.put("Francesca", "1150"); users.put("Seven", "1151"); users.put("Lauren's Brother", "1152"); users.put("Cap's Sister", "1153"); users.put("Raf", "1154"); users.put("Lars", "1155");
-            users.put("Sarah", "1156"); users.put("Trent", "1157"); users.put("Regan", "1158"); users.put("Taylor", "1159"); users.put("Allia", "1160"); users.put("Kameron", "1161");
-            users.put("Victor", "1163"); users.put("Alex Programming", "1164"); users.put("Conner", "1165"); users.put("Lincoln", "1166"); users.put("Alenjandra", "1167"); users.put("Harpreet","1168");
-            users.put("Jacob", "1169"); users.put("Noam", "2269"); users.put("Guthrie", "1170"); users.put("Jenny", "1171"); users.put("Caleb","1172"); users.put("Eileen", "1173"); users.put("Malia", "1174");
-            users.put("Emily", "1175"); users.put("Brandon", "76");
+            users.put("Syed", "1116"); users.put("Lauren A", "1115"); users.put("Kheana", "1117"); users.put("Shou", "1118");users.put("Vish", "1119");
+            users.put("Elsdon", "1120");users.put("J", "1121"); users.put("Christian", "1122"); users.put("Katie", "1123"); users.put("Nova", "1124");
+            users.put("Ethan", "1125"); users.put("Cameron", "1126");users.put("Nicky", "1127"); users.put("Katelyn", "1128"); users.put("Edward", "1129");
+            users.put("Hudson", "1130"); users.put("Mustaf", "1131"); users.put("Leon Alfonso", "1132");users.put("Maddi", "1133"); users.put("Chloe", "1134");
+            users.put("Alex notProgramming", "1135"); users.put("Ryan", "1136"); users.put("Eleanor", "1137");users.put("Dalen", "1138"); users.put("John", "1139");
+            users.put("Elena", "1140"); users.put("Jonathan", "1141"); users.put("Anan", "1142"); users.put("Jordan", "1143");users.put("Saturn", "1144");
+            users.put("Oskar", "1145"); users.put("Maria", "1146"); users.put("Maxwell", "1147"); users.put("Colm", "1148"); users.put("Esther", "1149");
+            users.put("Francesca", "1150"); users.put("Seven", "1151"); users.put("Lauren's Brother", "1152"); users.put("Cap's Sister", "1153"); users.put("Raf", "1154");
+            users.put("Lars", "1155");users.put("Sarah", "1156"); users.put("Trent", "1157"); users.put("Regan", "1158"); users.put("Taylor", "1159");
+            users.put("Allia", "1160"); users.put("Kameron", "1161");users.put("Victor", "1163"); users.put("Alex Programming", "1164"); users.put("Conner", "1165");
+            users.put("Lincoln", "1166"); users.put("Alenjandra", "1167"); users.put("Harpreet","1168");users.put("Jacob", "1169"); users.put("Noam", "2269");
+            users.put("Guthrie", "1170"); users.put("Jenny", "1171"); users.put("Caleb","1172"); users.put("Eileen", "1173"); users.put("Malia", "1174");users.put("Emily", "1175");
+            users.put("Brandon", "1176");
 
             if (user.equals("Select User")) {
 
