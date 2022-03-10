@@ -31,6 +31,8 @@ public class ActivityPitView extends AppCompatActivity{
     EditText teamnum;
     Button search;
     TextView shower;
+    TextView botInfo;
+    TextView botThoughts;
 
     String id;
     int idInt;
@@ -45,6 +47,8 @@ public class ActivityPitView extends AppCompatActivity{
         teamnum = findViewById(R.id.textView15);
         search = findViewById(R.id.button6);
         shower = findViewById(R.id.shower);
+        botInfo = findViewById(R.id.textView21);
+        botThoughts = findViewById(R.id.textView22);
 
         search.setOnClickListener(new View.OnClickListener() {
 
@@ -75,6 +79,8 @@ public class ActivityPitView extends AppCompatActivity{
 
 
 
+
+
         Log.d("PitView","Returned List");
         pit = SDB.pitDao().findTeam(idInt);
 
@@ -82,8 +88,8 @@ public class ActivityPitView extends AppCompatActivity{
 
             Log.d("pitviewdata", String.valueOf(pit.get(0).getBotInfo()));
 
-
-
+        shower.setText(String.valueOf(pit.get(0).getRobotThoughts()));
+        botInfo.setText(String.valueOf(pit.get(0).getBotInfo()));
 
 
     }

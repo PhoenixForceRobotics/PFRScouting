@@ -11,12 +11,13 @@ import org.jetbrains.annotations.NotNull;
 @Entity
 public class PitData {
 
-    public PitData(@NotNull String teamNum, String robotThoughts, String botInfo){
+    public PitData(@NotNull String teamNum, String robotThoughts, String botInfo, String ProjectedCycleTime, String ProjectedClimbLevel){
 
         this.teamNum = teamNum;
         this.botInfo = botInfo;
         //this.img_1 = img_1;
         this.robotThoughts = robotThoughts;
+        this.ProjectedCycleTime = ProjectedCycleTime;
 
 
     }
@@ -34,6 +35,12 @@ public class PitData {
 
     @ColumnInfo(name = "robotThoughts")
     private String robotThoughts;
+
+    @ColumnInfo(name = "ProjectedCycleTime")
+    private String ProjectedCycleTime;
+
+    @ColumnInfo(name = "ProjectedClimbLevel")
+    private String ProjectedClimbLevel;
 
     public String getTeamNum() {
         return teamNum;
@@ -66,4 +73,13 @@ public class PitData {
     public void setRobotThoughts(String robotThoughts) {
         this.robotThoughts = robotThoughts;
     }
+
+    public String getProjectedCycleTime(String ProjectedCycleTime) { return ProjectedCycleTime;}
+
+    public void getProjectedCycleTime() { this.ProjectedCycleTime = ProjectedCycleTime;}
+
+    public String getProjectedClimbLevel(String ProjectedClimbLevel) { return ProjectedClimbLevel;}
+
+    public void getProjectedClimbLevel() { this.ProjectedClimbLevel = ProjectedClimbLevel;}
+
 }
