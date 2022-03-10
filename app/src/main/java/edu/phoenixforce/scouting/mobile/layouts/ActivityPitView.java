@@ -1,5 +1,7 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +13,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.CheckBox;
@@ -33,6 +36,7 @@ public class ActivityPitView extends AppCompatActivity{
     TextView shower;
     TextView botInfo;
     TextView botThoughts;
+    ImageView imageView;
 
     String id;
     int idInt;
@@ -50,6 +54,7 @@ public class ActivityPitView extends AppCompatActivity{
         shower = findViewById(R.id.shower);
         botInfo = findViewById(R.id.textView21);
         botThoughts = findViewById(R.id.textView22);
+        imageView = findViewById(R.id.imageView8);
 
         search.setOnClickListener(new View.OnClickListener() {
 
@@ -73,11 +78,14 @@ public class ActivityPitView extends AppCompatActivity{
         Log.d("ActivityPitView", "searchData");
 
         ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
-
+/*
         PitData pitData = new PitData("1","It looks good", , "Amazing!");
 
 
         SDB.pitDao().insertAll(pitData);
+
+
+        */
 
 
 
@@ -92,8 +100,13 @@ public class ActivityPitView extends AppCompatActivity{
 
             Log.d("pitviewdata", String.valueOf(pit.get(0).getBotInfo()));
 
+
+        byte[] byteArray = pit.get(0).getImg_1();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
         shower.setText(String.valueOf(pit.get(0).getRobotThoughts()));
         botInfo.setText(String.valueOf(pit.get(0).getBotInfo()));
+        imageView.setImageBitmap(bitmap);
 
 
     }

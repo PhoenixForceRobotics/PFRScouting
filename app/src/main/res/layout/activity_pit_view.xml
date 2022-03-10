@@ -34,7 +34,7 @@
         android:layout_gravity="center|center_horizontal|center_vertical"
         android:background="#951313"
         android:fontFamily="@font/nasalization_rg"
-        android:hint="TextView"
+        android:hint="Enter Team Number Here"
         android:textColorHint="@color/font"
         android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline154"
@@ -59,7 +59,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#951313"
-        android:text="TextView"
+        android:text="Team"
+        android:autoSizeTextType="uniform"
         android:textColor="#F4F1F1"
         app:layout_constraintBottom_toTopOf="@+id/guideline147"
         app:layout_constraintEnd_toStartOf="@+id/guideline145"
@@ -99,7 +100,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#951313"
-        android:text="TextView"
+        android:text="A"
+        android:autoSizeTextType="uniform"
         android:textColor="#F4F1F1"
         app:layout_constraintBottom_toTopOf="@+id/shower"
         app:layout_constraintEnd_toStartOf="@+id/guideline145"
@@ -136,7 +138,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#951313"
-        android:text="TextView"
+        android:text="Below"
+        android:autoSizeTextType="uniform"
         android:textColor="#F4F1F1"
         app:layout_constraintBottom_toTopOf="@+id/guideline149"
         app:layout_constraintEnd_toStartOf="@+id/guideline145"
@@ -155,8 +158,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#951313"
-        android:text="TextView"
+        android:text="Enter"
         android:textColor="#F4F1F1"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/textView16"
         app:layout_constraintEnd_toStartOf="@+id/guideline145"
         app:layout_constraintStart_toStartOf="@+id/guideline136"
@@ -202,7 +206,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="55dp" />
+        app:layout_constraintGuide_percent="0.93125" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline157"
@@ -224,8 +228,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline160"
         app:layout_constraintEnd_toStartOf="@+id/guideline159"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline152"
         app:layout_constraintTop_toTopOf="@+id/guideline161"
+        app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -233,26 +239,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="231dp" />
+        app:layout_constraintGuide_percent="0.28875" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline159"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="629dp" />
+        app:layout_constraintGuide_percent="0.78625" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline160"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="186dp" />
+        app:layout_constraintGuide_percent="0.1453125" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline161"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="22dp" />
+        app:layout_constraintGuide_percent="0.0171875" />
 </androidx.constraintlayout.widget.ConstraintLayout>

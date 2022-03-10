@@ -24,7 +24,7 @@ public interface PitDao {
 
 
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(PitData pitData);
 
 
