@@ -23,6 +23,7 @@ import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.common.*;
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 import static edu.phoenixforce.scouting.mobile.layouts.login.TEXT;
+import static edu.phoenixforce.scouting.mobile.layouts.login.text;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
 
@@ -620,8 +621,14 @@ public class TeleScore extends AppCompatActivity{
 
       ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
-        GameData gameData = new GameData(constants.getUser(),"2","3","4", "5", "6", "7", "8", "9"
-                , "10", "11", "12", "13", "14", "15", "16");
+        //GameData gameData = new GameData(constants.getUser(),"2","3","4", "5", "6", "7", "8", "9"
+                //, "10", "11", "12", "13", "14", "15", "16");
+
+            GameData gameData = new GameData(text, String.valueOf(constants.getDeviceId()), constants.getMatchNumber(), constants.getTeamNumber(),
+                    String.valueOf(constants.getAutoThree()), String.valueOf(constants.getTwelve()), String.valueOf(constants.getOne()), String.valueOf(constants.getTwo()),
+                    String.valueOf(constants.getThree()), String.valueOf(constants.getAutoOne()), String.valueOf(constants.getAutoTwo()),
+                    String.valueOf(constants.getFour()), String.valueOf(constants.getFive()), String.valueOf(constants.getSix()), String.valueOf(constants.getEleven()),
+                    String.valueOf(constants.getThirteen()));
 
         SDB.gameDao().insertAll(gameData);
 
