@@ -230,6 +230,8 @@ public class AutoScore extends AppCompatActivity {
 
     public void navigate() {
 
+        constants.getPrefs(this);
+
         Intent intent = new Intent(this, TeleScore.class);
         startActivity(intent);
 

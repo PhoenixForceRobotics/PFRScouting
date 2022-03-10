@@ -3,6 +3,7 @@ package edu.phoenixforce.scouting.mobile.layouts;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -17,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.fyrebirdscout11.R;
+
+import java.io.ByteArrayOutputStream;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
@@ -110,7 +113,21 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
             if (requestCode == RIC && resultCode == RESULT_OK) {
                 Bundle extras = data.getExtras();
                 Bitmap imageBitmap = (Bitmap) extras.get("data");
-                imageView.setImageBitmap(imageBitmap);
+
+
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+
+                imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+
+                byte[] byteArray = stream.toByteArray();
+
+                Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
+
+                imageView.setImageBitmap(bitmap);
+
+
+
             }
         }
 

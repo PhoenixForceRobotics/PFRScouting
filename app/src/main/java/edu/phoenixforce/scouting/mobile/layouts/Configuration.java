@@ -20,6 +20,8 @@ public class Configuration {
     private static final String KEY_TBA_TEAM_ID = CONFIG_FILE_NAME + ".TbaTeamId";
     private static final String KEY_TBA_LAST_MODIFIED = CONFIG_FILE_NAME + ".TbaLastModified";
 
+
+
     public static Configuration getInstance(@NonNull Context context) {
         if(config == null) {
             synchronized(Configuration.class) {
@@ -45,7 +47,7 @@ public class Configuration {
     private SharedPreferences prefs;
     private RequestQueue requestQueue;
 
-    private Configuration(@NonNull Context context) {
+    public Configuration(@NonNull Context context) {
         this.context = context;
         this.prefs = this.context.getSharedPreferences(CONFIG_FILE_NAME, Context.MODE_PRIVATE);
         this.loadConfiguration();
