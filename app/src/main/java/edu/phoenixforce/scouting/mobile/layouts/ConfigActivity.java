@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -38,6 +39,7 @@ public class ConfigActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("ConfigActivity","onCreate");
         super.onCreate(savedInstanceState);
 
         // Set the layout.
@@ -77,6 +79,7 @@ public class ConfigActivity extends AppCompatActivity {
 
     // Set the values of the editTexts to match the configuration values.
     private void setScreenValues() {
+        Log.d("ConfigActivity","setScreenValues");
         Configuration config = Configuration.getInstance();
         setEditTextValue(R.id.editDeviceId, String.valueOf(config.getDeviceId()));
         setEditTextValue(R.id.editTbaTeamId, String.valueOf(config.getTbaTeamId()));
@@ -84,20 +87,25 @@ public class ConfigActivity extends AppCompatActivity {
 
     // Given an editText resource id, set the string value in that text.
     private void setEditTextValue(int resourceId, String value) {
-        EditText editText = (EditText) findViewById(resourceId);
+        Log.d("ConfigActivity","setEditTextValue");
+
+                EditText editText = (EditText) findViewById(resourceId);
         editText.setText(value);
     }
 
     // Get the text in an editText given the resource id.
     private String getEditTextValue(int resourceId) {
-        EditText editText = (EditText) findViewById(resourceId);
+        Log.d("ConfigActivity", "getEditTextValue");
+
+                EditText editText = (EditText) findViewById(resourceId);
         return editText.getText().toString();
     }
 
     // Save the config information to the preferences.
     public void saveConfig(View view) {
 
-        // Get a reference to the config
+
+                // Get a reference to the config
         Configuration config = Configuration.getInstance();
 
         // Get a number for the device id and save it.
@@ -118,7 +126,9 @@ public class ConfigActivity extends AppCompatActivity {
 
     // Fetches team information from the Blue Alliance services.
     public void fetchTeamDetails() {
-        // Get the team Id from the editText.
+        Log.d("ConfigActivity","fetchTeamDetails");
+
+                // Get the team Id from the editText.
         int teamId = Integer.parseInt(getEditTextValue(R.id.editTbaTeamId));
 
         //If the team ID is zero, clear the textTeamInfo block, and set the image to the
@@ -135,7 +145,9 @@ public class ConfigActivity extends AppCompatActivity {
         GetTeam teamRestCall = new GetTeam(teamId, new IObjectResponseHandler<Team>() {
             @Override
             public void onResponse(Map<String, String> headers, Team response) {
-                StringBuffer text = new StringBuffer();
+                Log.d("ConfigActivity","onResponse");
+
+                        StringBuffer text = new StringBuffer();
                 text.append("School: " + response.getSchoolName() + "\n");
                 text.append("Team: " + response.getNickname() + "\n");
                 text.append("Key: " + response.getKey() + "\n");
@@ -150,7 +162,9 @@ public class ConfigActivity extends AppCompatActivity {
 
             @Override
             public void onError(VolleyError error) {
-                TextView txt = (TextView) findViewById(R.id.textTeamInfo);
+                Log.d("ConfigActivity", "onError");
+
+                        TextView txt = (TextView) findViewById(R.id.textTeamInfo);
                 if (error != null) {
                     txt.setText(txt.getText() + "\nError fetching data on GetTeam: " + error.getMessage() + "\n");
                     if (error.networkResponse != null) {
@@ -171,7 +185,9 @@ public class ConfigActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Map<String, String> headers, List<TeamMedia> response) {
-                Bitmap decodedImage = null;
+                Log.d("ConfigActivity", "onResponse");
+
+                        Bitmap decodedImage = null;
                 TextView txt = (TextView) findViewById(R.id.textTeamInfo);
                 StringBuffer text = new StringBuffer();
                 text.append(txt.getText());
@@ -212,9 +228,13 @@ public class ConfigActivity extends AppCompatActivity {
                 return;
             }
 
+
+
             @Override
             public void onError(VolleyError error) {
-                StringBuffer text = new StringBuffer();
+                Log.d("ConfigActivity","onError");
+
+                        StringBuffer text = new StringBuffer();
                 TextView txt = (TextView) findViewById(R.id.textTeamInfo);
                 if (error != null) {
                     text.append("Url: " + MessageFormat.format(TeamMedia.TBA_TEAM_MEDIA_URL, Team.getTeamKeyFromTeamId(teamId), year));

@@ -41,6 +41,7 @@ public class ActivityPitView extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("ActivityPitView","onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pit_view);
 
@@ -54,7 +55,9 @@ public class ActivityPitView extends AppCompatActivity{
 
             @Override
             public void onClick(View v) {
-                id = teamnum.getText().toString();
+                Log.d("ActivityPitView","onClick");
+                Log.d("ActivityPitView",
+                id = teamnum.getText().toString());
                 idInt = Integer.parseInt(id);
                 Log.d("dataPull", "Ran searchData");
                 searchData();
@@ -67,6 +70,7 @@ public class ActivityPitView extends AppCompatActivity{
     }
 
     public void searchData(){
+        Log.d("ActivityPitView", "searchData");
 
         ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
