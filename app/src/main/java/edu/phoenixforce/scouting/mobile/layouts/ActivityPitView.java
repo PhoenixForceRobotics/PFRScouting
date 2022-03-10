@@ -74,11 +74,11 @@ public class ActivityPitView extends AppCompatActivity{
 
         ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
-        PitData pitData = new PitData("1","It looks good", "Amazing!");
-        PitData pitData1 = new PitData("2", "It Looks decent", "red");
+        PitData pitData = new PitData("1","It looks good", , "Amazing!");
+
 
         SDB.pitDao().insertAll(pitData);
-        SDB.pitDao().insertAll(pitData1);
+
 
 
 
