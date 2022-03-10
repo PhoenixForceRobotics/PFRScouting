@@ -52,6 +52,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("login", "saveuser ran");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
@@ -93,6 +94,8 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
                 public void onClick(View v) {
                     openAutoScore();
                 }
+
+
             });
 
             test.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +175,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
 
     private void copyDatabase() {
+        Log.d("login", "saveuser ran");
         try
         {
 
@@ -209,7 +213,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
 
     public void openAutoScore () {
-
+        Log.d("login", "saveuser ran");
             Intent intent = new Intent(this, AutoScore.class);
             startActivity(intent);
 
@@ -217,11 +221,13 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         }
 
         public void openTeleScore () {
+            Log.d("login", "saveuser ran");
 
             Intent intent = new Intent(this, ActivityPitView.class);
             startActivity(intent);
         }
       private void openSettings () {
+          Log.d("login", "saveuser ran");
 
         Intent intent = new Intent(this,  ConfigActivity.class);
         startActivity(intent);

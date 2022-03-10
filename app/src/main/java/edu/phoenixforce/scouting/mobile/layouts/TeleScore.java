@@ -125,6 +125,7 @@ public static int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("TeleScore","onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tele_score);
         //RecyclerViewViewer.mWordViewModelII = new ViewModelProvider(this).get(TeleView.class);
@@ -262,6 +263,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
                 counter6 = counter6 + 1;
                 autoBallHighA.setText(String.valueOf(counter6));
             }
@@ -271,6 +273,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
                 counter6 = counter6 - 1;
                 autoBallHighA.setText(String.valueOf(counter6));
             }
@@ -281,6 +284,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
                 counter7 = counter7 + 1;
                 view7.setText(String.valueOf(counter7));
             }
@@ -290,7 +294,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
-
+                Log.d("TeleScore","onClick");
                 counter8 = counter8 + 1;
                 view8.setText (String.valueOf(counter8));
             }
@@ -301,7 +305,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
-
+                Log.d("TeleScore","onClick");
                 counter9 = counter9 + 1;
                 view9.setText (String.valueOf(counter9));
             }
@@ -312,7 +316,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
-
+                Log.d("TeleScore","onClick");
                 counter10 = counter10 + 1;
                 view10.setText (String.valueOf(counter10));
             }
@@ -323,6 +327,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 counter7 = counter7 - 1;
                 view7.setText(String.valueOf(counter7));
@@ -336,6 +341,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 counter8 = counter8 - 1;
                 view8.setText(String.valueOf(counter8));
@@ -346,6 +352,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 counter9 = counter9 - 1;
                 view9.setText(String.valueOf(counter9));
@@ -357,6 +364,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onCLick");
 
                 counter10 = counter10 - 1;
                 view10.setText (String.valueOf(counter10));
@@ -368,6 +376,7 @@ public static int counter = 0;
        timer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 SharedPreferences timePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 String oldTime = timePrefs.getString("time", "0");
@@ -416,6 +425,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v){
+                Log.d("TeleScore","onClick");
 
                 Log.d(tag, "this is back");
 
@@ -430,6 +440,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
                 counter = counter + 1;
                 autoBallHigh.setText(String.valueOf(counter));
             }
@@ -439,6 +450,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
                 counter = counter - 1;
                 autoBallHigh.setText(String.valueOf(counter));
             }
@@ -449,6 +461,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
                 counter2 = counter2 + 1;
                 view2.setText(String.valueOf(counter2));
             }
@@ -458,6 +471,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 counter3 = counter3 + 1;
                 view3.setText (String.valueOf(counter3));
@@ -469,6 +483,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 counter4 = counter4 + 1;
                 view4.setText (String.valueOf(counter4));
@@ -480,6 +495,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 counter5 = counter5 + 1;
                view5.setText (String.valueOf(counter5));
@@ -491,6 +507,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 counter2 = counter2 - 1;
                 view2.setText(String.valueOf(counter2));
@@ -502,6 +519,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 counter3 = counter3 - 1;
                 view3.setText(String.valueOf(counter3));
@@ -512,6 +530,7 @@ public static int counter = 0;
 
            @Override
            public void onClick(View v) {
+               Log.d("TeleScore","onClick");
 
                counter4 = counter4 - 1;
                view4.setText(String.valueOf(counter4));
@@ -523,6 +542,7 @@ public static int counter = 0;
 
             @Override
             public void onClick(View v) {
+                Log.d("TeleScore","onClick");
 
                 counter5 = counter5 - 1;
                 view5.setText (String.valueOf(counter5));
@@ -532,8 +552,8 @@ public static int counter = 0;
         });
     }
 
-    public void onCheckboxClicked(View view) { //this is for all of the checkboxes in the activity
-        //Log.d("hola",String.valueOf(colorwheel));
+    public void onCheckboxClicked(View view) {
+        Log.d("TeleScore","onCheckboxClicked");
         boolean checked = ((CheckBox) view).isChecked();
         //Log.d("hola",String.valueOf(colorwheel));
         //check for what checkbox is checked
@@ -599,6 +619,7 @@ public static int counter = 0;
 
     }
     public void openMainActivity(){
+        Log.d("TeleScore","openMainActivity");
 
         Log.d("Testing", "openMainRan");
         Intent intent = new Intent(this, team_select.class);
@@ -629,6 +650,7 @@ public static int counter = 0;
     }
 
     public void saveGameData(){
+        Log.d("TeleScore","saveGameData");
 
         ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 

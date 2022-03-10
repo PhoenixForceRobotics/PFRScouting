@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 //import android.widget.CheckBox; -- Not needed during the auto period
@@ -14,6 +15,7 @@ import com.example.fyrebirdscout11.R;
 
 
 public class AutoScore extends AppCompatActivity {
+
 
 
     //TextViews
@@ -51,6 +53,7 @@ public class AutoScore extends AppCompatActivity {
 
             @Override
             protected void onCreate(Bundle savedInstanceState) {
+                Log.d("AutoScore","onCreate");
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_auto_score);
 
@@ -101,6 +104,7 @@ public class AutoScore extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
+                        Log.d("AutoScore","onClick");
                         counter6 = counter6 + 1;
                         autoBallHighA.setText(String.valueOf(counter6));
                     }
@@ -110,6 +114,7 @@ public class AutoScore extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
+                        Log.d("AutoScore","onClick");
                         counter6 = counter6 - 1;
                         autoBallHighA.setText(String.valueOf(counter6));
                     }
@@ -120,6 +125,7 @@ public class AutoScore extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
+                        Log.d("AutoScore","onClick");
                         counter7 = counter7 + 1;
                         view7.setText(String.valueOf(counter7));
                     }
@@ -207,13 +213,14 @@ public class AutoScore extends AppCompatActivity {
                 }); */
             }
             public void openMainActivity(){
+                //question
 
                 Intent intent = new Intent(this, ActivityMain.class);
                 startActivity(intent);
 
             }
             public void goTeleScore(){
-
+//question
                 Intent intent = new Intent(this, TeleScore.class);
                 startActivity(intent);
 

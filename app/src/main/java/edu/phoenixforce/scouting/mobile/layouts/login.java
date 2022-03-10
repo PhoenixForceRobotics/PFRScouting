@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -81,6 +82,7 @@ public class login extends AppCompatActivity {
     }
 
     public void validateUser() {
+        Log.d("login", "saveuser ran");
             user = nombre.getSelectedItem().toString();
             pass = pWord.getText().toString();
 
@@ -136,6 +138,7 @@ public class login extends AppCompatActivity {
 
         public void saveUser(){
 
+        Log.d("login", "saveuser ran");
 SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 SharedPreferences.Editor editor = myPrefs.edit();
 
@@ -148,6 +151,7 @@ Toast.makeText(this, "Logged In as" + user, Toast.LENGTH_SHORT).show();
 goScout();
         }
     public void goScout() {
+        Log.d("login", "saveuser ran");
 
         Intent intent = new Intent(this, team_select.class);
         startActivity(intent);
@@ -156,6 +160,7 @@ goScout();
     }
 
     public void loadData(){
+        Log.d("login", "saveuser ran");
 
 
 

@@ -2,6 +2,7 @@ package edu.phoenixforce.scouting.mobile.layouts;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -58,6 +59,8 @@ public class Configuration {
     }
 
     private void loadConfiguration() {
+        Log.d("Configuration","loadConfiguration");
+
         if (!configLoaded) {
             synchronized (this) {
                 if (!configLoaded) {
