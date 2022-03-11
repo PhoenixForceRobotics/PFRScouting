@@ -232,25 +232,25 @@ public class TeleScore extends AppCompatActivity{
 
         matchnumber = Integer.valueOf(match);
 
-        if(teamnum == "2097"){
+        if(teamnum.equals("2097")){
             user.setText("Hi " + scoutname + " GO PHOENIX FORCE!");
         }
-        else if(scoutname == "Admin"){
+        else if(scoutname.equals("Admin")){
             user.setText("Keep up the hard work");
         }
-        else if(scoutname == "Malia"){
+        else if(scoutname.equals("Malia")){
             user.setText("Thanks for the help, Malia! Scouting team: " + teamnum);
         }
-        else if(scoutname == "Syed"){
+        else if(scoutname.equals("Syed")){
             user.setText("Thanks for the help, Syed! Scouting team: " + teamnum);
         }
         else if(scoutname.equals("Noam")){
             user.setText("Thanks for the help, Noam! Scouting team: " + teamnum);
         }
-        else if(scoutname == "Gabriel"){
+        else if(scoutname.equals("Gabriel")){
             user.setText("Thanks for the help, Gabriel! Scouting team:" + teamnum);
         }
-        else if(scoutname == "Emily"){
+        else if(scoutname.equals("Emily")){
             user.setText("Fergalicious definition scouting team: " + teamnum);
         }
 
