@@ -243,6 +243,8 @@ public class AutoScore extends AppCompatActivity {
 
         editorTwo.apply();
 
+        Log.d("auto", String.valueOf(counter5));
+
         Intent intent = new Intent(this, TeleScore.class);
         startActivity(intent);
 
@@ -257,6 +259,7 @@ public class AutoScore extends AppCompatActivity {
         switch (view.getId()) {
 
             case R.id.moved:
+
                 if (checked) {
                     counter5 = 1;
                     constants.setAutoFive(counter5);
