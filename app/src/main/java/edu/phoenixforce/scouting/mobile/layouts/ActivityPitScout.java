@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -35,8 +36,7 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
     EditText bottomRightBox;
     EditText leftTopBox;
     EditText leftBottomBox;
-    EditText teamNumber;
-    byte[] byteArray;
+    EditText teamNumBox;
     Button Finished;
     Button Activate_Camera;
     ImageView imageView;
@@ -53,8 +53,8 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
         topRightBox = findViewById(R.id.textView9);
         bottomRightBox = findViewById(R.id.textView18);
         leftTopBox = findViewById(R.id.textView21);
-        leftBottomBox = findViewById(R.id.textView23);
-        teamNumber = findViewById(R.id.teamNumber1);
+        leftBottomBox = findViewById(R.id.TextView23);
+        teamNumBox = findViewById(R.id.teamNumber1);
         Finished = findViewById(R.id.finished);
         Finished.setOnClickListener(new View.OnClickListener (){
             @Override
@@ -63,25 +63,20 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
                 text2 = bottomRightBox.getText().toString();
                 text3 = leftTopBox.getText().toString();
                 text4 = leftBottomBox.getText().toString();
-                text5 = teamNumber.getText().toString();
-               /* constants.setUserThoughts(text2);
+                text5 = teamNumBox.getText().toString();
+                /*constants.setUserThoughts(text2);
                 constants.setRobotInfo(text1);
                 constants.setProjectedClimbLevel(text4);
                 constants.setProjectedCycleTime(text3);
-                constants.setProjectedCycleTime(text5);
                 String one = constants.getRobotInfo();
                 String two = constants.getUserThoughts();
                 String three = constants.getProjectedClimbLevel();
-                String four = constants.getProjectedCycleTime();
-                String five = constants.getTeamNumber();
-                Log.d("pitscout", "TopRightbox: " + one);
-                Log.d("pitscout","BottomRightbox: " + two);
-                Log.d("pitscout", "TopLeftbox: " + three);
-                Log.d("pitscout","BottomLeftBox: " + four);
-                Log.d("pitscout","TeamNumber " + five);
-
-
-                */
+                String four = constants.getProjectedCycleTime(); */
+                Log.d("pitscout", "TopRightbox: " + text1);
+                Log.d("pitscout","BottomRightbox: " + text2);
+                Log.d("pitscout", "TopLeftbox: " + text3);
+                Log.d("pitscout","BottomLeftBox: " + text4);
+                Log.d("pitscout", "TeamNumBox" + text5);
                 navigate();
 
 
@@ -106,17 +101,8 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
 
 
     public void navigate(){
-
-        ScoreDataBase SBD = ScoreDataBase.getDatabase(this);
-
-        PitData pitData = new PitData("1","2",byteArray,"3", "4", "5");
-
-        SBD.pitDao().insertAll(pitData);
-
-        Intent intent = new Intent(this, ActivityPitView.class);
+        Intent intent = new Intent(this, team_select.class);
         startActivity(intent);
-
-
 
     }
     public void Activate_Camera() {
@@ -140,12 +126,23 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
 
             imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
 
-            byteArray = stream.toByteArray();
+            byte[] byteArray = stream.toByteArray();
 
-            Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+            ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
 
-            imageView.setImageBitmap(bitmap);
+            String forNowPriKey = "1";
+
+            PitData pitData = new PitData(text5, text2, byteArray,text1 ,text3,text4);
+
+            SDB.pitDao().insertAll(pitData);
+
+            //Bitmap code from Array to bitmap (needs imports).
+
+            //Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
+
+            imageView.setImageBitmap(imageBitmap);
 
 
 
