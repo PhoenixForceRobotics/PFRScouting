@@ -29,7 +29,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorPrimaryDark"
+        android:background="#AC1626"
         android:fontFamily="@font/nasalization_rg"
         android:autoSizeTextType="uniform"
         android:text="@string/button_use"
