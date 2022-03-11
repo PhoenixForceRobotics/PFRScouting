@@ -109,7 +109,7 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
 
         ScoreDataBase SBD = ScoreDataBase.getDatabase(this);
 
-        PitData pitData = new PitData(String.valueOf(teamNumber), String.valueOf(bottomRightBox),byteArray,String.valueOf(topRightBox), String.valueOf(leftTopBox), String.valueOf(leftBottomBox));
+        PitData pitData = new PitData("1","2",byteArray,"3", "4", "5");
 
         SBD.pitDao().insertAll(pitData);
 
