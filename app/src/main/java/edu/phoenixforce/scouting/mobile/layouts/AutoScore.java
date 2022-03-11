@@ -13,9 +13,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 //import android.widget.CheckBox; -- Not needed during the auto period
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.fyrebirdscout11.R;
+import com.google.android.material.chip.ChipGroup;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
@@ -37,6 +40,8 @@ public class AutoScore extends AppCompatActivity {
     TextView view3;
     TextView view4;
 
+    CheckBox checkBox;
+
 
     //Buttons
     Button upButton1; //upButton in camel case
@@ -54,7 +59,7 @@ public class AutoScore extends AppCompatActivity {
     int counter2 = 0;
     int counter3 = 0;
     int counter4 = 0;
-    int counter5 = 0;
+    String counter5 = "0";
 
 
     @Override
@@ -115,6 +120,24 @@ public class AutoScore extends AppCompatActivity {
                 constants.setAutoOne(counter1);
             }
         });
+
+        checkBox = findViewById(R.id.moved);
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    counter5 = "1";
+                    Log.d("counter", "ran");
+                }
+                else {
+                    counter5 = "0";
+                }
+            }
+
+        }
+        );
 
         downButton1.setOnClickListener(new View.OnClickListener() {
 
@@ -239,7 +262,7 @@ public class AutoScore extends AppCompatActivity {
         editorTwo.putString("autoTwo", String.valueOf(counter2));
         editorTwo.putString("autoThree", String.valueOf(counter3));
         editorTwo.putString("autoFour", String.valueOf(counter4));
-        editorTwo.putString("autoMoved", String.valueOf(counter5));
+        editorTwo.putString("autoMoved", counter5);
 
         editorTwo.apply();
 
@@ -251,29 +274,5 @@ public class AutoScore extends AppCompatActivity {
 
     }
 
-    public void onCheckboxClicked(View view) {
 
-        boolean checked = (((CheckBox) view).isChecked());
-
-
-        switch (view.getId()) {
-
-            case R.id.moved:
-
-                if (checked) {
-                    counter5 = 1;
-                    constants.setAutoFive(counter5);
-                    Log.d("counter5auto", String.valueOf(counter5));
-                }
-                else{
-                    counter5 = 0;
-                    constants.setAutoFive(counter5);
-                }
-
-                    break;
-
-        }
-
-
-        }
 }

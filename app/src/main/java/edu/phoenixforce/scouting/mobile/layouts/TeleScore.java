@@ -257,6 +257,8 @@ public class TeleScore extends AppCompatActivity{
 
         else {
             user.setText("Hi " + scoutname + ", Score Team " + teamnum + " During TeleOp Below!");
+            Log.d("user", scoutname + " " + teamnum);
+
         }
 
 
