@@ -103,10 +103,9 @@ public class TeleScore extends AppCompatActivity{
     private static String match;
     String importedTeamNum;
     String importedMatchNum;
-    String checkone;
-    String checktwo;
-    String checkthree;
-
+    String checkone = "0";
+    String checktwo = "0";
+    String checkthree = "0";
     public void setImportedTeamNum(String importedTeamNum) {
         this.importedTeamNum = importedTeamNum;
     }
@@ -674,7 +673,7 @@ public class TeleScore extends AppCompatActivity{
 
        */
 
-            Log.d("counter5", autoCounter5);
+            Log.d("counter5", autoCounter5 + checkone + checktwo + checkthree);
         SDB.gameDao().insertAll(gameData);
 
 
@@ -684,6 +683,7 @@ public class TeleScore extends AppCompatActivity{
 
 
     }
+
 
 
 

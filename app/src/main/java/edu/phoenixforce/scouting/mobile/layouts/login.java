@@ -188,6 +188,13 @@ goScout();
 
     }
 
+    @Override
+    public void onBackPressed(){
+
+        Toast.makeText(this, "You Cannot Return to the Previous Page", Toast.LENGTH_LONG).show();
+
+    }
+
 
 
 
