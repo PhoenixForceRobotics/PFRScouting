@@ -11,21 +11,22 @@ import org.jetbrains.annotations.NotNull;
 @Entity
 public class PitData {
 
-    public PitData(@NotNull String teamNum, String botInfo, byte[] img_1, String robotThoughts, int priKey){
+
+
+    public PitData(@NotNull String teamNum, String robotThoughts, byte[] img_1, String botInfo, String projectedCycleTime, String projectedClimbLevel){
 
         this.teamNum = teamNum;
         this.botInfo = botInfo;
         this.img_1 = img_1;
         this.robotThoughts = robotThoughts;
-        this.priKey = priKey;
+        this.projectedCycleTime = projectedCycleTime;
+        this.projectedClimbLevel = projectedClimbLevel;
+
 
     }
 
     @PrimaryKey
     @NotNull
-    @ColumnInfo(name = "priKey")
-    private int priKey;
-
     @ColumnInfo(name = "teamNum")
     private String teamNum;
 
@@ -38,13 +39,11 @@ public class PitData {
     @ColumnInfo(name = "robotThoughts")
     private String robotThoughts;
 
-    public int getPriKey() {
-        return priKey;
-    }
+    @ColumnInfo(name = "projectedCycleTime")
+    private String projectedCycleTime;
 
-    public void setPriKey(int priKey) {
-        this.priKey = priKey;
-    }
+    @ColumnInfo(name = "projectedClimbLevel")
+    private String projectedClimbLevel;
 
     public String getTeamNum() {
         return teamNum;
@@ -73,8 +72,23 @@ public class PitData {
     public String getRobotThoughts() {
         return robotThoughts;
     }
+    public String getProjectedCycleTime() {
+        return projectedCycleTime;
+    }
 
+    public String getProjectedClimbLevel() {
+        return projectedClimbLevel;
+    }
+    public void setProjectedCycleTime(String projectedCycleTime) {
+        this.projectedCycleTime = projectedCycleTime;
+    }
+
+    public void setProjectedClimbLevel(String projectedClimbLevel) {
+        this.projectedClimbLevel = projectedClimbLevel;
+    }
     public void setRobotThoughts(String robotThoughts) {
         this.robotThoughts = robotThoughts;
     }
+
+
 }

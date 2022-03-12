@@ -44,20 +44,21 @@ public class GameData{
         this.AutoBallMissed = AutoBallMissed;
     }
 
+    @NotNull
+    public String getMatchNum() {
+        return MatchNum;
+    }
+
+    public void setMatchNum(@NotNull String matchNum) {
+        MatchNum = matchNum;
+    }
+
     public String getScout() {
         return Scout;
     }
 
     public void setScout(String scout) {
         Scout = scout;
-    }
-
-    public String getMatchNum() {
-        return MatchNum;
-    }
-
-    public void setMatchNum(String matchNum) {
-        MatchNum = matchNum;
     }
 
     public String getTeamNum() {

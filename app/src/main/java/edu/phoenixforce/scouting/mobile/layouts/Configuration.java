@@ -62,6 +62,8 @@ public class Configuration {
     }
 
     private void loadConfiguration() {
+        Log.d("Configuration","loadConfiguration");
+
         if (!configLoaded) {
             synchronized (this) {
                 if (!configLoaded) {

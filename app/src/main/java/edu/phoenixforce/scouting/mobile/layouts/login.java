@@ -98,6 +98,7 @@ public class login extends AppCompatActivity {
     }
 
     public void validateUser() {
+        Log.d("login", "saveuser ran");
             user = nombre.getSelectedItem().toString();
             pass = pWord.getText().toString();
 
@@ -156,6 +157,7 @@ public class login extends AppCompatActivity {
 
         public void saveUser(){
 
+        Log.d("login", "saveuser ran");
 SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 SharedPreferences.Editor editor = myPrefs.edit();
 
@@ -170,6 +172,7 @@ goScout();
 //constants.setUser(user);
         }
     public void goScout() {
+        Log.d("login", "saveuser ran");
 
         Intent intent = new Intent(this, ActivityMain.class);
         startActivity(intent);
@@ -178,6 +181,7 @@ goScout();
     }
 
     public void loadData(){
+        Log.d("login", "saveuser ran");
 
 
 

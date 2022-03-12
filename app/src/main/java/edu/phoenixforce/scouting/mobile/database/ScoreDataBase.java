@@ -1,6 +1,8 @@
 package edu.phoenixforce.scouting.mobile.database;
 
 import android.app.Application;
+import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
+
 import android.content.Context;
 
 import androidx.room.Database;

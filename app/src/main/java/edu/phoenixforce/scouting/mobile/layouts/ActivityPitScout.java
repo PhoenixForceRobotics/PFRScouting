@@ -12,17 +12,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.fyrebirdscout11.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.ByteArrayOutputStream;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
+import edu.phoenixforce.scouting.mobile.database.entities.PitData;
 
 public class ActivityPitScout extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     String text1;
@@ -34,10 +37,13 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
     EditText bottomRightBox;
     EditText leftTopBox;
     EditText leftBottomBox;
-    EditText teamNumber;
+    EditText teamNumBox;
     Button Finished;
     Button Activate_Camera;
     ImageView imageView;
+    int count7 = 0;
+
+    byte[] byteArray;
     static final int RIC = 1;
 
     Constants constants = new Constants();
@@ -51,8 +57,8 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
         topRightBox = findViewById(R.id.textView9);
         bottomRightBox = findViewById(R.id.textView18);
         leftTopBox = findViewById(R.id.textView21);
-        leftBottomBox = findViewById(R.id.textView23);
-        teamNumber = findViewById(R.id.teamNumber1);
+        leftBottomBox = findViewById(R.id.TextView23);
+        teamNumBox = findViewById(R.id.teamNumber1);
         Finished = findViewById(R.id.finished);
         Finished.setOnClickListener(new View.OnClickListener (){
             @Override
@@ -61,23 +67,29 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
                 text2 = bottomRightBox.getText().toString();
                 text3 = leftTopBox.getText().toString();
                 text4 = leftBottomBox.getText().toString();
-                text5 = teamNumber.getText().toString();
-                constants.setUserThoughts(text2);
+                text5 = teamNumBox.getText().toString();
+                /*constants.setUserThoughts(text2);
                 constants.setRobotInfo(text1);
                 constants.setProjectedClimbLevel(text4);
                 constants.setProjectedCycleTime(text3);
-                constants.setProjectedCycleTime(text5);
                 String one = constants.getRobotInfo();
                 String two = constants.getUserThoughts();
                 String three = constants.getProjectedClimbLevel();
-                String four = constants.getProjectedCycleTime();
-                String five = constants.getTeamNumber();
-                Log.d("pitscout", "TopRightbox: " + one);
-                Log.d("pitscout","BottomRightbox: " + two);
-                Log.d("pitscout", "TopLeftbox: " + three);
-                Log.d("pitscout","BottomLeftBox: " + four);
-                Log.d("pitscout","TeamNumber " + five);
-                navigate();
+                String four = constants.getProjectedCycleTime(); */
+                Log.d("pitscout", "TopRightbox: " + text1);
+                Log.d("pitscout","BottomRightbox: " + text2);
+                Log.d("pitscout", "TopLeftbox: " + text3);
+                Log.d("pitscout","BottomLeftBox: " + text4);
+                Log.d("pitscout", "TeamNumBox" + text5);
+
+               if(count7 == 1) {
+                   navigate();
+               }
+               else{
+                   Toast.makeText(ActivityPitScout.this, "You Must Take A Photo!", Toast.LENGTH_LONG).show();
+
+               }
+
 
 
             }
@@ -88,6 +100,7 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
             @Override
             public void onClick(View v) {
 
+                count7 = count7+1;
                 Activate_Camera();
 
                 //onActivityResult();
@@ -101,8 +114,30 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
 
 
     public void navigate(){
-        Intent intent = new Intent(this, team_select.class);
+        Intent intent = new Intent(this, ActivityPitView.class);
         startActivity(intent);
+
+        Log.d("pitData", text5 + text2 + text1 + text3 + text4);
+
+        if(text1.length() < 1){
+            text1 = "n/a";
+        }
+        if(text2.length() < 1){
+            text2 = "n/a";
+        }
+        if(text3.length() < 1){
+            text3 = "no projection";
+        }
+        if(text4.length() < 1){
+            text4 = "0";
+        }
+
+        ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
+        PitData pitData = new PitData( text5, "Scout's Thoughts: " + text2, byteArray, "Robot Information: " + text1 , "Projected Cycle Time (in Secs): " + text3, "Projected Climb Level: " + text4);
+
+        SDB.pitDao().insertAll(pitData);
+
+
 
     }
     public void Activate_Camera() {
@@ -114,29 +149,32 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
             // display error state to the user
         }
     }
-        @Override
-        protected void onActivityResult ( int requestCode, int resultCode, Intent data){
-            super.onActivityResult(requestCode, resultCode, data);
-            if (requestCode == RIC && resultCode == RESULT_OK) {
-                Bundle extras = data.getExtras();
-                Bitmap imageBitmap = (Bitmap) extras.get("data");
+    @Override
+    protected void onActivityResult ( int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RIC && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
 
 
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
 
-                imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
 
-                byte[] byteArray = stream.toByteArray();
-
-                Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+            byteArray = stream.toByteArray();
 
 
-                imageView.setImageBitmap(bitmap);
+            //Bitmap code from Array to bitmap (needs imports).
+
+            //Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
+
+            imageView.setImageBitmap(imageBitmap);
 
 
 
-            }
         }
+    }
 
     public void OMG(){
 

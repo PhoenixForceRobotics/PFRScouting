@@ -15,7 +15,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 public class PitRepo {
 
     private PitDao Pit;
-    private LiveData<List<PitData>> todos;
+    private List<PitData> todos;
 
     //public PitRepo(Application application) {
      //   ScoreDataBase data = ScoreDataBase.getDatabase(Application);
@@ -23,7 +23,7 @@ public class PitRepo {
     //    todos = Pit.getAllScores();
    // }
 
-    public LiveData<List<PitData>> getPit() {
+    public List<PitData> getPit() {
         return todos;
     }
 
