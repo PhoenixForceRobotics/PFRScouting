@@ -33,4 +33,7 @@ public interface PitDao {
 
     @Query("Select * FROM pitData WHERE teamNum = :idInt")
     List<PitData> findTeam(int idInt);
+
+    @Query("Select teamNum FROM PitData")
+    List<String> getTeams();
 }

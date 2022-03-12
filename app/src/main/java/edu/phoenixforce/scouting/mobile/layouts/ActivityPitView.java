@@ -33,7 +33,8 @@ public class ActivityPitView extends AppCompatActivity{
 
     EditText teamnum;
     Button search;
-    TextView shower;
+    TextView Cycle;
+    TextView climb;
     TextView botInfo;
     TextView botThoughts;
     ImageView imageView;
@@ -42,6 +43,7 @@ public class ActivityPitView extends AppCompatActivity{
     int idInt;
 
     private List<PitData> pit = new ArrayList<>();
+    private List<String> teams = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +51,15 @@ public class ActivityPitView extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pit_view);
 
-        teamnum = findViewById(R.id.textView15);
-        search = findViewById(R.id.button6);
-        shower = findViewById(R.id.shower);
-        botInfo = findViewById(R.id.textView21);
-        botThoughts = findViewById(R.id.textView22);
-        imageView = findViewById(R.id.imageView8);
+        teamnum = findViewById(R.id.teamNumber1);
+        search = findViewById(R.id.SearchTeam);
+
+        Cycle = findViewById(R.id.Cycle);
+        climb = findViewById(R.id.climb);
+        botInfo = findViewById(R.id.info);
+        botThoughts = findViewById(R.id.Thoughts);
+
+        imageView = findViewById(R.id.picBox);
 
         search.setOnClickListener(new View.OnClickListener() {
 
@@ -65,7 +70,17 @@ public class ActivityPitView extends AppCompatActivity{
                 id = teamnum.getText().toString());
                 idInt = Integer.parseInt(id);
                 Log.d("dataPull", "Ran searchData");
-                searchData();
+
+
+                if(id.length() > 0) {
+
+                    searchData();
+
+                }
+
+                else{
+                    Toast.makeText(ActivityPitView.this, "Enter a Team Number", Toast.LENGTH_LONG).show();
+                }
 
             }
 
@@ -87,26 +102,52 @@ public class ActivityPitView extends AppCompatActivity{
 
         */
 
+        teams = SDB.pitDao().getTeams();
+
+        int l = teams.size();
+
+        Log.d("teams", String.valueOf(teams.size()));
+
+        int exists = 0;
 
 
+        for (int i = 0; i < l; i++ ){
+
+           String z = teams.get(i);
+
+           Log.d("teams", z);
+
+           if(z.equals(String.valueOf(idInt))){
+               exists = 1;
+           }
+
+        }
 
 
+        if(exists == 1) {
 
-
-        Log.d("PitView","Returned List");
-        pit = SDB.pitDao().findTeam(idInt);
+            Log.d("PitView", "Returned List");
+            pit = SDB.pitDao().findTeam(idInt);
 
             Log.d("pitdata", pit.getClass().getName());
 
             Log.d("pitviewdata", String.valueOf(pit.get(0).getBotInfo()));
 
 
-        byte[] byteArray = pit.get(0).getImg_1();
-        Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+            byte[] byteArray = pit.get(0).getImg_1();
+            Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
 
-        shower.setText(String.valueOf(pit.get(0).getRobotThoughts()));
-        botInfo.setText(String.valueOf(pit.get(0).getBotInfo()));
-        imageView.setImageBitmap(bitmap);
+            botThoughts.setText(String.valueOf(pit.get(0).getRobotThoughts()));
+            botInfo.setText(String.valueOf(pit.get(0).getBotInfo()));
+            Cycle.setText(String.valueOf(pit.get(0).getProjectedCycleTime()));
+            climb.setText(String.valueOf(pit.get(0).getProjectedClimbLevel()));
+            teamnum.setText(String.valueOf(pit.get(0).getTeamNum()));
+            imageView.setImageBitmap(bitmap);
+
+        }
+        else{
+            Toast.makeText(ActivityPitView.this, "Enter a valid TeamNumber!", Toast.LENGTH_LONG).show();;
+        }
 
 
     }

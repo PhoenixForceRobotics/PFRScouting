@@ -12,13 +12,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.fyrebirdscout11.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.ByteArrayOutputStream;
 
@@ -40,6 +41,9 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
     Button Finished;
     Button Activate_Camera;
     ImageView imageView;
+    int count7 = 0;
+
+    byte[] byteArray;
     static final int RIC = 1;
 
     Constants constants = new Constants();
@@ -77,7 +81,15 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
                 Log.d("pitscout", "TopLeftbox: " + text3);
                 Log.d("pitscout","BottomLeftBox: " + text4);
                 Log.d("pitscout", "TeamNumBox" + text5);
-                navigate();
+
+               if(count7 == 1) {
+                   navigate();
+               }
+               else{
+                   Toast.makeText(ActivityPitScout.this, "You Must Take A Photo!", Toast.LENGTH_LONG).show();
+
+               }
+
 
 
             }
@@ -88,6 +100,7 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
             @Override
             public void onClick(View v) {
 
+                count7 = count7+1;
                 Activate_Camera();
 
                 //onActivityResult();
@@ -101,8 +114,30 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
 
 
     public void navigate(){
-        Intent intent = new Intent(this, team_select.class);
+        Intent intent = new Intent(this, ActivityPitView.class);
         startActivity(intent);
+
+        Log.d("pitData", text5 + text2 + text1 + text3 + text4);
+
+        if(text1.length() < 1){
+            text1 = "n/a";
+        }
+        if(text2.length() < 1){
+            text2 = "n/a";
+        }
+        if(text3.length() < 1){
+            text3 = "no projection";
+        }
+        if(text4.length() < 1){
+            text4 = "0";
+        }
+
+        ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
+        PitData pitData = new PitData( text5, "Scout's Thoughts: " + text2, byteArray, "Robot Information: " + text1 , "Projected Cycle Time (in Secs): " + text3, "Projected Climb Level: " + text4);
+
+        SDB.pitDao().insertAll(pitData);
+
+
 
     }
     public void Activate_Camera() {
@@ -126,16 +161,8 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
 
             imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
 
-            byte[] byteArray = stream.toByteArray();
+            byteArray = stream.toByteArray();
 
-            ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
-
-
-            String forNowPriKey = "1";
-
-            PitData pitData = new PitData(text5, text2, byteArray,text1 ,text3,text4);
-
-            SDB.pitDao().insertAll(pitData);
 
             //Bitmap code from Array to bitmap (needs imports).
 
