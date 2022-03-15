@@ -82,7 +82,7 @@ public class login extends AppCompatActivity {
                 , "Dalen", "John", "Ryan", "Elena", "Jonathan", "Anan", "Jordan", "Saturn", "Oskar", "Maria", "Maxwell",
                 "Colm", "Esther", "Francesca", "Seven", "Lauren's Brother", "Cap's Sister", "Raf", "Lars", "Sarah", "Trent", "Regan", "Taylor", "Allia"
                 , "Kameron", "Victor", "Alex Programming", "Conner", "Lincoln", "Alenjandra", "Harpreet", "Jacob", "Noam", "Guthrie", "Jenny",
-                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon"};
+                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "PitUser"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -117,7 +117,7 @@ public class login extends AppCompatActivity {
             users.put("Allia", "1160"); users.put("Kameron", "1161");users.put("Victor", "1163"); users.put("Alex Programming", "1164"); users.put("Conner", "1165");
             users.put("Lincoln", "1166"); users.put("Alenjandra", "1167"); users.put("Harpreet","1168");users.put("Jacob", "1169"); users.put("Noam", "2269");
             users.put("Guthrie", "1170"); users.put("Jenny", "1171"); users.put("Caleb","1172"); users.put("Eileen", "1173"); users.put("Malia", "1174");users.put("Emily", "1175");
-            users.put("Brandon", "1176");
+            users.put("Brandon", "1176"); users.put("PitUser", "1983");
 
             if (user.equals("Select User")) {
 
@@ -128,15 +128,18 @@ public class login extends AppCompatActivity {
 
 
                 if (pass.equals(users.get(user))){
-                    saveUser();
+
+                    
+                    saveUser(0);
 
 
 
-                }else{
-
-
-
-
+                }
+                else if(pass.equals("0000")){
+                    saveUser(1);
+                }
+                else{
+                    Toast.makeText(login.this, "Username and Password do not match1", Toast.LENGTH_LONG).show();
                 }
 
 
@@ -155,13 +158,14 @@ public class login extends AppCompatActivity {
             //goScout();
         }
 
-        public void saveUser(){
+        public void saveUser(int i){
 
         Log.d("login", "saveuser ran");
 SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 SharedPreferences.Editor editor = myPrefs.edit();
 
 editor.putString(TEXT, user);
+editor.putInt("state", i);
 Constants constants = new Constants();
 constants.setUser(user);
 editor.apply();

@@ -38,6 +38,7 @@ public class ActivityPitView extends AppCompatActivity{
     TextView botInfo;
     TextView botThoughts;
     ImageView imageView;
+    Button finished;
 
     String id;
     int idInt;
@@ -59,7 +60,18 @@ public class ActivityPitView extends AppCompatActivity{
         botInfo = findViewById(R.id.info);
         botThoughts = findViewById(R.id.Thoughts);
 
+        finished = findViewById(R.id.finishedView);
+
         imageView = findViewById(R.id.picBox);
+
+        finished.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                goHome();
+
+            }
+        });
 
         search.setOnClickListener(new View.OnClickListener() {
 
@@ -149,6 +161,12 @@ public class ActivityPitView extends AppCompatActivity{
             Toast.makeText(ActivityPitView.this, "Enter a valid TeamNumber!", Toast.LENGTH_LONG).show();;
         }
 
+
+    }
+
+    public void goHome(){
+        Intent intent = new Intent(this, ActivityMain.class);
+        startActivity(intent);
 
     }
 

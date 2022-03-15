@@ -53,6 +53,7 @@ public class TeleScore extends AppCompatActivity{
     Button downButton5;
     Button back;
 
+
     Button timer;
 
     //integers

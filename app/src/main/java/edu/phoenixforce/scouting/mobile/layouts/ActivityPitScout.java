@@ -100,7 +100,7 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
             @Override
             public void onClick(View v) {
 
-                count7 = count7+1;
+                count7 = 1;
                 Activate_Camera();
 
                 //onActivityResult();
@@ -114,8 +114,7 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
 
 
     public void navigate(){
-        Intent intent = new Intent(this, ActivityPitView.class);
-        startActivity(intent);
+
 
         Log.d("pitData", text5 + text2 + text1 + text3 + text4);
 
@@ -137,7 +136,8 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
 
         SDB.pitDao().insertAll(pitData);
 
-
+        Intent intent = new Intent(this, ActivityMain.class);
+        startActivity(intent);
 
     }
     public void Activate_Camera() {

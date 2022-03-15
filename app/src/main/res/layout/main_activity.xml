@@ -29,9 +29,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        app:autoSizeTextType="uniform"
         android:background="#AC1626"
         android:fontFamily="@font/nasalization_rg"
-        android:autoSizeTextType="uniform"
         android:text="@string/button_use"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
@@ -48,9 +48,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        app:autoSizeTextType="uniform"
         android:background="@color/Orange"
         android:fontFamily="@font/nasalization_rg"
-        android:autoSizeTextType="uniform"
         android:text="@string/by"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
@@ -60,8 +60,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="1243dp"
-        android:layout_height="232dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -76,8 +76,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="1245dp"
-        android:layout_height="221dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline28"
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline27"
-        app:srcCompat="@drawable/rrlogo" />
+        app:srcCompat="@mipmap/rrlogo" />
 
     <TextView
         android:id="@+id/textView8"
@@ -128,11 +128,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        app:autoSizeTextType="uniform"
         android:background="@color/Orange"
         android:fontFamily="@font/nasalization_rg"
         android:text="Settings"
         android:textColor="#FFFFFF"
-        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
         app:layout_constraintEnd_toStartOf="@+id/guideline30"
         app:layout_constraintStart_toStartOf="@+id/guideline32"
@@ -156,11 +156,12 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="344dp"
-        android:layout_height="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        app:autoSizeTextType="uniform"
         android:background="#FFFFFF"
         android:fontFamily="@font/nasalization_rg"
         android:text="TextView"
@@ -213,7 +214,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.11" />
+        app:layout_constraintGuide_percent=".12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline27"
@@ -347,6 +348,34 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline187"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline197"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".8" />
+
+    <Button
+        android:id="@+id/pitViewButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:autoSizeTextType="uniform"
+        android:background="#AC1626"
+        android:fontFamily="@font/nasalization_rg"
+        android:textColor="@color/font"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
+        app:layout_constraintEnd_toStartOf="@+id/guideline28"
+        app:layout_constraintStart_toStartOf="@+id/guideline187"
+        app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

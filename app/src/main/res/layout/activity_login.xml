@@ -43,7 +43,8 @@
         android:fontFamily="@font/nasalization_rg"
         android:text="submit"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        app:autoSizeTextType="uniform"
+
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -96,8 +97,9 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:textColor="#FFFF"
-        android:textSize="30sp"
         android:textColorHint="@color/OffWhite"
+        app:autoSizeTextType="uniform"
+
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
