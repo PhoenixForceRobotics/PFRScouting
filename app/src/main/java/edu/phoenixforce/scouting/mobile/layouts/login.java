@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,12 +14,10 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
-import edu.phoenixforce.scouting.*;
+
 import edu.phoenixforce.scouting.mobile.common.Constants;
 
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-import java.util.Locale;
 
 
 public class login extends AppCompatActivity {
@@ -31,7 +28,9 @@ public class login extends AppCompatActivity {
 
     Button log;
 
+
     String  pass;
+
 
     //String snoqualmie;
 
@@ -96,6 +95,7 @@ public class login extends AppCompatActivity {
 
             }
         });
+
     }
 
     public void validateUser() {
