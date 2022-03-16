@@ -16,26 +16,41 @@ import org.jetbrains.annotations.NotNull;
 public class GameData{
 
     //Create the variable for the columns in the table
-    public GameData(@NotNull String Scout,String DevNum, String MatchNum, String TeamNum, String Moved, String Stalled, String ClimbLow,
-                    String ClimbMid, String ClimbHigh, String ClimbHigher, String BallLow, String BallHigh, String AutoBallLow,
-                    String AutoBallHigh){
+    public GameData(@NotNull String Scout,String DevNum, String MatchNum, String TeamNum,
+                    String Moved, String Stalled, String ClimbLevel,
+                     String BallLow, String BallHigh, String AutoBallLow,
+                    String AutoBallHigh, String AutoBallCollected, String AutoBallMissed, String CycleAttempted, String Dropped, String Missed, String TeleMoved, String NoShow) {
     //Create our getters and setters - will we ever use them tho???
+        //TODO THIS ^
 
 
         this.MatchNum = MatchNum;
         this.TeamNum = TeamNum;
         this.Moved = Moved;
         this.Stalled = Stalled;
-        this.ClimbLow = ClimbLow;
-        this.ClimbMid = ClimbMid;
-        this.ClimbHigh = ClimbHigh;
-        this.ClimbHigher = ClimbHigher;
+        this.ClimbLevel = ClimbLevel;
+        this.CycleAttempted = CycleAttempted;
+        this.Dropped = Dropped;
+        this.Missed = Missed;
         this.BallLow = BallLow;
         this.BallHigh = BallHigh;
         this.AutoBallHigh = AutoBallHigh;
         this.AutoBallLow = AutoBallLow;
         this.DevNum = DevNum;
         this.Scout = Scout;
+        this.TeleMoved = TeleMoved;
+        this.NoShow = NoShow;
+        this.AutoBallCollected = AutoBallCollected;
+        this.AutoBallMissed = AutoBallMissed;
+    }
+
+    @NotNull
+    public String getMatchNum() {
+        return MatchNum;
+    }
+
+    public void setMatchNum(@NotNull String matchNum) {
+        MatchNum = matchNum;
     }
 
     public String getScout() {
@@ -44,14 +59,6 @@ public class GameData{
 
     public void setScout(String scout) {
         Scout = scout;
-    }
-
-    public String getMatchNum() {
-        return MatchNum;
-    }
-
-    public void setMatchNum(String matchNum) {
-        MatchNum = matchNum;
     }
 
     public String getTeamNum() {
@@ -78,37 +85,12 @@ public class GameData{
         Stalled = stalled;
     }
 
-    public String getClimbLow() {
-        return ClimbLow;
+    public String getClimbLevel() {
+        return ClimbLevel;
     }
 
-    public void setClimbLow(String climbLow) {
-        ClimbLow = climbLow;
-    }
 
-    public String getClimbMid() {
-        return ClimbMid;
-    }
 
-    public void setClimbMid(String climbMid) {
-        ClimbMid = climbMid;
-    }
-
-    public String getClimbHigh() {
-        return ClimbHigh;
-    }
-
-    public void setClimbHigh(String climbHigh) {
-        ClimbHigh = climbHigh;
-    }
-
-    public String getClimbHigher() {
-        return ClimbHigher;
-    }
-
-    public void setClimbHigher(String climbHigher) {
-        ClimbHigher = climbHigher;
-    }
 
     public String getBallLow() {
         return BallLow;
@@ -167,17 +149,10 @@ public class GameData{
     @ColumnInfo(name = "Stalled")
     private String Stalled;
 
-    @ColumnInfo(name = "ClimbLow")
-    private String ClimbLow;
+    @ColumnInfo(name = "ClimbLevel")
+    private String ClimbLevel;
 
-    @ColumnInfo(name = "ClimbMid")
-    private String ClimbMid;
 
-    @ColumnInfo(name = "ClimbHigh")
-    private String ClimbHigh;
-
-    @ColumnInfo(name = "ClimbHigher")
-    private String ClimbHigher;
 
     @ColumnInfo(name = "BalLLow")
     private String BallLow;
@@ -191,7 +166,90 @@ public class GameData{
     @ColumnInfo(name = "AutoBallHigh")
     private String AutoBallHigh;
 
+    @ColumnInfo(name = "AutoBallCollected")
+    private String AutoBallCollected;
+
+    @ColumnInfo(name = "AutoBallMissed")
+    private String AutoBallMissed;
+
     @ColumnInfo(name = "DevNum")
     private String DevNum;
 
+    public String getCycleAttempted() {
+        return CycleAttempted;
+    }
+
+    public void setCycleAttempted(String cycleAttempted) {
+        CycleAttempted = cycleAttempted;
+    }
+
+    @ColumnInfo(name = "CycleAttempted")
+    private String CycleAttempted;
+
+    @ColumnInfo(name = "Dropped")
+    private String Dropped;
+
+    @ColumnInfo(name = "TeleMoved")
+    private String TeleMoved;
+
+    public String getTeleMoved() {
+        return TeleMoved;
+    }
+
+    public void setTeleMoved(String teleMoved) {
+        TeleMoved = teleMoved;
+    }
+
+    public String getNoShow() {
+        return NoShow;
+    }
+
+    public void setNoShow(String noShow) {
+        NoShow = noShow;
+    }
+
+    @ColumnInfo(name = "NoShow")
+    private String NoShow;
+
+    public String getDropped() {
+        return Dropped;
+    }
+
+
+
+    public String getMissed() {
+        return Missed;
+    }
+
+    public void setMissed(String missed) {
+        Missed = missed;
+    }
+
+    @ColumnInfo(name = "Missed")
+    private String Missed;
+
+
+    public void setClimbLevel(String climbLevel) {
+        ClimbLevel = climbLevel;
+    }
+
+    public String getAutoBallCollected() {
+        return AutoBallCollected;
+    }
+
+    public void setAutoBallCollected(String autoBallCollected) {
+        AutoBallCollected = autoBallCollected;
+    }
+
+    public String getAutoBallMissed() {
+        return AutoBallMissed;
+    }
+
+    public void setAutoBallMissed(String autoBallMissed) {
+        AutoBallMissed = autoBallMissed;
+    }
+
+    public void setDropped(String dropped) {
+        Dropped = dropped;
+    }
 }

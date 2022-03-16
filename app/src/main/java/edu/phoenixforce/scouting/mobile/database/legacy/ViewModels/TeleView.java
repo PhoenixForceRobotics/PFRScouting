@@ -17,7 +17,7 @@ public class TeleView extends AndroidViewModel {
 
     public TeleView(Application application){
         super(application);
-        repo = new TeleRepo(application);
+        repo = new TeleRepo();
         todos = repo.getTele();
     }
 

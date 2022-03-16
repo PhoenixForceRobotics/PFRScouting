@@ -2,6 +2,7 @@ package edu.phoenixforce.scouting.mobile.layouts;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -9,15 +10,18 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
 import edu.phoenixforce.scouting.mobile.bluealliance.resources.Team;
+import edu.phoenixforce.scouting.mobile.common.Constants;
 import edu.phoenixforce.scouting.mobile.exceptions.InvalidStateException;
 
 public class Configuration {
-
+    Constants constants = new Constants();
     private static volatile Configuration config;
     private static final String CONFIG_FILE_NAME = "edu.phoenixforce.scouting.mobile";
     private static final String KEY_DEVICE_ID = CONFIG_FILE_NAME + ".DeviceId";
     private static final String KEY_TBA_TEAM_ID = CONFIG_FILE_NAME + ".TbaTeamId";
     private static final String KEY_TBA_LAST_MODIFIED = CONFIG_FILE_NAME + ".TbaLastModified";
+
+
 
     public static Configuration getInstance(@NonNull Context context) {
         if(config == null) {
@@ -44,7 +48,7 @@ public class Configuration {
     private SharedPreferences prefs;
     private RequestQueue requestQueue;
 
-    private Configuration(@NonNull Context context) {
+    public Configuration(@NonNull Context context) {
         this.context = context;
         this.prefs = this.context.getSharedPreferences(CONFIG_FILE_NAME, Context.MODE_PRIVATE);
         this.loadConfiguration();
@@ -58,6 +62,8 @@ public class Configuration {
     }
 
     private void loadConfiguration() {
+        Log.d("Configuration","loadConfiguration");
+
         if (!configLoaded) {
             synchronized (this) {
                 if (!configLoaded) {
@@ -80,6 +86,7 @@ public class Configuration {
 
     public void setDeviceId(int deviceId) {
         SharedPreferences.Editor editor = prefs.edit();
+        Log.d("constants", String.valueOf(deviceId));
         editor.putInt(KEY_DEVICE_ID, deviceId);
         editor.apply();
         this.deviceId = prefs.getInt(KEY_DEVICE_ID, this.deviceId);
@@ -94,6 +101,10 @@ public class Configuration {
         editor.putInt(KEY_TBA_TEAM_ID, tbaTeamId);
         editor.apply();
         this.tbaTeamId = prefs.getInt(KEY_TBA_TEAM_ID, this.tbaTeamId);
+
+
+
+
     }
 
     public String getTbaLastModified() {

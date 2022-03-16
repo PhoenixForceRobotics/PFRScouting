@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.widget.Button;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -39,6 +41,8 @@ import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 public class ActivityMain extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     private Button scores;
     private Button skipper;
+    Button pitView;
+    Button pitScout;
     //private Button rick;
     private Button choice, test;
     private FloatingActionButton fab;
@@ -46,7 +50,9 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
     public String dev, teamnum, match;
 
     public TextView user;
+    public String userNombre;
 
+    String buttonText = "Drive Coach";
 
 
 
@@ -55,8 +61,13 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
+        pitView = findViewById(R.id.pitViewButton);
+        pitView.setText(buttonText);
+
+
         user = findViewById(R.id.textView17);
         test = findViewById(R.id.testBtn);
+
 
         SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         text = myPrefs.getString(TEXT, "No User");
@@ -65,8 +76,12 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
         match = myPrefs.getString(matchNum, "No Match Number");
 
+        int role = myPrefs.getInt("state", 0);
 
-        user.setText(text +  "Team " + teamnum + "Match " + match);
+
+
+
+        user.setText("Signed in as " + text + ". Is this you?");
 
 
 
@@ -88,17 +103,63 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
 
             scores = (Button) findViewById(R.id.button);
+            if(role == 1){
+                scores.setText("Start Pit Scouting!");
+            }
             scores.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    openAutoScore();
+
+                    if (role == 0) {
+                        openAutoScore();
+                    }
+                    else if(role == 1){
+                        pitNav(2);
+                    }
+
+
+            }
+            });
+
+
+            pitView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(text == "PitUser" | text == "Admin"){
+                       pitNav(1);
+                    }
+                    else{
+                        buttonText = ":(";
+                        pitView.setText(buttonText);
+                        Toast.makeText(ActivityMain.this, "Only For Use in the Pit!", Toast.LENGTH_LONG);
+                        Log.v("PitAccess System", "Invalid click detected on pitview button");
+                    }
                 }
             });
+
+            /*pitScout = findViewById(R.id.pitScoutButton);
+            pitScout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+
+
+
+                if(text == "PitUser" | text == "Admin"){
+                    pitNav(2);
+                }
+                else{
+                    Toast.makeText(ActivityMain.this, "Only For Use in the Pit!", Toast.LENGTH_LONG).show();
+                }
+        }
+    });
+
+             */
 
             test.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //seeData();
+                    clearData();
                 }
             });
 
@@ -210,7 +271,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
     public void openAutoScore () {
 
-            Intent intent = new Intent(this, AutoScore.class);
+            Intent intent = new Intent(this, team_select.class);
             startActivity(intent);
 
 
@@ -223,8 +284,15 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         }
       private void openSettings () {
 
-        Intent intent = new Intent(this,  ConfigActivity.class);
-        startActivity(intent);
+        if(text.equals("Admin")) {
+
+            Intent intent = new Intent(this, ConfigActivity.class);
+            startActivity(intent);
+        }
+        else{
+            Toast.makeText(this, "Permission denied - 100 - ADMIN required", Toast.LENGTH_LONG).show();
+
+        }
 
         }
 
@@ -242,12 +310,46 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         }
     }
 
-   /* public void seeData(){
+    public void clearData(){
 
-        Intent intent = new Intent(this,  RecyclerViewViewer.class);
-        startActivity(intent);
+        if(text.equals("Admin")) {
 
-    } */
+            ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
+
+            SDB.gameDao().nukeTable();
+
+            Toast.makeText(this, "Table cleared", Toast.LENGTH_LONG).show();
+            Log.v("ActivityMain", "Table Cleared");
+        }
+
+        else{
+            Toast.makeText(this, "Permission denied - 100 - Must be run as ADMIN", Toast.LENGTH_LONG).show();
+            Log.e("ActiivityMain", "Non-Admin tried to run clear data");
+
+        }
+
+    }
+
+    @Override
+    public void onBackPressed(){
+
+        Toast.makeText(this, "You Cannot Return to the Previous Page", Toast.LENGTH_LONG).show();
+
+    }
+
+    public void pitNav(int button){
+
+        if(button == 1){
+            Intent intent = new Intent(this, ActivityPitView.class);
+            startActivity(intent);
+        }
+        else if(button == 2){
+            Intent intent = new Intent(this, ActivityPitScout.class);
+            startActivity(intent);
+        }
+
+
+    }
 
 }
 
