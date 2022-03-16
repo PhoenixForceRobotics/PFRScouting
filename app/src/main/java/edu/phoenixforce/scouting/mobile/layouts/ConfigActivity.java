@@ -40,7 +40,7 @@ public class ConfigActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Set the layout.
+        // Set the layout-large.
         setContentView(R.layout.activity_config);
 
 
