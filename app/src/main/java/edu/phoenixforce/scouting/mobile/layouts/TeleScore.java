@@ -63,6 +63,12 @@ public class TeleScore extends AppCompatActivity{
     public static int counter4 = 0;
     public static int counter5 = 0;
 
+
+
+
+    int nice = 0;
+
+
     public int differnce;
     public int parsedOldTime;
 
@@ -309,6 +315,7 @@ public class TeleScore extends AppCompatActivity{
                    counter6 = counter6 - 1;
                    autoBallHighA.setText(String.valueOf(counter6));
                    constants.setSix(counter6);
+                   nice();
                }
             }
         });
@@ -388,6 +395,7 @@ public class TeleScore extends AppCompatActivity{
                     Context context =getApplicationContext();
                     Toast toast = Toast.makeText(context, "Max Climb Level is 4 - Verify Climb Level", Toast.LENGTH_SHORT);
                     toast.show();
+                    nice();
 
                 }
 
@@ -404,6 +412,7 @@ public class TeleScore extends AppCompatActivity{
                     counter = counter - 1;
                     view1.setText(String.valueOf(counter));
                     constants.setOne(counter);
+                    nice();
                 }
             }
         });
@@ -430,6 +439,7 @@ public class TeleScore extends AppCompatActivity{
                     counter2 = counter2 - 1;
                     view2.setText(String.valueOf(counter2));
                     constants.setTwo(counter2);
+                    nice();
                 }
 
             }
@@ -456,6 +466,7 @@ public class TeleScore extends AppCompatActivity{
                     counter3 = counter3 - 1;
                     view3.setText(String.valueOf(counter3));
                     constants.setThree(counter3);
+                    nice();
                 }
             }
         });
@@ -484,6 +495,7 @@ public class TeleScore extends AppCompatActivity{
                     counter4 = counter4 - 1;
                     view4.setText(String.valueOf(counter4));
                     constants.setFour(counter4);
+                    nice();
                 }
 
             }
@@ -496,6 +508,7 @@ public class TeleScore extends AppCompatActivity{
                 counter5 = counter5 + 1;
                 view5.setText(String.valueOf(counter5));
                 constants.setFive(counter5);
+
 
             }
 
@@ -514,6 +527,7 @@ public class TeleScore extends AppCompatActivity{
                     counter3 = counter3 - 1;
                     view3.setText(String.valueOf(counter3));
                     constants.setThree(counter3);
+                    nice();
                 }
             }
         });
@@ -549,6 +563,7 @@ public class TeleScore extends AppCompatActivity{
                     counter5 = counter5 - 1;
                     view5.setText(String.valueOf(counter5));
                     constants.setFive(counter5);
+                    nice();
                 }
             }
 
@@ -677,7 +692,39 @@ public class TeleScore extends AppCompatActivity{
             Log.d("counter5", autoCounter5 + checkone + checktwo + checkthree);
         SDB.gameDao().insertAll(gameData);
 
+}
 
+public void niceTwo(){}
+
+
+public void nice() {
+    SharedPreferences myPref = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+    SharedPreferences.Editor editor = myPref.edit();
+
+
+    if(myPref.contains("NICE")){
+        nice = myPref.getInt("NICE", 0);
+        nice = nice + 1;
+        editor.putInt("NICE", nice);
+        editor.apply();
+        Log.d("Nice", "+1`");
+
+    }
+
+    else{
+        editor.putInt("NICE", 0);
+        Log.d("Nice", "created`");
+
+    }
+
+    if (nice == 69) {
+        user.setText("NICE: " + teamnum);
+        nice = 0;
+        editor.putInt("NICE", nice);
+        editor.apply();
+        Log.d("Nice", "0`");
+
+    }
 
 
         //this is a new comment, this better work!
