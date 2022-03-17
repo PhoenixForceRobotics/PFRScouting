@@ -18,7 +18,6 @@ import com.example.fyrebirdscout11.R;
 
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 import edu.phoenixforce.scouting.mobile.database.entities.GameData;
-import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.common.*;
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;

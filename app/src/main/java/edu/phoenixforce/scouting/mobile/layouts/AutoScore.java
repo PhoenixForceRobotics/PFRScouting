@@ -2,12 +2,9 @@ package edu.phoenixforce.scouting.mobile.layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.widget.CheckBox;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 //import android.widget.CheckBox; -- Not needed during the auto period
@@ -16,7 +13,6 @@ import android.widget.TextView;
 import com.example.fyrebirdscout11.R;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
-import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 
 
 public class AutoScore extends AppCompatActivity {
@@ -58,10 +54,9 @@ public class AutoScore extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_auto_score);
+        setContentView(R.layout.sadsmallpit);
 
         Constants constants = new Constants();
-
 
         //TextViews
         view1 = findViewById(R.id.integer_number1);

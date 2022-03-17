@@ -1,7 +1,5 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -9,11 +7,9 @@ import android.util.Base64;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,7 +27,6 @@ import edu.phoenixforce.scouting.mobile.bluealliance.resources.TeamMedia;
 import edu.phoenixforce.scouting.mobile.restservicecalls.ICollectionResponseHandler;
 import edu.phoenixforce.scouting.mobile.restservicecalls.IObjectResponseHandler;
 
-import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 ;
 
 public class ConfigActivity extends AppCompatActivity {
@@ -40,7 +35,7 @@ public class ConfigActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Set the layout-large.
+        // Set the layout.
         setContentView(R.layout.activity_config);
 
 

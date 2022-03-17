@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +21,6 @@ import com.example.fyrebirdscout11.R;
 import java.io.ByteArrayOutputStream;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
-import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 
 public class ActivityPitScout extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     String text1;

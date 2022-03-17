@@ -1,26 +1,13 @@
 package edu.phoenixforce.scouting.mobile.common;
 
 import static android.content.Context.MODE_PRIVATE;
-import edu.phoenixforce.scouting.mobile.common.Constants;
-import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
 
-import android.content.Context;
-import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 import android.content.SharedPreferences;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import edu.phoenixforce.scouting.*;
-import edu.phoenixforce.scouting.mobile.layouts.Configuration;
-import edu.phoenixforce.scouting.mobile.layouts.TeleScore;
-import edu.phoenixforce.scouting.mobile.layouts.login;
-
 
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
-import edu.phoenixforce.scouting.mobile.database.entities.GameData;
-import edu.phoenixforce.scouting.mobile.functions.Timer;
 import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 
 public class Constants {
