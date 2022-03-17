@@ -166,6 +166,7 @@ SharedPreferences.Editor editor = myPrefs.edit();
 
 editor.putString(TEXT, user);
 editor.putInt("state", i);
+
 Constants constants = new Constants();
 constants.setUser(user);
 editor.apply();
