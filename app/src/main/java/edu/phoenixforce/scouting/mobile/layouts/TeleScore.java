@@ -300,6 +300,7 @@ public class TeleScore extends AppCompatActivity{
                 counter6 = counter6 + 1;
                 autoBallHighA.setText(String.valueOf(counter6));
                 constants.setSix(counter6);
+                nice();
 
 
             }
@@ -425,6 +426,7 @@ public class TeleScore extends AppCompatActivity{
                 counter2 = counter2 + 1;
                 view2.setText(String.valueOf(counter2));
                 constants.setTwo(counter2);
+                nice();
 
             }
         });
@@ -452,6 +454,7 @@ public class TeleScore extends AppCompatActivity{
                 counter3 = counter3 + 1;
                 view3.setText(String.valueOf(counter3));
                 constants.setThree(counter3);
+                nice();
             }
 
         });
@@ -480,6 +483,7 @@ public class TeleScore extends AppCompatActivity{
 
                     view4.setText(String.valueOf(counter4));
                     constants.setFour(counter4);
+                    nice();
 
             }
 
@@ -508,6 +512,7 @@ public class TeleScore extends AppCompatActivity{
                 counter5 = counter5 + 1;
                 view5.setText(String.valueOf(counter5));
                 constants.setFive(counter5);
+                nice();
 
 
             }
@@ -701,6 +706,7 @@ public void nice() {
     SharedPreferences myPref = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
     SharedPreferences.Editor editor = myPref.edit();
 
+    Log.d("NICE", "nice was called");
 
     if(myPref.contains("NICE")){
         nice = myPref.getInt("NICE", 0);
