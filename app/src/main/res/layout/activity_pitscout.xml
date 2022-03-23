@@ -54,6 +54,7 @@
         android:layout_height="0dp"
         android:background="@color/OffWhite"
 
+        android:textStyle="bold"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline58"
         app:layout_constraintEnd_toStartOf="@+id/guideline44"
@@ -67,8 +68,9 @@
         android:layout_height="0dp"
         android:background="@color/OffWhite"
         android:inputType="number"
-        app:autoSizeTextType="uniform"
+        android:textStyle="bold"
 
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline58"
         app:layout_constraintEnd_toStartOf="@+id/guideline47"
         app:layout_constraintStart_toStartOf="@+id/guideline176"
@@ -134,6 +136,7 @@
         android:layout_height="0dp"
         android:background="@color/OffWhite"
 
+        android:textStyle="bold"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline58"
         app:layout_constraintEnd_toStartOf="@+id/guideline62"
@@ -148,6 +151,7 @@
 
         android:inputType="number"
         android:maxLength="4"
+        android:textStyle="bold"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline53"
         app:layout_constraintEnd_toStartOf="@+id/guideline61"
@@ -161,8 +165,9 @@
         android:background="@color/OffWhite"
         android:inputType="number"
         android:maxLength="1"
-        app:autoSizeTextType="uniform"
+        android:textStyle="bold"
 
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline58"
         app:layout_constraintEnd_toStartOf="@+id/guideline39"
         app:layout_constraintStart_toStartOf="@+id/guideline145"
