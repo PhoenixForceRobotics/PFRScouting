@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:id="@+id/layout"
-    android:layout_height="match_parent">
-    <SccrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
-                <Button
-                    android:id="@+id/finished"
-                    android:layout_width="0dp"
-                    android:layout_height="63dp"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/Finished"
-                    android:textColor="#FFFFFF"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="edu.phoenixforce.scouting.mobile.layouts.ActivityPitScout">
 
-        android:textSize="14sp"
+    <Button
+        android:id="@+id/finished"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/Finished"
+        android:textColor="#FFFFFF"
+
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline59"
         app:layout_constraintEnd_toStartOf="@+id/guideline47"
-        app:layout_constraintStart_toStartOf="@+id/guideline175"
         app:layout_constraintTop_toTopOf="@+id/guideline58" />
 
     <Button
@@ -34,8 +34,8 @@
 
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline50"
-        app:layout_constraintEnd_toStartOf="@+id/guideline60"
-        app:layout_constraintStart_toStartOf="@+id/guideline136"
+        app:layout_constraintEnd_toStartOf="@+id/guideline39"
+        app:layout_constraintStart_toStartOf="@+id/guideline145"
         app:layout_constraintTop_toTopOf="@+id/guideline49" />
 
     <ImageView
@@ -294,7 +294,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17" />
+        app:layout_constraintGuide_percent="0.14" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline51"
