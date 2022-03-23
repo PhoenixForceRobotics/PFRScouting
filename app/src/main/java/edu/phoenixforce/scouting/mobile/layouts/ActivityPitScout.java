@@ -3,7 +3,6 @@ package edu.phoenixforce.scouting.mobile.layouts;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -19,7 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.fyrebirdscout11.R;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.io.ByteArrayOutputStream;
 
@@ -28,15 +25,15 @@ import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 import edu.phoenixforce.scouting.mobile.database.entities.PitData;
 
 public class ActivityPitScout extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
-    String text1;
-    String text2;
-    String text3;
-    String text4;
-    String text5;
-    EditText topRightBox;
-    EditText bottomRightBox;
-    EditText leftTopBox;
-    EditText leftBottomBox;
+    String robotInfo;
+    String userThoughts;
+    String projectedCycleTime;
+    String projectedClimbLevel;
+    String teamNum;
+    EditText robotInfoBox;
+    EditText userThoughtsBox;
+    EditText projectedCycleTimeBox;
+    EditText projectedClimbLevelBox;
     EditText teamNumBox;
     Button Finished;
     Button Activate_Camera;
@@ -54,33 +51,25 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
         setContentView(R.layout.activity_pitscout);
         imageView = findViewById(R.id.imageView6);
 
-        topRightBox = findViewById(R.id.textView9);
-        bottomRightBox = findViewById(R.id.textView18);
-        leftTopBox = findViewById(R.id.textView21);
-        leftBottomBox = findViewById(R.id.TextView23);
+        robotInfoBox = findViewById(R.id.textView9);
+        userThoughtsBox = findViewById(R.id.textView18);
+        projectedCycleTimeBox = findViewById(R.id.textView21);
+        projectedClimbLevelBox = findViewById(R.id.TextView23);
         teamNumBox = findViewById(R.id.teamNumber1);
         Finished = findViewById(R.id.finished);
         Finished.setOnClickListener(new View.OnClickListener (){
             @Override
             public void onClick(View v) {
-                text1 = topRightBox.getText().toString();
-                text2 = bottomRightBox.getText().toString();
-                text3 = leftTopBox.getText().toString();
-                text4 = leftBottomBox.getText().toString();
-                text5 = teamNumBox.getText().toString();
-                /*constants.setUserThoughts(text2);
-                constants.setRobotInfo(text1);
-                constants.setProjectedClimbLevel(text4);
-                constants.setProjectedCycleTime(text3);
-                String one = constants.getRobotInfo();
-                String two = constants.getUserThoughts();
-                String three = constants.getProjectedClimbLevel();
-                String four = constants.getProjectedCycleTime(); */
-                Log.d("pitscout", "TopRightbox: " + text1);
-                Log.d("pitscout","BottomRightbox: " + text2);
-                Log.d("pitscout", "TopLeftbox: " + text3);
-                Log.d("pitscout","BottomLeftBox: " + text4);
-                Log.d("pitscout", "TeamNumBox" + text5);
+                robotInfo = robotInfoBox.getText().toString();
+                userThoughts = userThoughtsBox.getText().toString();
+                projectedCycleTime = projectedCycleTimeBox.getText().toString();
+                projectedClimbLevel = projectedClimbLevelBox.getText().toString();
+                teamNum = teamNumBox.getText().toString();
+                Log.d("pitscout", "TopRightbox: " + robotInfo);
+                Log.d("pitscout","BottomRightbox: " + userThoughts);
+                Log.d("pitscout", "TopLeftbox: " + projectedCycleTime);
+                Log.d("pitscout","BottomLeftBox: " + projectedClimbLevel);
+                Log.d("pitscout", "TeamNumBox" + teamNum);
 
                if(count7 == 1) {
                    navigate();
@@ -116,23 +105,23 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
     public void navigate(){
 
 
-        Log.d("pitData", text5 + text2 + text1 + text3 + text4);
+        Log.d("pitData", teamNum + userThoughts + robotInfo + projectedCycleTime + projectedClimbLevel);
 
-        if(text1.length() < 1){
-            text1 = "n/a";
+        if(robotInfo.length() < 1){
+            robotInfo = "n/a";
         }
-        if(text2.length() < 1){
-            text2 = "n/a";
+        if(userThoughts.length() < 1){
+            userThoughts = "n/a";
         }
-        if(text3.length() < 1){
-            text3 = "no projection";
+        if(projectedCycleTime.length() < 1){
+            projectedCycleTime = "no projection";
         }
-        if(text4.length() < 1){
-            text4 = "0";
+        if(projectedClimbLevel.length() < 1){
+            projectedClimbLevel = "0";
         }
 
         ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
-        PitData pitData = new PitData( text5, "Scout's Thoughts: " + text2, byteArray, "Robot Information: " + text1 , "Projected Cycle Time (in Secs): " + text3, "Projected Climb Level: " + text4);
+        PitData pitData = new PitData(teamNum, "Scout's Thoughts: " + userThoughts, byteArray, "Robot Information: " + robotInfo, "Projected Cycle Time (in Secs): " + projectedCycleTime, "Projected Climb Level: " + projectedClimbLevel);
 
         SDB.pitDao().insertAll(pitData);
 
