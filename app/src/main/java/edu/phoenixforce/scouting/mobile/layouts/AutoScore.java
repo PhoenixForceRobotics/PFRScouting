@@ -269,9 +269,6 @@ public class AutoScore extends AppCompatActivity {
 
         Log.d("auto", String.valueOf(counter5));
 
-        Toast.makeText(this, "Saved your scores", Toast.LENGTH_LONG).show();
-
-
         Intent intent = new Intent(this, TeleScore.class);
         startActivity(intent);
 
