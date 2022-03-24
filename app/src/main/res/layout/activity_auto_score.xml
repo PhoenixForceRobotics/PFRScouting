@@ -22,7 +22,7 @@
         android:layout_marginBottom="550dp"
         android:background="?android:attr/listDivider" />-->
 
-    <CheckBox
+    <TextView
         android:id="@+id/WHAA"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline144" />
 
     <CheckBox
-        android:id="@+id/moved2"
+        android:id="@+id/moved"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_alignParentStart="true"
@@ -566,7 +566,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.68" />
+        app:layout_constraintGuide_percent="0.66" />
 
     <TextView
         android:id="@+id/textView7"
