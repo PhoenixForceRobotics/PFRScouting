@@ -78,11 +78,11 @@ public class login extends AppCompatActivity {
 
         String[] items = new String[]{"Select User", "Admin", "Andrew", "Gabriel", "Andy", "Alem", "Syed"
                 , "Lauren A", "Kheana", "Shou", "Vish", "Elsdon", "J", "Christian", "Katie", "Nova", "Ethan", "Cameron",
-                "Nicky", "Katelyn", "Edward", "Hudson", "Mustaf", "Lean Alfonso", "Maddi", "Chloe", "Alex notProgramming", "Ryan", "Eleanor"
+                "Nicky", "Katelyn", "Edward", "Hudson", "Mustaf", "Leon Alfonso", "Maddi", "Chloe", "Alex notProgramming", "Ryan", "Eleanor"
                 , "Dalen", "John", "Ryan", "Elena", "Jonathan", "Anan", "Jordan", "Saturn", "Oskar", "Maria", "Maxwell",
                 "Colm", "Esther", "Francesca", "Seven", "Lauren's Brother", "Cap's Sister", "Raf", "Lars", "Sarah", "Trent", "Regan", "Taylor", "Allia"
-                , "Kameron", "Victor", "Alex Programming", "Conner", "Lincoln", "Alenjandra", "Harpreet", "Jacob", "Noam", "Guthrie", "Jenny",
-                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "PitUser"};
+                , "Kameron", "Victor", "Alex Programming", "Conner", "Lincoln", "Alejandra", "Harpreet", "Jacob", "Noam", "Guthrie", "Jenny",
+                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "Seiji", "Josue",  "PitUser"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -115,7 +115,7 @@ public class login extends AppCompatActivity {
             users.put("Francesca", "1150"); users.put("Seven", "1151"); users.put("Lauren's Brother", "1152"); users.put("Cap's Sister", "1153"); users.put("Raf", "1154");
             users.put("Lars", "1155");users.put("Sarah", "1156"); users.put("Trent", "1157"); users.put("Regan", "1158"); users.put("Taylor", "1159");
             users.put("Allia", "1160"); users.put("Kameron", "1161");users.put("Victor", "1163"); users.put("Alex Programming", "1164"); users.put("Conner", "1165");
-            users.put("Lincoln", "1166"); users.put("Alenjandra", "1167"); users.put("Harpreet","1168");users.put("Jacob", "1169"); users.put("Noam", "2269");
+            users.put("Lincoln", "1166"); users.put("Alejandra", "1167"); users.put("Harpreet","1168");users.put("Jacob", "1169"); users.put("Noam", "2269");
             users.put("Guthrie", "1170"); users.put("Jenny", "1171"); users.put("Caleb","1172"); users.put("Eileen", "1173"); users.put("Malia", "1174");users.put("Emily", "1175");
             users.put("Brandon", "1176"); users.put("PitUser", "1983");
 
