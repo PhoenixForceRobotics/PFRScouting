@@ -81,6 +81,8 @@ public class TeleScore extends AppCompatActivity{
     public int solo = 0;
     public int buddy = 0;
 
+    public int checker;
+
 //FOR ADDING THE AUTOSCORE STUFF
 
     //TextViews
@@ -594,6 +596,7 @@ public class TeleScore extends AppCompatActivity{
             case R.id.checkOne: {
                 if (checked) {
                     checkone = "1";
+                    checker = 1;
                 } else {
                     checkone = "0";
                 }
@@ -604,6 +607,7 @@ public class TeleScore extends AppCompatActivity{
                 if (checked) {
 
                     checktwo = "1";
+                    checker = 1;
                 } else {
 
                     checktwo = "0";
@@ -614,6 +618,7 @@ public class TeleScore extends AppCompatActivity{
             case R.id.check3: {
                 if (checked) {
                     checkthree = "1";
+                    checker = 1;
 
                 } else {
                     checkthree = "0";
@@ -625,6 +630,8 @@ public class TeleScore extends AppCompatActivity{
     }
 
         public void openMainActivity() {
+
+        if(checker == 1) {
 
             Constants constantsone = new Constants();
 
@@ -652,6 +659,11 @@ public class TeleScore extends AppCompatActivity{
             Log.d("Night Mode Update", String.valueOf(team_select.show1));
             X = 1;
 
+        }
+        else{
+            Toast.makeText(TeleScore.this,"Not yet allowed!", Toast.LENGTH_LONG).show();
+
+        }
 
         }
 
