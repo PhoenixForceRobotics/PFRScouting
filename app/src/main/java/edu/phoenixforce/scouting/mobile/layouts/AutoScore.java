@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
 import com.google.android.material.chip.ChipGroup;
@@ -267,7 +268,7 @@ public class AutoScore extends AppCompatActivity {
         editorTwo.apply();
 
         Log.d("auto", String.valueOf(counter5));
-
+        Toast.makeText(this, "Finished auto-scouting", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, TeleScore.class);
         startActivity(intent);
 
