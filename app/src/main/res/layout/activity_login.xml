@@ -95,10 +95,11 @@
         android:background="#AC1626"
         android:fontFamily="@font/nasalization_rg"
         android:hint="Password"
-        android:inputType="textPassword"
         android:textColor="#FFFF"
         android:textColorHint="@color/OffWhite"
         app:autoSizeTextType="uniform"
+        android:maxLength="4"
+        android:inputType="number"
 
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
