@@ -1,6 +1,8 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
+import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
+import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,6 +42,7 @@ public class AutoScore extends AppCompatActivity {
     TextView view2;
     TextView view3;
     TextView view4;
+    TextView reassurance;
 
     CheckBox checkBox;
 
@@ -61,8 +64,8 @@ public class AutoScore extends AppCompatActivity {
     int counter3 = 0;
     int counter4 = 0;
     String counter5 = "0";
-
-
+    public static String team;
+    public static int teamnumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,9 +93,19 @@ public class AutoScore extends AppCompatActivity {
 
         finishButton = findViewById(R.id.finishedbutton);
 
+        //Top text box
+        SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editorTwo = scorePrefs.edit();
 
 
+        SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 
+        reassurance = findViewById(R.id.WHAA);
+        team = myPrefs.getString(teamNum, "No Match Number");
+
+        teamnumber = Integer.valueOf(team);
+
+        reassurance.setText("You are scoring autonomous for 20 seconds. Your teamnumber is: " + teamnumber);
         //on app launch Text View Must show zero
 
         view1.setText("0");
