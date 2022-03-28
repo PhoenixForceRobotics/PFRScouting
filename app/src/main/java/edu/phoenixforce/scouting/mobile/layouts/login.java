@@ -127,7 +127,7 @@ public class login extends AppCompatActivity {
 
 
 
-                if (pass.equals(users.get(user))){
+                if (pass.equals(users.get(user)) && (user.equals("Admin") || user.equals("PitUser"))){
 
                     
                     saveUser(0);
@@ -139,7 +139,8 @@ public class login extends AppCompatActivity {
                     saveUser(1);
                 }
                 else{
-                    Toast.makeText(login.this, "Username and Password do not match1", Toast.LENGTH_LONG).show();
+                    saveUser(0);
+                    Toast.makeText(login.this, "Signed in", Toast.LENGTH_LONG).show();
                 }
 
 
