@@ -82,7 +82,7 @@ public class login extends AppCompatActivity {
                 , "Dalen", "John", "Ryan", "Elena", "Jonathan", "Anan", "Jordan", "Saturn", "Oskar", "Maria", "Maxwell",
                 "Colm", "Esther", "Francesca", "Seven", "Lauren's Brother", "Cap's Sister", "Raf", "Lars", "Sarah", "Trent", "Regan", "Taylor", "Allia"
                 , "Kameron", "Victor", "Alex Programming", "Conner", "Lincoln", "Alejandra", "Harpreet", "Jacob", "Noam", "Guthrie", "Jenny",
-                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "Seiji", "Josue",  "PitUser"};
+                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "Seiji", "Josue", "Elijah",  "PitUser"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -109,7 +109,7 @@ public class login extends AppCompatActivity {
             users.put("Elsdon", "1120");users.put("J", "1121"); users.put("Christian", "1122"); users.put("Katie", "1123"); users.put("Nova", "1124");
             users.put("Ethan", "1125"); users.put("Cameron", "1126");users.put("Nicky", "1127"); users.put("Katelyn", "1128"); users.put("Edward", "1129");
             users.put("Hudson", "1130"); users.put("Mustaf", "1131"); users.put("Leon Alfonso", "1132");users.put("Maddi", "1133"); users.put("Chloe", "1134");
-            users.put("Alex notProgramming", "1135"); users.put("Ryan", "1136"); users.put("Eleanor", "1137");users.put("Dalen", "1138"); users.put("John", "1139");
+            users.put("Alex notProgramming", "1135"); users.put("Rya n", "1136"); users.put("Eleanor", "1137");users.put("Dalen", "1138"); users.put("John", "1139");
             users.put("Elena", "1140"); users.put("Jonathan", "1141"); users.put("Anan", "1142"); users.put("Jordan", "1143");users.put("Saturn", "1144");
             users.put("Oskar", "1145"); users.put("Maria", "1146"); users.put("Maxwell", "1147"); users.put("Colm", "1148"); users.put("Esther", "1149");
             users.put("Francesca", "1150"); users.put("Seven", "1151"); users.put("Lauren's Brother", "1152"); users.put("Cap's Sister", "1153"); users.put("Raf", "1154");
@@ -207,7 +207,6 @@ goScout();
         Toast.makeText(this, "You Cannot Return to the Previous Page", Toast.LENGTH_LONG).show();
 
     }
-
 
 
 
