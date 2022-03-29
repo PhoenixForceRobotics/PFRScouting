@@ -94,10 +94,10 @@
         android:layout_alignParentBottom="true"
         android:background="#AC1626"
         android:fontFamily="@font/nasalization_rg"
-        android:hint="Password"
+        android:hint="Enter Admin Key Here or Hit Submit"
         android:textColor="#FFFF"
         android:textColorHint="@color/OffWhite"
-        app:autoSizeTextType="uniform"
+        android:autoSizeTextType="uniform"
         android:maxLength="4"
         android:inputType="number"
 

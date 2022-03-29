@@ -661,7 +661,7 @@ public class TeleScore extends AppCompatActivity{
 
         }
         else{
-            Toast.makeText(TeleScore.this,"Not yet allowed!", Toast.LENGTH_LONG).show();
+            Toast.makeText(TeleScore.this,"Select Correct CheckBoxes", Toast.LENGTH_LONG).show();
 
         }
 

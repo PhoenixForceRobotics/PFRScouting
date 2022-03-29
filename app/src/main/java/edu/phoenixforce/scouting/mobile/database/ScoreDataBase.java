@@ -25,7 +25,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.PitData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
 
-@Database(entities = {TeleData.class, GameData.class, PitData.class} , version = 4, exportSchema = false)
+@Database(entities = {TeleData.class, GameData.class, PitData.class} , version = 5, exportSchema = false)
 public abstract class ScoreDataBase extends RoomDatabase {
 
     private static volatile ScoreDataBase INSTANCE;

@@ -59,13 +59,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-    app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:onClick="onCheckboxClicked"
-        android:text="Moved"
-
+        android:text="Drove"
         android:textColor="#FFFFFF"
+
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline185"
         app:layout_constraintEnd_toStartOf="@+id/guideline152"
         app:layout_constraintStart_toStartOf="@+id/guideline128"
@@ -79,10 +79,10 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:background="#FFFFFF"
-    app:autoSizeTextType="uniform"
         android:fontFamily="@font/nasalization_rg"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline196"
-        app:layout_constraintEnd_toStartOf="@+id/guideline190"
+        app:layout_constraintEnd_toStartOf="@+id/guideline152"
         app:layout_constraintStart_toStartOf="@+id/guideline189"
         app:layout_constraintTop_toBottomOf="@+id/downbutton2" />
 
@@ -94,12 +94,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
-        android:onClick="onCheckboxClicked"
-        android:text="Missing"
-        android:textColor="#FFFFFF"
-        app:autoSizeTextType="uniform"
-
         android:fontFamily="@font/nasalization_rg"
+        android:onClick="onCheckboxClicked"
+        android:text="No Show"
+        android:textColor="#FFFFFF"
+
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline185"
         app:layout_constraintEnd_toStartOf="@+id/guideline192"
         app:layout_constraintStart_toStartOf="@+id/guideline176"
@@ -112,13 +112,13 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:onClick="onCheckboxClicked"
-        android:text="Stalled"
-
+        android:text="Broke Down"
         android:textColor="#FFFFFF"
+
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline185"
         app:layout_constraintEnd_toStartOf="@+id/guideline127"
         app:layout_constraintStart_toStartOf="@+id/guideline182"
@@ -161,12 +161,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/guideline194"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline201"
         app:layout_constraintEnd_toStartOf="@+id/guideline127"
         app:layout_constraintStart_toStartOf="@+id/guideline188"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -178,15 +178,15 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline195"
         app:layout_constraintEnd_toStartOf="@+id/guideline127"
         app:layout_constraintStart_toStartOf="@+id/guideline188"
-        app:layout_constraintTop_toBottomOf="@+id/upbutton" />
+        app:layout_constraintTop_toTopOf="@+id/guideline194" />
 
     <TextView
         android:id="@+id/textView2"
@@ -212,15 +212,15 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_down"
         android:textColor="#FFFFFF"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline195"
         app:layout_constraintEnd_toStartOf="@+id/guideline152"
         app:layout_constraintStart_toStartOf="@+id/guideline189"
-        app:layout_constraintTop_toBottomOf="@+id/upbutton2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline194" />
 
     <TextView
         android:id="@+id/integer_number"
@@ -247,12 +247,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_up"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/guideline194"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline201"
         app:layout_constraintEnd_toStartOf="@+id/guideline152"
         app:layout_constraintStart_toStartOf="@+id/guideline189"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -284,15 +284,15 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline177"
         app:layout_constraintEnd_toStartOf="@+id/guideline127"
         app:layout_constraintStart_toStartOf="@+id/guideline79"
-        app:layout_constraintTop_toBottomOf="@+id/upbutton4" />
+        app:layout_constraintTop_toTopOf="@+id/guideline172" />
 
     <Button
         android:id="@+id/donebutton"
@@ -301,11 +301,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
-        android:text="Finish"
+        android:text="End Match"
         android:textColor="#FDFCFC"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline92"
         app:layout_constraintEnd_toStartOf="@+id/guideline170"
         app:layout_constraintHorizontal_bias="1.0"
@@ -320,12 +320,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/guideline172"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline202"
         app:layout_constraintEnd_toStartOf="@+id/guideline127"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline117"
@@ -390,12 +390,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/guideline172"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline202"
         app:layout_constraintEnd_toStartOf="@+id/guideline152"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline128"
@@ -409,18 +409,20 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/guideline194"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline201"
         app:layout_constraintEnd_toStartOf="@+id/guideline192"
         app:layout_constraintStart_toStartOf="@+id/guideline176"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1" /><![CDATA[
     app:layout_constraintEnd_toStartOf="@+id/guideline170"
     app:layout_constraintStart_toStartOf="@+id/guideline118"
     app:layout_constraintTop_toTopOf="@+id/guideline193" />
+
+    ]]>
 
     <Button
         android:id="@+id/upbutton6"
@@ -429,15 +431,17 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_up"
         android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/guideline172"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline202"
         app:layout_constraintEnd_toStartOf="@+id/guideline170"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline176"
-        app:layout_constraintTop_toTopOf="@+id/guideline171" />
+        app:layout_constraintTop_toTopOf="@+id/guideline171"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView10"
@@ -446,10 +450,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:fontFamily="@font/nasalization_rg"
-        android:text="Ball Collected"
+        android:text="Ball Collected (Floor)"
         android:textColor="#FFFFFF"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline116"
         app:layout_constraintEnd_toStartOf="@+id/guideline127"
         app:layout_constraintStart_toStartOf="@+id/guideline175"
@@ -463,10 +467,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:fontFamily="@font/nasalization_rg"
-        android:text="Climb Level 0-4"
+        android:text="Rung Climbed To:"
         android:textColor="#FFFFFF"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline193"
         app:layout_constraintEnd_toStartOf="@+id/guideline127"
         app:layout_constraintStart_toStartOf="@+id/guideline188"
@@ -480,10 +484,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:fontFamily="@font/nasalization_rg"
-        android:text="Ball Scored High"
+        android:text="High Goal"
         android:textColor="#FFFFFF"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline193"
         app:layout_constraintEnd_toStartOf="@+id/guideline192"
         app:layout_constraintStart_toStartOf="@+id/guideline176"
@@ -497,10 +501,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:fontFamily="@font/nasalization_rg"
-        android:text="Ball Scored Low"
+        android:text="Low Goal"
         android:textColor="#FFFFFF"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline193"
         app:layout_constraintEnd_toStartOf="@+id/guideline118"
         app:layout_constraintStart_toStartOf="@+id/guideline189"
@@ -514,15 +518,15 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        app:autoSizeTextType="uniform"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline177"
         app:layout_constraintEnd_toStartOf="@+id/guideline170"
         app:layout_constraintStart_toStartOf="@+id/guideline176"
-        app:layout_constraintTop_toBottomOf="@+id/upbutton6" />
+        app:layout_constraintTop_toTopOf="@+id/guideline172" />
 
     <TextView
         android:id="@+id/integer_number6"
@@ -863,6 +867,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent=".54" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline201"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline202"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".713" />
     app:layout_constraintGuide_percent="0.5" />
 
 
