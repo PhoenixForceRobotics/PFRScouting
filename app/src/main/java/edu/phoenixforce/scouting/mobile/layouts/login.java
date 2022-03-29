@@ -43,6 +43,7 @@ public class login extends AppCompatActivity {
     public static String text;
 
     public static String user;
+    int easter = 1;
 
     HashMap<String, String> users = new HashMap();
     Constants constants = new Constants();
@@ -204,7 +205,22 @@ goScout();
     @Override
     public void onBackPressed(){
 
-        Toast.makeText(this, "You Cannot Return to the Previous Page", Toast.LENGTH_LONG).show();
+        if (easter < 5) {
+            Toast.makeText(this, "You Cannot Return to the Previous Page", Toast.LENGTH_LONG).show();
+            easter++;
+        }
+        else if (easter == 5){
+            Toast.makeText(this, "You really need to take a break", Toast.LENGTH_LONG).show();
+            easter ++;
+        }
+        else if (easter > 5 && easter < 10){
+            Toast.makeText(this, "You Cannot Return to the Previous Page", Toast.LENGTH_LONG).show();
+            easter ++;
+        }
+        else{
+            Toast.makeText(this, "You really are persistant", Toast.LENGTH_LONG).show();
+            easter = 0;
+        }
 
     }
 
