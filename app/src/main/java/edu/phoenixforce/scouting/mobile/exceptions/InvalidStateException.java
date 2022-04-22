@@ -1,5 +1,7 @@
 package edu.phoenixforce.scouting.mobile.exceptions;
 
+//used for pulling TBA data (Activity config, could be expanded)
+
 public class InvalidStateException extends RuntimeException {
 
     public InvalidStateException() {

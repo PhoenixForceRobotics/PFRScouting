@@ -10,6 +10,9 @@ import java.util.List;
 import edu.phoenixforce.scouting.mobile.database.Repositories.TeleRepo;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
+//Legacy - View the android room with a view codelab for more info
+//Also check androiddevelopers (android documentation) for more info.
+
 public class TeleView extends AndroidViewModel {
 
     private TeleRepo repo;

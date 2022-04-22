@@ -14,7 +14,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 @Dao //data access object
 
 
-
+//Legacy (2021 game)
 public interface TeleDao {
 
     @Query("SELECT * FROM teleData")

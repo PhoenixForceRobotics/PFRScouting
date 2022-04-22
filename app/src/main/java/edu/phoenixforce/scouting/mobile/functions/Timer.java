@@ -2,6 +2,9 @@ package edu.phoenixforce.scouting.mobile.functions;
 
 import java.util.Calendar;
 
+//Could be used to count down time or see how long something took
+//Could be used to remind users to change from autoscore with threading
+
 public class Timer {
 
     public long miliTime;

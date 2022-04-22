@@ -301,7 +301,7 @@ public class TeleScore extends AppCompatActivity{
 
                 counter6 = counter6 + 1;
                 autoBallHighA.setText(String.valueOf(counter6));
-                constants.setSix(counter6);
+
                 nice();
 
 
@@ -317,7 +317,7 @@ public class TeleScore extends AppCompatActivity{
                else {
                    counter6 = counter6 - 1;
                    autoBallHighA.setText(String.valueOf(counter6));
-                   constants.setSix(counter6);
+
                    nice();
                }
             }
@@ -392,7 +392,7 @@ public class TeleScore extends AppCompatActivity{
                 if(counter <= 3) {
                     counter = counter + 1;
                     view1.setText(String.valueOf(counter));
-                    constants.setOne(counter);
+
                 }
                 else{
                     Context context =getApplicationContext();
@@ -414,7 +414,7 @@ public class TeleScore extends AppCompatActivity{
                 else {
                     counter = counter - 1;
                     view1.setText(String.valueOf(counter));
-                    constants.setOne(counter);
+
                     nice();
                 }
             }
@@ -427,7 +427,7 @@ public class TeleScore extends AppCompatActivity{
             public void onClick(View v) {
                 counter2 = counter2 + 1;
                 view2.setText(String.valueOf(counter2));
-                constants.setTwo(counter2);
+
                 nice();
 
             }
@@ -442,7 +442,7 @@ public class TeleScore extends AppCompatActivity{
 
                     counter2 = counter2 - 1;
                     view2.setText(String.valueOf(counter2));
-                    constants.setTwo(counter2);
+
                     nice();
                 }
 
@@ -455,7 +455,7 @@ public class TeleScore extends AppCompatActivity{
 
                 counter3 = counter3 + 1;
                 view3.setText(String.valueOf(counter3));
-                constants.setThree(counter3);
+
                 nice();
             }
 
@@ -470,7 +470,7 @@ public class TeleScore extends AppCompatActivity{
 
                     counter3 = counter3 - 1;
                     view3.setText(String.valueOf(counter3));
-                    constants.setThree(counter3);
+
                     nice();
                 }
             }
@@ -484,7 +484,7 @@ public class TeleScore extends AppCompatActivity{
                     counter4 = counter4 + 1;
 
                     view4.setText(String.valueOf(counter4));
-                    constants.setFour(counter4);
+
                     nice();
 
             }
@@ -500,7 +500,7 @@ public class TeleScore extends AppCompatActivity{
 
                     counter4 = counter4 - 1;
                     view4.setText(String.valueOf(counter4));
-                    constants.setFour(counter4);
+
                     nice();
                 }
 
@@ -513,7 +513,7 @@ public class TeleScore extends AppCompatActivity{
 
                 counter5 = counter5 + 1;
                 view5.setText(String.valueOf(counter5));
-                constants.setFive(counter5);
+
                 nice();
 
 
@@ -533,7 +533,7 @@ public class TeleScore extends AppCompatActivity{
 
                     counter3 = counter3 - 1;
                     view3.setText(String.valueOf(counter3));
-                    constants.setThree(counter3);
+
                     nice();
                 }
             }
@@ -569,7 +569,7 @@ public class TeleScore extends AppCompatActivity{
 
                     counter5 = counter5 - 1;
                     view5.setText(String.valueOf(counter5));
-                    constants.setFive(counter5);
+
                     nice();
                 }
             }
@@ -633,16 +633,6 @@ public class TeleScore extends AppCompatActivity{
 
         if(checker == 1) {
 
-            Constants constantsone = new Constants();
-
-            constantsone.setEleven(solo);
-            constantsone.setTwelve(buddy);
-            constantsone.setThirteen(spunwheel);
-            constantsone.setFourteen(colorwheel);
-            constantsone.setFifteen(balls);
-            constantsone.setSixteen(moved);
-
-            //constantsone.setData(this);
             saveGameData();
 
             Log.d("Testing", "openMainRan");
@@ -671,9 +661,6 @@ public class TeleScore extends AppCompatActivity{
 
         public void saveGameData() {
 
-        Constants constants = new Constants();
-
-        constants.getPrefs(this);
       ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
       //  GameData gameData = new GameData(constants.getUser(),"2","3","4", "5", "6", "7", "8", "9"
@@ -687,8 +674,16 @@ public class TeleScore extends AppCompatActivity{
             String autoCounter4 = scorePrefs.getString("autoFour", "0");
             String autoCounter5 = scorePrefs.getString("autoMoved", "0");
 
+           SharedPreferences devicePrefs = getSharedPreferences("edu.phoenixforce.scouting.mobile", MODE_PRIVATE);
 
-            GameData gameData = new GameData(scoutname, String.valueOf(constants.getDeviceId()), match, teamnum,
+           //Removes the need for the getter device ID in constants
+           int deviceIdentifaction = devicePrefs.getInt("edu.phoenixforce.scouting.mobile.DeviceId", 0);
+           String deviceIdNumber = String.valueOf(deviceIdentifaction);
+
+            Log.d("DevNum Pull Function", deviceIdNumber);
+
+
+            GameData gameData = new GameData(scoutname, deviceIdNumber, match, teamnum,
                     autoCounter5, checkone, String.valueOf(counter), String.valueOf(counter2),
                     String.valueOf(counter3), autoCounter1, autoCounter2, autoCounter3, autoCounter4,
                     String.valueOf(counter4), String.valueOf(counter5), String.valueOf(counter6),checktwo, checkthree);

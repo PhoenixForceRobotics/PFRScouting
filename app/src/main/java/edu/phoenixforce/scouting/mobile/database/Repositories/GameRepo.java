@@ -14,6 +14,8 @@ import edu.phoenixforce.scouting.mobile.database.daos.TeleDao;
 import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
+//Not needed, best practice - allows for easy integration with LIVEDATA
+
 public class GameRepo {
 
     private GameDao Game;
@@ -43,6 +45,7 @@ public class GameRepo {
 
 
     // we are creating a async task method to insert new course.
+    // I do not believe that this is actaully ever used (Added by Andrew in 2022)
     private static class InsertCourseAsyncTask extends AsyncTask<GameData, Void, Void> {
         private GameDao gameDao;
 

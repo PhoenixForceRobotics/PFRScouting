@@ -12,6 +12,8 @@ import edu.phoenixforce.scouting.mobile.database.daos.TeleDao;
 import edu.phoenixforce.scouting.mobile.database.entities.PitData;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
+//Same usage as the gamerepo
+
 public class PitRepo {
 
     private PitDao Pit;

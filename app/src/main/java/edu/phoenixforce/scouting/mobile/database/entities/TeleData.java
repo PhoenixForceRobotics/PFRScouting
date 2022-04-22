@@ -10,6 +10,8 @@ import androidx.room.PrimaryKey;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
+//Legacy - would have been used in the 2021 game
+
 @Entity
 public class TeleData{
     // apple sucks :)

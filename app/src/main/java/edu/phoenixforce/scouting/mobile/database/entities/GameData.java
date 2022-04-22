@@ -44,6 +44,8 @@ public class GameData{
         this.AutoBallMissed = AutoBallMissed;
     }
 
+    //This is all horribly disorganized
+
     @NotNull
     public String getMatchNum() {
         return MatchNum;

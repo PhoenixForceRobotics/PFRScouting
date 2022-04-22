@@ -10,6 +10,8 @@ import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 import edu.phoenixforce.scouting.mobile.database.daos.TeleDao;
 import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
+//Legacy
+
 public class TeleRepo {
 
 
