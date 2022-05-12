@@ -184,7 +184,7 @@ goScout();
     public void goScout() {
         Log.d("login", "saveuser ran");
 
-        Intent intent = new Intent(this, login.class);
+        Intent intent = new Intent(this, ActivityMain.class);
         startActivity(intent);
 
 
