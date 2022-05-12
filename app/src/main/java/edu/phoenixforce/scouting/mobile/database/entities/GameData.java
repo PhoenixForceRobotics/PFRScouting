@@ -219,16 +219,14 @@ public class GameData{
 
 
 
-    public String getMissed() {
-        return Missed;
-    }
+   public String getMissed() {return Missed;}
 
-    public void setMissed(String missed) {
-        Missed = missed;
-    }
+    public void setMissed(String missed) {Missed = missed;}
 
-    @ColumnInfo(name = "Missed")
+   @ColumnInfo(name = "Missed")
     private String Missed;
+
+
 
 
     public void setClimbLevel(String climbLevel) {

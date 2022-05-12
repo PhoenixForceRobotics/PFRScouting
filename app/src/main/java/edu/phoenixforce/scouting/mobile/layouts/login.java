@@ -105,7 +105,7 @@ public class login extends AppCompatActivity {
 
             //Create the users in the HashMap!
 
-            users.put("Admin", "6969"); users.put("Andrew", "1111"); users.put("Gabriel", "1112"); users.put("Andy", "1113"); users.put("Alem", "1114");
+            users.put("Admin", "6970"); users.put("Andrew", "1111"); users.put("Gabriel", "1112"); users.put("Andy", "1113"); users.put("Alem", "1114");
             users.put("Syed", "1116"); users.put("Lauren A", "1115"); users.put("Kheana", "1117"); users.put("Shou", "1118");users.put("Vish", "1119");
             users.put("Elsdon", "1120");users.put("J", "1121"); users.put("Christian", "1122"); users.put("Katie", "1123"); users.put("Nova", "1124");
             users.put("Ethan", "1125"); users.put("Cameron", "1126");users.put("Nicky", "1127"); users.put("Katelyn", "1128"); users.put("Edward", "1129");
@@ -169,7 +169,7 @@ public class login extends AppCompatActivity {
 SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 SharedPreferences.Editor editor = myPrefs.edit();
 
-editor.putString(TEXT, user);
+//editor.putString(TEXT, user);
 editor.putInt("state", i);
 
 
@@ -183,7 +183,7 @@ goScout();
     public void goScout() {
         Log.d("login", "saveuser ran");
 
-        Intent intent = new Intent(this, ActivityMain.class);
+        Intent intent = new Intent(this, login.class);
         startActivity(intent);
 
 
