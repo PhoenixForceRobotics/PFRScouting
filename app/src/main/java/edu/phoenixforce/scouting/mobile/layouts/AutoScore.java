@@ -54,10 +54,10 @@ public class AutoScore extends AppCompatActivity {
     Button downButton4;
     Button finishButton;
     //integers
-    int counter1 = 1;
-    int counter2 = 2;
-    int counter3 = 3;
-    int counter4 = 4;
+    int counter1 = 0;
+    int counter2 = 0;
+    int counter3 = 0;
+    int counter4 = 0;
     String counter5 = "0";
     public static String team;
     public static int teamnumber;
@@ -125,7 +125,8 @@ public class AutoScore extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                counter1 = counter1 - 1;
+                counter1 = counter1 + 1;
+                view1.setText(String.valueOf(counter1));
 
 
             }
@@ -156,7 +157,8 @@ public class AutoScore extends AppCompatActivity {
                 if (counter1 < 1){
                 }
                 else {
-                    counter1 = counter1 + 1;
+                    counter1 = counter1 - 1;
+                    view1.setText(String.valueOf(counter1));
 
 
                 }
@@ -184,7 +186,7 @@ public class AutoScore extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 counter3 = counter3 + 1;
-                view3.setText(String.valueOf(counter1));
+                view3.setText(String.valueOf(counter3));
 
             }
 
