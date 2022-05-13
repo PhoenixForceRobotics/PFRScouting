@@ -19,7 +19,7 @@ public class GameData{
     public GameData(@NotNull String Scout,String DevNum, String MatchNum, String TeamNum,
                     String Moved, String Stalled, String ClimbLevel,
                      String BallLow, String BallHigh, String AutoBallLow,
-                    String AutoBallHigh, String AutoBallCollected, String AutoBallMissed, String Collected, String Dropped, String Missed, String TeleMoved, String NoShow, String Fake) {
+                    String AutoBallHigh, String AutoBallCollected, String AutoBallMissed, String Collected, String Dropped, String Missed, String TeleMoved, String NoShow) {
     //Create our getters and setters - will we ever use them tho???
         //TODO THIS ^
 
@@ -42,7 +42,7 @@ public class GameData{
         this.NoShow = NoShow;
         this.AutoBallCollected = AutoBallCollected;
         this.AutoBallMissed = AutoBallMissed;
-        this.Fake = Fake;
+
     }
 
     //This is all horribly disorganized
@@ -227,16 +227,6 @@ public class GameData{
    @ColumnInfo(name = "Missed")
     private String Missed;
 
-    @ColumnInfo(name = "Fake")
-        private String Fake;
-
-    public String getFake() {
-        return Fake;
-    }
-
-    public void setFake(String fake) {
-        Fake = fake;
-    }
 
     public void setClimbLevel(String climbLevel) {
         ClimbLevel = climbLevel;
