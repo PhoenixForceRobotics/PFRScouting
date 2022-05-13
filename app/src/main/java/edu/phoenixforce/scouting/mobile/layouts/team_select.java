@@ -103,7 +103,7 @@ public class team_select extends AppCompatActivity {
             SharedPreferences.Editor editor = myPrefs.edit();
 
             editor.putString(matchNum, matchNumber);
-            editor.putString(teamNum, teamNumber);
+            editor.putString(teamNum, "2097");
 
 
 

@@ -132,7 +132,7 @@ public class login extends AppCompatActivity {
                 if (pass.equals(users.get(user)) && (user.equals("Admin") || user.equals("PitUser"))){
 
                     
-                    saveUser(0);
+                    saveUser(1);
 
 
 
@@ -144,7 +144,7 @@ public class login extends AppCompatActivity {
                     Toast.makeText(login.this, "This User Requires Admin Key!", Toast.LENGTH_LONG).show();
                 }
                 else{
-                    saveUser(0);
+                    saveUser(1);
                     Toast.makeText(login.this, "Signed in", Toast.LENGTH_LONG).show();
                 }
 

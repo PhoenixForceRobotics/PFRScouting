@@ -80,7 +80,8 @@ public class ActivityPitView extends AppCompatActivity{
                 Log.d("ActivityPitView","onClick");
                 Log.d("ActivityPitView",
                 id = teamnum.getText().toString());
-                idInt = Integer.parseInt(id);
+                //idInt = Integer.parseInt(id);
+                idInt = 0000;
                 Log.d("dataPull", "Ran searchData");
 
 

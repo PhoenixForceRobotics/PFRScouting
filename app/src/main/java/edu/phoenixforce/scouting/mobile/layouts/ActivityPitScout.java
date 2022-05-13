@@ -89,7 +89,7 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
             @Override
             public void onClick(View v) {
 
-                count7 = 1;
+
                 Activate_Camera();
 
                 //onActivityResult();
