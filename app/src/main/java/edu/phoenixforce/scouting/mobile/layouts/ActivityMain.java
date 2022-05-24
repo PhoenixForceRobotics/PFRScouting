@@ -178,8 +178,9 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                openQRCode();
 
-                if (ContextCompat.checkSelfPermission(thisActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                /*if (ContextCompat.checkSelfPermission(thisActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         != PackageManager.PERMISSION_GRANTED) {
 
                     if (ActivityCompat.shouldShowRequestPermissionRationale(thisActivity,
@@ -198,6 +199,8 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
                 } else {
                     copyDatabase();
                 }
+
+                 */
             }
         });
 
@@ -274,6 +277,11 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
             Intent intent = new Intent(this, team_select.class);
             startActivity(intent);
 
+
+        }
+        public void openQRCode () {
+            Intent intent = new Intent(this, QRCode.class);
+            startActivity(intent);
 
         }
 
