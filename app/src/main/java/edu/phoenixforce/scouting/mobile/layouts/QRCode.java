@@ -1,4 +1,5 @@
 package edu.phoenixforce.scouting.mobile.layouts;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -24,14 +25,14 @@ public class QRCode extends AppCompatActivity {
     // button, bitmap and qrencoder.
     private ImageView qrCodeIV;
     private EditText dataEdt;
-    private Button generateQrBtn;
+    Button generateQrBtn;
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.qr_code);
 
 
         qrCodeIV = findViewById(R.id.idIVQrcode);
@@ -40,26 +41,35 @@ public class QRCode extends AppCompatActivity {
 
         generateQrBtn = findViewById(R.id.idBtnGenerateQR);
 
+
         // initializing onclick listener for button.
+        //Works if this section is commented out
+        Log.d("QRCodeButton", "Got here");
         generateQrBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(dataEdt.getText().toString())) {
+
+
+               if (TextUtils.isEmpty(dataEdt.getText().toString())) {
 
                     // if the edittext inputs are empty then execute
                     // this method showing a toast message.
                     Toast.makeText(QRCode.this, "Enter some text to generate QR Code", Toast.LENGTH_SHORT).show();
                 } else {
+
+
                     // below line is for getting
                     // the windowmanager service.
-                    WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
 
+                    WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
+                            
                     // initializing a variable for default display.
                     Display display = manager.getDefaultDisplay();
 
                     // creating a variable for point which
                     // is to be displayed in QR Code.
                     Point point = new Point();
+                    Log.d("point", "got this far");
                     display.getSize(point);
 
                     // getting width and
@@ -71,9 +81,12 @@ public class QRCode extends AppCompatActivity {
                     int dimen = width < height ? width : height;
                     dimen = dimen * 3 / 4;
 
+
+
                     // setting this dimensions inside our qr code
                     // encoder to generate our qr code.
-                    qrgEncoder = new QRGEncoder(dataEdt.getText().toString(), null, QRGContents.Type.TEXT, dimen);
+
+                    qrgEncoder = new QRGEncoder(dataEdt.getText().toString(), null, QRGContents.Type.TEXT, 400);
                     try {
                         // getting our qrcode in the form of bitmap.
                         bitmap = qrgEncoder.encodeAsBitmap();
@@ -85,8 +98,13 @@ public class QRCode extends AppCompatActivity {
                         // exception handling.
                         Log.e("Tag", e.toString());
                     }
+
+
                 }
+
+
             }
         });
     }
+
 }
