@@ -69,10 +69,9 @@
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline27"
         app:layout_constraintEnd_toStartOf="@+id/guideline28"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline26"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.818"
         app:srcCompat="@mipmap/pfrlogolight" />
 
     <ImageView
@@ -90,6 +89,37 @@
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline27"
         app:srcCompat="@mipmap/rrlogo" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/nasalization_rg"
+        android:text="@string/VersionStatus"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toStartOf="@+id/guideline37"
+        app:layout_constraintStart_toStartOf="@+id/guideline36"
+        app:layout_constraintTop_toTopOf="@+id/guideline18" />
+
+    <Button
+        android:id="@+id/rickroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/nasalization_rg"
+        android:text="@string/VerisonNumber"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toStartOf="@+id/guideline38"
+        app:layout_constraintStart_toStartOf="@+id/guideline37"
+        app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
     <Button
         android:id="@+id/options"
@@ -119,7 +149,7 @@
         android:clickable="true"
         app:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/guideline25"
-        app:layout_constraintEnd_toStartOf="@+id/guideline37"
+        app:layout_constraintEnd_toStartOf="@+id/guideline36"
         app:layout_constraintStart_toStartOf="@+id/guideline35"
         app:layout_constraintTop_toTopOf="@+id/guideline18"
         app:srcCompat="@mipmap/picture1" />
@@ -307,7 +337,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.39" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline146"
@@ -355,13 +385,13 @@
         android:id="@+id/QRcode"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="QRcode"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline36"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline23"
-        app:layout_constraintTop_toBottomOf="@+id/testBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline29"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

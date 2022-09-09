@@ -15,9 +15,11 @@ import android.widget.Toast;
 import com.google.zxing.WriterException;
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fyrebirdscout11.R;
+import java.util.List;
 
 public class QRCode extends AppCompatActivity {
 
@@ -28,6 +30,7 @@ public class QRCode extends AppCompatActivity {
     Button generateQrBtn;
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
+    List data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,13 @@ public class QRCode extends AppCompatActivity {
         qrCodeIV = findViewById(R.id.idIVQrcode);
         //where the user enters the data, dataEdt is a parameter for qrg encoder later.
         dataEdt = findViewById(R.id.idEdt);
+        ScoreDataBase Base = ScoreDataBase.getDatabase(this);
+
+        //data = (List) Base.gameDao().getAllScores();
+
+        //Casted to list might not get whole Table
+        //COME BACK TO THIS.
+        //At the time of writing this queen Elizabeth died 3 minuets ago.
 
         generateQrBtn = findViewById(R.id.idBtnGenerateQR);
 
