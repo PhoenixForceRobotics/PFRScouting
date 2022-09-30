@@ -26,11 +26,10 @@ public class QRCode extends AppCompatActivity {
     // variables for imageview, edittext,
     // button, bitmap and qrencoder.
     private ImageView qrCodeIV;
-    private EditText dataEdt;
     Button generateQrBtn;
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
-    List data;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +39,25 @@ public class QRCode extends AppCompatActivity {
 
         qrCodeIV = findViewById(R.id.idIVQrcode);
         //where the user enters the data, dataEdt is a parameter for qrg encoder later.
-        dataEdt = findViewById(R.id.idEdt);
+
         ScoreDataBase Base = ScoreDataBase.getDatabase(this);
 
-        //data = (List) Base.gameDao().getAllScores();
+        //database1 = (List) Base.gameDao().getAllScores();
 
         //Casted to list might not get whole Table
         //COME BACK TO THIS.
         //At the time of writing this queen Elizabeth died 3 minuets ago.
+        List<String> database1 = Base.gameDao().getTeamNum();
+        StringBuilder strbul=new StringBuilder();
+        for(String str : database1)
+        {
+            strbul.append(str);
+            //for adding comma between elements
+            strbul.append(",");
+        }
+        //just for removing last comma
+        strbul.setLength(strbul.length()-1);
+        String str =strbul.toString();
 
         generateQrBtn = findViewById(R.id.idBtnGenerateQR);
 
@@ -59,13 +69,6 @@ public class QRCode extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-               if (TextUtils.isEmpty(dataEdt.getText().toString())) {
-
-                    // if the edittext inputs are empty then execute
-                    // this method showing a toast message.
-                    Toast.makeText(QRCode.this, "Enter some text to generate QR Code", Toast.LENGTH_SHORT).show();
-                } else {
 
 
                     // below line is for getting
@@ -95,8 +98,10 @@ public class QRCode extends AppCompatActivity {
 
                     // setting this dimensions inside our qr code
                     // encoder to generate our qr code.
+                    // ADD DATABASE INTEGRATION TO GET NUMBER OF ROWS TO USE FOR I $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-                    qrgEncoder = new QRGEncoder(dataEdt.getText().toString(), null, QRGContents.Type.TEXT, 400);
+                    qrgEncoder = new QRGEncoder(/*dataEdt.getText().toString()*/str, null, QRGContents.Type.TEXT, 400);
+                    //try normal list as well.
                     try {
                         // getting our qrcode in the form of bitmap.
                         bitmap = qrgEncoder.encodeAsBitmap();
@@ -110,7 +115,7 @@ public class QRCode extends AppCompatActivity {
                     }
 
 
-                }
+
 
 
             }

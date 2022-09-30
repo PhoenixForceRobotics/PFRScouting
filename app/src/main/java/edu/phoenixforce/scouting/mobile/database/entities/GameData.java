@@ -162,7 +162,7 @@ public class GameData{
     @ColumnInfo(name = "BallHigh")
     private String BallHigh;
 
-    @ColumnInfo(name = "AutpBalLLow")
+    @ColumnInfo(name = "AutoBalLLow")
     private String AutoBallLow;
 
     @ColumnInfo(name = "AutoBallHigh")
