@@ -53,7 +53,7 @@ public interface GameDao {
     @Query("SELECT BallHigh FROM gameData")
     List<String> getBallHigh();
 
-    @Query("SELECT AutoBalLLow FROM gameData")
+    @Query("SELECT AutoBallLow FROM gameData")
     List<String> getAutoBallLow();
 
     @Query("SELECT AutoBallHigh FROM gameData")

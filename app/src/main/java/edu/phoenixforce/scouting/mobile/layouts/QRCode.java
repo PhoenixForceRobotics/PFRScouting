@@ -47,17 +47,29 @@ public class QRCode extends AppCompatActivity {
         //Casted to list might not get whole Table
         //COME BACK TO THIS.
         //At the time of writing this queen Elizabeth died 3 minuets ago.
-        List<String> database1 = Base.gameDao().getTeamNum();
-        StringBuilder strbul=new StringBuilder();
-        for(String str : database1)
-        {
-            strbul.append(str);
-            //for adding comma between elements
-            strbul.append(",");
-        }
-        //just for removing last comma
-        strbul.setLength(strbul.length()-1);
-        String str =strbul.toString();
+
+                                        //Scouts
+        String scouts = Base.gameDao().getScout().toString();
+        String devNums = Base.gameDao().getDevNum().toString();
+        String matchNums = Base.gameDao().getMatchNum().toString();
+        String teams = Base.gameDao().getTeamNum().toString();
+        String moved = Base.gameDao().getMoved().toString();
+        String stalled = Base.gameDao().getStalled().toString();
+        String climb = Base.gameDao().getClimbLevel().toString();
+        String ballsLow = Base.gameDao().getBallLow().toString();
+        String ballsHigh = Base.gameDao().getBallHigh().toString();
+        String autoBallsLow = Base.gameDao().getAutoBallLow().toString();
+        String autoBallsHigh = Base.gameDao().getAutoBallHigh().toString();
+        String autoBallsCollected = Base.gameDao().getAutoBallCollected().toString();
+        String autoBallMissed = Base.gameDao().getAutoBallMissed().toString();
+        String collected = Base.gameDao().getCollected().toString();
+        String dropped = Base.gameDao().getDropped().toString();
+        String missed = Base.gameDao().getMissed().toString();
+        String teleMoved = Base.gameDao().getTeleMoved().toString();
+        String noShow = Base.gameDao().getNoShow().toString();
+
+        String qrCodeData = scouts + "," + devNums + "," + matchNums + "," + teams + "," + moved + "," + stalled + "," + climb + "," + ballsLow + "," + ballsHigh + "," + autoBallsLow + "," + autoBallsHigh + "," + autoBallsCollected + "," + autoBallMissed + "," + collected + "," + dropped + "," + missed + "," + teleMoved + "," + noShow + ",";
+
 
         generateQrBtn = findViewById(R.id.idBtnGenerateQR);
 
@@ -100,7 +112,7 @@ public class QRCode extends AppCompatActivity {
                     // encoder to generate our qr code.
                     // ADD DATABASE INTEGRATION TO GET NUMBER OF ROWS TO USE FOR I $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-                    qrgEncoder = new QRGEncoder(/*dataEdt.getText().toString()*/str, null, QRGContents.Type.TEXT, 400);
+                    qrgEncoder = new QRGEncoder(qrCodeData, null, QRGContents.Type.TEXT, 400);
                     //try normal list as well.
                     try {
                         // getting our qrcode in the form of bitmap.
@@ -120,6 +132,21 @@ public class QRCode extends AppCompatActivity {
 
             }
         });
+
     }
 
+   /* public String listToString(List list, int number){
+
+        StringBuilder strbul1 = new StringBuilder();
+        for (String data : list) {
+            strbul1.append(data);
+            //for adding comma between elements
+            strbul1.append(",");
+        }
+        //just for removing last comma
+        strbul1.setLength(strbul1.length() - 1);
+        String data = strbul1.toString();
+
+        return data;
+    }*/
 }

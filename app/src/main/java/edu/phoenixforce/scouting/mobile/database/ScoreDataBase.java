@@ -26,7 +26,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
 //Main DB File for the app, finicky
 
-@Database(entities = {TeleData.class, GameData.class, PitData.class} , version = 7, exportSchema = false)
+@Database(entities = {TeleData.class, GameData.class, PitData.class} , version = 8, exportSchema = false)
 public abstract class ScoreDataBase extends RoomDatabase {
 
     private static volatile ScoreDataBase INSTANCE;
