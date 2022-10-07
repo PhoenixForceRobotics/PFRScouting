@@ -126,6 +126,7 @@ public class AutoScore extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 counter1 = counter1 + 1;
+                view1.setText(String.valueOf(counter1));
 
 
             }
@@ -157,7 +158,6 @@ public class AutoScore extends AppCompatActivity {
                 }
                 else {
                     counter1 = counter1 - 1;
-
 
                 }
 

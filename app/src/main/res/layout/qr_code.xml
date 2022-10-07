@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/colorPrimary"
     tools:context="edu.phoenixforce.scouting.mobile.layouts.MainActivity">
 
     <!--We are using this image
@@ -30,6 +30,7 @@
         android:layout_marginStart="7dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
+        android:background="@color/Accent2"
         android:text="@string/generate_qr_code" />
 
 </RelativeLayout>
