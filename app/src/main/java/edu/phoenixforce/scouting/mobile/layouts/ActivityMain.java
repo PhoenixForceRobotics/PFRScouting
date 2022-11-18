@@ -107,8 +107,10 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
             scores = (Button) findViewById(R.id.button);
             if(role == 1){
-                qrCode.setText("Scan QR code");
                 scores.setText("Start Pit Scouting!");
+            }
+            else if(role == 2){
+                qrCode.setText("Scan QR-Code");
             }
             scores.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -132,6 +134,9 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
                         openQRCode();
                     }
                     else if(role == 1){
+                        openQRCode();
+                    }
+                    else if(role == 2){
                         openQRCodeScanner();
                     }
 

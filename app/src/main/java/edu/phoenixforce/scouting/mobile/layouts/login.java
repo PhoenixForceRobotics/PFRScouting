@@ -33,6 +33,8 @@ public class login extends AppCompatActivity {
 
     String  pass;
 
+    String QrUserPass = "1984";
+
     //String snoqualmie;
 
     int New = 2;
@@ -77,7 +79,7 @@ public class login extends AppCompatActivity {
 
         String name;
 
-        String[] items = new String[]{"Select User", "Admin", "Andrew", "Gabriel", "Andy", "Alem", "Syed"
+        String[] items = new String[]{"Select User", "Admin", "QRScanner", "Andrew", "Gabriel", "Andy", "Alem", "Syed"
                 , "Lauren A", "Kheana", "Shou", "Vish", "Elsdon", "J", "Christian", "Katie", "Nova", "Ethan", "Cameron",
                 "Nicky", "Katelyn", "Edward", "Hudson", "Mustaf", "Leon Alfonso", "Maddi", "Chloe", "Alex notProgramming", "Ryan", "Eleanor"
                 , "Dalen", "John", "Ryan", "Elena", "Jonathan", "Anan", "Jordan", "Saturn", "Oskar", "Maria", "Maxwell",
@@ -105,7 +107,7 @@ public class login extends AppCompatActivity {
 
             //Create the users in the HashMap!
 
-            users.put("Admin", "6969"); users.put("Andrew", "1111"); users.put("Gabriel", "1112"); users.put("Andy", "1113"); users.put("Alem", "1114");
+            users.put("Admin", "6969"); users.put("QRScanner", QrUserPass); users.put("Andrew", "1111"); users.put("Gabriel", "1112"); users.put("Andy", "1113"); users.put("Alem", "1114");
             users.put("Syed", "1116"); users.put("Lauren A", "1115"); users.put("Kheana", "1117"); users.put("Shou", "1118");users.put("Vish", "1119");
             users.put("Elsdon", "1120");users.put("J", "1121"); users.put("Christian", "1122"); users.put("Katie", "1123"); users.put("Nova", "1124");
             users.put("Ethan", "1125"); users.put("Cameron", "1126");users.put("Nicky", "1127"); users.put("Katelyn", "1128"); users.put("Edward", "1129");
@@ -127,18 +129,23 @@ public class login extends AppCompatActivity {
             } else {
 
 
+                if (pass.equals(QrUserPass) && (user.equals("QRScanner"))){
 
-                if (pass.equals(users.get(user)) && (user.equals("Admin") || user.equals("PitUser"))){
+                    saveUser(2);
+                    Log.d("Login", "Signed in as QRScanner");
+                }
+
+                else if (pass.equals(users.get(user)) && (user.equals("Admin") || user.equals("PitUser"))){
 
                     
                     saveUser(0);
 
-
-
                 }
+
                 else if(pass.equals("0000")){
                     saveUser(1);
                 }
+
                 else if((user.equals("Admin") || user.equals("PitUser")) && !pass.equals(users.get(user))){
                     Toast.makeText(login.this, "This User Requires Admin Key!", Toast.LENGTH_LONG).show();
                 }
