@@ -110,7 +110,7 @@ public class QRCode extends AppCompatActivity {
 
                     // setting this dimensions inside our qr code
                     // encoder to generate our qr code.
-                    // ADD DATABASE INTEGRATION TO GET NUMBER OF ROWS TO USE FOR I $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
 
                     qrgEncoder = new QRGEncoder(qrCodeData, null, QRGContents.Type.TEXT, 400);
                     //try normal list as well.

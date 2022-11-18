@@ -44,7 +44,8 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
     Button pitView;
     Button pitScout;
     //private Button rick;
-    private Button choice, test;
+    private Button settings;
+    private Button test;
     private Button qrCode;
     private FloatingActionButton fab;
     public String text ;
@@ -106,6 +107,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
             scores = (Button) findViewById(R.id.button);
             if(role == 1){
+                qrCode.setText("Scan QR code");
                 scores.setText("Start Pit Scouting!");
             }
             scores.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +123,20 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
 
             }
+            });
+            qrCode.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (role == 0) {
+                        openQRCode();
+                    }
+                    else if(role == 1){
+                        openQRCodeScanner();
+                    }
+
+
+                }
             });
 
 
@@ -138,6 +154,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
                     }
                 }
             });
+
 
             /*pitScout = findViewById(R.id.pitScoutButton);
             pitScout.setOnClickListener(new View.OnClickListener() {
@@ -166,8 +183,8 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
             });
 
 
-            choice = (Button) findViewById(R.id.options);
-            choice.setOnClickListener(new View.OnClickListener() {
+            settings = (Button) findViewById(R.id.options);
+            settings.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
@@ -206,12 +223,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
             }
         });
-        qrCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openQRCode();
-            }
-        });
+
 
 
         if (!Configuration.getInstance().isConfigured()) {
@@ -289,6 +301,12 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
 
         }
+
+        public void openQRCodeScanner () {
+        Intent intent = new Intent(this, QRCodeScanner.class);
+        startActivity(intent);
+
+    }
         public void openQRCode () {
             Intent intent = new Intent(this, QRCode.class);
             startActivity(intent);

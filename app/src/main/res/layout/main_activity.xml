@@ -149,7 +149,7 @@
         android:fontFamily="@font/nasalization_rg"
         android:text="Clear"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/guideline25"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toStartOf="@+id/guideline34"
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline18"
@@ -181,7 +181,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.09" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline26"
@@ -355,10 +355,12 @@
         android:id="@+id/QRcode"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
         android:text="QRcode"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toStartOf="@+id/guideline36"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toBottomOf="@+id/testBtn"
         app:layout_constraintVertical_bias="0.0" />
