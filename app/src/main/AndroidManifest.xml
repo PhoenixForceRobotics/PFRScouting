@@ -3,8 +3,10 @@
     xmlns:andriod="http://schemas.android.com/apk/distribution"
     package="com.example.fyrebirdscout11">
 
+    <uses-permission android:name="CAMERA"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-feature android:name="andriod.hardware.camera"
                    andriod:required="true" />
 
@@ -20,6 +22,7 @@
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.team_select"></activity>
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ScoreView" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.QRCodeScanner" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore"
         />

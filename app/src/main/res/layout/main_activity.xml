@@ -355,7 +355,7 @@
         android:id="@+id/QRcode"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="QRcode"
+nn hygghuh8t6rrrrrrr        android:text="QRcode"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toStartOf="@+id/guideline36"
         app:layout_constraintHorizontal_bias="0.0"
