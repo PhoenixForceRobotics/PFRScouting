@@ -22,9 +22,63 @@ public interface GameDao {
     @Query("SELECT * FROM gameData")
     LiveData<List<GameData>> getAllScores();
 
-    //Used to write a new colum into the entities in TeleScore
+    //Used to write a new collum into the entities in TeleScore
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertAll(GameData gameData);
+
+    @Query("SELECT Scout FROM gameData")
+    List<String> getScout();
+
+    @Query("SELECT DevNum FROM gameData")
+    List<String> getDevNum();
+
+    @Query("SELECT MatchNum FROM gameData")
+    List<String> getMatchNum();
+
+    @Query("SELECT TeamNum FROM gameData")
+    List<String> getTeamNum();
+
+    @Query("SELECT Moved FROM gameData")
+    List<String> getMoved();
+
+    @Query("SELECT Stalled FROM gameData")
+    List<String> getStalled();
+
+    @Query("SELECT ClimbLevel FROM gameData")
+    List<String> getClimbLevel();
+
+    @Query("SELECT BallLow FROM gameData")
+    List<String> getBallLow();
+
+    @Query("SELECT BallHigh FROM gameData")
+    List<String> getBallHigh();
+
+    @Query("SELECT AutoBallLow FROM gameData")
+    List<String> getAutoBallLow();
+
+    @Query("SELECT AutoBallHigh FROM gameData")
+    List<String> getAutoBallHigh();
+
+    @Query("SELECT AutoBallCollected FROM gameData")
+    List<String> getAutoBallCollected();
+
+    @Query("SELECT AutoBallMissed FROM gameData")
+    List<String> getAutoBallMissed();
+
+    @Query("SELECT Collected FROM gameData")
+    List<String> getCollected();
+
+    @Query("SELECT Dropped FROM gameData")
+    List<String> getDropped();
+
+    @Query("SELECT Missed FROM gameData")
+    List<String> getMissed();
+
+    @Query("SELECT TeleMoved FROM gameData")
+    List<String> getTeleMoved();
+
+    @Query("SELECT NoShow FROM gameData")
+    List<String> getNoShow();
 
     //used by Admin to clear data after a pull.
     @Query("DELETE FROM GameData")

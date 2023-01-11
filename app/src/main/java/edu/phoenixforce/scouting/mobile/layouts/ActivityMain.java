@@ -45,6 +45,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
     Button pitScout;
     //private Button rick;
     private Button choice, test;
+    private Button qrCode;
     private FloatingActionButton fab;
     public String text ;
     public String dev, teamnum, match;
@@ -67,6 +68,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
         user = findViewById(R.id.textView17);
         test = findViewById(R.id.testBtn);
+        qrCode = findViewById(R.id.QRcode);
 
 
         SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
@@ -178,6 +180,8 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                
+
 
                 if (ContextCompat.checkSelfPermission(thisActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         != PackageManager.PERMISSION_GRANTED) {
@@ -198,8 +202,17 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
                 } else {
                     copyDatabase();
                 }
+
+
             }
         });
+        qrCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openQRCode();
+            }
+        });
+
 
         if (!Configuration.getInstance().isConfigured()) {
             Snackbar.make(fab, "Device has not yet been configured. Switching to config",
@@ -274,6 +287,11 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
             Intent intent = new Intent(this, team_select.class);
             startActivity(intent);
 
+
+        }
+        public void openQRCode () {
+            Intent intent = new Intent(this, QRCode.class);
+            startActivity(intent);
 
         }
 

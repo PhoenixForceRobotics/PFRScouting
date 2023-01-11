@@ -26,7 +26,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
 //Main DB File for the app, finicky
 
-@Database(entities = {TeleData.class, GameData.class, PitData.class} , version = 5, exportSchema = false)
+@Database(entities = {TeleData.class, GameData.class, PitData.class} , version = 8, exportSchema = false)
 public abstract class ScoreDataBase extends RoomDatabase {
 
     private static volatile ScoreDataBase INSTANCE;
@@ -48,7 +48,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
             synchronized (ScoreDataBase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), ScoreDataBase.class,
-                            DBNAME).addCallback(RoomDatabaseCallBack).allowMainThreadQueries().build();
+                            DBNAME).addCallback(RoomDatabaseCallBack).allowMainThreadQueries().fallbackToDestructiveMigration().build();
                                                 //allowMainThreadQueries is not best practice but it works
                                                 //barook was here
                 }
