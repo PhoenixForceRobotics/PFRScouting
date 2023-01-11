@@ -53,22 +53,34 @@ public class QRCode extends AppCompatActivity {
         String devNums = Base.gameDao().getDevNum().toString();
         String matchNums = Base.gameDao().getMatchNum().toString();
         String teams = Base.gameDao().getTeamNum().toString();
-        String moved = Base.gameDao().getMoved().toString();
-        String stalled = Base.gameDao().getStalled().toString();
-        String climb = Base.gameDao().getClimbLevel().toString();
-        String ballsLow = Base.gameDao().getBallLow().toString();
-        String ballsHigh = Base.gameDao().getBallHigh().toString();
-        String autoBallsLow = Base.gameDao().getAutoBallLow().toString();
-        String autoBallsHigh = Base.gameDao().getAutoBallHigh().toString();
-        String autoBallsCollected = Base.gameDao().getAutoBallCollected().toString();
-        String autoBallMissed = Base.gameDao().getAutoBallMissed().toString();
-        String collected = Base.gameDao().getCollected().toString();
-        String dropped = Base.gameDao().getDropped().toString();
-        String missed = Base.gameDao().getMissed().toString();
+        String autoMoved = Base.gameDao().getAutoMoved().toString();
         String teleMoved = Base.gameDao().getTeleMoved().toString();
-        String noShow = Base.gameDao().getNoShow().toString();
+        String autoTopCones = Base.gameDao().getAutoTopCones().toString();
+        String autoMidCones = Base.gameDao().getAutoMidCones().toString();
+        String autoBottomCones = Base.gameDao().getAutoBottomCones().toString();
+        String autoTopCubes = Base.gameDao().getAutoTopCubes().toString();
+        String autoMidCubes = Base.gameDao().getAutoMidCubes().toString();
+        String autoBottomCubes = Base.gameDao().getAutoBottomCubes().toString();
+        String teleTopCones = Base.gameDao().getTeleTopCones().toString();
+        String teleMidCones = Base.gameDao().getTeleMidCones().toString();
+        String teleBottomCones = Base.gameDao().getTeleBottomCones().toString();
+        String teleTopCubes = Base.gameDao().getTeleTopCubes().toString();
+        String teleMidCubes = Base.gameDao().getTeleMidCubes().toString();
+        String teleBottomCubes = Base.gameDao().getTeleBottomCubes().toString();
+        String defence = Base.gameDao().getDefence().toString();
+        String autoLeftCommunity = Base.gameDao().getAutoLeftCommunity().toString();
+        String autoOnStation = Base.gameDao().getAutoOnStation().toString();
+        String autoLevelOnStation = Base.gameDao().getAutoLevelOnStation().toString();
+        String teleOnStation = Base.gameDao().getTeleOnStation().toString();
+        String teleLevelOnStation = Base.gameDao().getTeleLevelOnStation().toString();
+        String teleBroke = Base.gameDao().getTeleBroke().toString();
+        String teleNoShow = Base.gameDao().getTeleNoShow().toString();
 
-        String qrCodeData = scouts + "," + devNums + "," + matchNums + "," + teams + "," + moved + "," + stalled + "," + climb + "," + ballsLow + "," + ballsHigh + "," + autoBallsLow + "," + autoBallsHigh + "," + autoBallsCollected + "," + autoBallMissed + "," + collected + "," + dropped + "," + missed + "," + teleMoved + "," + noShow + ",";
+        String qrCodeData = scouts + "," + devNums + "," + matchNums + "," + teams + "," + autoMoved + "," + teleMoved + ","
+                + autoTopCones + "," + autoMidCones + "," + autoBottomCones + "," + autoTopCubes + "," + autoMidCubes + ","
+                + autoBottomCubes + "," + teleTopCones + "," + teleMidCones + "," + teleBottomCones + "," + teleTopCubes + ","
+                + teleMidCubes + "," + teleBottomCubes + "," + defence + "," + autoLeftCommunity + "," + autoOnStation + ","
+                + autoLevelOnStation + "," + teleOnStation + "," +  teleLevelOnStation + "," + teleBroke + "," + teleNoShow;
 
 
         generateQrBtn = findViewById(R.id.idBtnGenerateQR);
