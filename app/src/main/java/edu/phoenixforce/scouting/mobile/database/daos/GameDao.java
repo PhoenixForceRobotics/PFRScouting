@@ -38,47 +38,71 @@ public interface GameDao {
     @Query("SELECT TeamNum FROM gameData")
     List<String> getTeamNum();
 
-    @Query("SELECT Moved FROM gameData")
-    List<String> getMoved();
+    @Query("SELECT AutoTopCones FROM gameData")
+    List<String> getAutoTopCones();
 
-    @Query("SELECT Stalled FROM gameData")
-    List<String> getStalled();
+    @Query("SELECT AutoMidCones FROM gameData")
+    List<String> getAutoMidCones();
 
-    @Query("SELECT ClimbLevel FROM gameData")
-    List<String> getClimbLevel();
+    @Query("SELECT AutoBottomCones FROM gameData")
+    List<String> getAutoBottomCones();
 
-    @Query("SELECT BallLow FROM gameData")
-    List<String> getBallLow();
+    @Query("SELECT TeleTopCones FROM gameData")
+    List<String> getTeleTopCones();
 
-    @Query("SELECT BallHigh FROM gameData")
-    List<String> getBallHigh();
+    @Query("SELECT TeleMidCones FROM gameData")
+    List<String> getTeleMidCones();
 
-    @Query("SELECT AutoBallLow FROM gameData")
-    List<String> getAutoBallLow();
+    @Query("SELECT TeleBottomCones FROM gameData")
+    List<String> getTeleBottomCones();
 
-    @Query("SELECT AutoBallHigh FROM gameData")
-    List<String> getAutoBallHigh();
+    @Query("SELECT AutoTopCubes FROM gameData")
+    List<String> getAutoTopCubes();
 
-    @Query("SELECT AutoBallCollected FROM gameData")
-    List<String> getAutoBallCollected();
+    @Query("SELECT AutoMidCubes FROM gameData")
+    List<String> getAutoMidCubes();
 
-    @Query("SELECT AutoBallMissed FROM gameData")
-    List<String> getAutoBallMissed();
+    @Query("SELECT AutoBottomCubes FROM gameData")
+    List<String> getAutoBottomCubes();
 
-    @Query("SELECT Collected FROM gameData")
-    List<String> getCollected();
+    @Query("SELECT TeleTopCubes FROM gameData")
+    List<String> getTeleTopCubes();
 
-    @Query("SELECT Dropped FROM gameData")
-    List<String> getDropped();
+    @Query("SELECT TeleMidCubes FROM gameData")
+    List<String> getTeleMidCubes();
 
-    @Query("SELECT Missed FROM gameData")
-    List<String> getMissed();
+    @Query("SELECT TeleBottomCubes FROM gameData")
+    List<String> getTeleBottomCubes();
+
+    @Query("SELECT Defence FROM gameData")
+    List<String> getDefence();
+
+    @Query("SELECT AutoMoved FROM gameData")
+    List<String> getAutoMoved();
 
     @Query("SELECT TeleMoved FROM gameData")
     List<String> getTeleMoved();
 
-    @Query("SELECT NoShow FROM gameData")
-    List<String> getNoShow();
+    @Query("SELECT AutoLeftCommunity FROM gameData")
+    List<String> getAutoLeftCommunity();
+
+    @Query("SELECT AutoOnStation FROM gameData")
+    List<String> getAutoOnStation();
+
+    @Query("SELECT AutoLevelOnStation FROM gameData")
+    List<String> getAutoLevelOnStation();
+
+    @Query("SELECT TeleOnStation FROM gameData")
+    List<String> getTeleOnStation();
+
+    @Query("SELECT TeleLevelOnStation FROM gameData")
+    List<String> getTeleLevelOnStation();
+
+    @Query("SELECT TeleBroke FROM gameData")
+    List<String> getTeleBroke();
+
+    @Query("SELECT TeleNoShow FROM gameData")
+    List<String> getTeleNoShow();
 
     //used by Admin to clear data after a pull.
     @Query("DELETE FROM GameData")

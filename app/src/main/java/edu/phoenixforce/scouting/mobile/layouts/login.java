@@ -146,6 +146,10 @@ public class login extends AppCompatActivity {
                     saveUser(0);
                     Toast.makeText(login.this, "Signed in", Toast.LENGTH_LONG).show();
                 }
+                else if (user.equals("QRScanner")){
+
+                    Toast.makeText(login.this, "This User Requires Password Key!", Toast.LENGTH_LONG).show();
+                }
 
 
 
