@@ -89,7 +89,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline28"
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline27"
-        app:srcCompat="@mipmap/ChargedUpLogo" />
+        app:srcCompat="@mipmap/chargeduplogo" />
 
     <Button
         android:id="@+id/options"
