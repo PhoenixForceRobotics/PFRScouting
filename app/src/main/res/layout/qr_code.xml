@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="edu.phoenixforce.scouting.mobile.layouts.MainActivity">
+    tools:context="edu.phoenixforce.scouting.mobile.layouts.QRCode">
 
     <!--We are using this image
         view to display our QR code-->
@@ -25,11 +25,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idIVQrcode"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:background="@color/Accent2"
         android:text="@string/generate_qr_code" />
 
