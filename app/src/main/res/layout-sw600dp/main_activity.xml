@@ -30,7 +30,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:autoSizeTextType="uniform"
-        android:background="#AC1626"
+        android:background="@drawable/red_rounded_corner"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/button_use"
         android:textColor="#FFFFFF"
