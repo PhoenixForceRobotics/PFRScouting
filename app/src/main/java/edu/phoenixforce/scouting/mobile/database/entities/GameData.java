@@ -468,7 +468,13 @@ public class GameData {
 
     public void setBBox9(String bBox9) { BBox9 = bBox9; }
 
+    public String getTeleNoShow() {
+        return TeleNoShow;
+    }
 
+    public void setTeleNoShow(String teleNoShow) {
+        TeleNoShow = teleNoShow;
+    }
 
     @PrimaryKey
     @NotNull
