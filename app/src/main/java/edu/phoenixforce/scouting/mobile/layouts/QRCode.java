@@ -75,12 +75,44 @@ public class QRCode extends AppCompatActivity {
         String teleLevelOnStation = Base.gameDao().getTeleLevelOnStation().toString();
         String teleBroke = Base.gameDao().getTeleBroke().toString();
         String teleNoShow = Base.gameDao().getTeleNoShow().toString();
+        String TBox1 = Base.gameDao().getTBox1().toString();
+        String TBox2 = Base.gameDao().getTBox2().toString();
+        String TBox3 = Base.gameDao().getTBox3().toString();
+        String TBox4 = Base.gameDao().getTBox4().toString();
+        String TBox5 = Base.gameDao().getTBox5().toString();
+        String TBox6 = Base.gameDao().getTBox6().toString();
+        String TBox7 = Base.gameDao().getTBox7().toString();
+        String TBox8 = Base.gameDao().getTBox8().toString();
+        String TBox9 = Base.gameDao().getTBox9().toString();
+        String MBox1 = Base.gameDao().getMBox1().toString();
+        String MBox2 = Base.gameDao().getMBox2().toString();
+        String MBox3 = Base.gameDao().getMBox3().toString();
+        String MBox4 = Base.gameDao().getMBox4().toString();
+        String MBox5 = Base.gameDao().getMBox5().toString();
+        String MBox6 = Base.gameDao().getMBox6().toString();
+        String MBox7 = Base.gameDao().getMBox7().toString();
+        String MBox8 = Base.gameDao().getMBox8().toString();
+        String MBox9 = Base.gameDao().getMBox9().toString();
+        String BBox1 = Base.gameDao().getBBox1().toString();
+        String BBox2 = Base.gameDao().getBBox2().toString();
+        String BBox3 = Base.gameDao().getBBox3().toString();
+        String BBox4 = Base.gameDao().getBBox4().toString();
+        String BBox5 = Base.gameDao().getBBox5().toString();
+        String BBox6 = Base.gameDao().getBBox6().toString();
+        String BBox7 = Base.gameDao().getBBox7().toString();
+        String BBox8 = Base.gameDao().getBBox8().toString();
+        String BBox9 = Base.gameDao().getBBox9().toString();
+
 
         String qrCodeData = scouts + "," + devNums + "," + matchNums + "," + teams + "," + autoMoved + "," + teleMoved + ","
                 + autoTopCones + "," + autoMidCones + "," + autoBottomCones + "," + autoTopCubes + "," + autoMidCubes + ","
                 + autoBottomCubes + "," + teleTopCones + "," + teleMidCones + "," + teleBottomCones + "," + teleTopCubes + ","
                 + teleMidCubes + "," + teleBottomCubes + "," + defence + "," + autoLeftCommunity + "," + autoOnStation + ","
-                + autoLevelOnStation + "," + teleOnStation + "," +  teleLevelOnStation + "," + teleBroke + "," + teleNoShow;
+                + autoLevelOnStation + "," + teleOnStation + "," +  teleLevelOnStation + "," + teleBroke + "," + teleNoShow +
+                "," + TBox1 + "," + TBox2 + "," + TBox3 + "," + TBox4 + "," + TBox5 + "," + TBox6 + "," + TBox7 + "," + TBox8 +
+                "," + TBox9 + "," + MBox1 + "," + MBox2 + "," + MBox3 + "," + MBox4 + "," + MBox5 + "," + MBox6 + "," + MBox7 +
+                "," + MBox8 + "," + MBox9 + "," + BBox1 + "," + BBox2 + "," + BBox3 + "," + BBox4 + "," + BBox5 + "," + BBox6 +
+                "," + BBox7 + "," + BBox8 + "," + BBox9;
 
 
         generateQrBtn = findViewById(R.id.idBtnGenerateQR);
