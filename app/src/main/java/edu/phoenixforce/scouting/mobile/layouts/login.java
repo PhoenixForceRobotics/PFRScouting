@@ -83,7 +83,7 @@ public class login extends AppCompatActivity {
                 , "Dalen", "John", "Ryan", "Elena", "Jonathan", "Anan", "Jordan", "Saturn", "Oskar", "Maria", "Maxwell",
                 "Colm", "Esther", "Francesca", "Seven", "Lauren's Brother", "Cap's Sister", "Raf", "Lars", "Sarah", "Trent", "Regan", "Taylor", "Allia"
                 , "Kameron", "Victor", "Alex Programming", "Conner", "Lincoln", "Alejandra", "Harpreet", "Jacob", "Noam", "Guthrie", "Jenny",
-                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "Seiji", "Josue",  "PitUser"};
+                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "Seiji", "Josue",  "PitUse, QR Scanner"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -118,7 +118,7 @@ public class login extends AppCompatActivity {
             users.put("Allia", "1160"); users.put("Kameron", "1161");users.put("Victor", "1163"); users.put("Alex Programming", "1164"); users.put("Conner", "1165");
             users.put("Lincoln", "1166"); users.put("Alejandra", "1167"); users.put("Harpreet","1168");users.put("Jacob", "1169"); users.put("Noam", "2269");
             users.put("Guthrie", "1170"); users.put("Jenny", "1171"); users.put("Caleb","1172"); users.put("Eileen", "1173"); users.put("Malia", "1174");users.put("Emily", "1175");
-            users.put("Brandon", "1176"); users.put("PitUser", "1983");
+            users.put("Brandon", "1176"); users.put("PitUser", "1983"); users.put("QRScanner", "1984");
 
             if (user.equals("Select User")) {
 
@@ -136,20 +136,24 @@ public class login extends AppCompatActivity {
 
 
                 }
+                else if(pass.equals("1984") && user == "QRScanner"){
+                    saveUser(3);
+                }
                 else if(pass.equals("0000")){
                     saveUser(1);
                 }
                 else if((user.equals("Admin") || user.equals("PitUser")) && !pass.equals(users.get(user))){
                     Toast.makeText(login.this, "This User Requires Admin Key!", Toast.LENGTH_LONG).show();
                 }
-                else{
-                    saveUser(0);
-                    Toast.makeText(login.this, "Signed in", Toast.LENGTH_LONG).show();
-                }
                 else if (user.equals("QRScanner")){
 
                     Toast.makeText(login.this, "This User Requires Password Key!", Toast.LENGTH_LONG).show();
                 }
+                else{
+                    saveUser(0);
+                    Toast.makeText(login.this, "Signed in", Toast.LENGTH_LONG).show();
+                }
+
 
 
 

@@ -242,6 +242,14 @@ public class GameData {
         TeleBroke = teleBroke;
     }
 
+    public String getTeleNoShow() {
+        return TeleNoShow;
+    }
+
+    public void setTeleNoShow(String teleNoShow) {
+        TeleNoShow = teleNoShow;
+    }
+
 
     @PrimaryKey
     @NotNull
