@@ -104,6 +104,88 @@ public interface GameDao {
     @Query("SELECT TeleNoShow FROM gameData")
     List<String> getTeleNoShow();
 
+    @Query("SELECT TBox1 FROM gameData")
+    List<String> getTBox1();
+
+    @Query("SELECT TBox2 FROM gameData")
+    List<String> getTBox2();
+
+    @Query("SELECT TBox3 FROM gameData")
+    List<String> getTBox3();
+
+    @Query("SELECT TBox4 FROM gameData")
+    List<String> getTBox4();
+
+    @Query("SELECT TBox5 FROM gameData")
+    List<String> getTBox5();
+
+    @Query("SELECT TBox6 FROM gameData")
+    List<String> getTBox6();
+
+    @Query("SELECT TBox7 FROM gameData")
+    List<String> getTBox7();
+
+    @Query("SELECT TBox8 FROM gameData")
+    List<String> getTBox8();
+
+    @Query("SELECT TBox9 FROM gameData")
+    List<String> getTBox9();
+
+    @Query("SELECT MBox1 FROM gameData")
+    List<String> getMBox1();
+
+    @Query("SELECT MBox2 FROM gameData")
+    List<String> getMBox2();
+
+    @Query("SELECT MBox3 FROM gameData")
+    List<String> getMBox3();
+
+    @Query("SELECT MBox4 FROM gameData")
+    List<String> getMBox4();
+
+    @Query("SELECT MBox5 FROM gameData")
+    List<String> getMBox5();
+
+    @Query("SELECT MBox6 FROM gameData")
+    List<String> getMBox6();
+
+    @Query("SELECT MBox7 FROM gameData")
+    List<String> getMBox7();
+
+    @Query("SELECT MBox8 FROM gameData")
+    List<String> getMBox8();
+
+    @Query("SELECT MBox9 FROM gameData")
+    List<String> getMBox9();
+
+    @Query("SELECT BBox1 FROM gameData")
+    List<String> getBBox1();
+
+    @Query("SELECT BBox2 FROM gameData")
+    List<String> getBBox2();
+
+    @Query("SELECT BBox3 FROM gameData")
+    List<String> getBBox3();
+
+    @Query("SELECT BBox4 FROM gameData")
+    List<String> getBBox4();
+
+    @Query("SELECT BBox5 FROM gameData")
+    List<String> getBBox5();
+
+    @Query("SELECT BBox6 FROM gameData")
+    List<String> getBBox6();
+
+    @Query("SELECT BBox7 FROM gameData")
+    List<String> getBBox7();
+
+    @Query("SELECT BBox8 FROM gameData")
+    List<String> getBBox8();
+
+    @Query("SELECT BBox9 FROM gameData")
+    List<String> getBBox9();
+
+
     //used by Admin to clear data after a pull.
     @Query("DELETE FROM GameData")
     void nukeTable();
