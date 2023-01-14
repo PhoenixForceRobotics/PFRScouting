@@ -59,7 +59,7 @@ public abstract class ScoreDataBase extends RoomDatabase {
 
 
 
-    private static ScoreDataBase.Callback RoomDatabaseCallBack = new ScoreDataBase.Callback(){
+    private static final ScoreDataBase.Callback RoomDatabaseCallBack = new ScoreDataBase.Callback(){
         @Override
         public void onOpen(@NotNull SupportSQLiteDatabase db){
             super.onOpen(db);

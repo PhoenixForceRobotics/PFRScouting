@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.CheckBox;
@@ -28,122 +29,60 @@ import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
 
 public class TeleScore extends AppCompatActivity{
-    //TextViews
-    TextView view1;
-    TextView view2;
-    TextView view3;
-    TextView view4;
-    TextView view5;
-    TextView user;
-
-//String Numero = teamNumber.getText().toString();
-//int numberTeam = Integer.parseInt(Numero);
 
 
-    //Buttons
-    Button autoHighUp; //upButton in camel case
-    Button autoHighDown; //downButton in camel case
-    Button upButton2;
-    Button upButton3;
-    Button upButton4;
-    Button upButton5;
-    Button downButton2;
-    Button downButton3;
-    Button downButton4;
-    Button downButton5;
-    Button back;
+    //Counters
+    TextView cone_counter1;
+    TextView cone_counter2;
+    TextView cone_counter3;
+    TextView cube_counter1;
+    TextView cube_counter2;
+    TextView cube_counter3;
 
 
-    Button timer;
-
-    //integers
-    public static int counter = 0;
-    public static int counter2 = 0;
-    public static int counter3 = 0;
-    public static int counter4 = 0;
-    public static int counter5 = 0;
-
-
-
-
-    int nice = 0;
-
-
-    public int differnce;
-    public int parsedOldTime;
-
-
-    public int moved = 0;
-    public int spunwheel = 0; //default is zero, if the checkbox is clicked this number will be changed to onen can never be greater than one
-    public int
-            colorwheel = 0;
-    public int balls = 0;
-    public int solo = 0;
-    public int buddy = 0;
-
-    public int checker;
-
-//FOR ADDING THE AUTOSCORE STUFF
-
-    //TextViews
-    TextView autoBallHighA;
-    TextView view7;
-    TextView view8;
-    TextView view9;
-    TextView view10;
+    //Checkboxs
+    CheckBox check1_broke;
+    CheckBox check2_drove;
+    CheckBox check3_show;
 
 
     //Buttons
-    Button autoHighUp6; //upButton in camel case
-    Button autoHighDown6; //downButton in camel case
-    Button upButton7;
-    Button upButton8;
-    Button upButton9;
-    Button upButton10;
-    Button downButton7;
-    Button downButton8;
-    Button downButton9;
-    Button downButton10;
-    // ImageButton backA;
-    Button navme;
+    Button cone_Plus1;
+    Button cone_Plus2;
+    Button cone_Plus3;
 
-    private static String scoutname;
-    private static String teamnum;
-    private static String match;
-    String importedTeamNum;
-    String importedMatchNum;
-    String checkone = "0";
-    String checktwo = "0";
-    String checkthree = "0";
-    public void setImportedTeamNum(String importedTeamNum) {
-        this.importedTeamNum = importedTeamNum;
-    }
+    Button cone_Minus1;
+    Button cone_Minus2;
+    Button cone_Minus3;
 
-    public void setImportedMatchNum(String importedMatchNum) {
-        this.importedMatchNum = importedMatchNum;
-    }
+    Button cube_Plus1;
+    Button cube_Plus2;
+    Button cube_Plus3;
+
+    Button cube_Minus1;
+    Button cube_Minus2;
+    Button cube_Minus3;
+
+
+    Button defense_Plus1;
+    Button defense_Minus1;
+    Button finish_Button;
 
     //integers
-    public static int counter6 = 0;
-    public static int counter7 = 0;
-    public static int counter8 = 0;
-    public static int counter9 = 0;
-    public static int counter10 = 0;
-    public static int X = 0;
-
-    private static final String CONFIG_FILE_NAME = "edu.phoenixforce.scouting.mobile";
-    private static final String KEY_DEVICE_ID = CONFIG_FILE_NAME + ".DeviceId";
-    private static final String KEY_TBA_TEAM_ID = CONFIG_FILE_NAME + ".TbaTeamId";
-    private static final String KEY_TBA_LAST_MODIFIED = CONFIG_FILE_NAME + ".TbaLastModified";
-
-
-    public static int matchnumber;
-
-    private static String tag = "TeleScore";
-
-    public int timeTime;
-
-    Timer clock = new Timer();
+    // U counter =  Cube Counter
+    int Ucounter1;
+    int Ucounter2;
+    int Ucounter3;
+    // U counter =  Cone Counter
+    int Ocounter1;
+    int Ocounter2;
+    int Ocounter3;
+    // D counter =  Defense Counter
+    int Dcounter1;
+    //Check Counters
+    int check_counter1;
+    int check_counter2;
+    int check_counter3;
 
 
 
@@ -153,609 +92,294 @@ public class TeleScore extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tele_score);
-        Constants constants = new Constants();
-        //RecyclerViewViewer.mWordViewModelII = new ViewModelProvider(this).get(TeleView.class);
-
-        counter6 = 0;
-        counter7 = 0;
-        counter8 = 0;
-        counter9 = 0;
-        counter10 = 0;
-        counter = 0;
-        counter2 = 0;
-        counter3 = 0;
-        counter4 = 0;
-        counter5 = 0;
-        spunwheel = 0;
-        colorwheel = 0;
-        balls = 0;
-        solo = 0;
-        buddy = 0;
-
-        timeTime = clock.currentTime;
-
 
         //TextViews
+        cone_counter1 = findViewById(R.id.cone_counter1);
+        cone_counter2 = findViewById(R.id.cone_counter2);
+        cone_counter3 = findViewById(R.id.cone_counter3);
 
-        view1 = findViewById(R.id.integer_number);
-        view3 = findViewById(R.id.integer_number3);
-        view2 = findViewById(R.id.integer_number2);
-        view5 = findViewById(R.id.integer_number5);
-        view4 = findViewById(R.id.integer_number4);
+        cube_counter1 = findViewById(R.id.cube_counter1);
+        cube_counter2 = findViewById(R.id.cube_counter2);
+        cube_counter3 = findViewById(R.id.cube_counter3);
 
-        //Buttons
-        autoHighUp = findViewById(R.id.upbutton);
-        autoHighDown = findViewById(R.id.downbutton);
-
-        back = findViewById(R.id.donebutton);
-
-        upButton2 = findViewById(R.id.upbutton2);
-        upButton3 = findViewById(R.id.upbutton3);
-        upButton4 = findViewById(R.id.upbutton4);
-        upButton5 = findViewById(R.id.upbutton5);
-
-        downButton2 = findViewById(R.id.downbutton2);
-        downButton3 = findViewById(R.id.downbutton3);
-        downButton4 = findViewById(R.id.downbutton4);
-        downButton5 = findViewById(R.id.downbutton5);
-
-        //on app launch Text View Must show zero.setText("0");
-        view1.setText("0");
-        view3.setText("0");
-        view2.setText("0");
-        view4.setText("0");
-        view5.setText("0");
-
-        //AUTOSCORE STUFF
-
-
-        autoBallHighA = findViewById(R.id.integer_number6);
+        //Checkboxs
+        check1_broke = findViewById(R.id.check1_broke);
+        check2_drove = findViewById(R.id.check2_drove);
+        check3_show = findViewById(R.id.check3_show);
 
         //Buttons
-        autoHighUp6 = findViewById(R.id.upbutton6);
-        autoHighDown6 = findViewById(R.id.downbutton6);
+        cone_Minus1 = findViewById(R.id.cone_minus1);
+        cone_Minus2 = findViewById(R.id.cone_minus2);
+        cone_Minus3 = findViewById(R.id.cone_minus3);
 
-        // back = findViewById(R.id.imageButton);
-        //navme = findViewById(R.id.navbutton);
+        cone_Plus1 = findViewById(R.id.cone_plus1);
+        cone_Plus2 = findViewById(R.id.cone_plus2);
+        cone_Plus3 = findViewById(R.id.cone_plus3);
 
+        cube_Minus1 = findViewById(R.id.cube_minus1);
+        cube_Minus2 = findViewById(R.id.cube_minus2);
+        cube_Minus3 = findViewById(R.id.cube_minus3);
 
-        //timer =findViewById(R.id.timer);
+        cube_Plus1 = findViewById(R.id.cube_plus1);
+        cube_Plus2 = findViewById(R.id.cube_plus2);
+        cube_Plus3 = findViewById(R.id.cube_plus3);
 
-        //on app launch Text View Must show zero
-        autoBallHighA.setText("0");
+        defense_Plus1 = findViewById(R.id.defense_plus1);
+        defense_Minus1 = findViewById(R.id.defense_plus1);
+        finish_Button = findViewById(R.id.finish_button);
 
+        //Set up
 
+        cone_counter1.setText("0");
+        cone_counter2.setText("0");
+        cone_counter3.setText("0");
 
-        user = findViewById(R.id.show_user);
-
-        SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        SharedPreferences.Editor editorTwo = scorePrefs.edit();
-
-
-        SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        scoutname = myPrefs.getString(TEXT, "No User");
-        //dev = myPrefs.getString(devNUM, "Device Number Not Set");
-        teamnum = myPrefs.getString(teamNum, "No Team Number");
-
-        match = myPrefs.getString(matchNum, "No Match Number");
-
-        matchnumber = Integer.valueOf(match);
-
-        if(teamnum.equals("2097")){
-            user.setText("Hi " + scoutname + " GO PHOENIX FORCE!");
-        }
-        else if(scoutname.equals("Admin")){
-            user.setText("Keep up the hard work");
-        }
-        else if(scoutname.equals("Malia")){
-            user.setText("Thanks for the help, Malia! Scouting team: " + teamnum);
-        }
-        else if(scoutname.equals("Syed")){
-            user.setText("Thanks for the help, Syed! Scouting team: " + teamnum);
-        }
-        else if(scoutname.equals("Noam")){
-            user.setText("Thanks for the help, Noam! Scouting team: " + teamnum);
-        }
-        else if(scoutname.equals("Gabriel")){
-            user.setText("Thanks for the help, Gabriel! Scouting team:" + teamnum);
-        }
-        else if(scoutname.equals("Emily")){
-            user.setText("Fergalicious definition scouting team: " + teamnum);
-        }
-
-        else {
-            user.setText("Hi " + scoutname + ", Score Team " + teamnum + " During TeleOp Below!");
-            Log.d("user", scoutname + " " + teamnum);
-
-        }
+        cube_counter1.setText("0");
+        cube_counter2.setText("0");
+        cube_counter3.setText("0");
 
 
 
+        //CheckBox's
+        //Might need to be a string instead of an int - as in past apps
 
-     /*  backA.setOnClickListener(new View.OnClickListener() {
-
-           @Override
-           public void onClick(View v) {
-               openMainActivity();
-
-           }
-       });
-
-      */
-
-     /* Not sure why this one exists?
-     timer.setOnClickListener(new View.OnClickListener(){
-         @Override
-         public void onClick(View v){
-
-             writeTime();
-
-         }
-
-     }); */
-
-        autoHighUp6.setOnClickListener(new View.OnClickListener() {
-
+        check1_broke.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
 
-                counter6 = counter6 + 1;
-                autoBallHighA.setText(String.valueOf(counter6));
-
-                nice();
-
-
-            }
-        });
-
-        autoHighDown6.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-               if (counter6 < 1){
-               }
-               else {
-                   counter6 = counter6 - 1;
-                   autoBallHighA.setText(String.valueOf(counter6));
-
-                   nice();
-               }
-            }
-        });
-
-
-/*        timer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                SharedPreferences timePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-                String oldTime = timePrefs.getString("time", "0");
-
-
-
-
-                SharedPreferences.Editor editorThree = timePrefs.edit();
-                editorThree.putInt("time", timeTime);
-
-            }
-        });
-
-
-       timer.setOnClickListener(new View.OnClickListener() {
-
-           @Override
-           public void onClick(View v) {
-              // openMainActivity();
-               Log.d(tag,"This button is timer");
-               Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-               TeleData teleData = new TeleData(String.valueOf(System.currentTimeMillis()), String.valueOf(TeleScore.counter2),
-                       String.valueOf(TeleScore.counter3),String.valueOf(TeleScore.counter4),
-                       String.valueOf(TeleScore.counter),String.valueOf(TeleScore.counter5),
-                       spunwheel,colorwheel,balls,solo,buddy);
-               //TODO this /\
-               RecyclerViewViewer.mWordViewModelII.insert(teleData);
-               //Log.d("Night Mode Update", teleData.toString());
-               //Log.d("Night Mode Update", String.valueOf(team_select.show1));
-               X = 1;
-
-               AutoData autoData = new AutoData(String.valueOf(TeleScore.moved), String.valueOf(TeleScore.counter7), String.valueOf(TeleScore.counter8), String.valueOf(TeleScore.counter9), String.valueOf(TeleScore.counter6),
-                       String.valueOf(TeleScore.counter10), String.valueOf(TeleScore.scoutname), String.valueOf(TeleScore.match), Integer.valueOf(TeleScore.matchnumber) );
-
-               Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-               //-----------------------------------------------RIGHT HERE OFFICERS------------------------------------------------------------------------------------------------------------------------
-
-
-
-           }
-       });
-
-*/
-
-        back.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                Log.d(tag, "this is back");
-
-                openMainActivity();
-
-
-            }
-
-
-        });
-        autoHighUp.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if(counter <= 3) {
-                    counter = counter + 1;
-                    view1.setText(String.valueOf(counter));
-
-                }
-                else{
-                    Context context =getApplicationContext();
-                    Toast toast = Toast.makeText(context, "Max Climb Level is 4 - Verify Climb Level", Toast.LENGTH_SHORT);
-                    toast.show();
-                    nice();
-
-                }
-
-            }
-        });
-
-        autoHighDown.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (counter < 1){
+                if( isChecked){
+                    check_counter1 = 1;
+                    Log.d("check1", "ran");
                 }
                 else {
-                    counter = counter - 1;
-                    view1.setText(String.valueOf(counter));
-
-                    nice();
+                    check_counter1 = 0;
                 }
             }
+
         });
 
-        //upbuttons
-        upButton2.setOnClickListener(new View.OnClickListener() {
-
+        check2_drove.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                counter2 = counter2 + 1;
-                view2.setText(String.valueOf(counter2));
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
 
-                nice();
-
-            }
-        });
-        downButton2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (counter2 < 1){
+                if( isChecked){
+                    check_counter2 = 1;
+                    Log.d("check2", "ran");
                 }
                 else {
-
-                    counter2 = counter2 - 1;
-                    view2.setText(String.valueOf(counter2));
-
-                    nice();
+                    check_counter2 = 0;
                 }
-
-            }
-        });
-        upButton3.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                counter3 = counter3 + 1;
-                view3.setText(String.valueOf(counter3));
-
-                nice();
             }
 
         });
-        downButton3.setOnClickListener(new View.OnClickListener() {
 
+        check3_show.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                if (counter3 < 1){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    check_counter3 = 1;
+                    Log.d("check3", "ran");
                 }
                 else {
-
-                    counter3 = counter3 - 1;
-                    view3.setText(String.valueOf(counter3));
-
-                    nice();
+                    check_counter3 = 0;
                 }
             }
+
         });
-        upButton4.setOnClickListener(new View.OnClickListener() {
+
+        //Programing Buttons on click (set on click listeners)
+        //Plus buttons for cones
+
+        cone_Plus1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                Ocounter1 = Ocounter1 + 1;
+                cone_counter1.setText(String.valueOf(Ocounter1));
 
-
-                    counter4 = counter4 + 1;
-
-                    view4.setText(String.valueOf(counter4));
-
-                    nice();
 
             }
-
         });
-        downButton4.setOnClickListener(new View.OnClickListener() {
+
+        cone_Plus2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (counter4 < 1){
+                Ocounter2 = Ocounter2 + 1;
+                cone_counter2.setText(String.valueOf(Ocounter2));
+
+
+            }
+        });
+
+        cone_Plus3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Ocounter3 = Ocounter3 + 1;
+                cone_counter3.setText(String.valueOf(Ocounter3));
+
+
+            }
+        });
+
+        //Minus buttons for Cones
+
+        cone_Minus1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (Ocounter1 < 1){
                 }
                 else {
+                    Ocounter1 = Ocounter1 - 1;
 
-                    counter4 = counter4 - 1;
-                    view4.setText(String.valueOf(counter4));
-
-                    nice();
                 }
-
-            }
-        });
-        upButton5.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                counter5 = counter5 + 1;
-                view5.setText(String.valueOf(counter5));
-
-                nice();
+                cone_counter1.setText(String.valueOf(Ocounter1));
 
 
             }
-
         });
 
-
-
-        downButton3.setOnClickListener(new View.OnClickListener() {
+        cone_Minus2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (counter3 < 1){
+                if (Ocounter2 < 1){
                 }
                 else {
+                    Ocounter2 = Ocounter2 - 1;
 
-                    counter3 = counter3 - 1;
-                    view3.setText(String.valueOf(counter3));
-
-                    nice();
                 }
+                cone_counter2.setText(String.valueOf(Ocounter2));
+
+
             }
         });
-      /*  downButton4.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick (View v){
 
-            counter4 = counter4 - 1;
-            view4.setText(String.valueOf(counter4));
-            constants.setFour(counter4);
-
-        }
-        });
-        upButton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View v){
-
-                counter4 = counter4 + 1;
-                view4.setText(String.valueOf(counter4));
-                constants.setFour(counter4);
-            }
-            });
-        */
-
-                downButton5.setOnClickListener(new View.OnClickListener (){
+        cone_Minus3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (counter5< 1){
+                if (Ocounter3 < 1){
                 }
                 else {
+                    Ocounter3 = Ocounter3 - 1;
 
-                    counter5 = counter5 - 1;
-                    view5.setText(String.valueOf(counter5));
-
-                    nice();
                 }
+                cone_counter3.setText(String.valueOf(Ocounter3));
+
+
+            }
+        });
+
+        //Plus Buttons for Cubes
+
+        cube_Plus1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Ucounter1 = Ucounter1 + 1;
+                cube_counter1.setText(String.valueOf(Ucounter1));
+
+
+            }
+        });
+
+        cube_Plus2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Ucounter2 = Ucounter2 + 1;
+                cube_counter2.setText(String.valueOf(Ucounter2));
+
+
+            }
+        });
+
+        cube_Plus3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Ucounter3 = Ucounter3 + 1;
+                cube_counter3.setText(String.valueOf(Ucounter3));
+
+
+            }
+        });
+
+        //Minus Buttons for Cubes
+
+        cube_Minus1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (Ucounter1 < 1){
+                }
+                else {
+                    Ucounter1 = Ucounter1 - 1;
+
+                }
+                cube_counter1.setText(String.valueOf(Ucounter1));
+
+
+            }
+        });
+
+        cube_Minus2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (Ucounter2 < 1){
+                }
+                else {
+                    Ucounter2 = Ucounter2 - 1;
+
+                }
+                cube_counter2.setText(String.valueOf(Ucounter2));
+
+
+            }
+        });
+
+        cube_Minus3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (Ucounter3 < 1){
+                }
+                else {
+                    Ucounter3 = Ucounter3 - 1;
+
+                }
+                cube_counter3.setText(String.valueOf(Ucounter3));
+
+
+            }
+        });
+
+        //Finish button
+        finish_Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                navigate();
+
             }
 
-
         });
+
+
+
+
     }
+    public void navigate(){
+
+        Intent intent = new Intent(this, ActivityMain.class);
+        startActivity(intent);
 
 
-
-
-
-
-
-
-    public void onCheckboxClicked(View view) { //this is for all of the checkboxes in the activity
-        //Log.d("hola",String.valueOf(colorwheel));
-        boolean checked = ((CheckBox) view).isChecked();
-        //Log.d("hola",String.valueOf(colorwheel));
-        //check for what checkbox is checked
-        switch (view.getId()) {
-
-
-            case R.id.checkOne: {
-                if (checked) {
-                    checkone = "1";
-                    checker = 1;
-                } else {
-                    checkone = "0";
-                }
-                break;
-            }
-
-            case R.id.check2: {
-                if (checked) {
-
-                    checktwo = "1";
-                    checker = 1;
-                } else {
-
-                    checktwo = "0";
-                }
-                break;
-            }
-
-            case R.id.check3: {
-                if (checked) {
-                    checkthree = "1";
-                    checker = 1;
-
-                } else {
-                    checkthree = "0";
-
-                }
-                break;
-            }
-        }
     }
-
-        public void openMainActivity() {
-
-        if(checker == 1) {
-
-            saveGameData();
-
-            Log.d("Testing", "openMainRan");
-            Intent intent = new Intent(this, ActivityMain.class);
-            startActivity(intent);
-
-            //  saveGameData();
-
-            Toast.makeText(TeleScore.this, "Saved your scores", Toast.LENGTH_LONG).show();
-
-            //TODO this /
-
-
-            Log.d("Night Mode Update", String.valueOf(team_select.show1));
-            X = 1;
-
-        }
-        else{
-            Toast.makeText(TeleScore.this,"Select Correct CheckBoxes", Toast.LENGTH_LONG).show();
-
-        }
-
-        }
-
-
-
-        public void saveGameData() {
-
-      ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
-
-      //  GameData gameData = new GameData(constants.getUser(),"2","3","4", "5", "6", "7", "8", "9"
-       //        , "10", "11", "12", "13", "14", "15", "16");
-
-            SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-
-            String autoCounter1 = scorePrefs.getString("autoOne", "0");
-            String autoCounter2 = scorePrefs.getString("autoTwo", "0");
-            String autoCounter3 = scorePrefs.getString("autoThree", "0");
-            String autoCounter4 = scorePrefs.getString("autoFour", "0");
-            String autoCounter5 = scorePrefs.getString("autoMoved", "0");
-
-           SharedPreferences devicePrefs = getSharedPreferences("edu.phoenixforce.scouting.mobile", MODE_PRIVATE);
-
-           //Removes the need for the getter device ID in constants
-           int deviceIdentifaction = devicePrefs.getInt("edu.phoenixforce.scouting.mobile.DeviceId", 0);
-           String deviceIdNumber = String.valueOf(deviceIdentifaction);
-
-            Log.d("DevNum Pull Function", deviceIdNumber);
-
-
-            GameData gameData = new GameData(scoutname, deviceIdNumber, match, teamnum,
-                    autoCounter5, checkone, String.valueOf(counter), String.valueOf(counter2),
-                    String.valueOf(counter3), autoCounter1, autoCounter2, autoCounter3, autoCounter4,
-                    String.valueOf(counter4), String.valueOf(counter5), String.valueOf(counter6),checktwo, checkthree);
-
-
-
-
-
-      /*      Log.d("tele", text + constants.getDeviceId() +  match + teamnum +
-                    constants.getAutoThree() + constants.getTwelve() + constants.getOne() + constants.getTwo() +
-                constants.getThree() + constants.getAutoOne() + constants.getAutoTwo() +
-                    constants.getFour() + constants.getFive() + constants.getSix()  + constants.getEleven() +
-                    constants.getThirteen());
-
-
-       */
-
-            Log.d("counter5", autoCounter5 + checkone + checktwo + checkthree);
-        SDB.gameDao().insertAll(gameData);
-
 }
-
-public void niceTwo(){}
-
-
-public void nice() {
-    SharedPreferences myPref = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-    SharedPreferences.Editor editor = myPref.edit();
-
-    Log.d("NICE", "nice was called");
-
-    if(myPref.contains("NICE")){
-        nice = myPref.getInt("NICE", 0);
-        nice = nice + 1;
-        editor.putInt("NICE", nice);
-        editor.apply();
-        Log.d("Nice", "+1`");
-
-    }
-
-    else{
-        editor.putInt("NICE", 0);
-        Log.d("Nice", "created`");
-
-    }
-
-    if (nice == 69) {
-        user.setText("NICE: " + teamnum);
-        nice = 0;
-        editor.putInt("NICE", nice);
-        editor.apply();
-        Log.d("Nice", "0`");
-
-    }
-
-
-        //this is a new comment, this better work!
-
-
-    }
-
-
-
-
-
-        }
-
-
-
-
-
-
-
-
-

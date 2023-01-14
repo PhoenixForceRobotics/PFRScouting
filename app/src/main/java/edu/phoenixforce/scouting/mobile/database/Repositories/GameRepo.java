@@ -47,7 +47,7 @@ public class GameRepo {
     // we are creating a async task method to insert new course.
     // I do not believe that this is actaully ever used (Added by Andrew in 2022)
     private static class InsertCourseAsyncTask extends AsyncTask<GameData, Void, Void> {
-        private GameDao gameDao;
+        private final GameDao gameDao;
 
         private InsertCourseAsyncTask(GameDao gameDao) {
             this.gameDao = gameDao;

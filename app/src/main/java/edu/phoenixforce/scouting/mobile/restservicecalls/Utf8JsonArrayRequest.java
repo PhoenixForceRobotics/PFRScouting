@@ -10,11 +10,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public class Utf8JsonArrayRequest extends Request<JSONArray> implements IRequest {
-    private Response.Listener<JSONArray> listener;
-    private Map<String, String> params;
+    private final Response.Listener<JSONArray> listener;
+    private final Map<String, String> params;
     private NetworkResponse networkResponse = null;
 
     public Utf8JsonArrayRequest(String url, Map<String, String> params,
@@ -40,18 +41,16 @@ public class Utf8JsonArrayRequest extends Request<JSONArray> implements IRequest
     @Override
     public Map<String, String> getParams() {
         return params;
-    };
+    }
 
     @Override
     protected Response<JSONArray> parseNetworkResponse(NetworkResponse response) {
         this.networkResponse = response;
         try {
-            String jsonString = new String(response.data, "UTF-8");
+            String jsonString = new String(response.data, StandardCharsets.UTF_8);
 //                    HttpHeaderParser.parseCharset(response.headers));
             return Response.success(new JSONArray(jsonString),
                     HttpHeaderParser.parseCacheHeaders(response));
-        } catch (UnsupportedEncodingException e) {
-            return Response.error(new ParseError(e));
         } catch (JSONException je) {
             return Response.error(new ParseError(je));
         }

@@ -33,7 +33,6 @@ import edu.phoenixforce.scouting.mobile.restservicecalls.ICollectionResponseHand
 import edu.phoenixforce.scouting.mobile.restservicecalls.IObjectResponseHandler;
 
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
-;
 
 public class ConfigActivity extends AppCompatActivity {
 
@@ -136,7 +135,7 @@ public class ConfigActivity extends AppCompatActivity {
         //default.
         if (teamId == 0) {
             TextView txt = (TextView) findViewById(R.id.textTeamInfo);
-            txt.setText(new String());
+            txt.setText("");
             ImageView img = (ImageView) findViewById(R.id.imgTeamLogo);
             img.setImageResource(R.drawable.ic_launcher_background);
             return;

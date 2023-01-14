@@ -43,9 +43,9 @@ public class Configuration {
     private volatile boolean configLoaded = false;
     private int deviceId = 0;
     private int tbaTeamId = 0;
-    private Context context;
+    private final Context context;
     private String tbaLastModified;
-    private SharedPreferences prefs;
+    private final SharedPreferences prefs;
     private RequestQueue requestQueue;
 
     public Configuration(@NonNull Context context) {

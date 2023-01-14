@@ -321,5 +321,5 @@ public class GameData {
     private String DevNum;
 
     @ColumnInfo(name = "TeleNoShow")
-    private String TeleNoShow;
+    private final String TeleNoShow;
 }

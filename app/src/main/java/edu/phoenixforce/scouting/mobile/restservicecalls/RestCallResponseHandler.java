@@ -12,7 +12,7 @@ public abstract class RestCallResponseHandler<T> implements IResponseHandler<Str
     private final Class<T> theClass;
     private T responseObject;
     private List<T> collectionResponseObject;
-    private IResponseHandler<T> responder;
+    private final IResponseHandler<T> responder;
 
     public RestCallResponseHandler(Class<T> theClass, IResponseHandler<T> responder) {
         this.theClass = theClass;
@@ -33,8 +33,7 @@ public abstract class RestCallResponseHandler<T> implements IResponseHandler<Str
                 responder.onResponse(headers, responseObject);
             }
         } catch (Exception e) {
-            VolleyError error = new VolleyError();
-            error.initCause(e);
+            VolleyError error = new VolleyError(e);
             responder.onError(error);
         }
     }
@@ -46,10 +45,10 @@ public abstract class RestCallResponseHandler<T> implements IResponseHandler<Str
 
     protected List<T> getCollectionResponseObject(String restStringResponse, Class<T> theClass) throws Exception {
         return new ArrayList<T>();
-    };
+    }
 
     protected T getResponseObject(String restStringResponse, Class<T> theClass) throws Exception {
         return theClass.newInstance();
-    };
+    }
 
 }

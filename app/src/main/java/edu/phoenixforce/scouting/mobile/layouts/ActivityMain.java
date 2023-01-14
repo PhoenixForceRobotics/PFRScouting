@@ -315,7 +315,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case Constants.EXTERNAL_FILE_STORAGE_PERMISSION:
                 if(grantResults[0] == PackageManager.PERMISSION_GRANTED){

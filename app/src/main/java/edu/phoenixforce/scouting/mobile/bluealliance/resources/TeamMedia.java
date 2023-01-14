@@ -43,7 +43,7 @@ public class TeamMedia {
     private  String viewUrl;
 
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public String getType() {
         return type;
