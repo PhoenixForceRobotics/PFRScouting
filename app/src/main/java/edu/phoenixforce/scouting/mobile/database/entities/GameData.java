@@ -22,11 +22,11 @@ public class GameData {
                     String TeleBottomCones, String TeleTopCubes, String TeleMidCubes, String TeleBottomCubes,
                     String Defence, String AutoMoved, String AutoLeftCommunity, String AutoOnStation,
                     String AutoLevelOnStation, String TeleOnStation, String TeleLevelOnStation, String TeleMoved,
-                    String TeleBroke, String TeleNoShow, String TBox1, String TBox2, String TBox3, String TBox4,
-                    String TBox5, String TBox6, String TBox7, String TBox8, String TBox9, String MBox1, String MBox2,
-                    String MBox3, String MBox4, String MBox5, String MBox6, String MBox7, String MBox8, String MBox9,
-                    String BBox1, String BBox2, String BBox3, String BBox4, String BBox5, String BBox6, String BBox7,
-                    String BBox8, String BBox9) {
+                    String TeleBroke, String TeleNoShow, String TBoxOne, String TBoxTwo, String TBoxThree, String TBoxFour,
+                    String TBoxFive, String TBoxSix, String TBoxSeven, String TBoxEight, String TBoxNine, String MBoxOne, String MBoxTwo,
+                    String MBoxThree, String MBoxFour, String MBoxFive, String MBoxSix, String MBoxSeven, String MBoxEight, String MBoxNine,
+                    String BBoxOne, String BBoxTwo, String BBoxThree, String BBoxFour, String BBoxFive, String BBoxSix, String BBoxSeven,
+                    String BBoxEight, String BBoxNine) {
         //Create our getters and setters - will we ever use them tho???
         //TODO THIS ^
 
@@ -57,33 +57,33 @@ public class GameData {
         this.TeleMoved = TeleMoved;
         this.TeleBroke = TeleBroke;
         this.TeleNoShow = TeleNoShow;
-        this.TBox1 = TBox1;
-        this.TBox2 = TBox2;
-        this.TBox3 = TBox3;
-        this.TBox4 = TBox4;
-        this.TBox5 = TBox5;
-        this.TBox6 = TBox6;
-        this.TBox7 = TBox7;
-        this.TBox8 = TBox8;
-        this.TBox9 = TBox9;
-        this.MBox1 = MBox1;
-        this.MBox2 = MBox2;
-        this.MBox3 = MBox3;
-        this.MBox4 = MBox4;
-        this.MBox5 = MBox5;
-        this.MBox6 = MBox6;
-        this.MBox7 = MBox7;
-        this.MBox8 = MBox8;
-        this.MBox9 = MBox9;
-        this.BBox1 = BBox1;
-        this.BBox2 = BBox2;
-        this.BBox3 = BBox3;
-        this.BBox4 = BBox4;
-        this.BBox5 = BBox5;
-        this.BBox6 = BBox6;
-        this.BBox7 = BBox7;
-        this.BBox8 = BBox8;
-        this.BBox9 = BBox9;
+        this.TBoxOne = TBoxOne;
+        this.TBoxTwo = TBoxTwo;
+        this.TBoxThree = TBoxThree;
+        this.TBoxFour = TBoxFour;
+        this.TBoxFive = TBoxFive;
+        this.TBoxSix = TBoxSix;
+        this.TBoxSeven = TBoxSeven;
+        this.TBoxEight = TBoxEight;
+        this.TBoxNine = TBoxNine;
+        this.MBoxOne = MBoxOne;
+        this.MBoxTwo = MBoxTwo;
+        this.MBoxThree = MBoxThree;
+        this.MBoxFour = MBoxFour;
+        this.MBoxFive = MBoxFive;
+        this.MBoxSix = MBoxSix;
+        this.MBoxSeven = MBoxSeven;
+        this.MBoxEight = MBoxEight;
+        this.MBoxNine = MBoxNine;
+        this.BBoxOne = BBoxOne;
+        this.BBoxTwo = BBoxTwo;
+        this.BBoxThree = BBoxThree;
+        this.BBoxFour = BBoxFour;
+        this.BBoxFive = BBoxFive ;
+        this.BBoxSix = BBoxSix;
+        this.BBoxSeven = BBoxSeven;
+        this.BBoxEight = BBoxEight;
+        this.BBoxNine = BBoxNine;
 
 
 
@@ -276,197 +276,187 @@ public class GameData {
         TeleBroke = teleBroke;
     }
 
-    public String getTBox1() {
-        return TBox1;
+    public String getTBoxOne() {
+        return TBoxOne;
     }
 
-    public void setTBox1(String tBox1) {
-        TBox1 = tBox1;
+    public void setTBoxOne(String tBoxOne) {
+        TBoxOne = tBoxOne;
     }
 
-    public String getTBox2() {
-        return TBox2;
+    public String getTBoxTwo() {
+        return TBoxTwo;
     }
 
-    public void setTBox2(String tBox2) {
-        TBox2 = tBox2;
+    public void setTBoxTwo(String tBoxTwo) {
+        TBoxTwo = tBoxTwo;
     }
 
-    public String getTBox3() { return TBox3; }
+    public String getTBoxThree() { return TBoxTwo; }
 
-    public void setTBox3(String tBox3) {
-        TBox3 = tBox3;
+    public void setTBoxThree(String tBoxThree) { TBoxThree = tBoxThree; }
+
+    public String getTBoxFour() {
+        return TBoxFour;
     }
 
-    public String getTBox4() {
-        return TBox4;
+    public void setTBoxFour(String tBoxFour) { TBoxFour = tBoxFour; }
+
+    public String getTBoxFive() { return TBoxFive; }
+
+    public void setTBoxFive(String tBoxFive) {
+        TBoxFive = tBoxFive;
     }
 
-    public void setTBox4(String tBox4) {
-        TBox4 = tBox4;
+    public String getTBoxSix() {
+        return TBoxSix;
     }
 
-    public String getTBox5() {
-        return TBox5;
+    public void setTBoxSix(String tBoxSix) {
+        TBoxSix = tBoxSix;
     }
 
-    public void setTBox5(String tBox5) {
-        TBox5 = tBox5;
+    public String getTBoxSeven() {
+        return TBoxSeven;
     }
 
-    public String getTBox6() {
-        return TBox6;
+    public void setTBoxSeven(String tBoxSeven) { TBoxSeven = tBoxSeven; }
+
+    public String getTBoxEight() {
+        return TBoxEight;
     }
 
-    public void setTBox6(String tBox6) {
-        TBox6 = tBox6;
+    public void setTBoxEight(String tBoxEight) { TBoxEight = tBoxEight; }
+
+    public String getTBoxNine() {
+        return TBoxNine;
     }
 
-    public String getTBox7() {
-        return TBox7;
+    public void setTBoxNine(String tBoxNine) {
+        TBoxNine = tBoxNine;
     }
 
-    public void setTBox7(String tBox7) { TBox7 = tBox7; }
-
-    public String getTBox8() {
-        return TBox8;
+    public String getMBoxOne() {
+        return MBoxOne;
     }
 
-    public void setTBox8(String tBox8) {
-        TBox8 = tBox8;
+    public void setMBoxOne(String mBoxOne) {
+        MBoxOne = mBoxOne;
     }
 
-    public String getTBox9() {
-        return TBox9;
+    public String getMBoxTwo() {
+        return MBoxTwo;
     }
 
-    public void setTBox9(String tBox9) {
-        TBox9 = tBox9;
+    public void setMBoxTwo(String mBoxTwo) {
+        MBoxTwo = mBoxTwo;
     }
 
-    public String geMBox1() {
-        return MBox1;
+    public String getMBoxThree() {
+        return MBoxThree;
     }
 
-    public void setMBox1(String mBox1) {
-        MBox1 = mBox1;
+    public void setMBoxThree(String mBoxThree) {
+        MBoxThree = mBoxThree;
     }
 
-    public String geMBox2() {
-        return MBox2;
+    public String getMBoxFour() {
+        return MBoxFour;
     }
 
-    public void setMBox2(String mBox2) {
-        MBox2 = mBox2;
+    public void setMBoxFour(String mBoxFour) {
+        MBoxFour = mBoxFour;
     }
 
-    public String geMBox3() {
-        return MBox3;
+    public String getMBoxFive() {
+        return MBoxFive;
     }
 
-    public void setMBox3(String mBox3) {
-        MBox3 = mBox3;
+    public void setMBoxFive(String mBoxFive) {
+        MBoxFive = mBoxFive;
     }
 
-    public String geMBox4() {
-        return MBox4;
+    public String getMBoxSix() {
+        return MBoxSix;
     }
 
-    public void setMBox4(String mBox4) {
-        MBox4 = mBox4;
+    public void setMBoxSix(String mBoxSix) {
+        MBoxSix = mBoxSix;
     }
 
-    public String geMBox5() {
-        return MBox5;
+    public String getMBoxSeven() {
+        return MBoxSeven;
     }
 
-    public void setMBox5(String mBox5) {
-        MBox5 = mBox5;
+    public void setMBoxSeven(String mBoxSeven) {
+        MBoxSeven = mBoxSeven;
     }
 
-    public String geMBox6() {
-        return MBox6;
+    public String getMBoxEight() {
+        return MBoxEight;
     }
 
-    public void setMBox6(String mBox6) {
-        MBox6 = mBox6;
+    public void setMBoxEight(String mBoxEight) {
+        MBoxEight = mBoxEight;
     }
 
-    public String geMBox7() {
-        return MBox7;
+    public String getMBoxNine() {
+        return MBoxNine;
     }
 
-    public void setMBox7(String mBox7) {
-        MBox7 = mBox7;
+    public void setMBoxNine(String mBoxNine) {
+        MBoxNine = mBoxNine;
     }
 
-    public String geMBox8() {
-        return MBox8;
+    public String getBBoxOne() {
+        return BBoxOne;
     }
 
-    public void setMBox8(String mBox8) {
-        MBox8 = mBox8;
+    public void setBBoxOne(String bBoxOne) { BBoxOne = bBoxOne; }
+
+    public String getBBoxTwo() {
+        return BBoxTwo;
     }
 
-    public String geMBox9() {
-        return MBox9;
+    public void setBBoxTwo(String bBoxTwo) { BBoxTwo = bBoxTwo; }
+
+    public String getBBoxThree() {
+        return BBoxThree;
     }
 
-    public void setMBox9(String mBox9) {
-        MBox9 = mBox9;
+    public void setBBoxThree(String bBoxThree) { BBoxThree = bBoxThree; }
+
+    public String getBBoxFour() {
+        return BBoxFour;
     }
 
-    public String geBBox1() {
-        return BBox1;
+    public void setBBoxFour(String bBoxFour) { BBoxFour = bBoxFour; }
+
+    public String getBBoxFive() { return BBoxFive; }
+
+    public void setBBoxFive(String bBoxFive) { BBoxFive = bBoxFive; }
+
+    public String getBBoxSix() {
+        return BBoxSix;
     }
 
-    public void setBBox1(String bBox1) { BBox1 = bBox1; }
+    public void setBBoxSix(String bBoxSix) { BBoxSix = bBoxSix; }
 
-    public String geBBox2() {
-        return BBox2;
+    public String getBBoxSeven() { return BBoxSeven; }
+
+    public void setBBoxSeven(String bBoxSeven) { BBoxSeven = bBoxSeven; }
+
+    public String getBBoxEight() {
+        return BBoxEight;
     }
 
-    public void setBBox2(String bBox2) { BBox2 = bBox2; }
+    public void setBBoxEight(String bBoxEight) { BBoxEight = bBoxEight; }
 
-    public String geBBox3() {
-        return BBox3;
+    public String getBBoxNine() {
+        return BBoxNine;
     }
 
-    public void setBBox3(String bBox3) { BBox3 = bBox3; }
-
-    public String geBBox4() {
-        return BBox4;
-    }
-
-    public void setBBox4(String bBox4) { BBox4 = bBox4; }
-
-    public String geBBox5() { return BBox5; }
-
-    public void setBBox5(String bBox5) { BBox5 = bBox5; }
-
-    public String geBBox6() {
-        return BBox6;
-    }
-
-    public void setBBox6(String bBox6) { BBox6 = bBox6; }
-
-    public String geBBox7() {
-        return BBox7;
-    }
-
-    public void setBBox7(String bBox7) { BBox7 = bBox7; }
-
-    public String geBBox8() {
-        return BBox8;
-    }
-
-    public void setBBox8(String bBox8) { BBox8 = bBox8; }
-
-    public String geBBox9() {
-        return BBox9;
-    }
-
-    public void setBBox9(String bBox9) { BBox9 = bBox9; }
+    public void setBBoxNine(String bBoxNine) { BBoxNine = bBoxNine; }
 
     public String getTeleNoShow() {
         return TeleNoShow;
@@ -556,84 +546,84 @@ public class GameData {
     @ColumnInfo(name = "TeleNoShow")
     private String TeleNoShow;
 
-    @ColumnInfo(name = "TBox1")
-    private String TBox1;
+    @ColumnInfo(name = "TBoxOne")
+    private String TBoxOne;
 
-    @ColumnInfo(name = "TBox2")
-    private String TBox2;
+    @ColumnInfo(name = "TBoxTwo")
+    private String TBoxTwo;
 
-    @ColumnInfo(name = "TBox3")
-    private String TBox3;
+    @ColumnInfo(name = "TBoxThree")
+    private String TBoxThree;
 
-    @ColumnInfo(name = "TBox4")
-    private String TBox4;
+    @ColumnInfo(name = "TBoxFour")
+    private String TBoxFour;
 
-    @ColumnInfo(name = "TBox5")
-    private String TBox5;
+    @ColumnInfo(name = "TBoxFive")
+    private String TBoxFive;
 
-    @ColumnInfo(name = "TBox6")
-    private String TBox6;
+    @ColumnInfo(name = "TBoxSix")
+    private String TBoxSix;
 
-    @ColumnInfo(name = "TBox7")
-    private String TBox7;
+    @ColumnInfo(name = "TBoxSeven")
+    private String TBoxSeven;
 
-    @ColumnInfo(name = "TBox8")
-    private String TBox8;
+    @ColumnInfo(name = "TBoxEight")
+    private String TBoxEight;
 
-    @ColumnInfo(name = "TBox9")
-    private String TBox9;
+    @ColumnInfo(name = "TBoxNine")
+    private String TBoxNine;
 
-    @ColumnInfo(name = "MBox1")
-    private String MBox1;
+    @ColumnInfo(name = "MBoxOne")
+    private String MBoxOne;
 
-    @ColumnInfo(name = "MBox2")
-    private String MBox2;
+    @ColumnInfo(name = "MBoxTwo")
+    private String MBoxTwo;
 
-    @ColumnInfo(name = "MBox3")
-    private String MBox3;
+    @ColumnInfo(name = "MBoxThree")
+    private String MBoxThree;
 
-    @ColumnInfo(name = "MBox4")
-    private String MBox4;
+    @ColumnInfo(name = "MBoxFour")
+    private String MBoxFour;
 
-    @ColumnInfo(name = "MBox5")
-    private String MBox5;
+    @ColumnInfo(name = "MBoxFive")
+    private String MBoxFive ;
 
-    @ColumnInfo(name = "MBox6")
-    private String MBox6;
+    @ColumnInfo(name = "MBoxSix")
+    private String MBoxSix;
 
-    @ColumnInfo(name = "MBox7")
-    private String MBox7;
+    @ColumnInfo(name = "MBoxSeven")
+    private String MBoxSeven;
 
-    @ColumnInfo(name = "MBox8")
-    private String MBox8;
+    @ColumnInfo(name = "MBoxEight")
+    private String MBoxEight;
 
-    @ColumnInfo(name = "MBox9")
-    private String MBox9;
+    @ColumnInfo(name = "MBoxNine")
+    private String MBoxNine;
 
-    @ColumnInfo(name = "BBox1")
-    private String BBox1;
+    @ColumnInfo(name = "BBoxOne")
+    private String BBoxOne;
 
-    @ColumnInfo(name = "BBox2")
-    private String BBox2;
+    @ColumnInfo(name = "BBoxTwo")
+    private String BBoxTwo;
 
-    @ColumnInfo(name = "BBox3")
-    private String BBox3;
+    @ColumnInfo(name = "BBoxThree")
+    private String BBoxThree;
 
-    @ColumnInfo(name = "BBox4")
-    private String BBox4;
+    @ColumnInfo(name = "BBoxFour")
+    private String BBoxFour;
 
-    @ColumnInfo(name = "BBox5")
-    private String BBox5;
+    @ColumnInfo(name = "BBoxFive")
+    private String BBoxFive;
 
-    @ColumnInfo(name = "BBox6")
-    private String BBox6;
+    @ColumnInfo(name = "BBoxSix")
+    private String BBoxSix;
 
-    @ColumnInfo(name = "BBox7")
-    private String BBox7;
+    @ColumnInfo(name = "BBoxSeven")
+    private String BBoxSeven;
 
-    @ColumnInfo(name = "BBox8")
-    private String BBox8;
+    @ColumnInfo(name = "BBoxEight")
+    private String BBoxEight;
 
-    @ColumnInfo(name = "BBox9")
-    private String BBox9;
+    @ColumnInfo(name = "BBoxNine")
+    private String BBoxNine;
 }

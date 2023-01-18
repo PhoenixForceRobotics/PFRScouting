@@ -104,86 +104,86 @@ public interface GameDao {
     @Query("SELECT TeleNoShow FROM gameData")
     List<String> getTeleNoShow();
 
-    @Query("SELECT TBox1 FROM gameData")
-    List<String> getTBox1();
+    @Query("SELECT TBoxOne FROM gameData")
+    List<String> getTBoxOne();
 
-    @Query("SELECT TBox2 FROM gameData")
-    List<String> getTBox2();
+    @Query("SELECT TBoxTwo FROM gameData")
+    List<String> getTBoxTwo();
 
-    @Query("SELECT TBox3 FROM gameData")
-    List<String> getTBox3();
+    @Query("SELECT TBoxThree FROM gameData")
+    List<String> getTBoxThree();
 
-    @Query("SELECT TBox4 FROM gameData")
-    List<String> getTBox4();
+    @Query("SELECT TBoxFour FROM gameData")
+    List<String> getTBoxFour();
 
-    @Query("SELECT TBox5 FROM gameData")
-    List<String> getTBox5();
+    @Query("SELECT TBoxFive FROM gameData")
+    List<String> getTBoxFive();
 
-    @Query("SELECT TBox6 FROM gameData")
-    List<String> getTBox6();
+    @Query("SELECT TBoxSix FROM gameData")
+    List<String> getTBoxSix();
 
-    @Query("SELECT TBox7 FROM gameData")
-    List<String> getTBox7();
+    @Query("SELECT TBoxSeven FROM gameData")
+    List<String> getTBoxSeven();
 
-    @Query("SELECT TBox8 FROM gameData")
-    List<String> getTBox8();
+    @Query("SELECT TBoxEight FROM gameData")
+    List<String> getTBoxEight();
 
-    @Query("SELECT TBox9 FROM gameData")
-    List<String> getTBox9();
+    @Query("SELECT TBoxNine FROM gameData")
+    List<String> getTBoxNine();
 
-    @Query("SELECT MBox1 FROM gameData")
-    List<String> getMBox1();
+    @Query("SELECT MBoxOne FROM gameData")
+    List<String> getMBoxOne();
 
-    @Query("SELECT MBox2 FROM gameData")
-    List<String> getMBox2();
+    @Query("SELECT MBoxTwo FROM gameData")
+    List<String> getMBoxTwo();
 
-    @Query("SELECT MBox3 FROM gameData")
-    List<String> getMBox3();
+    @Query("SELECT MBoxThree FROM gameData")
+    List<String> getMBoxThree();
 
-    @Query("SELECT MBox4 FROM gameData")
-    List<String> getMBox4();
+    @Query("SELECT MBoxFour FROM gameData")
+    List<String> getMBoxFour();
 
-    @Query("SELECT MBox5 FROM gameData")
-    List<String> getMBox5();
+    @Query("SELECT MBoxFive FROM gameData")
+    List<String> getMBoxFive();
 
-    @Query("SELECT MBox6 FROM gameData")
-    List<String> getMBox6();
+    @Query("SELECT MBoxSix FROM gameData")
+    List<String> getMBoxSix();
 
-    @Query("SELECT MBox7 FROM gameData")
-    List<String> getMBox7();
+    @Query("SELECT MBoxSeven FROM gameData")
+    List<String> getMBoxSeven();
 
-    @Query("SELECT MBox8 FROM gameData")
-    List<String> getMBox8();
+    @Query("SELECT MBoxEight FROM gameData")
+    List<String> getMBoxEight();
 
-    @Query("SELECT MBox9 FROM gameData")
-    List<String> getMBox9();
+    @Query("SELECT MBoxNine FROM gameData")
+    List<String> getMBoxNine();
 
-    @Query("SELECT BBox1 FROM gameData")
-    List<String> getBBox1();
+    @Query("SELECT BBoxOne FROM gameData")
+    List<String> getBBoxOne();
 
-    @Query("SELECT BBox2 FROM gameData")
-    List<String> getBBox2();
+    @Query("SELECT BBoxTwo FROM gameData")
+    List<String> getBBoxTwo();
 
-    @Query("SELECT BBox3 FROM gameData")
-    List<String> getBBox3();
+    @Query("SELECT BBoxThree FROM gameData")
+    List<String> getBBoxThree();
 
-    @Query("SELECT BBox4 FROM gameData")
-    List<String> getBBox4();
+    @Query("SELECT BBoxFour FROM gameData")
+    List<String> getBBoxFour();
 
-    @Query("SELECT BBox5 FROM gameData")
-    List<String> getBBox5();
+    @Query("SELECT BBoxFive FROM gameData")
+    List<String> getBBoxFive();
 
-    @Query("SELECT BBox6 FROM gameData")
-    List<String> getBBox6();
+    @Query("SELECT BBoxSix FROM gameData")
+    List<String> getBBoxSix();
 
-    @Query("SELECT BBox7 FROM gameData")
-    List<String> getBBox7();
+    @Query("SELECT BBoxSeven FROM gameData")
+    List<String> getBBoxSeven();
 
-    @Query("SELECT BBox8 FROM gameData")
-    List<String> getBBox8();
+    @Query("SELECT BBoxEight FROM gameData")
+    List<String> getBBoxEight();
 
-    @Query("SELECT BBox9 FROM gameData")
-    List<String> getBBox9();
+    @Query("SELECT BBoxNine FROM gameData")
+    List<String> getBBoxNine();
 
 
     //used by Admin to clear data after a pull.
