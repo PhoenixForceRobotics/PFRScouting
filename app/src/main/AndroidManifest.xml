@@ -4,6 +4,7 @@
     package="com.example.fyrebirdscout11">
 
     <uses-permission android:name="CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -26,11 +27,11 @@
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ScoreView" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore"
-        />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityPitScout"/>
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.EActivity" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.QRCode" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.QRCodeScanner" />
         <activity
             android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityPitView"

@@ -83,7 +83,7 @@ public class login extends AppCompatActivity {
                 , "Dalen", "John", "Ryan", "Elena", "Jonathan", "Anan", "Jordan", "Saturn", "Oskar", "Maria", "Maxwell",
                 "Colm", "Esther", "Francesca", "Seven", "Lauren's Brother", "Cap's Sister", "Raf", "Lars", "Sarah", "Trent", "Regan", "Taylor", "Allia"
                 , "Kameron", "Victor", "Alex Programming", "Conner", "Lincoln", "Alejandra", "Harpreet", "Jacob", "Noam", "Guthrie", "Jenny",
-                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "Seiji", "Josue",  "PitUse, QR Scanner"};
+                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "Seiji", "Josue",  "PitUse", "QRScanner"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
