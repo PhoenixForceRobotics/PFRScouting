@@ -10,6 +10,7 @@
     <uses-feature android:name="andriod.hardware.camera"
                    andriod:required="true" />
 
+
     <application
         android:name="edu.phoenixforce.scouting.mobile.layouts.ScoutingApplication"
         android:allowBackup="true"
@@ -18,11 +19,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
         >
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.team_select"></activity>
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ScoreView" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.QRCodeScanner" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore"
         />
