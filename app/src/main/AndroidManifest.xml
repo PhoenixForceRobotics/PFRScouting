@@ -3,12 +3,14 @@
     xmlns:andriod="http://schemas.android.com/apk/distribution"
     package="com.example.fyrebirdscout11">
 
-    <uses-permission android:name="CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-feature android:name="andriod.hardware.camera"
+    <uses-feature android:name="android.hardware.camera"
                    andriod:required="true" />
+
 
     <application
         android:name="edu.phoenixforce.scouting.mobile.layouts.ScoutingApplication"
@@ -18,17 +20,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
         >
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.team_select"></activity>
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ScoreView" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.Settings" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.QRCodeScanner" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.AutoScore" />
-        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore"
-        />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.TeleScore" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityPitScout"/>
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.EActivity" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.QRCode" />
+        <activity android:name="edu.phoenixforce.scouting.mobile.layouts.QRCodeScanner" />
         <activity
             android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityMain" />
         <activity android:name="edu.phoenixforce.scouting.mobile.layouts.ActivityPitView"
