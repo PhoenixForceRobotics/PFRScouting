@@ -2,11 +2,13 @@ package edu.phoenixforce.scouting.mobile.layouts;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.VIBRATE;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Display;
@@ -19,6 +21,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import edu.phoenixforce.scouting.mobile.common.Constants;
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 import eu.livotov.labs.android.camview.ScannerLiveView;
 import eu.livotov.labs.android.camview.scanner.decoder.zxing.ZXDecoder;
 
@@ -27,17 +31,25 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.example.fyrebirdscout11.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.List;
 
     public class QRCodeScanner extends AppCompatActivity {
         private ScannerLiveView camera;
         private TextView scannedTV;
+        private FloatingActionButton fab;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.qr_code_scanner);
-
+            FloatingActionButton fab = findViewById(R.id.fab);
+            final QRCodeScanner thisActivity = this;
             // check permission method is to check that the
             // camera permission is granted by user or not.
             // request permission method is to request the
@@ -79,9 +91,41 @@ import java.util.List;
                     // qr code and the data from qr code is
                     // stored in data in string format.
                     scannedTV.setText(data);
+
+                    fab.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+
+
+                            if (ContextCompat.checkSelfPermission(thisActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                                    != PackageManager.PERMISSION_GRANTED) {
+
+                                if (ActivityCompat.shouldShowRequestPermissionRationale(thisActivity,
+                                        Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                                    Snackbar.make(fab, "We can't copy the database without permission to store it to your external storage.",
+                                            Snackbar.LENGTH_INDEFINITE).setAction("Action", null).show();
+                                    // No explanation needed; request the permission
+                                    String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                                    ActivityCompat.requestPermissions(thisActivity, permissions, Constants.EXTERNAL_FILE_STORAGE_PERMISSION);
+
+                                } else {
+                                    // No explanation needed; request the permission
+                                    String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                                    ActivityCompat.requestPermissions(thisActivity, permissions, Constants.EXTERNAL_FILE_STORAGE_PERMISSION);
+                                }
+                            } else {
+                                copyDatabase();
+                            }
+
+
+                        }
+                    });
+
+                    }
+                    });
                 }
-            });
-        }
+
 
         @Override
         protected void onResume() {
@@ -134,6 +178,40 @@ import java.util.List;
                     Toast.makeText(this, "Permission Denied \n You cannot use app without providing permission", Toast.LENGTH_SHORT).show();
                 }
             }
+        }
+        private void copyDatabase() {
+            try
+            {
+
+                File sourceDb = new File(getApplicationContext().getDatabasePath(ScoreDataBase.DBNAME).getAbsolutePath());
+                File targetDb = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/"
+                        + ScoreDataBase.DBNAME + "_" + Configuration.getInstance().getTbaTeamId() + "_"
+                        + Configuration.getInstance().getDeviceId() + ".db");
+
+                FileInputStream fis = new FileInputStream(sourceDb);
+                FileOutputStream fos = new FileOutputStream(targetDb);
+
+                byte[] buffer = new byte[1024];
+                int length;
+                while ((length = fis.read(buffer))>0){
+                    fos.write(buffer, 0, length);
+                }
+
+                // Close the streams
+                fos.flush();
+                fos.close();
+                fis.close();
+
+                Snackbar.make(this.findViewById(R.id.fab), "Copy complete.", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
+            }
+            catch (Exception e) {
+                Snackbar.make(findViewById(R.id.fab), "Exception copying data " + e.getMessage(), Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+
+
         }
     }
 
