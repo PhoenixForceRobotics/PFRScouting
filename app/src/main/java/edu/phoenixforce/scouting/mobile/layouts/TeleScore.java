@@ -682,7 +682,14 @@ public class TeleScore extends AppCompatActivity{
 
             Log.d("DevNum Pull Function", deviceIdNumber);
 
+            GameData gameData = new GameData("L", "1", "1", "1","1", "1","1", "1",
+                    "1", "1", "1", "1", "1", "1", "1",
+                    "1", "1","1", "1","1", "1","1", "1",
+                    "1","1", "1","1" ,"1" ,"1","1" ,"1" ,"1" ,"1" , "1",
+                    "1","1","1" ,"1" ,"1" ,"1" ,"1" ,"1" ,"1" ,"1" ,"1",
+                    "1","1", "1", "1", "1", "1", "1", "1");
 
+            SDB.gameDao().insertAll(gameData);
             //GameData gameData = new GameData(scoutname, deviceIdNumber, match, teamnum,
                     //autoCounter5, checkone, String.valueOf(counter), String.valueOf(counter2),
                     //String.valueOf(counter3), autoCounter1, autoCounter2, autoCounter3, autoCounter4,

@@ -209,7 +209,14 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         qrCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openQRCode();
+                if(role == 3){
+
+                    openQRCodeScanner();
+                }
+                else {
+
+                    openQRCode();
+                }
             }
         });
 
@@ -293,6 +300,11 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
             Intent intent = new Intent(this, QRCode.class);
             startActivity(intent);
 
+        }
+
+        public void openQRCodeScanner() {
+            Intent intent = new Intent(this, QRCodeScanner.class);
+            startActivity(intent);
         }
 
         public void openTeleScore () {

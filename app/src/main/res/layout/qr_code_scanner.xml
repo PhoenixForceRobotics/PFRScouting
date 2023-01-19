@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.phoenixforce.scouting.mobile.layouts.QRCodeScanner">
+
+    <!--Frame layout is required as we are using camera view-->
+    <!--Below is the scannerliveview which will scan QR code-->
+    <eu.livotov.labs.android.camview.ScannerLiveView
+        android:id="@+id/camview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/picture1" />
+    </eu.livotov.labs.android.camview.ScannerLiveView>
+
+    <!--TextView to display the scanned data-->
+    <TextView
+        android:id="@+id/idTVscanned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:textColor="@color/font" />
+
+</FrameLayout>
