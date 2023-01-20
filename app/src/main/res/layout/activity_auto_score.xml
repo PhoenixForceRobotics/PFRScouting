@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -22,149 +22,72 @@
         android:layout_marginBottom="550dp"
         android:background="?android:attr/listDivider" />-->
 
-    <CheckBox
-        android:id="@+id/moved"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
+    <Button
+        android:id="@+id/finishedbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
-        android:text="Moved "
-        android:textColor="#FFFFFF"
+        android:text="Tele-Op"
+        android:textColor="#FFFF"
         app:autoSizeTextType="uniform"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="147dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline69"
+        app:layout_constraintEnd_toStartOf="@+id/guideline71"
+        app:layout_constraintStart_toStartOf="@+id/guideline70"
+        app:layout_constraintTop_toTopOf="@+id/guideline68"
+        tools:text="Tele-Op" />
 
-    <CheckBox
-        android:id="@+id/moved4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="@font/nasalization_rg"
-        android:text="Moved "
-        android:textColor="#FFFFFF"
-        app:autoSizeTextType="uniform"
-        tools:layout_editor_absoluteX="-13dp"
-        tools:layout_editor_absoluteY="380dp" />
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="373dp"
+        tools:layout_editor_absoluteY="48dp" />
 
-    <CheckBox
-        android:id="@+id/moved5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="@font/nasalization_rg"
-        android:text="Moved "
-        android:textColor="#FFFFFF"
-        app:autoSizeTextType="uniform"
-        tools:layout_editor_absoluteX="-15dp"
-        tools:layout_editor_absoluteY="339dp" />
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="373dp"
+        tools:layout_editor_absoluteY="48dp" />
 
-    <CheckBox
-        android:id="@+id/moved6"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline68"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="@font/nasalization_rg"
-        android:text="Moved "
-        android:textColor="#FFFFFF"
-        app:autoSizeTextType="uniform"
-        tools:layout_editor_absoluteX="-9dp"
-        tools:layout_editor_absoluteY="291dp" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.87" />
 
-    <CheckBox
-        android:id="@+id/moved7"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline69"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="@font/nasalization_rg"
-        android:text="Moved "
-        android:textColor="#FFFFFF"
-        app:autoSizeTextType="uniform"
-        tools:layout_editor_absoluteX="-11dp"
-        tools:layout_editor_absoluteY="243dp" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98632014" />
 
-    <CheckBox
-        android:id="@+id/moved8"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline70"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="@font/nasalization_rg"
-        android:text="Moved "
-        android:textColor="#FFFFFF"
-        app:autoSizeTextType="uniform"
-        tools:layout_editor_absoluteX="-15dp"
-        tools:layout_editor_absoluteY="195dp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3138686" />
 
-    <CheckBox
-        android:id="@+id/moved9"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline71"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="@font/nasalization_rg"
-        android:text="Moved "
-        android:textColor="#FFFFFF"
-        app:autoSizeTextType="uniform"
-        tools:layout_editor_absoluteX="-10dp"
-        tools:layout_editor_absoluteY="94dp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7542579" />
 
-    <CheckBox
-        android:id="@+id/moved2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="@font/nasalization_rg"
-        android:text="Moved "
-        android:textColor="#FFFFFF"
-        app:autoSizeTextType="uniform"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="-3dp" />
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/guideline78"
+        tools:layout_editor_absoluteY="535dp" />
 
     <CheckBox
         android:id="@+id/moved3"
@@ -184,18 +107,151 @@
         tools:layout_editor_absoluteX="-5dp"
         tools:layout_editor_absoluteY="46dp" />
 
-    <Button
-        android:id="@+id/finishedbutton"
+    <CheckBox
+        android:id="@+id/moved2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
-        android:text="Tele-Op"
-        android:textColor="#FFFF"
+        android:text="Moved "
+        android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
-        tools:layout_editor_absoluteX="282dp"
-        tools:layout_editor_absoluteY="631dp"
-        tools:text="Tele-Op" />
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:checked="true"
+        android:text="Moved"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#DC0707"
+        android:textColorHint="#D80D0D"
+        android:textColorLink="#CC0909"
+        app:layout_constraintBottom_toTopOf="@+id/guideline81"
+        app:layout_constraintEnd_toStartOf="@+id/guideline84"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline83"
+        app:layout_constraintTop_toTopOf="@+id/guideline80"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline81"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline83"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0691358" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline84"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.47901234" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:checked="true"
+        android:text="Left community"
+        android:textColor="@color/OffWhite"
+        app:layout_constraintBottom_toTopOf="@+id/guideline86"
+        app:layout_constraintEnd_toStartOf="@+id/guideline84"
+        app:layout_constraintStart_toStartOf="@+id/guideline83"
+        app:layout_constraintTop_toTopOf="@+id/guideline85"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.61" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.23703703" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6419753" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:clickable="false"
+        android:text="On station"
+        android:textColor="@color/OffWhite"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="323dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="340dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="344dp" />
 
 
     <!-- //Checkboxes
