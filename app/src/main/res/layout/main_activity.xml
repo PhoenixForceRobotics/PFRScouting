@@ -73,7 +73,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline26"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@mipmap/pfrlogolight" />
+        app:srcCompat="@drawable/phoenix_force_logo_charged_up_editioncopy" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -355,7 +355,9 @@
         android:id="@+id/QRcode"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
         android:text="QRcode"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toStartOf="@+id/guideline36"
         app:layout_constraintHorizontal_bias="0.0"
