@@ -997,7 +997,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline142"
         app:layout_constraintStart_toStartOf="@+id/guideline141"
         app:layout_constraintTop_toTopOf="@+id/guideline143"
-        app:srcCompat="@mipmap/pfrlogolight" />
+        app:srcCompat="@drawable/phoenix_force_logo_charged_up_editioncopy" />
 
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"
