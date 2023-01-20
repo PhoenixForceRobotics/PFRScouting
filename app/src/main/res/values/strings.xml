@@ -39,15 +39,15 @@
     <string name="empty_not_saved">sorry :(</string>
 
     //Strings for tele op
-    <string name="tele_op_title">Tele op (Main Match) </string>
+    <string name="tele_op_title">Tele op</string>
 
     <string name="drove_checkbox">Drove</string>
     <string name="noshow_checkbox">No Show</string>
     <string name="broke_checkbox">Broke Down</string>
 
-    <string name="top_row">Top Row</string>
-    <string name="mid_row">Mid Row</string>
-    <string name="low_row">Low Row</string>
+    <string name="top_row">Top</string>
+    <string name="mid_row">Mid</string>
+    <string name="low_row">Low</string>
     <string name="defense">Defense</string>
     <string name="cones">Cones</string>
     <string name="cubes">Cubes</string>

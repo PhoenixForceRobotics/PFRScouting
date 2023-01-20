@@ -110,8 +110,8 @@ public class team_select extends AppCompatActivity {
 
             editor.apply();
             TeleScore teleScore = new TeleScore();
-            teleScore.setImportedTeamNum(teamNumber);
-            teleScore.setImportedMatchNum(matchNumber);
+            //teleScore.setImportedTeamNum(teamNumber);
+            //teleScore.setImportedMatchNum(matchNumber);
 
             Log.d("team_select", teamNumber + matchNumber);
 

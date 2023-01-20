@@ -103,7 +103,7 @@ public class TeleScore extends AppCompatActivity{
         cube_counter3 = findViewById(R.id.cube_counter3);
 
         //Checkboxs
-        check1_broke = findViewById(R.id.check1_broke);
+
         check2_drove = findViewById(R.id.check2_drove);
         check3_show = findViewById(R.id.check3_show);
 
@@ -124,8 +124,7 @@ public class TeleScore extends AppCompatActivity{
         cube_Plus2 = findViewById(R.id.cube_plus2);
         cube_Plus3 = findViewById(R.id.cube_plus3);
 
-        defense_Plus1 = findViewById(R.id.defense_plus1);
-        defense_Minus1 = findViewById(R.id.defense_plus1);
+
         finish_Button = findViewById(R.id.finish_button);
 
         //Set up
@@ -142,8 +141,9 @@ public class TeleScore extends AppCompatActivity{
 
         //CheckBox's
         //Might need to be a string instead of an int - as in past apps
-
+        check1_broke = findViewById(R.id.check1_broke);
         check1_broke.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
 
@@ -156,7 +156,8 @@ public class TeleScore extends AppCompatActivity{
                 }
             }
 
-        });
+        }
+        );
 
         check2_drove.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
