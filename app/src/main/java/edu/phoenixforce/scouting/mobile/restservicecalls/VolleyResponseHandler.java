@@ -5,7 +5,7 @@ import com.android.volley.VolleyError;
 
 public class VolleyResponseHandler<T> implements Response.Listener<T>, Response.ErrorListener {
 
-    private IResponseHandler<T> handler;
+    private final IResponseHandler<T> handler;
     private IRequest request;
 
     public VolleyResponseHandler(IResponseHandler<T> handler) {

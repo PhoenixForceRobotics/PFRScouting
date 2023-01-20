@@ -7,7 +7,7 @@ import edu.phoenixforce.scouting.mobile.restservicecalls.ICollectionResponseHand
 
 public class GetTeamRobots extends GetRestCollectionCall<TeamRobot> {
 
-    private int teamId;
+    private final int teamId;
 
     public GetTeamRobots(int teamId, ICollectionResponseHandler<TeamRobot> handler) {
         super(handler);

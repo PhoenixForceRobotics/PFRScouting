@@ -15,8 +15,8 @@ import edu.phoenixforce.scouting.mobile.database.entities.TeleData;
 
 public class TeleView extends AndroidViewModel {
 
-    private TeleRepo repo;
-    private LiveData<List<TeleData>> todos;
+    private final TeleRepo repo;
+    private final LiveData<List<TeleData>> todos;
 
     public TeleView(Application application){
         super(application);

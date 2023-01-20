@@ -7,11 +7,12 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.HttpHeaderParser;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public class Utf8StringRequest extends Request<String> implements IRequest {
-    private Response.Listener<String> listener;
-    private Map<String, String> params;
+    private final Response.Listener<String> listener;
+    private final Map<String, String> params;
     private NetworkResponse networkResponse = null;
 
     public Utf8StringRequest(String url, Map<String, String> params,
@@ -39,18 +40,14 @@ public class Utf8StringRequest extends Request<String> implements IRequest {
     @Override
     public Map<String, String> getParams() {
         return params;
-    };
+    }
 
     @Override
     protected Response<String> parseNetworkResponse(NetworkResponse response) {
         this.networkResponse = response;
-        try {
-            String jsonString = new String(response.data, "UTF-8");
-            return Response.success(jsonString,
-                    HttpHeaderParser.parseCacheHeaders(response));
-        } catch (UnsupportedEncodingException e) {
-            return Response.error(new ParseError(e));
-        }
+        String jsonString = new String(response.data, StandardCharsets.UTF_8);
+        return Response.success(jsonString,
+                HttpHeaderParser.parseCacheHeaders(response));
     }
 
     @Override

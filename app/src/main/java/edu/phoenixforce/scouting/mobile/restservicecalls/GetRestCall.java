@@ -8,7 +8,7 @@ import edu.phoenixforce.scouting.mobile.layouts.Configuration;
 
 public abstract class GetRestCall<T> {
 
-    private IResponseHandler<T> handler;
+    private final IResponseHandler<T> handler;
 
     GetRestCall(IResponseHandler<T> handler) {
         this.handler = handler;

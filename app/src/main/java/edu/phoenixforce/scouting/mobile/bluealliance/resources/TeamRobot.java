@@ -38,7 +38,7 @@ public class TeamRobot {
     private String teamKey;
 
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public int getYear() {
         return year;

@@ -15,7 +15,7 @@ import static java.sql.DriverManager.println;
 
 public class Settings extends AppCompatActivity {
 
-    private int time = 1;
+    private final int time = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

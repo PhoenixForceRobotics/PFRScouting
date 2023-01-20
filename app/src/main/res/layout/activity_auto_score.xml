@@ -631,6 +631,7 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/button_down"
         android:textColor="#FDFCFC"
+        android:textSize="96sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline134"
         app:layout_constraintEnd_toStartOf="@+id/guideline84"
