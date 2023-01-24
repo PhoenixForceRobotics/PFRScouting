@@ -77,13 +77,10 @@ public class login extends AppCompatActivity {
 
         String name;
 
-        String[] items = new String[]{"Select User", "Admin", "Andrew", "Gabriel", "Andy", "Alem", "Syed"
-                , "Lauren A", "Kheana", "Shou", "Vish", "Elsdon", "J", "Christian", "Katie", "Nova", "Ethan", "Cameron",
-                "Nicky", "Katelyn", "Edward", "Hudson", "Mustaf", "Leon Alfonso", "Maddi", "Chloe", "Alex notProgramming", "Ryan", "Eleanor"
-                , "Dalen", "John", "Ryan", "Elena", "Jonathan", "Anan", "Jordan", "Saturn", "Oskar", "Maria", "Maxwell",
-                "Colm", "Esther", "Francesca", "Seven", "Lauren's Brother", "Cap's Sister", "Raf", "Lars", "Sarah", "Trent", "Regan", "Taylor", "Allia"
-                , "Kameron", "Victor", "Alex Programming", "Conner", "Lincoln", "Alejandra", "Harpreet", "Jacob", "Noam", "Guthrie", "Jenny",
-                "Caleb", "Eileen", "Nathaniel", "Malia", "Emily", "Brandon", "Seiji", "Josue",  "PitUse", "QRScanner"};
+        String[] items = new String[]{"Select User", "Admin",  "PitUser", "QRScanner", "Alejandra", "Alem", "Alex",
+                "Allia", "Amanuel", "Andrew", "Anan", "Arian", "Bryce", "Cecelia", "Chloe", "Conor", "Elena", "Eleanor",
+                "Ethan", "Francesca","Gabriel", "Jenny", "Jordan", "Josue", "Kameron", "Katie", "Lauren", "Leon",
+                "Malia", "Maria", "Maxwell", "Nate", "Noam", "Quang-Hy", "Raf", "Shou", "Syed", "Victor", "Vish"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -105,20 +102,16 @@ public class login extends AppCompatActivity {
 
             //Create the users in the HashMap!
 
-            users.put("Admin", "6969"); users.put("Andrew", "1111"); users.put("Gabriel", "1112"); users.put("Andy", "1113"); users.put("Alem", "1114");
-            users.put("Syed", "1116"); users.put("Lauren A", "1115"); users.put("Kheana", "1117"); users.put("Shou", "1118");users.put("Vish", "1119");
-            users.put("Elsdon", "1120");users.put("J", "1121"); users.put("Christian", "1122"); users.put("Katie", "1123"); users.put("Nova", "1124");
-            users.put("Ethan", "1125"); users.put("Cameron", "1126");users.put("Nicky", "1127"); users.put("Katelyn", "1128"); users.put("Edward", "1129");
-            users.put("Hudson", "1130"); users.put("Mustaf", "1131"); users.put("Leon Alfonso", "1132");users.put("Maddi", "1133"); users.put("Chloe", "1134");
-            users.put("Alex notProgramming", "1135"); users.put("Ryan", "1136"); users.put("Eleanor", "1137");users.put("Dalen", "1138"); users.put("John", "1139");
-            users.put("Elena", "1140"); users.put("Jonathan", "1141"); users.put("Anan", "1142"); users.put("Jordan", "1143");users.put("Saturn", "1144");
-            users.put("Oskar", "1145"); users.put("Maria", "1146"); users.put("Maxwell", "1147"); users.put("Colm", "1148"); users.put("Esther", "1149");
-            users.put("Francesca", "1150"); users.put("Seven", "1151"); users.put("Lauren's Brother", "1152"); users.put("Cap's Sister", "1153"); users.put("Raf", "1154");
-            users.put("Lars", "1155");users.put("Sarah", "1156"); users.put("Trent", "1157"); users.put("Regan", "1158"); users.put("Taylor", "1159");
-            users.put("Allia", "1160"); users.put("Kameron", "1161");users.put("Victor", "1163"); users.put("Alex Programming", "1164"); users.put("Conner", "1165");
-            users.put("Lincoln", "1166"); users.put("Alejandra", "1167"); users.put("Harpreet","1168");users.put("Jacob", "1169"); users.put("Noam", "2269");
-            users.put("Guthrie", "1170"); users.put("Jenny", "1171"); users.put("Caleb","1172"); users.put("Eileen", "1173"); users.put("Malia", "1174");users.put("Emily", "1175");
-            users.put("Brandon", "1176"); users.put("PitUser", "1983"); users.put("QRScanner", "1984");
+            users.put("Admin", "6969"); users.put("PitUser", "1983"); users.put("QRScanner", "1984");users.put("Andrew", "1111");
+            users.put("Alejandra", "1112"); users.put("Alem", "1113"); users.put("Alex", "1114");users.put("Allia", "1116");
+            users.put("Amanuel", "1115"); users.put("Anan", "1117"); users.put("Arian", "1118");users.put("Bryce", "1119");
+            users.put("Cecelia", "1120");users.put("Chloe", "1121"); users.put("Conor", "1122"); users.put("Elena", "1123");
+            users.put("Eleanor", "1124");users.put("Ethan", "1125"); users.put("Francesca", "1126");users.put("Gabriel", "1127");
+            users.put("Jenny", "1128"); users.put("Jordan", "1129"); users.put("Josue", "1130"); users.put("Kameron", "1131");
+            users.put("Katie", "1132");users.put("Lauren", "1133"); users.put("Leon", "1134");
+            users.put("Malia", "1135"); users.put("Maria", "1136"); users.put("Maxwell", "1137");users.put("Nate", "1138"); users.put("Noam", "1139");
+            users.put("Quang-Hy", "1140"); users.put("Raf", "1141"); users.put("Shou", "1142"); users.put("Syed", "1143");users.put("Victor", "1144");
+            users.put("Vish", "1145");
 
             if (user.equals("Select User")) {
 
