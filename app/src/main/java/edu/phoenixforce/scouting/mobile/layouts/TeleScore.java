@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.CompoundButton;
+
 import android.widget.TextView;
 import android.view.View;
 import android.widget.CheckBox;
@@ -31,6 +32,7 @@ import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
 public class TeleScore extends AppCompatActivity{
 
 
+
     //Counters
     TextView cone_counter1;
     TextView cone_counter2;
@@ -38,6 +40,7 @@ public class TeleScore extends AppCompatActivity{
     TextView cube_counter1;
     TextView cube_counter2;
     TextView cube_counter3;
+    TextView defense_counter;
 
 
     //Checkboxs
@@ -102,6 +105,8 @@ public class TeleScore extends AppCompatActivity{
         cube_counter2 = findViewById(R.id.cube_counter2);
         cube_counter3 = findViewById(R.id.cube_counter3);
 
+        defense_counter = findViewById(R.id.defense_counter);
+
         //Checkboxs
 
         check2_drove = findViewById(R.id.check2_drove);
@@ -124,7 +129,8 @@ public class TeleScore extends AppCompatActivity{
         cube_Plus2 = findViewById(R.id.cube_plus2);
         cube_Plus3 = findViewById(R.id.cube_plus3);
 
-
+        defense_Plus1 = findViewById(R.id.defense_Plus1);
+        defense_Minus1 = findViewById(R.id.defense_Minus1);
         finish_Button = findViewById(R.id.finish_button);
 
         //Set up
@@ -136,6 +142,8 @@ public class TeleScore extends AppCompatActivity{
         cube_counter1.setText("0");
         cube_counter2.setText("0");
         cube_counter3.setText("0");
+
+        defense_counter.setText("0");
 
 
 
@@ -355,6 +363,35 @@ public class TeleScore extends AppCompatActivity{
 
                 }
                 cube_counter3.setText(String.valueOf(Ucounter3));
+
+
+            }
+        });
+    // Defense Plus and Minus
+
+        defense_Plus1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (Dcounter1 < 5)
+                    Dcounter1 = Dcounter1 + 1;
+                    defense_counter.setText(String.valueOf(Dcounter1));
+
+
+            }
+        });
+
+        defense_Minus1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (Dcounter1 < 1){
+                }
+                else {
+                    Dcounter1 = Dcounter1 - 1;
+
+                }
+                defense_counter.setText(String.valueOf(Dcounter1));
 
 
             }
