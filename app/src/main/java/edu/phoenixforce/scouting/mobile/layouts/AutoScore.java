@@ -1,10 +1,12 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
 import static edu.phoenixforce.scouting.mobile.layouts.login.SHARED_PREFS;
+import static edu.phoenixforce.scouting.mobile.layouts.team_select.matchNum;
 import static edu.phoenixforce.scouting.mobile.layouts.team_select.teamNum;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.widget.CheckBox;
 import android.content.SharedPreferences;
@@ -14,11 +16,15 @@ import android.view.View;
 import android.widget.Button;
 //import android.widget.CheckBox; -- Not needed during the auto period
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fyrebirdscout11.R;
+import com.google.android.material.chip.ChipGroup;
 
 import edu.phoenixforce.scouting.mobile.common.Constants;
+import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 
 
 public class AutoScore extends AppCompatActivity {
@@ -126,7 +132,7 @@ public class AutoScore extends AppCompatActivity {
             }
         });
 
-        checkBox = findViewById(R.id.Checkbox1);
+        checkBox = findViewById(R.id.moved);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
