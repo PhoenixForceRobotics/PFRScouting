@@ -371,7 +371,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline81" />
 
     <CheckBox
-        android:id="@+id/Ckeckbox7"
+        android:id="@+id/Checkbox7"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_alignParentStart="true"
@@ -508,7 +508,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline71" />
 
     <CheckBox
-        android:id="@+id/Ceckbox6"
+        android:id="@+id/Checkbox6"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_alignParentStart="true"
@@ -565,7 +565,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline65" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/Moved"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:checked="true"
@@ -575,38 +575,37 @@
         android:textColorHint="#D80D0D"
         android:textColorLink="#CC0909"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
-        app:layout_constraintEnd_toStartOf="@+id/guideline99"
+        app:layout_constraintEnd_toStartOf="@+id/guideline95"
         app:layout_constraintStart_toStartOf="@+id/guideline67"
         app:layout_constraintTop_toTopOf="@+id/guideline98" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/LeftCommunity"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:checked="true"
         android:text="Left community"
         android:textColor="@color/OffWhite"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
-        app:layout_constraintEnd_toStartOf="@+id/guideline105"
-        app:layout_constraintStart_toStartOf="@+id/guideline104"
+        app:layout_constraintEnd_toStartOf="@+id/guideline100"
+        app:layout_constraintStart_toStartOf="@+id/guideline69"
         app:layout_constraintTop_toTopOf="@+id/guideline98"
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/LevelOnChargeStation"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:checked="true"
         android:text="Level on charge station"
         android:textColor="@color/OffWhite"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
-        app:layout_constraintEnd_toStartOf="@+id/guideline101"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline74"
+        app:layout_constraintEnd_toStartOf="@+id/guideline102"
+        app:layout_constraintStart_toStartOf="@+id/guideline66"
         app:layout_constraintTop_toTopOf="@+id/guideline98"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
+    <TextView
         android:id="@+id/Field"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -641,7 +640,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline67"
@@ -809,7 +808,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.195" />
+        app:layout_constraintGuide_percent="0.22" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline96"
@@ -880,6 +879,38 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline102"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.73" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline108"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <CheckBox
+        android:id="@+id/NotLevelOnChargeStation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="not level charge station"
+        android:textColor="#FAF0F0"
+        app:layout_constraintBottom_toTopOf="@+id/guideline103"
+        app:layout_constraintEnd_toStartOf="@+id/guideline108"
+        app:layout_constraintStart_toStartOf="@+id/guideline102"
+        app:layout_constraintTop_toTopOf="@+id/guideline98" />
 
 
     <!-- //Checkboxes
