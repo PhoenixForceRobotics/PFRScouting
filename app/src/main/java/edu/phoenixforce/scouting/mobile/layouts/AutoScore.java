@@ -104,7 +104,7 @@ public class AutoScore<Moved> extends AppCompatActivity {
     String GetMoved = "0";
     String GetLeftCommunity = "0";
     String GetLevelOnChargeStation = "0";
-    String GetMovedNotLevelOnChargeStation = "0";
+    String GetNotLevelOnChargeStation = "0";
 
 
 
@@ -702,9 +702,79 @@ public class AutoScore<Moved> extends AppCompatActivity {
         }
         );
 
+        Moved.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
 
+                if( isChecked){
+                    GetMoved = "1";
+                    Log.d("counter", "ran");
 
+                }
+                else {
+                    GetMoved = "0";
+
+                }
+            }
+
+        }
+        );
+
+        LeftCommunity.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    GetLeftCommunity = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    GetLeftCommunity = "0";
+
+                }
+            }
+
+        }
+        );
+
+        LevelOnChargeStation.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+                 if( isChecked){
+                     GetLevelOnChargeStation = "1";
+                     Log.d("counter", "ran");
+                 }
+                 else {
+                     GetLevelOnChargeStation = "0";
+
+                 }
+            }
+
+        }
+        );
+
+        NotLevelOnChargeStation.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    GetNotLevelOnChargeStation = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    GetNotLevelOnChargeStation = "0";
+
+                }
+            }
+
+        }
+        );
 
         //upbuttons
         finishButton.setOnClickListener(new View.OnClickListener() {
@@ -755,38 +825,44 @@ public class AutoScore<Moved> extends AppCompatActivity {
         String checkBox25 = String.valueOf(Checkbox25);
         String checkBox26 = String.valueOf(Checkbox26);
         String checkBox27 = String.valueOf(Checkbox27);
+        String moved = String.valueOf(Moved);
+        String LeftCommunity = String.valueOf(GetLeftCommunity);
+        String Level
+
+
 
 
 
 
         editorTwo.putString("autoMoved", counter5);
-        editorTwo.putString("autoMoved", checkBox1);
-        editorTwo.putString("autoMoved", checkBox2);
-        editorTwo.putString("autoMoved", checkBox3);
-        editorTwo.putString("autoMoved", checkBox4);
-        editorTwo.putString("autoMoved", checkBox5);
-        editorTwo.putString("autoMoved", checkBox6);
-        editorTwo.putString("autoMoved", checkBox7);
-        editorTwo.putString("autoMoved", checkBox8);
-        editorTwo.putString("autoMoved", checkBox9);
-        editorTwo.putString("autoMoved", checkBox10);
-        editorTwo.putString("autoMoved", checkBox11);
-        editorTwo.putString("autoMoved", checkBox12);
-        editorTwo.putString("autoMoved", checkBox13);
-        editorTwo.putString("autoMoved", checkBox14);
-        editorTwo.putString("autoMoved", checkBox15);
-        editorTwo.putString("autoMoved", checkBox16);
-        editorTwo.putString("autoMoved", checkBox17);
-        editorTwo.putString("autoMoved", checkBox18);
-        editorTwo.putString("autoMoved", checkBox19);
-        editorTwo.putString("autoMoved", checkBox20);
-        editorTwo.putString("autoMoved", checkBox21);
-        editorTwo.putString("autoMoved", checkBox22);
-        editorTwo.putString("autoMoved", checkBox23);
-        editorTwo.putString("autoMoved", checkBox24);
-        editorTwo.putString("autoMoved", checkBox25);
-        editorTwo.putString("autoMoved", checkBox26);
-        editorTwo.putString("autoMoved", checkBox27);
+        editorTwo.putString("checkBox1", checkBox1);
+        editorTwo.putString("checkBox2", checkBox2);
+        editorTwo.putString("checkBox3", checkBox3);
+        editorTwo.putString("checkbox4", checkBox4);
+        editorTwo.putString("checkBox5", checkBox5);
+        editorTwo.putString("checkBox6", checkBox6);
+        editorTwo.putString("checkBox7", checkBox7);
+        editorTwo.putString("checkBox8", checkBox8);
+        editorTwo.putString("checkBox9", checkBox9);
+        editorTwo.putString("checkBox10", checkBox10);
+        editorTwo.putString("checkBox11", checkBox11);
+        editorTwo.putString("checkBox12", checkBox12);
+        editorTwo.putString("checkBox13", checkBox13);
+        editorTwo.putString("checkBox14", checkBox14);
+        editorTwo.putString("checkBox15", checkBox15);
+        editorTwo.putString("checkBox16", checkBox16);
+        editorTwo.putString("checkBox17", checkBox17);
+        editorTwo.putString("checkBox18", checkBox18);
+        editorTwo.putString("checkBox19", checkBox19);
+        editorTwo.putString("checkBox20", checkBox20);
+        editorTwo.putString("checkBox21", checkBox21);
+        editorTwo.putString("checkBox22", checkBox22);
+        editorTwo.putString("checkBox23", checkBox23);
+        editorTwo.putString("checkBox24", checkBox24);
+        editorTwo.putString("checkBox25", checkBox25);
+        editorTwo.putString("checkBox26", checkBox26);
+        editorTwo.putString("checkBox27", checkBox27);
+
 
 
         editorTwo.apply();
