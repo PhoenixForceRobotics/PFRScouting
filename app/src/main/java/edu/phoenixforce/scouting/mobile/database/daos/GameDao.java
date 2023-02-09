@@ -38,15 +38,6 @@ public interface GameDao {
     @Query("SELECT TeamNum FROM gameData")
     List<String> getTeamNum();
 
-    @Query("SELECT AutoTopCones FROM gameData")
-    List<String> getAutoTopCones();
-
-    @Query("SELECT AutoMidCones FROM gameData")
-    List<String> getAutoMidCones();
-
-    @Query("SELECT AutoBottomCones FROM gameData")
-    List<String> getAutoBottomCones();
-
     @Query("SELECT TeleTopCones FROM gameData")
     List<String> getTeleTopCones();
 
@@ -55,15 +46,6 @@ public interface GameDao {
 
     @Query("SELECT TeleBottomCones FROM gameData")
     List<String> getTeleBottomCones();
-
-    @Query("SELECT AutoTopCubes FROM gameData")
-    List<String> getAutoTopCubes();
-
-    @Query("SELECT AutoMidCubes FROM gameData")
-    List<String> getAutoMidCubes();
-
-    @Query("SELECT AutoBottomCubes FROM gameData")
-    List<String> getAutoBottomCubes();
 
     @Query("SELECT TeleTopCubes FROM gameData")
     List<String> getTeleTopCubes();
