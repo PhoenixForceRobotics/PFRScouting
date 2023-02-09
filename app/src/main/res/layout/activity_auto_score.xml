@@ -14,14 +14,6 @@
     tools:context="edu.phoenixforce.scouting.mobile.layouts.AutoScore">
 
 
-    <!--<View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="550dp"
-        android:background="?android:attr/listDivider" />-->
-
     <TextView
         android:id="@+id/WHAA"
         android:layout_width="0dp"
@@ -998,7 +990,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline142"
         app:layout_constraintStart_toStartOf="@+id/guideline141"
         app:layout_constraintTop_toTopOf="@+id/guideline143"
-        app:srcCompat="@mipmap/chargeduplogo" />
+        app:srcCompat="@mipmap/logo1" />
 
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"

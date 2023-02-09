@@ -73,7 +73,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline26"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@mipmap/chargeduplogo" />
+        app:srcCompat="@mipmap/logo1" />
 
     <ImageView
         android:id="@+id/imageView4"

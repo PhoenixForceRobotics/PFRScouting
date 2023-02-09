@@ -8,6 +8,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,6 +52,7 @@ public class login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
        Constants constants = new Constants();
        Context context = this;
 
@@ -71,7 +74,7 @@ public class login extends AppCompatActivity {
         log = findViewById(R.id.btnSubmit);
         //bypass = findViewById(R.id.bypass);
         //bypassII = findViewById(R.id.bypassII);
-
+        pWord.setVisibility(View.INVISIBLE);
 
         pass = pWord.getText().toString();
 
@@ -86,6 +89,30 @@ public class login extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
 //set the spinners adapter to the previously created one.
         nombre.setAdapter(adapter);
+
+        nombre.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l){
+                String result = nombre.getSelectedItem().toString();
+                if (result == "Select User" || result == "Admin" || result == "PitUser" || result == "QRScanner"){
+
+                    pWord.setVisibility(View.VISIBLE);
+
+                }
+                else{
+                    pWord.setVisibility(View.INVISIBLE);
+                }
+
+
+
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView){
+
+            }
+
+        });
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
