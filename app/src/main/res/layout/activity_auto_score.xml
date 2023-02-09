@@ -62,7 +62,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline126"
         app:layout_constraintTop_toTopOf="@+id/guideline70"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline80"
@@ -998,7 +998,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline142"
         app:layout_constraintStart_toStartOf="@+id/guideline141"
         app:layout_constraintTop_toTopOf="@+id/guideline143"
-        app:srcCompat="@drawable/phoenix_force_logo_charged_up_editioncopy" />
+        app:srcCompat="@mipmap/chargeduplogo" />
 
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"

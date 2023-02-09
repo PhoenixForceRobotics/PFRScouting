@@ -130,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="@+id/guideline166"
         app:layout_constraintTop_toTopOf="@+id/guideline168"
-        app:srcCompat="@drawable/phoenix_force_logo_charged_up_editioncopy" />
+        app:srcCompat="@mipmap/chargeduplogo" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline136"

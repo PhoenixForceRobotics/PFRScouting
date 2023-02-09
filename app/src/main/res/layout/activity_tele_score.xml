@@ -83,9 +83,6 @@
         android:id="@+id/check2_drove"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/drove_checkbox"
@@ -101,9 +98,6 @@
         android:id="@+id/check3_show"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/noshow_checkbox"
@@ -120,19 +114,43 @@
         android:id="@+id/check1_broke"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/broke_checkbox"
-
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline185"
         app:layout_constraintEnd_toStartOf="@+id/guideline116"
         app:layout_constraintStart_toStartOf="@+id/guideline_teleleft"
         app:layout_constraintTop_toTopOf="@+id/guideline184" />
+
+    <CheckBox
+        android:id="@+id/check4_onstation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/nasalization_rg"
+        android:text="@string/onstation_checkbox"
+        android:textColor="#FFFFFF"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline92"
+        app:layout_constraintEnd_toStartOf="@+id/guideline128"
+        app:layout_constraintStart_toStartOf="@+id/guideline177"
+        app:layout_constraintTop_toTopOf="@+id/guideline79" />
+
+    <CheckBox
+        android:id="@+id/check5_levelonstation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/nasalization_rg"
+        android:text="@string/level_checkbox"
+        android:textColor="#FFFFFF"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline92"
+        app:layout_constraintEnd_toStartOf="@+id/guideline183"
+        app:layout_constraintStart_toStartOf="@+id/guideline204"
+        app:layout_constraintTop_toTopOf="@+id/guideline79" />
 
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"
@@ -314,7 +332,7 @@
         android:id="@+id/textView27"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#00272C"
         android:gravity="center"
         android:text="@string/defense"
         android:textColor="#FFFFFF"
@@ -438,6 +456,19 @@
         app:layout_constraintStart_toStartOf="@+id/guideline205"
         app:layout_constraintTop_toTopOf="@+id/guideline209" />
 
+    <TextView
+        android:id="@+id/defense_counter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFF"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline210"
+        app:layout_constraintEnd_toStartOf="@+id/guideline204"
+        app:layout_constraintStart_toStartOf="@+id/guideline205"
+        app:layout_constraintTop_toTopOf="@+id/guideline208" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline196"
         android:layout_width="wrap_content"
@@ -492,7 +523,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.68" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline209"
@@ -506,7 +537,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.72" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline211"
@@ -514,6 +545,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.62" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline212"
@@ -597,6 +642,16 @@
         app:layout_constraintTop_toTopOf="@+id/guideline209" />
 
     <Button
+        android:id="@+id/defense_Minus1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/minus_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline210"
+        app:layout_constraintEnd_toStartOf="@+id/guideline128"
+        app:layout_constraintStart_toStartOf="@+id/guideline117"
+        app:layout_constraintTop_toTopOf="@+id/guideline208" />
+
+    <Button
         android:id="@+id/cone_plus1"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -656,6 +711,16 @@
         app:layout_constraintEnd_toStartOf="@+id/guidelinedrove"
         app:layout_constraintStart_toStartOf="@+id/guideline191"
         app:layout_constraintTop_toTopOf="@+id/guideline209" />
+
+    <Button
+        android:id="@+id/defense_Plus1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/plus_with_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline210"
+        app:layout_constraintEnd_toStartOf="@+id/guidelinedrove"
+        app:layout_constraintStart_toStartOf="@+id/guideline191"
+        app:layout_constraintTop_toTopOf="@+id/guideline208" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline216"

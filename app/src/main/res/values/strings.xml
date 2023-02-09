@@ -44,6 +44,8 @@
     <string name="drove_checkbox">Drove</string>
     <string name="noshow_checkbox">No Show</string>
     <string name="broke_checkbox">Broke Down</string>
+    <string name="onstation_checkbox">On Station</string>
+    <string name="level_checkbox">Level On Station</string>
 
     <string name="top_row">Top</string>
     <string name="mid_row">Mid</string>
@@ -53,5 +55,6 @@
     <string name="cubes">Cubes</string>
     <string name="teleop_next_button">Round Over</string>
     <string name="top_row_counter_cone">0</string>
+
 </resources>
 

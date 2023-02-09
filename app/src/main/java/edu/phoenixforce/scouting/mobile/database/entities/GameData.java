@@ -16,9 +16,7 @@ import org.jetbrains.annotations.NotNull;
 public class GameData {
 
     //Create the variable for the columns in the table
-    public GameData(@NotNull String Scout, String DevNum, String MatchNum, String TeamNum,
-                    String AutoTopCones, String AutoMidCones, String AutoBottomCones, String AutoTopCubes,
-                    String AutoMidCubes, String AutoBottomCubes, String TeleTopCones, String TeleMidCones,
+    public GameData(@NotNull String Scout, String DevNum, String MatchNum, String TeamNum, String TeleTopCones, String TeleMidCones,
                     String TeleBottomCones, String TeleTopCubes, String TeleMidCubes, String TeleBottomCubes,
                     String Defence, String AutoMoved, String AutoLeftCommunity, String AutoOnStation,
                     String AutoLevelOnStation, String TeleOnStation, String TeleLevelOnStation, String TeleMoved,
@@ -35,12 +33,6 @@ public class GameData {
         this.TeamNum = TeamNum;
         this.DevNum = DevNum;
         this.Scout = Scout;
-        this.AutoTopCones = AutoTopCones;
-        this.AutoMidCones = AutoMidCones;
-        this.AutoBottomCones = AutoBottomCones;
-        this.AutoTopCubes = AutoTopCubes;
-        this.AutoMidCubes = AutoMidCubes;
-        this.AutoBottomCubes = AutoBottomCubes;
         this.TeleTopCones = TeleTopCones;
         this.TeleMidCones = TeleMidCones;
         this.TeleBottomCones = TeleBottomCones;
@@ -135,52 +127,6 @@ public class GameData {
     public String getTeleMoved() { return TeleMoved; }
 
     public void setTeleMoved(String teleMoved) { TeleMoved = teleMoved; }
-
-    public String getAutoTopCones() {
-        return AutoTopCones;
-    }
-
-    public void setAutoTopCones(String autoTopCones) {
-        AutoTopCones = autoTopCones;
-    }
-
-    public String getAutoMidCones() {
-        return AutoMidCones;
-    }
-
-    public void setAutoMidCones(String autoMidCones) {
-        AutoMidCones = autoMidCones;
-    }
-
-    public String getAutoBottomCones() {
-        return AutoBottomCones;
-    }
-
-    public void setAutoBottomCones(String autoBottomCones) { AutoBottomCones = autoBottomCones; }
-
-    public String getAutoTopCubes() {
-        return AutoTopCubes;
-    }
-
-    public void setAutoTopCubes(String autoTopCubes) {
-        AutoTopCubes = autoTopCubes;
-    }
-
-    public String getAutoMidCubes() {
-        return AutoMidCubes;
-    }
-
-    public void setAutoMidCubes(String autoMidCubes) {
-        AutoMidCubes = autoMidCubes;
-    }
-
-    public String getAutoBottomCubes() {
-        return AutoBottomCubes;
-    }
-
-    public void setAutoBottomCubes(String autoBottomCubes) {
-        AutoBottomCubes = autoBottomCubes;
-    }
 
     public String getTeleTopCones() {
         return TeleTopCones;
@@ -482,24 +428,6 @@ public class GameData {
 
     @ColumnInfo(name = "TeleMoved")
     private String TeleMoved;
-
-    @ColumnInfo(name = "AutoTopCones")
-    private String AutoTopCones;
-
-    @ColumnInfo(name = "AutoMidCones")
-    private String AutoMidCones;
-
-    @ColumnInfo(name = "AutoBottomCones")
-    private String AutoBottomCones;
-
-    @ColumnInfo(name = "AutoTopCubes")
-    private String AutoTopCubes;
-
-    @ColumnInfo(name = "AutoMidCubes")
-    private String AutoMidCubes;
-
-    @ColumnInfo(name = "AutoBottomCubes")
-    private String AutoBottomCubes;
 
     @ColumnInfo(name = "TeleTopCones")
     private String TeleTopCones;

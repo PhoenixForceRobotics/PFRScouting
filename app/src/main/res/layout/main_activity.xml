@@ -73,7 +73,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline26"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/phoenix_force_logo_charged_up_editioncopy" />
+        app:srcCompat="@mipmap/chargeduplogo" />
 
     <ImageView
         android:id="@+id/imageView4"
