@@ -83,7 +83,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:srcCompat="@mipmap/chargeduplogo" />
+        app:srcCompat="@mipmap/logo1" />
 
     <EditText
         android:id="@+id/txtPassword"
@@ -95,7 +95,7 @@
         android:autoSizeTextType="uniform"
         android:background="@drawable/red_login_buttons"
         android:fontFamily="@font/nasalization_rg"
-        android:hint="Enter Admin Key Here or Hit Submit"
+        android:hint="Enter Password"
         android:inputType="number"
         android:maxLength="4"
         android:textColor="#FFFF"

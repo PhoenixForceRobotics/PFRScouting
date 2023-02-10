@@ -83,7 +83,7 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
 
 
 
-        user.setText("Signed in as " + text + ". Is this you?");
+        user.setText("Signed in as " + text);
 
 
 
