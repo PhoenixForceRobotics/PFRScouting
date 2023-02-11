@@ -663,25 +663,25 @@ public class AutoScore<Moved> extends AppCompatActivity {
 
         }
         );
+        if (Checkbox26 != null) {
+            Checkbox26.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
-        Checkbox26.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                                      @Override
+                                                      public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+                                                          if (isChecked) {
+                                                              CheckBox26 = "1";
+                                                              Log.d("counter", "ran");
 
-                if( isChecked){
-                    CheckBox26 = "1";
-                    Log.d("counter", "ran");
+                                                          } else {
+                                                              CheckBox26 = "0";
 
-                }
-                else {
-                    CheckBox26 = "0";
+                                                          }
+                                                      }
 
-                }
-            }
-
+                                                  }
+            );
         }
-        );
 
         Checkbox27.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
