@@ -82,7 +82,7 @@ public class login extends AppCompatActivity {
 
         String[] items = new String[]{"Select User", "Admin",  "PitUser", "QRScanner", "Alejandra", "Alem", "Alex",
                 "Allia", "Amanuel", "Andrew", "Anan", "Arian", "Bryce", "Cecelia", "Chloe", "Conor", "Elena", "Eleanor",
-                "Ethan", "Francesca","Gabriel", "Jenny", "Jordan", "Josue", "Kameron", "Katie", "Lauren", "Leon",
+                "Ethan", "Francesca","Gabriel", "Gerardo", "Jenny", "Jordan", "Josue", "Kameron", "Katie", "Lauren", "Leon",
                 "Malia", "Maria", "Maxwell", "Nate", "Noam", "Quang-Hy", "Raf", "Shou", "Syed", "Victor", "Vish"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
