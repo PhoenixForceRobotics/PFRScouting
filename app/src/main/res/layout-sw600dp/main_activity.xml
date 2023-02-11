@@ -49,7 +49,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         app:autoSizeTextType="uniform"
-        android:background="@color/Orange"
+        android:background="@drawable/orange_rounded_corner"
         android:fontFamily="@font/nasalization_rg"
         android:text="@string/by"
         android:textColor="#FFFFFF"
@@ -72,7 +72,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline26"
         app:layout_constraintVertical_bias="0.818"
-        app:srcCompat="@mipmap/pfrlogolight" />
+        app:srcCompat="@mipmap/logo1" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline28"
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline27"
-        app:srcCompat="@mipmap/rrlogo" />
+        app:srcCompat="@mipmap/chargeduplogo" />
 
     <TextView
         android:id="@+id/textView8"
@@ -129,7 +129,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         app:autoSizeTextType="uniform"
-        android:background="@color/Orange"
+        android:background="@drawable/orange_rounded_corner"
         android:fontFamily="@font/nasalization_rg"
         android:text="Settings"
         android:textColor="#FFFFFF"
@@ -384,14 +384,23 @@
     <Button
         android:id="@+id/QRcode"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        android:background="@color/colorPrimaryDark"
+        android:text="QRcode"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline180"
         app:layout_constraintEnd_toStartOf="@+id/guideline29"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testBtn" />
+        app:layout_constraintTop_toTopOf="@+id/guideline26" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline180"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2225" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

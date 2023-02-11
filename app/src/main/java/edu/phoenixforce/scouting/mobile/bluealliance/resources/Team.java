@@ -96,10 +96,10 @@ public class Team {
     private String motto;
 
     @JsonProperty("home_championship")
-    private Map<String, String> homeChampionship = new HashMap<String, String>();
+    private final Map<String, String> homeChampionship = new HashMap<String, String>();
 
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
 
     public String getKey() {

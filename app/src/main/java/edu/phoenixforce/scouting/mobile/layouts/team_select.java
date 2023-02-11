@@ -85,14 +85,14 @@ public class team_select extends AppCompatActivity {
             //constants.setMatchNumber(matchNumber);
            // constants.setTeamNumber(teamNumber); TODO
 
-            if(teamNumber.toString().length() == 0){
+            if(teamNumber.length() == 0){
 
                Toast.makeText(this,"No input detected :(", Toast.LENGTH_SHORT).show();
                 mediatorMethod();
 
             }
 
-            else if(matchNumber.toString().length() == 0){
+            else if(matchNumber.length() == 0){
 
                 Toast.makeText(this,"No input detected :(", Toast.LENGTH_SHORT).show();
                 mediatorMethod();
@@ -110,8 +110,8 @@ public class team_select extends AppCompatActivity {
 
             editor.apply();
             TeleScore teleScore = new TeleScore();
-            teleScore.setImportedTeamNum(teamNumber);
-            teleScore.setImportedMatchNum(matchNumber);
+            //teleScore.setImportedTeamNum(teamNumber);
+            //teleScore.setImportedMatchNum(matchNumber);
 
             Log.d("team_select", teamNumber + matchNumber);
 

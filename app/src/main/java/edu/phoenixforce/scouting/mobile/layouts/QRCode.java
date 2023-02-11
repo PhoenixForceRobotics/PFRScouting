@@ -55,12 +55,6 @@ public class QRCode extends AppCompatActivity {
         String teams = Base.gameDao().getTeamNum().toString();
         String autoMoved = Base.gameDao().getAutoMoved().toString();
         String teleMoved = Base.gameDao().getTeleMoved().toString();
-        String autoTopCones = Base.gameDao().getAutoTopCones().toString();
-        String autoMidCones = Base.gameDao().getAutoMidCones().toString();
-        String autoBottomCones = Base.gameDao().getAutoBottomCones().toString();
-        String autoTopCubes = Base.gameDao().getAutoTopCubes().toString();
-        String autoMidCubes = Base.gameDao().getAutoMidCubes().toString();
-        String autoBottomCubes = Base.gameDao().getAutoBottomCubes().toString();
         String teleTopCones = Base.gameDao().getTeleTopCones().toString();
         String teleMidCones = Base.gameDao().getTeleMidCones().toString();
         String teleBottomCones = Base.gameDao().getTeleBottomCones().toString();
@@ -105,8 +99,7 @@ public class QRCode extends AppCompatActivity {
 
 
         String qrCodeData = scouts + "," + devNums + "," + matchNums + "," + teams + "," + autoMoved + "," + teleMoved + ","
-                + autoTopCones + "," + autoMidCones + "," + autoBottomCones + "," + autoTopCubes + "," + autoMidCubes + ","
-                + autoBottomCubes + "," + teleTopCones + "," + teleMidCones + "," + teleBottomCones + "," + teleTopCubes + ","
+                + "," + teleTopCones + "," + teleMidCones + "," + teleBottomCones + "," + teleTopCubes + ","
                 + teleMidCubes + "," + teleBottomCubes + "," + defence + "," + autoLeftCommunity + "," + autoOnStation + ","
                 + autoLevelOnStation + "," + teleOnStation + "," +  teleLevelOnStation + "," + teleBroke + "," + teleNoShow +
                 "," + TBox1 + "," + TBox2 + "," + TBox3 + "," + TBox4 + "," + TBox5 + "," + TBox6 + "," + TBox7 + "," + TBox8 +

@@ -6,7 +6,7 @@ import edu.phoenixforce.scouting.mobile.restservicecalls.IObjectResponseHandler;
 
 public class GetTeam extends GetRestObjectCall<Team> {
 
-    private int teamId;
+    private final int teamId;
     public GetTeam(int teamId, IObjectResponseHandler<Team> handler) {
         super(handler);
         this.teamId = teamId;

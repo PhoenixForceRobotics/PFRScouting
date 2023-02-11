@@ -7,7 +7,7 @@ import edu.phoenixforce.scouting.mobile.restservicecalls.ICollectionResponseHand
 
 public class GetTeamDistricts extends GetRestCollectionCall<TeamDistrict> {
 
-    private int teamId;
+    private final int teamId;
 
     public GetTeamDistricts(int teamId, ICollectionResponseHandler<TeamDistrict> handler) {
         super(handler);

@@ -158,7 +158,7 @@ public class ActivityPitView extends AppCompatActivity{
 
         }
         else{
-            Toast.makeText(ActivityPitView.this, "Enter a valid TeamNumber!", Toast.LENGTH_LONG).show();;
+            Toast.makeText(ActivityPitView.this, "Enter a valid TeamNumber!", Toast.LENGTH_LONG).show();
         }
 
 

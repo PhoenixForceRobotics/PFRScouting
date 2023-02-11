@@ -7,8 +7,8 @@ import edu.phoenixforce.scouting.mobile.restservicecalls.ICollectionResponseHand
 
 public class GetTeamMedia extends GetRestCollectionCall<TeamMedia> {
 
-    private int teamId;
-    private int year;
+    private final int teamId;
+    private final int year;
 
     public GetTeamMedia(int teamId, int year, ICollectionResponseHandler<TeamMedia> handler) {
         super(handler);
