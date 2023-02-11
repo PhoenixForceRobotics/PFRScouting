@@ -27,38 +27,87 @@ import edu.phoenixforce.scouting.mobile.common.Constants;
 import edu.phoenixforce.scouting.mobile.database.ScoreDataBase;
 
 
-public class AutoScore extends AppCompatActivity {
+public class AutoScore<Moved> extends AppCompatActivity {
 
     Constants constants = new Constants();
 
-    //TextViews
-    TextView autoBallHighA;
-    TextView view1;
-    TextView view2;
-    TextView view3;
-    TextView view4;
-    TextView reassurance;
+    //CheckBoxes
+    CheckBox Checkbox1;
+    CheckBox Checkbox2;
+    CheckBox Checkbox3;
+    CheckBox Checkbox4;
+    CheckBox Checkbox5;
+    CheckBox Checkbox6;
+    CheckBox Checkbox7;
+    CheckBox Checkbox8;
+    CheckBox Checkbox9;
+    CheckBox Checkbox10;
+    CheckBox Checkbox11;
+    CheckBox Checkbox12;
+    CheckBox Checkbox13;
+    CheckBox Checkbox14;
+    CheckBox Checkbox15;
+    CheckBox Checkbox16;
+    CheckBox Checkbox17;
+    CheckBox Checkbox18;
+    CheckBox Checkbox19;
+    CheckBox Checkbox20;
+    CheckBox Checkbox21;
+    CheckBox Checkbox22;
+    CheckBox Checkbox23;
+    CheckBox Checkbox24;
+    CheckBox Checkbox25;
+    CheckBox Checkbox26;
+    CheckBox Checkbox27;
+    CheckBox Moved;
+    CheckBox LeftCommunity;
+    CheckBox LevelOnChargeStation;
+    CheckBox NotLevelOnChargeStation;
 
-    CheckBox checkBox;
+
+
+
 
 
     //Buttons
-    Button upButton1; //upButton in camel case
-    Button upButton2;
-    Button upButton3;
-    Button upButton4;
 
-    Button downButton1;
-    Button downButton2;
-    Button downButton3;
-    Button downButton4;
     Button finishButton;
-    //integers
-    int counter1 = 0;
-    int counter2 = 0;
-    int counter3 = 0;
-    int counter4 = 0;
+
     String counter5 = "0";
+    String CheckBox1 = "0";
+    String CheckBox2 = "0";
+    String CheckBox3 = "0";
+    String CheckBox4 = "0";
+    String CheckBox5 = "0";
+    String CheckBox6 = "0";
+    String CheckBox7 = "0";
+    String CheckBox8 = "0";
+    String CheckBox9 = "0";
+    String CheckBox10 = "0";
+    String CheckBox11 = "0";
+    String CheckBox12 = "0";
+    String CheckBox13 = "0";
+    String CheckBox14 = "0";
+    String CheckBox15 = "0";
+    String CheckBox16 = "0";
+    String CheckBox17 = "0";
+    String CheckBox18 = "0";
+    String CheckBox19 = "0";
+    String CheckBox20 = "0";
+    String CheckBox21 = "0";
+    String CheckBox22 = "0";
+    String CheckBox23 = "0";
+    String CheckBox24 = "0";
+    String CheckBox25 = "0";
+    String CheckBox26 = "0";
+    String CheckBox27 = "0";
+    String GetMoved = "0";
+    String GetLeftCommunity = "0";
+    String GetLevelOnChargeStation = "0";
+    String GetNotLevelOnChargeStation = "0";
+
+
+
     public static String team;
     public static int teamnumber;
     @Override
@@ -70,23 +119,46 @@ public class AutoScore extends AppCompatActivity {
 
 
         //TextViews
-        view1 = findViewById(R.id.integer_number1);
-        view2 = findViewById(R.id.integer_number2);
-        view3 = findViewById(R.id.integer_number3);
-        view4 = findViewById(R.id.integer_number4);
+
+
 
         //Buttons
-        upButton1 = findViewById(R.id.upbutton1);
-        upButton2 = findViewById(R.id.upbutton2);
-        upButton3 = findViewById(R.id.upbutton3);
-        upButton4 = findViewById(R.id.upbutton4);
 
-        downButton1 = findViewById(R.id.downbutton1);
-        downButton2 = findViewById(R.id.downbutton2);
-        downButton3 = findViewById(R.id.downbutton3);
-        downButton4 = findViewById(R.id.downbutton4);
+
 
         finishButton = findViewById(R.id.finishedbutton);
+        Checkbox1 = findViewById(R.id.Checkbox1);
+        Checkbox2 = findViewById(R.id.Checkbox2);
+        Checkbox3  = findViewById(R.id.Checkbox3);
+        Checkbox4 = findViewById(R.id.Checkbox4);
+        Checkbox5 = findViewById(R.id.Checkbox5);
+        Checkbox6 = findViewById(R.id.Checkbox6);
+        Checkbox7 = findViewById(R.id.Checkbox7);
+        Checkbox8 = findViewById(R.id.Checkbox8);
+        Checkbox9 = findViewById(R.id.Checkbox9);
+        Checkbox10 = findViewById(R.id.Checkbox10);
+        Checkbox11 = findViewById(R.id.Checkbox11);
+        Checkbox12 = findViewById(R.id.Checkbox12);
+        Checkbox13 = findViewById(R.id.Checkbox13);
+        Checkbox14 = findViewById(R.id.Checkbox14);
+        Checkbox15 = findViewById(R.id.Checkbox15);
+        Checkbox16 = findViewById(R.id.Checkbox16);
+        Checkbox17 = findViewById(R.id.Checkbox17);
+        Checkbox18 = findViewById(R.id.Checkbox18);
+        Checkbox19 = findViewById(R.id.Checkbox19);
+        Checkbox20 = findViewById(R.id.Checkbox20);
+        Checkbox21 = findViewById(R.id.Checkbox21);
+        Checkbox22 = findViewById(R.id.Checkbox22);
+        Checkbox23 = findViewById(R.id.Checkbox23);
+        Checkbox24 = findViewById(R.id.Checkbox24);
+        Checkbox25 = findViewById(R.id.Checkbox25);
+        Checkbox27 = findViewById(R.id.Checkbox26);
+        Moved = findViewById(R.id.Moved);
+        LeftCommunity = findViewById(R.id.LeftCommunity);
+        LevelOnChargeStation = findViewById(R.id.LevelOnChargeStation);
+        NotLevelOnChargeStation = findViewById(R.id.NotLevelOnChargeStation);
+
+
 
         //Top text box
         SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
@@ -95,19 +167,15 @@ public class AutoScore extends AppCompatActivity {
 
         SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 
-        reassurance = findViewById(R.id.WHAA);
+
         team = myPrefs.getString(teamNum, "No Match Number");
 
         teamnumber = Integer.valueOf(team);
 
         //todo Rename reassurance
-        reassurance.setText("You are scoring autonomous for 20 seconds. Your teamnumber is: " + teamnumber);
         //on app launch Text View Must show zero
 
-        view1.setText("0");
-        view2.setText("0");
-        view3.setText("0");
-        view4.setText("0");
+
 
 /*                backA.setOnClickListener(new View.OnClickListener() {
 
@@ -121,131 +189,592 @@ public class AutoScore extends AppCompatActivity {
  */
 
 
-        upButton1.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                counter1 = counter1 + 1;
-                view1.setText(String.valueOf(counter1));
 
 
-            }
-        });
 
-        checkBox = findViewById(R.id.moved);
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        Checkbox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
 
                 if( isChecked){
-                    counter5 = "1";
+                    CheckBox1 = "1";
                     Log.d("counter", "ran");
                 }
                 else {
-                    counter5 = "0";
+                    CheckBox1 = "0";
                 }
             }
 
         }
         );
 
-        downButton1.setOnClickListener(new View.OnClickListener() {
+        Checkbox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
-            public void onClick(View v) {
-                if (counter1 < 1){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox2 = "1";
+                    Log.d("counter", "ran");
+
                 }
                 else {
-                    counter1 = counter1 - 1;
-
+                    CheckBox2 = "0";
                 }
-
-
-            }
-        });
-
-        //upbuttons
-        upButton2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                counter2 = counter2 + 1;
-                view2.setText(String.valueOf(counter2));
-
-
             }
 
-        });
+        }
+        );
 
-
-        upButton3.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                counter3 = counter3 + 1;
-                view3.setText(String.valueOf(counter3));
-
-            }
-
-        });
-
-        upButton4.setOnClickListener(new View.OnClickListener() {
+        Checkbox3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
-            public void onClick(View v) {
-                counter4 = counter4 + 1;
-                view4.setText(String.valueOf(counter4));
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
 
-            }
+                if( isChecked){
+                    CheckBox3 = "1";
+                    Log.d("counter", "ran");
 
-        });
-
-
-        downButton2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (counter2 < 1){
                 }
                 else {
-                    counter2 = counter2 - 1;
-                    view2.setText(String.valueOf(counter2));
+                    CheckBox3 = "0";
 
                 }
             }
 
-        });
+        }
+        );
 
-
-        downButton3.setOnClickListener(new View.OnClickListener() {
+        Checkbox4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
-            public void onClick(View v) {
-                if (counter3 < 1){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox4 = "1";
+                    Log.d("counter", "ran");
+
                 }
                 else {
-                    counter3 = counter3 - 1;
-                    view3.setText(String.valueOf(counter3));
+                    CheckBox4 = "0";
 
                 }
             }
 
-        });
+        }
+        );
 
-        downButton4.setOnClickListener(new View.OnClickListener() {
+        Checkbox5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
-            public void onClick(View v) {
-                if (counter4 < 1) {
-                } else {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
 
-                    counter4 = counter4 - 1;
-                    view4.setText(String.valueOf(counter4));
+                if( isChecked){
+                    CheckBox5 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox5 = "0";
 
                 }
             }
-        });
+
+        }
+        );
+
+        Checkbox6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox6 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox6 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox7 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox7 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox8 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox8 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox9 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox9 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox10.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox10 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox10 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox11.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox11 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox11 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox12.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox12 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox12 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox13.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox13 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox13 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox14.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox14 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox14 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox15.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox15 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox15 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox16.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox16 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox16 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox17.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox17 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox17 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox18.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox18 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox18 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox19.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox19 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox19 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox20.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox20 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox20 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox21.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox21 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox21 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox22.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox22 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox22 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox23.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox23 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox23 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox24.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox24 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox24 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Checkbox25.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox25 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox25 = "0";
+
+                }
+            }
+
+        }
+        );
+        if (Checkbox26 != null) {
+            Checkbox26.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+                                                      @Override
+                                                      public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                                                          if (isChecked) {
+                                                              CheckBox26 = "1";
+                                                              Log.d("counter", "ran");
+
+                                                          } else {
+                                                              CheckBox26 = "0";
+
+                                                          }
+                                                      }
+
+                                                  }
+            );
+        }
+
+        Checkbox27.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    CheckBox27 = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    CheckBox27 = "0";
+
+                }
+            }
+
+        }
+        );
+
+        Moved.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    GetMoved = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    GetMoved = "0";
+
+                }
+            }
+
+        }
+        );
+
+        LeftCommunity.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    GetLeftCommunity = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    GetLeftCommunity = "0";
+
+                }
+            }
+
+        }
+        );
+
+        LevelOnChargeStation.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+                 if( isChecked){
+                     GetLevelOnChargeStation = "1";
+                     Log.d("counter", "ran");
+                 }
+                 else {
+                     GetLevelOnChargeStation = "0";
+
+                 }
+            }
+
+        }
+        );
+
+        NotLevelOnChargeStation.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                if( isChecked){
+                    GetNotLevelOnChargeStation = "1";
+                    Log.d("counter", "ran");
+
+                }
+                else {
+                    GetNotLevelOnChargeStation = "0";
+
+                }
+            }
+
+        }
+        );
 
         //upbuttons
         finishButton.setOnClickListener(new View.OnClickListener() {
@@ -268,11 +797,79 @@ public class AutoScore extends AppCompatActivity {
         SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editorTwo = scorePrefs.edit();
 
-        editorTwo.putString("autoOne", String.valueOf(counter1));
-        editorTwo.putString("autoTwo", String.valueOf(counter2));
-        editorTwo.putString("autoThree", String.valueOf(counter3));
-        editorTwo.putString("autoFour", String.valueOf(counter4));
+
+        String checkBox1 = String.valueOf(Checkbox1);
+        String checkBox2 = String.valueOf(Checkbox2);
+        String checkBox3 = String.valueOf(Checkbox3);
+        String checkBox4 = String.valueOf(Checkbox4);
+        String checkBox5 = String.valueOf(Checkbox5);
+        String checkBox6 = String.valueOf(Checkbox6);
+        String checkBox7 = String.valueOf(Checkbox7);
+        String checkBox8 = String.valueOf(Checkbox8);
+        String checkBox9 = String.valueOf(Checkbox9);
+        String checkBox10 = String.valueOf(Checkbox10);
+        String checkBox11 = String.valueOf(Checkbox11);
+        String checkBox12 = String.valueOf(Checkbox12);
+        String checkBox13 = String.valueOf(Checkbox13);
+        String checkBox14 = String.valueOf(Checkbox14);
+        String checkBox15 = String.valueOf(Checkbox15);
+        String checkBox16 = String.valueOf(Checkbox16);
+        String checkBox17 = String.valueOf(Checkbox17);
+        String checkBox18 = String.valueOf(Checkbox18);
+        String checkBox19 = String.valueOf(Checkbox19);
+        String checkBox20 = String.valueOf(Checkbox20);
+        String checkBox21 = String.valueOf(Checkbox21);
+        String checkBox22 = String.valueOf(Checkbox22);
+        String checkBox23 = String.valueOf(Checkbox23);
+        String checkBox24 = String.valueOf(Checkbox24);
+        String checkBox25 = String.valueOf(Checkbox25);
+        String checkBox26 = String.valueOf(Checkbox26);
+        String checkBox27 = String.valueOf(Checkbox27);
+        String moved = String.valueOf(Moved);
+        String LeftCommunity = String.valueOf(GetLeftCommunity);
+        String LevelOnChargeStation = String.valueOf(GetLevelOnChargeStation);
+        String NotLevelOnChargeStation = String.valueOf(GetNotLevelOnChargeStation);
+
+
+
+
+
+
         editorTwo.putString("autoMoved", counter5);
+        editorTwo.putString("checkBox1", checkBox1);
+        editorTwo.putString("checkBox2", checkBox2);
+        editorTwo.putString("checkBox3", checkBox3);
+        editorTwo.putString("checkbox4", checkBox4);
+        editorTwo.putString("checkBox5", checkBox5);
+        editorTwo.putString("checkBox6", checkBox6);
+        editorTwo.putString("checkBox7", checkBox7);
+        editorTwo.putString("checkBox8", checkBox8);
+        editorTwo.putString("checkBox9", checkBox9);
+        editorTwo.putString("checkBox10", checkBox10);
+        editorTwo.putString("checkBox11", checkBox11);
+        editorTwo.putString("checkBox12", checkBox12);
+        editorTwo.putString("checkBox13", checkBox13);
+        editorTwo.putString("checkBox14", checkBox14);
+        editorTwo.putString("checkBox15", checkBox15);
+        editorTwo.putString("checkBox16", checkBox16);
+        editorTwo.putString("checkBox17", checkBox17);
+        editorTwo.putString("checkBox18", checkBox18);
+        editorTwo.putString("checkBox19", checkBox19);
+        editorTwo.putString("checkBox20", checkBox20);
+        editorTwo.putString("checkBox21", checkBox21);
+        editorTwo.putString("checkBox22", checkBox22);
+        editorTwo.putString("checkBox23", checkBox23);
+        editorTwo.putString("checkBox24", checkBox24);
+        editorTwo.putString("checkBox25", checkBox25);
+        editorTwo.putString("checkBox26", checkBox26);
+        editorTwo.putString("checkBox27", checkBox27);
+        editorTwo.putString("Moved", GetMoved);
+        editorTwo.putString("LevelOnChargeStation", GetLevelOnChargeStation);
+        editorTwo.putString("NotLevelOnChargeStation", GetNotLevelOnChargeStation);
+        editorTwo.putString("LeftCommunity", GetLeftCommunity);
+
+
+
 
         editorTwo.apply();
 

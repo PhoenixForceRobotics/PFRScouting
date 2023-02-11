@@ -447,6 +447,48 @@ public class TeleScore extends AppCompatActivity {
         //        , "10", "11", "12", "13", "14", "15", "16");
 
         SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        Constants constants = new Constants();
+        constants.getPrefs(this);
+        String teamNum2 = scorePrefs.getString(teamNum, "0");
+        String matchNum2 = scorePrefs.getString(matchNum, "0");
+        String scout2 = scorePrefs.getString(TEXT, "0");
+        String box1 = scorePrefs.getString("checkBox1", "0");
+        String box2 = scorePrefs.getString("checkBox2", "0");
+        String box3 = scorePrefs.getString("checkBox3", "0");
+        String box4 = scorePrefs.getString("checkBox4", "0");
+        String box5 = scorePrefs.getString("checkBox5", "0");
+        String box6 = scorePrefs.getString("checkBox6", "0");
+        String box7 = scorePrefs.getString("checkBox7", "0");
+        String box8 = scorePrefs.getString("checkBox8", "0");
+        String box9 = scorePrefs.getString("checkBox9", "0");
+        String box10 = scorePrefs.getString("checkBox10", "0");
+        String box11 = scorePrefs.getString("checkBox11", "0");
+        String box12 = scorePrefs.getString("checkBox12", "0");
+        String box13 = scorePrefs.getString("checkBox13", "0");
+        String box14 = scorePrefs.getString("checkBox14", "0");
+        String box15 = scorePrefs.getString("checkBox15", "0");
+        String box16 = scorePrefs.getString("checkBox16", "0");
+        String box17 = scorePrefs.getString("checkBox17", "0");
+        String box18 = scorePrefs.getString("checkBox18", "0");
+        String box19 = scorePrefs.getString("checkBox19", "0");
+        String box20 = scorePrefs.getString("checkBox20", "0");
+        String box21 = scorePrefs.getString("checkBox21", "0");
+        String box22 = scorePrefs.getString("checkBox22", "0");
+        String box23 = scorePrefs.getString("checkBox23", "0");
+        String box24 = scorePrefs.getString("checkBox24", "0");
+        String box25 = scorePrefs.getString("checkBox25", "0");
+        String box26 = scorePrefs.getString("checkBox26", "0");
+        String box27 = scorePrefs.getString("checkBox27", "0");
+
+
+
+
+
+
+
+
+
+
 
         //Ints to Strings
         String Ocounter1S = String.valueOf(Ocounter1);
@@ -466,15 +508,15 @@ public class TeleScore extends AppCompatActivity {
         String check_counter5S = String.valueOf(check_counter5);
 
 //Game Data
-        GameData gameData = new GameData("String Scout", "String DevNum", "String MatchNum", "String TeamNum",
+        GameData gameData = new GameData(scout2, String.valueOf(constants.getDeviceId()), matchNum2, teamNum2,
                 Ocounter1S, Ocounter2S, Ocounter3S, Ucounter1S, Ucounter2S, Ucounter3S,
                 Dcounter1S, "String AutoMoved", "String AutoLeftCommunity", "String AutoOnStation",
                 "String AutoLevelOnStation", check_counter4S, check_counter5S, check_counter2S,
-                check_counter1S, check_counter3S, "String TBoxOne", "String TBoxTwo", "String TBoxThree", "String TBoxFour",
-                "String TBoxFive", "String TBoxSix", "String TBoxSeven", "String TBoxEight", "String TBoxNine", "String MBoxOne", "String MBoxTwo",
-                "String MBoxThree", "String MBoxFour", "String MBoxFive", "String MBoxSix", "String MBoxSeven", "String MBoxEight", "String MBoxNine",
-                "String BBoxOne", "String BBoxTwo", "String BBoxThree", "String BBoxFour", "String BBoxFive", "String BBoxSix", "String BBoxSeven",
-                "String BBoxEight", "String BBoxNine");
+                check_counter1S, check_counter3S, box19, box20, box21, box22,
+                box23, box24, box25, box26, box27, box10, box11,
+                box12, box13, box14, box15, box16, box17, box18,
+                box1, box2, box3, box4, box5, box6, box7,
+                box8, box9);
 
         SDB.gameDao().insertAll(gameData);
 

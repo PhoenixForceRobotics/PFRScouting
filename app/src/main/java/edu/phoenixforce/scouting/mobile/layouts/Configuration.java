@@ -1,5 +1,7 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;

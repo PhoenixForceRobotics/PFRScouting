@@ -14,6 +14,8 @@ public class Constants {
     private android.app.Application Application;
     String matchNumber;
     String teamNumber;
+    public static final String CONFIG_FILE_NAME = "edu.pheonicforce.scouting.mobile";
+    public static final String KEY_DEVICE_ID = CONFIG_FILE_NAME + "DeviceId";
 
     //Not sure what this cluster of getters and setters is being used for
     public String getMatchNumber() {
@@ -24,10 +26,18 @@ public class Constants {
     }
     public void setMatchNumber(String MatchNumber) { this.matchNumber = MatchNumber;}
 
+    public int getDeviceId() {return deviceId;}
+
+    int deviceId = 0;
+
     public void setTeamNumber(String TeamNumber) { this.teamNumber = TeamNumber;}
 
     public static int getExternalFileStoragePermission() {
         return EXTERNAL_FILE_STORAGE_PERMISSION;
+    }
+    public void getPrefs(Context context) {
+        SharedPreferences myPrefs = context.getSharedPreferences(CONFIG_FILE_NAME, MODE_PRIVATE);
+        deviceId = myPrefs.getInt(KEY_DEVICE_ID, deviceId);
     }
 
     //important
