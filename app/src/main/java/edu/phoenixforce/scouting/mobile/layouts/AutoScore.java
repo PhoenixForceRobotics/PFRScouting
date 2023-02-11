@@ -827,7 +827,8 @@ public class AutoScore<Moved> extends AppCompatActivity {
         String checkBox27 = String.valueOf(Checkbox27);
         String moved = String.valueOf(Moved);
         String LeftCommunity = String.valueOf(GetLeftCommunity);
-        String Level
+        String LevelOnChargeStation = String.valueOf(GetLevelOnChargeStation);
+        String NotLevelOnChargeStation = String.valueOf(GetNotLevelOnChargeStation);
 
 
 
@@ -862,6 +863,11 @@ public class AutoScore<Moved> extends AppCompatActivity {
         editorTwo.putString("checkBox25", checkBox25);
         editorTwo.putString("checkBox26", checkBox26);
         editorTwo.putString("checkBox27", checkBox27);
+        editorTwo.putString("Moved", GetMoved);
+        editorTwo.putString("LevelOnChargeStation", GetLevelOnChargeStation);
+        editorTwo.putString("NotLevelOnChargeStation", GetNotLevelOnChargeStation);
+        editorTwo.putString("LeftCommunity", GetLeftCommunity);
+
 
 
 
