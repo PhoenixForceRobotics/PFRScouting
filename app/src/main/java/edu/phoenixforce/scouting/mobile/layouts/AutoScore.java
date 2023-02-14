@@ -798,71 +798,34 @@ public class AutoScore<Moved> extends AppCompatActivity {
         SharedPreferences.Editor editorTwo = scorePrefs.edit();
 
 
-        String checkBox1 = String.valueOf(Checkbox1);
-        String checkBox2 = String.valueOf(Checkbox2);
-        String checkBox3 = String.valueOf(Checkbox3);
-        String checkBox4 = String.valueOf(Checkbox4);
-        String checkBox5 = String.valueOf(Checkbox5);
-        String checkBox6 = String.valueOf(Checkbox6);
-        String checkBox7 = String.valueOf(Checkbox7);
-        String checkBox8 = String.valueOf(Checkbox8);
-        String checkBox9 = String.valueOf(Checkbox9);
-        String checkBox10 = String.valueOf(Checkbox10);
-        String checkBox11 = String.valueOf(Checkbox11);
-        String checkBox12 = String.valueOf(Checkbox12);
-        String checkBox13 = String.valueOf(Checkbox13);
-        String checkBox14 = String.valueOf(Checkbox14);
-        String checkBox15 = String.valueOf(Checkbox15);
-        String checkBox16 = String.valueOf(Checkbox16);
-        String checkBox17 = String.valueOf(Checkbox17);
-        String checkBox18 = String.valueOf(Checkbox18);
-        String checkBox19 = String.valueOf(Checkbox19);
-        String checkBox20 = String.valueOf(Checkbox20);
-        String checkBox21 = String.valueOf(Checkbox21);
-        String checkBox22 = String.valueOf(Checkbox22);
-        String checkBox23 = String.valueOf(Checkbox23);
-        String checkBox24 = String.valueOf(Checkbox24);
-        String checkBox25 = String.valueOf(Checkbox25);
-        String checkBox26 = String.valueOf(Checkbox26);
-        String checkBox27 = String.valueOf(Checkbox27);
-        String moved = String.valueOf(Moved);
-        String LeftCommunity = String.valueOf(GetLeftCommunity);
-        String LevelOnChargeStation = String.valueOf(GetLevelOnChargeStation);
-        String NotLevelOnChargeStation = String.valueOf(GetNotLevelOnChargeStation);
-
-
-
-
-
-
         editorTwo.putString("autoMoved", counter5);
-        editorTwo.putString("checkBox1", checkBox1);
-        editorTwo.putString("checkBox2", checkBox2);
-        editorTwo.putString("checkBox3", checkBox3);
-        editorTwo.putString("checkbox4", checkBox4);
-        editorTwo.putString("checkBox5", checkBox5);
-        editorTwo.putString("checkBox6", checkBox6);
-        editorTwo.putString("checkBox7", checkBox7);
-        editorTwo.putString("checkBox8", checkBox8);
-        editorTwo.putString("checkBox9", checkBox9);
-        editorTwo.putString("checkBox10", checkBox10);
-        editorTwo.putString("checkBox11", checkBox11);
-        editorTwo.putString("checkBox12", checkBox12);
-        editorTwo.putString("checkBox13", checkBox13);
-        editorTwo.putString("checkBox14", checkBox14);
-        editorTwo.putString("checkBox15", checkBox15);
-        editorTwo.putString("checkBox16", checkBox16);
-        editorTwo.putString("checkBox17", checkBox17);
-        editorTwo.putString("checkBox18", checkBox18);
-        editorTwo.putString("checkBox19", checkBox19);
-        editorTwo.putString("checkBox20", checkBox20);
-        editorTwo.putString("checkBox21", checkBox21);
-        editorTwo.putString("checkBox22", checkBox22);
-        editorTwo.putString("checkBox23", checkBox23);
-        editorTwo.putString("checkBox24", checkBox24);
-        editorTwo.putString("checkBox25", checkBox25);
-        editorTwo.putString("checkBox26", checkBox26);
-        editorTwo.putString("checkBox27", checkBox27);
+        editorTwo.putString("checkBox1", CheckBox1);
+        editorTwo.putString("checkBox2", CheckBox2);
+        editorTwo.putString("checkBox3", CheckBox3);
+        editorTwo.putString("checkbox4", CheckBox4);
+        editorTwo.putString("checkBox5", CheckBox5);
+        editorTwo.putString("checkBox6", CheckBox6);
+        editorTwo.putString("checkBox7", CheckBox7);
+        editorTwo.putString("checkBox8", CheckBox8);
+        editorTwo.putString("checkBox9", CheckBox9);
+        editorTwo.putString("checkBox10", CheckBox10);
+        editorTwo.putString("checkBox11", CheckBox11);
+        editorTwo.putString("checkBox12", CheckBox12);
+        editorTwo.putString("checkBox13", CheckBox13);
+        editorTwo.putString("checkBox14", CheckBox14);
+        editorTwo.putString("checkBox15", CheckBox15);
+        editorTwo.putString("checkBox16", CheckBox16);
+        editorTwo.putString("checkBox17", CheckBox17);
+        editorTwo.putString("checkBox18", CheckBox18);
+        editorTwo.putString("checkBox19", CheckBox19);
+        editorTwo.putString("checkBox20", CheckBox20);
+        editorTwo.putString("checkBox21", CheckBox21);
+        editorTwo.putString("checkBox22", CheckBox22);
+        editorTwo.putString("checkBox23", CheckBox23);
+        editorTwo.putString("checkBox24", CheckBox24);
+        editorTwo.putString("checkBox25", CheckBox25);
+        editorTwo.putString("checkBox26", CheckBox26);
+        editorTwo.putString("checkBox27", CheckBox27);
         editorTwo.putString("Moved", GetMoved);
         editorTwo.putString("LevelOnChargeStation", GetLevelOnChargeStation);
         editorTwo.putString("NotLevelOnChargeStation", GetNotLevelOnChargeStation);

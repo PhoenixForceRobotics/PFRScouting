@@ -118,6 +118,7 @@ public class QRCode extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Log.d("made it here", qrCodeData);
 
 
                     // below line is for getting
