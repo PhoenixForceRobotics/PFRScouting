@@ -33,10 +33,13 @@ import androidx.core.content.ContextCompat;
 import com.example.fyrebirdscout11.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.opencsv.CSVWriter;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.util.ArrayList;
 import java.util.List;
 
     public class QRCodeScanner extends AppCompatActivity {
@@ -48,7 +51,7 @@ import java.util.List;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.qr_code_scanner);
-            FloatingActionButton fab = findViewById(R.id.fab);
+            FloatingActionButton fab = findViewById(R.id.floatingActionButton2);
             final QRCodeScanner thisActivity = this;
             // check permission method is to check that the
             // camera permission is granted by user or not.
@@ -97,7 +100,6 @@ import java.util.List;
                         public void onClick(View view) {
 
 
-
                             if (ContextCompat.checkSelfPermission(thisActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                                     != PackageManager.PERMISSION_GRANTED) {
 
@@ -114,7 +116,8 @@ import java.util.List;
                                     String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
                                     ActivityCompat.requestPermissions(thisActivity, permissions, Constants.EXTERNAL_FILE_STORAGE_PERMISSION);
                                 }
-                            } else {
+                            }
+                            else {
                                 copyDatabase();
                             }
 
@@ -182,32 +185,93 @@ import java.util.List;
         private void copyDatabase() {
             try
             {
+                ArrayList<String> finalData = new ArrayList<String>();
+                String data = scannedTV.getText().toString();
 
-                File sourceDb = new File(getApplicationContext().getDatabasePath(ScoreDataBase.DBNAME).getAbsolutePath());
-                File targetDb = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/"
-                        + ScoreDataBase.DBNAME + "_" + Configuration.getInstance().getTbaTeamId() + "_"
-                        + Configuration.getInstance().getDeviceId() + ".db");
+                String[] dataSets = data.split("]");
+                int counter = 1;
+                String numEntries = "Skill issue";
+                for(String i: dataSets) {
+                    if (counter == 1) {
+                        numEntries = i;
+                    } else {
 
-                FileInputStream fis = new FileInputStream(sourceDb);
-                FileOutputStream fos = new FileOutputStream(targetDb);
 
-                byte[] buffer = new byte[1024];
-                int length;
-                while ((length = fis.read(buffer))>0){
-                    fos.write(buffer, 0, length);
+                        String[] individualNums = i.split(" ");
+                        for (String u : individualNums) {
+                            u = u.replace("[", "");
+                            u = u.replace(",", "");
+                            u = u.replace(" ", "");
+                            finalData.add(u);
+
+                        }
+                    }
+                    counter++;
                 }
+                numEntries = numEntries.replace(" ", "");
+                numEntries = numEntries.replace("[", "");
+                numEntries = numEntries.replace(",", "");
 
-                // Close the streams
-                fos.flush();
-                fos.close();
-                fis.close();
+                ArrayList<String> array1 = new ArrayList<String>();
+                ArrayList<String> array2 = new ArrayList<String>();
+                ArrayList<String> array3 = new ArrayList<String>();
+                ArrayList<String> array4 = new ArrayList<String>();
+                ArrayList<String> array5 = new ArrayList<String>();
+                ArrayList<String> array6 = new ArrayList<String>();
+                ArrayList<String> array7 = new ArrayList<String>();
+                ArrayList<String> array8 = new ArrayList<String>();
+                ArrayList<String> array9 = new ArrayList<String>();
+                ArrayList<String> array10 = new ArrayList<String>();
+                ArrayList<ArrayList> finalList = new ArrayList<ArrayList>();
 
-                Snackbar.make(this.findViewById(R.id.fab), "Copy complete.", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+
+                int e = Integer.valueOf(numEntries);
+
+                for(int i = 0; i < finalData.size(); i++){
+                    for(int r = 0; r < e; r++) {
+                        if ((i % e) == r) {
+
+                            String sortedData = finalData.get(i);
+                            if(r == 1){ array1.add(sortedData); }
+                            if(r == 2){ array2.add(sortedData); }
+                            if(r == 3){ array3.add(sortedData); }
+                            if(r == 4){ array4.add(sortedData); }
+                            if(r == 5){ array5.add(sortedData); }
+                            if(r == 6){ array6.add(sortedData); }
+                            if(r == 7){ array7.add(sortedData); }
+                            if(r == 8){ array8.add(sortedData); }
+                            if(r == 9){ array9.add(sortedData); }
+                            if(r == 10){ array10.add(sortedData); }
+
+                        }
+                    }
+
+                }
+                Log.d("num", numEntries);
+                Log.d("counter", finalData.toString());
+                finalList.add(array1);
+                finalList.add(array2);
+                finalList.add(array3);
+                finalList.add(array4);
+                finalList.add(array5);
+                finalList.add(array6);
+                finalList.add(array7);
+                finalList.add(array8);
+                finalList.add(array9);
+                finalList.add(array10);
+
+                String csv = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
+                CSVWriter writer = new CSVWriter(new FileWriter(csv));
+
+                writer.writeAll(finalList.get(1));
+
+                writer.close();
+
 
             }
             catch (Exception e) {
-                Snackbar.make(findViewById(R.id.fab), "Exception copying data " + e.getMessage(), Snackbar.LENGTH_LONG)
+                Snackbar.make(findViewById(R.id.idTVscanned), "Exception copying data " + e.getMessage(), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
 
