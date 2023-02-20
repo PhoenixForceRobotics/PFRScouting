@@ -188,6 +188,7 @@ import java.util.List;
                 ArrayList<String> finalData = new ArrayList<String>();
                 String data = scannedTV.getText().toString();
 
+
                 String[] dataSets = data.split("]");
                 int counter = 1;
                 String numEntries = "Skill issue";
@@ -212,59 +213,62 @@ import java.util.List;
                 numEntries = numEntries.replace("[", "");
                 numEntries = numEntries.replace(",", "");
 
-                ArrayList<String> array1 = new ArrayList<String>();
-                ArrayList<String> array2 = new ArrayList<String>();
-                ArrayList<String> array3 = new ArrayList<String>();
-                ArrayList<String> array4 = new ArrayList<String>();
-                ArrayList<String> array5 = new ArrayList<String>();
-                ArrayList<String> array6 = new ArrayList<String>();
-                ArrayList<String> array7 = new ArrayList<String>();
-                ArrayList<String> array8 = new ArrayList<String>();
-                ArrayList<String> array9 = new ArrayList<String>();
-                ArrayList<String> array10 = new ArrayList<String>();
-                ArrayList<ArrayList> finalList = new ArrayList<ArrayList>();
+                ArrayList<ArrayList<String>> arrays =  new ArrayList<ArrayList<String>>();
+                int numMatchesTracked = Integer.valueOf(numEntries);
 
+                //fullSize = Repeats a number of times equal to the total size of data
+                //numMatchesTracked =
+                //finalData = an arraylist of strings including the data devoid of commas etc.
 
+                //int r Repeats for each Match that is tracked
+                int g = finalData.size();
+                List<String[]> finalList = new ArrayList<String[]>();
+                Log.d("test", Integer.toString(g));
+                for(int i = 0; i < numMatchesTracked; i++){
+                    arrays.add(new ArrayList<String>());
+                }
+                Log.d("here", "test1");
 
-                int e = Integer.valueOf(numEntries);
-
-                for(int i = 0; i < finalData.size(); i++){
-                    for(int r = 0; r < e; r++) {
-                        if ((i % e) == r) {
-
-                            String sortedData = finalData.get(i);
-                            if(r == 1){ array1.add(sortedData); }
-                            if(r == 2){ array2.add(sortedData); }
-                            if(r == 3){ array3.add(sortedData); }
-                            if(r == 4){ array4.add(sortedData); }
-                            if(r == 5){ array5.add(sortedData); }
-                            if(r == 6){ array6.add(sortedData); }
-                            if(r == 7){ array7.add(sortedData); }
-                            if(r == 8){ array8.add(sortedData); }
-                            if(r == 9){ array9.add(sortedData); }
-                            if(r == 10){ array10.add(sortedData); }
-
+                for(int fullSize = 0; fullSize < finalData.size(); fullSize++){
+                   String sortedData = finalData.get(fullSize);
+                    Log.d("here", "test2");
+                    //fullSize % numMatchesTracked gives what array the current sorted data should be put in
+                    for(int i = 0; i < numMatchesTracked; i++){
+                        if ((fullSize % numMatchesTracked) == i){
+                            arrays.get(i).add(sortedData);
                         }
                     }
+                }
+                //Log.d("here", array1.get(1));
+                Log.d("here", "testing");
+
+
+                for(int i = 0; i < numMatchesTracked; i++){
+
+                    String[] coolCacheThingyMajig = new String[arrays.get(i).size()];
+                    for(int j = 0; j < arrays.get(i).size(); j++){
+                        coolCacheThingyMajig[j] = arrays.get(i).get(j);
+                    }
+                    finalList.add(coolCacheThingyMajig);
 
                 }
+                String[] names = {"Scout", "DevId", "matchNum", "TeamNum", "TeleTopCone", "TeleMidCone", "TeleBottomCone", "TeleTopCube", "TeleMidCube",
+                        "TeleBottomCube", "DefenceRating", "AutoMoved", "AutoLeftCommunity", "AutoUnengaged", "AutoEngaged", "TeleUnengaged", "TeleEngaged",
+                        "Drove", "Broke", "NoShow", "TBox1", "TBox2", "TBox3", "TBoxFour", "TBoxFive" , "TBoxSix",  "TBoxSeven",
+                        "TBoxEight", "TBoxNine", "MBoxOne", "MBoxTwo", "MBoxThree", "MBoxFour", "MBoxFive", "MBoxSix", "MBoxSeven", "MBoxEight", "MBoxNine",
+                        "BBoxOne", "BBoxTwo", "BBoxThree", "BBoxFour", "BBoxFive", "BBoxSix", "BBoxSeven", "BBoxEight", "BBoxNine"};
+                finalList.add(0, names);
                 Log.d("num", numEntries);
                 Log.d("counter", finalData.toString());
-                finalList.add(array1);
-                finalList.add(array2);
-                finalList.add(array3);
-                finalList.add(array4);
-                finalList.add(array5);
-                finalList.add(array6);
-                finalList.add(array7);
-                finalList.add(array8);
-                finalList.add(array9);
-                finalList.add(array10);
 
-                String csv = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
+
+
+                //String csv = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
+                String csv ="/data/data/com.phoenixforce.scouting/data.csv";
+                Log.d("test", csv);
                 CSVWriter writer = new CSVWriter(new FileWriter(csv));
 
-                writer.writeAll(finalList.get(1));
+                writer.writeAll(finalList);
 
                 writer.close();
 
@@ -273,6 +277,7 @@ import java.util.List;
             catch (Exception e) {
                 Snackbar.make(findViewById(R.id.idTVscanned), "Exception copying data " + e.getMessage(), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Log.d("exception", e.getMessage());
             }
 
 
