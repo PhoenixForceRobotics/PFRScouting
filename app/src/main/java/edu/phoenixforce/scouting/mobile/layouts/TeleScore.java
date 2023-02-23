@@ -452,6 +452,10 @@ public class TeleScore extends AppCompatActivity {
         String teamNum2 = scorePrefs.getString(teamNum, "0");
         String matchNum2 = scorePrefs.getString(matchNum, "0");
         String scout2 = scorePrefs.getString(TEXT, "0");
+        String autoMoved1 = scorePrefs.getString("Moved","0");
+        String levelOnChargeStation1 = scorePrefs.getString("LevelOnChargeStation","0");
+        String notLevelOnStation1 = scorePrefs.getString("NotLevelOnChargeStation","0");
+        String leftCommunity1 = scorePrefs.getString("LeftCommunity","0");
         String box1 = scorePrefs.getString("checkBox1", "0");
         String box2 = scorePrefs.getString("checkBox2", "0");
         String box3 = scorePrefs.getString("checkBox3", "0");
@@ -510,8 +514,8 @@ public class TeleScore extends AppCompatActivity {
 //Game Data
         GameData gameData = new GameData(scout2, String.valueOf(constants.getDeviceId()), matchNum2, teamNum2,
                 Ocounter1S, Ocounter2S, Ocounter3S, Ucounter1S, Ucounter2S, Ucounter3S,
-                Dcounter1S, "String AutoMoved", "String AutoLeftCommunity", "String AutoOnStation",
-                "String AutoLevelOnStation", check_counter4S, check_counter5S, check_counter2S,
+                Dcounter1S, autoMoved1, leftCommunity1, notLevelOnStation1,
+                levelOnChargeStation1, check_counter4S, check_counter5S, check_counter2S,
                 check_counter1S, check_counter3S, box19, box20, box21, box22,
                 box23, box24, box25, box26, box27, box10, box11,
                 box12, box13, box14, box15, box16, box17, box18,

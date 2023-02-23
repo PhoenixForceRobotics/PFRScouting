@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             app:srcCompat="@drawable/picture1" />
+
     </eu.livotov.labs.android.camview.ScannerLiveView>
 
     <!--TextView to display the scanned data-->

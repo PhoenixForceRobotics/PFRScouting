@@ -49,6 +49,8 @@ public class QRCode extends AppCompatActivity {
         //At the time of writing this queen Elizabeth died 3 minuets ago.
 
                                         //Scouts
+        List numEntries1 = Base.gameDao().getScout();
+        int numEntries = numEntries1.size();
         String scouts = Base.gameDao().getScout().toString();
         String devNums = Base.gameDao().getDevNum().toString();
         String matchNums = Base.gameDao().getMatchNum().toString();
@@ -98,7 +100,7 @@ public class QRCode extends AppCompatActivity {
         String BBox9 = Base.gameDao().getBBoxNine().toString();
 
 
-        String qrCodeData = scouts + "," + devNums + "," + matchNums + "," + teams + "," + autoMoved + "," + teleMoved + ","
+        String qrCodeData = numEntries + "]" + scouts + "," + devNums + "," + matchNums + "," + teams + "," + autoMoved + "," + teleMoved + ","
                 + "," + teleTopCones + "," + teleMidCones + "," + teleBottomCones + "," + teleTopCubes + ","
                 + teleMidCubes + "," + teleBottomCubes + "," + defence + "," + autoLeftCommunity + "," + autoOnStation + ","
                 + autoLevelOnStation + "," + teleOnStation + "," +  teleLevelOnStation + "," + teleBroke + "," + teleNoShow +
@@ -118,6 +120,7 @@ public class QRCode extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Log.d("made it here", qrCodeData);
 
 
                     // below line is for getting

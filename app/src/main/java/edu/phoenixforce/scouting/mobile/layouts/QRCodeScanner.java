@@ -33,10 +33,13 @@ import androidx.core.content.ContextCompat;
 import com.example.fyrebirdscout11.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.opencsv.CSVWriter;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.util.ArrayList;
 import java.util.List;
 
     public class QRCodeScanner extends AppCompatActivity {
@@ -48,7 +51,7 @@ import java.util.List;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.qr_code_scanner);
-            FloatingActionButton fab = findViewById(R.id.fab);
+            FloatingActionButton fab = findViewById(R.id.floatingActionButton2);
             final QRCodeScanner thisActivity = this;
             // check permission method is to check that the
             // camera permission is granted by user or not.
@@ -97,7 +100,6 @@ import java.util.List;
                         public void onClick(View view) {
 
 
-
                             if (ContextCompat.checkSelfPermission(thisActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                                     != PackageManager.PERMISSION_GRANTED) {
 
@@ -114,7 +116,8 @@ import java.util.List;
                                     String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
                                     ActivityCompat.requestPermissions(thisActivity, permissions, Constants.EXTERNAL_FILE_STORAGE_PERMISSION);
                                 }
-                            } else {
+                            }
+                            else {
                                 copyDatabase();
                             }
 
@@ -182,33 +185,99 @@ import java.util.List;
         private void copyDatabase() {
             try
             {
+                ArrayList<String> finalData = new ArrayList<String>();
+                String data = scannedTV.getText().toString();
 
-                File sourceDb = new File(getApplicationContext().getDatabasePath(ScoreDataBase.DBNAME).getAbsolutePath());
-                File targetDb = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/"
-                        + ScoreDataBase.DBNAME + "_" + Configuration.getInstance().getTbaTeamId() + "_"
-                        + Configuration.getInstance().getDeviceId() + ".db");
 
-                FileInputStream fis = new FileInputStream(sourceDb);
-                FileOutputStream fos = new FileOutputStream(targetDb);
+                String[] dataSets = data.split("]");
+                int counter = 1;
+                String numEntries = "Skill issue";
+                for(String i: dataSets) {
+                    if (counter == 1) {
+                        numEntries = i;
+                    } else {
 
-                byte[] buffer = new byte[1024];
-                int length;
-                while ((length = fis.read(buffer))>0){
-                    fos.write(buffer, 0, length);
+
+                        String[] individualNums = i.split(" ");
+                        for (String u : individualNums) {
+                            u = u.replace("[", "");
+                            u = u.replace(",", "");
+                            u = u.replace(" ", "");
+                            finalData.add(u);
+
+                        }
+                    }
+                    counter++;
                 }
+                numEntries = numEntries.replace(" ", "");
+                numEntries = numEntries.replace("[", "");
+                numEntries = numEntries.replace(",", "");
 
-                // Close the streams
-                fos.flush();
-                fos.close();
-                fis.close();
+                ArrayList<ArrayList<String>> arrays =  new ArrayList<ArrayList<String>>();
+                int numMatchesTracked = Integer.valueOf(numEntries);
 
-                Snackbar.make(this.findViewById(R.id.fab), "Copy complete.", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //fullSize = Repeats a number of times equal to the total size of data
+                //numMatchesTracked =
+                //finalData = an arraylist of strings including the data devoid of commas etc.
+
+                //int r Repeats for each Match that is tracked
+                int g = finalData.size();
+                List<String[]> finalList = new ArrayList<String[]>();
+                Log.d("test", Integer.toString(g));
+                for(int i = 0; i < numMatchesTracked; i++){
+                    arrays.add(new ArrayList<String>());
+                }
+                Log.d("here", "test1");
+
+                for(int fullSize = 0; fullSize < finalData.size(); fullSize++){
+                   String sortedData = finalData.get(fullSize);
+                    Log.d("here", "test2");
+                    //fullSize % numMatchesTracked gives what array the current sorted data should be put in
+                    for(int i = 0; i < numMatchesTracked; i++){
+                        if ((fullSize % numMatchesTracked) == i){
+                            arrays.get(i).add(sortedData);
+                        }
+                    }
+                }
+                //Log.d("here", array1.get(1));
+                Log.d("here", "testing");
+
+
+                for(int i = 0; i < numMatchesTracked; i++){
+
+                    String[] coolCacheThingyMajig = new String[arrays.get(i).size()];
+                    for(int j = 0; j < arrays.get(i).size(); j++){
+                        coolCacheThingyMajig[j] = arrays.get(i).get(j);
+                    }
+                    finalList.add(coolCacheThingyMajig);
+
+                }
+                String[] names = {"Scout", "DevId", "matchNum", "TeamNum", "TeleTopCone", "TeleMidCone", "TeleBottomCone", "TeleTopCube", "TeleMidCube",
+                        "TeleBottomCube", "DefenceRating", "AutoMoved", "AutoLeftCommunity", "AutoUnengaged", "AutoEngaged", "TeleUnengaged", "TeleEngaged",
+                        "Drove", "Broke", "NoShow", "TBox1", "TBox2", "TBox3", "TBoxFour", "TBoxFive" , "TBoxSix",  "TBoxSeven",
+                        "TBoxEight", "TBoxNine", "MBoxOne", "MBoxTwo", "MBoxThree", "MBoxFour", "MBoxFive", "MBoxSix", "MBoxSeven", "MBoxEight", "MBoxNine",
+                        "BBoxOne", "BBoxTwo", "BBoxThree", "BBoxFour", "BBoxFive", "BBoxSix", "BBoxSeven", "BBoxEight", "BBoxNine"};
+                finalList.add(0, names);
+                Log.d("num", numEntries);
+                Log.d("counter", finalData.toString());
+
+
+
+                //String csv = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
+                String csv ="/data/data/com.phoenixforce.scouting/data.csv";
+                Log.d("test", csv);
+                CSVWriter writer = new CSVWriter(new FileWriter(csv));
+
+                writer.writeAll(finalList);
+
+                writer.close();
+
 
             }
             catch (Exception e) {
-                Snackbar.make(findViewById(R.id.fab), "Exception copying data " + e.getMessage(), Snackbar.LENGTH_LONG)
+                Snackbar.make(findViewById(R.id.idTVscanned), "Exception copying data " + e.getMessage(), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Log.d("exception", e.getMessage());
             }
 
 
