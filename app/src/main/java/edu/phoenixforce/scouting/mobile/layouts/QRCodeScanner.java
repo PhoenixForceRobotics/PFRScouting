@@ -185,20 +185,27 @@ import java.util.List;
         private void copyDatabase() {
             try
             {
+                //Arraylist for unparsed data to be added to.
                 ArrayList<String> finalData = new ArrayList<String>();
+
+                //stores the unparsed data gathered from the QR code.
                 String data = scannedTV.getText().toString();
 
-
+                //Makes the data into a list of strings
                 String[] dataSets = data.split("]");
+                //Counter is an arbitrary int
                 int counter = 1;
-                String numEntries = "Skill issue";
+                String numEntries = "Shouldn't matter";
+                //for loop repeats for the number of entries in the list above
                 for(String i: dataSets) {
+                    /*makes sure that the loop stops at the first entry to pull the number of matches for
+                    later parsing, also is and if statement so the value doesn't get added to the data list*/
                     if (counter == 1) {
                         numEntries = i;
                     } else {
 
-
                         String[] individualNums = i.split(" ");
+                        //for each string thiis loop just removes all the extraneous characters not necissary for parsing.
                         for (String u : individualNums) {
                             u = u.replace("[", "");
                             u = u.replace(",", "");
@@ -209,26 +216,31 @@ import java.util.List;
                     }
                     counter++;
                 }
+                //parses the numer of entries data
                 numEntries = numEntries.replace(" ", "");
                 numEntries = numEntries.replace("[", "");
                 numEntries = numEntries.replace(",", "");
 
+                //arraylist to add the data
                 ArrayList<ArrayList<String>> arrays =  new ArrayList<ArrayList<String>>();
+                //converts the number of matches being tracked into an ninteger.
                 int numMatchesTracked = Integer.valueOf(numEntries);
 
                 //fullSize = Repeats a number of times equal to the total size of data
-                //numMatchesTracked =
                 //finalData = an arraylist of strings including the data devoid of commas etc.
-
                 //int r Repeats for each Match that is tracked
+                //lots of logs for debugging, nto necissary.
                 int g = finalData.size();
                 List<String[]> finalList = new ArrayList<String[]>();
                 Log.d("test", Integer.toString(g));
+
                 for(int i = 0; i < numMatchesTracked; i++){
                     arrays.add(new ArrayList<String>());
                 }
                 Log.d("here", "test1");
 
+                /*essentially this loop sorts each individual piece of data into an arraylist of arraylists
+                where the list is the match number the data is from*/
                 for(int fullSize = 0; fullSize < finalData.size(); fullSize++){
                    String sortedData = finalData.get(fullSize);
                     Log.d("here", "test2");
@@ -239,10 +251,11 @@ import java.util.List;
                         }
                     }
                 }
-                //Log.d("here", array1.get(1));
+
                 Log.d("here", "testing");
 
-
+                /*repeats for each mach then converts the respective arraylist into an array which is what
+                the csv writer takes*/
                 for(int i = 0; i < numMatchesTracked; i++){
 
                     String[] coolCacheThingyMajig = new String[arrays.get(i).size()];
@@ -252,6 +265,7 @@ import java.util.List;
                     finalList.add(coolCacheThingyMajig);
 
                 }
+                //column names for the csv file so that the data is readable in excel, (added at position 0)
                 String[] names = {"Scout", "DevId", "matchNum", "TeamNum", "TeleTopCone", "TeleMidCone", "TeleBottomCone", "TeleTopCube", "TeleMidCube",
                         "TeleBottomCube", "DefenceRating", "AutoMoved", "AutoLeftCommunity", "AutoUnengaged", "AutoEngaged", "TeleUnengaged", "TeleEngaged",
                         "Drove", "Broke", "NoShow", "TBox1", "TBox2", "TBox3", "TBoxFour", "TBoxFive" , "TBoxSix",  "TBoxSeven",
@@ -263,17 +277,20 @@ import java.util.List;
 
 
 
-                //String csv = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
+                //magic library that does conversion from list to csv file for us.
+                //path on "Device File Explorer"
                 String csv ="/data/data/com.phoenixforce.scouting/data.csv";
                 Log.d("test", csv);
-                CSVWriter writer = new CSVWriter(new FileWriter(csv));
 
+                CSVWriter writer = new CSVWriter(new FileWriter(csv));
+                //Writes the list of arrays to a file.
                 writer.writeAll(finalList);
 
                 writer.close();
 
 
             }
+            //obvious exception code.
             catch (Exception e) {
                 Snackbar.make(findViewById(R.id.idTVscanned), "Exception copying data " + e.getMessage(), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
