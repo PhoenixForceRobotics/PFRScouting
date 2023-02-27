@@ -1,11 +1,13 @@
 package edu.phoenixforce.scouting.mobile.layouts;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -340,23 +342,36 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
         }
     }
 
+
     public void clearData(){
 
-        if(text.equals("Admin")) {
 
-            ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
 
-            SDB.gameDao().nukeTable();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(true);
+            builder.setTitle("Are you sure?");
+            builder.setMessage("This action will delete the stored data on this device");
+            builder.setPositiveButton("Confirm",
+                    new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Context context = getApplicationContext();
+                        ScoreDataBase SDB = ScoreDataBase.getDatabase(context);
 
-            Toast.makeText(this, "Table cleared", Toast.LENGTH_LONG).show();
-            Log.v("ActivityMain", "Table Cleared");
-        }
+                        SDB.gameDao().nukeTable();
+                        Toast.makeText(context, "Table cleared", Toast.LENGTH_LONG).show();
+                        Log.v("ActivityMain", "Table Cleared");
+                    }
+                });
+        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        AlertDialog dialog = builder.create();
 
-        else{
-            Toast.makeText(this, "Permission denied - 100 - Must be run as ADMIN", Toast.LENGTH_LONG).show();
-            Log.e("ActiivityMain", "Non-Admin tried to run clear data");
+        dialog.show();
 
-        }
 
     }
 
