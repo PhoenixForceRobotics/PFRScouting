@@ -14,7 +14,7 @@ import edu.phoenixforce.scouting.mobile.database.entities.GameData;
 @Dao //data access object
 
 
-// This dao was used to save gameplay specific data for the 2022 season
+// This dao was used to save gameplay specific data for the 2023 season
 //This dao should be moved to the legacy folder with the GameData entity
 public interface GameDao {
 
