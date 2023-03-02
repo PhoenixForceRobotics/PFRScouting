@@ -111,6 +111,8 @@ import java.util.List;
             clear.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    /*
+                }
                     AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
                     builder.setCancelable(true);
                     builder.setTitle("Are you sure?");
@@ -118,9 +120,9 @@ import java.util.List;
                     builder.setPositiveButton("Confirm",
                             new DialogInterface.OnClickListener() {
                                 @Override
-                                public void onClick(DialogInterface dialog, int which) {
+                                public void onClick(DialogInterface dialog, int which) {*/
                                     clearDatabase();
-                                }
+                                /*}
                             });
                     builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                         @Override
@@ -130,22 +132,24 @@ import java.util.List;
                     AlertDialog dialog = builder.create();
 
                     dialog.show();
-
+                    */
                 }
+
+
             });
             copy.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                    /*AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
                     builder.setCancelable(true);
                     builder.setTitle("Are you sure?");
                     builder.setMessage("This action will delete the stored data on this device");
                     builder.setPositiveButton("Confirm",
                             new DialogInterface.OnClickListener() {
                                 @Override
-                                public void onClick(DialogInterface dialog, int which) {
+                                public void onClick(DialogInterface dialog, int which) { */
                                     copyDatabase();
-                                }
+                                /*}
                             });
                     builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                         @Override
@@ -155,9 +159,12 @@ import java.util.List;
                     AlertDialog dialog = builder.create();
 
                     dialog.show();
-
+*/
                 }
+
+
             });
+
             download.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -178,16 +185,16 @@ import java.util.List;
                             ActivityCompat.requestPermissions(thisActivity, permissions, Constants.EXTERNAL_FILE_STORAGE_PERMISSION);
                         }
                     } else {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                        /*AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
                         builder.setCancelable(true);
                         builder.setTitle("Are you sure?");
                         builder.setMessage("This action will delete the stored data on this device");
                         builder.setPositiveButton("Confirm",
                                 new DialogInterface.OnClickListener() {
                                     @Override
-                                    public void onClick(DialogInterface dialog, int which) {
+                                    public void onClick(DialogInterface dialog, int which) { */
                                         downloadDatabase();
-                                    }
+                                    /*}
                                 });
                         builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                             @Override
@@ -197,8 +204,10 @@ import java.util.List;
                         AlertDialog dialog = builder.create();
 
                         dialog.show();
-
+                           */
                     }
+
+
                 }
             });
 
