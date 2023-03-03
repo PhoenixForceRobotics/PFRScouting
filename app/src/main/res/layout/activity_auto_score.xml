@@ -604,6 +604,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:checked="false"
+        android:gravity="center"
         android:text="Moved"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#DC0707"
@@ -620,6 +621,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:checked="false"
+        android:gravity="center"
         android:text="Left community"
         android:textColor="@color/OffWhite"
         android:textIsSelectable="false"
@@ -636,6 +638,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:checked="false"
+        android:gravity="center"
         android:text="Level on charge station"
         android:textColor="@color/OffWhite"
         android:textSize="10sp"
@@ -871,7 +874,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84" />
+        app:layout_constraintGuide_percent="0.83" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline99"
@@ -892,7 +895,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.88" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline104"
@@ -947,6 +950,7 @@
         android:id="@+id/NotLevelOnChargeStation"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:gravity="center"
         android:text="not level charge station"
         android:textColor="#FAF0F0"
         android:textSize="10sp"
@@ -968,6 +972,7 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:gravity="center"
         android:text="Top"
         android:textColor="@color/OffWhite"
         android:textSize="14sp"
@@ -995,6 +1000,7 @@
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:gravity="center"
         android:text="MIddle"
         android:textColor="#FEFEFE"
         android:textSize="14sp"
@@ -1021,6 +1027,7 @@
         android:id="@+id/textView5"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:gravity="center"
         android:text="Bottom"
         android:textColor="#E4DCDC"
         android:textSize="14sp"
