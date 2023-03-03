@@ -627,7 +627,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
         app:layout_constraintEnd_toStartOf="@+id/guideline100"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline69"
+        app:layout_constraintStart_toEndOf="@+id/Moved"
         app:layout_constraintTop_toTopOf="@+id/guideline98"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -641,7 +641,7 @@
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
         app:layout_constraintEnd_toStartOf="@+id/guideline102"
-        app:layout_constraintStart_toStartOf="@+id/guideline66"
+        app:layout_constraintStart_toEndOf="@+id/LeftCommunity"
         app:layout_constraintTop_toTopOf="@+id/guideline98"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -850,7 +850,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.22" />
+        app:layout_constraintGuide_percent="0.21" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline96"
@@ -927,21 +927,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.42" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline102"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.73" />
+        app:layout_constraintGuide_percent="0.68" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline108"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
+        app:layout_constraintGuide_percent="0.96" />
 
     <CheckBox
         android:id="@+id/NotLevelOnChargeStation"
@@ -970,7 +970,7 @@
         android:layout_height="0dp"
         android:text="Top"
         android:textColor="@color/OffWhite"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/Checkbox1"
         app:layout_constraintEnd_toStartOf="@+id/guideline113"
         app:layout_constraintHorizontal_bias="0.471"
@@ -997,7 +997,7 @@
         android:layout_height="0dp"
         android:text="MIddle"
         android:textColor="#FEFEFE"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline110"
         app:layout_constraintEnd_toStartOf="@+id/guideline114"
         app:layout_constraintStart_toStartOf="@+id/guideline115"
@@ -1023,9 +1023,9 @@
         android:layout_height="0dp"
         android:text="Bottom"
         android:textColor="#E4DCDC"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline110"
-        app:layout_constraintEnd_toStartOf="@+id/guideline108"
+        app:layout_constraintEnd_toStartOf="@+id/guideline120"
         app:layout_constraintStart_toStartOf="@+id/guideline119"
         app:layout_constraintTop_toTopOf="@+id/guideline65"
         app:layout_constraintVertical_bias="0.428" />
@@ -1036,6 +1036,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline120"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
 
 
     <!-- //Checkboxes
