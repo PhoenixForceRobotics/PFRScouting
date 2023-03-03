@@ -34,6 +34,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline85"
@@ -53,7 +54,9 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Hybrid"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline85"
         app:layout_constraintEnd_toStartOf="@+id/guideline75"
@@ -74,6 +77,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cube"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline87"
@@ -94,6 +98,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline87"
@@ -113,7 +118,9 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Hybrid"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline87"
         app:layout_constraintEnd_toStartOf="@+id/guideline75"
@@ -132,6 +139,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cube"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline89"
@@ -151,6 +159,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline91"
@@ -172,6 +181,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cube"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline89"
@@ -192,7 +202,9 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Hybrid"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline89"
         app:layout_constraintEnd_toStartOf="@+id/guideline75"
@@ -211,6 +223,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline91"
@@ -230,7 +243,9 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Hybrid"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline91"
         app:layout_constraintEnd_toStartOf="@+id/guideline75"
@@ -249,7 +264,9 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Hybrid"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline83"
         app:layout_constraintEnd_toStartOf="@+id/guideline75"
@@ -269,6 +286,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline85"
@@ -304,12 +322,13 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline66"
         app:layout_constraintStart_toStartOf="@+id/guideline68"
-        app:layout_constraintTop_toTopOf="@+id/guideline65" />
+        app:layout_constraintTop_toTopOf="@+id/guideline110" />
 
     <CheckBox
         android:id="@+id/Checkbox1"
@@ -323,12 +342,13 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline69"
         app:layout_constraintStart_toStartOf="@+id/guideline67"
-        app:layout_constraintTop_toTopOf="@+id/guideline65" />
+        app:layout_constraintTop_toTopOf="@+id/guideline110" />
 
     <CheckBox
         android:id="@+id/Checkbox13"
@@ -342,6 +362,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cube"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline83"
@@ -362,6 +383,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cube"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline83"
@@ -382,6 +404,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline78"
@@ -401,6 +424,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline78"
@@ -420,7 +444,9 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Hybrid"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline78"
         app:layout_constraintEnd_toStartOf="@+id/guideline75"
@@ -439,6 +465,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline70"
@@ -459,6 +486,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cone"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline70"
@@ -479,7 +507,9 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Hybrid"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline70"
         app:layout_constraintEnd_toStartOf="@+id/guideline75"
@@ -500,6 +530,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cube"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline72"
@@ -519,7 +550,9 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Hybrid"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline72"
         app:layout_constraintEnd_toStartOf="@+id/guideline75"
@@ -538,6 +571,7 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="cube"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline72"
@@ -557,24 +591,25 @@
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/nasalization_rg"
+        android:text="Hybrid"
         android:textColor="#FFFFFF"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline64"
         app:layout_constraintEnd_toStartOf="@+id/guideline75"
         app:layout_constraintStart_toStartOf="@+id/guideline74"
-        app:layout_constraintTop_toTopOf="@+id/guideline65" />
+        app:layout_constraintTop_toTopOf="@+id/guideline110" />
 
     <CheckBox
         android:id="@+id/Moved"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:checked="true"
+        android:checked="false"
         android:text="Moved"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#DC0707"
         android:textColorHint="#D80D0D"
         android:textColorLink="#CC0909"
-        android:textSize="10sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
         app:layout_constraintEnd_toStartOf="@+id/guideline95"
         app:layout_constraintStart_toStartOf="@+id/guideline67"
@@ -584,10 +619,11 @@
         android:id="@+id/LeftCommunity"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:checked="true"
+        android:checked="false"
         android:text="Left community"
         android:textColor="@color/OffWhite"
-        android:textSize="10sp"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
         app:layout_constraintEnd_toStartOf="@+id/guideline100"
         app:layout_constraintHorizontal_bias="1.0"
@@ -599,10 +635,10 @@
         android:id="@+id/LevelOnChargeStation"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:checked="true"
+        android:checked="false"
         android:text="Level on charge station"
         android:textColor="@color/OffWhite"
-        android:textSize="10sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
         app:layout_constraintEnd_toStartOf="@+id/guideline102"
         app:layout_constraintStart_toStartOf="@+id/guideline66"
@@ -614,23 +650,25 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:text="Field"
         android:textColor="#F6F5F5"
         android:textIsSelectable="true"
-        app:layout_constraintBottom_toTopOf="@+id/guideline94"
-        app:layout_constraintEnd_toStartOf="@+id/guideline96"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline65"
+        app:layout_constraintEnd_toStartOf="@+id/guideline75"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline95"
+        app:layout_constraintStart_toStartOf="@+id/guideline97"
         app:layout_constraintTop_toTopOf="@+id/guideline93"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline64"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline65"
@@ -644,7 +682,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.52" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline67"
@@ -665,133 +703,133 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.29" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline71"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.16" />
+        app:layout_constraintGuide_percent="0.21" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline72"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.23" />
+        app:layout_constraintGuide_percent="0.27" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline74"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.62" />
+        app:layout_constraintGuide_percent="0.66" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline75"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.84" />
+        app:layout_constraintGuide_percent="1.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline76"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline78"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.31" />
+        app:layout_constraintGuide_percent="0.34" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline81"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.41" />
+        app:layout_constraintGuide_percent="0.43" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline83"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline84"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.49" />
+        app:layout_constraintGuide_percent="0.51" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline85"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.56" />
+        app:layout_constraintGuide_percent="0.58" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline70"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.42" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline86"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.57" />
+        app:layout_constraintGuide_percent="0.59" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline87"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.64" />
+        app:layout_constraintGuide_percent="0.66" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline88"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.67" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline89"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.72" />
+        app:layout_constraintGuide_percent="0.74" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.73" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline91"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.82" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline93"
@@ -833,7 +871,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.81" />
+        app:layout_constraintGuide_percent="0.84" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline99"
@@ -854,7 +892,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.88" />
+        app:layout_constraintGuide_percent="0.9" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline104"
@@ -868,14 +906,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.59" />
+        app:layout_constraintGuide_percent="0.62" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline106"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.89" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline107"
@@ -903,7 +941,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="1.0" />
+        app:layout_constraintGuide_percent="0.95" />
 
     <CheckBox
         android:id="@+id/NotLevelOnChargeStation"
@@ -911,11 +949,93 @@
         android:layout_height="0dp"
         android:text="not level charge station"
         android:textColor="#FAF0F0"
-        android:textSize="10sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
         app:layout_constraintEnd_toStartOf="@+id/guideline108"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline102"
-        app:layout_constraintTop_toTopOf="@+id/guideline98" />
+        app:layout_constraintTop_toTopOf="@+id/guideline98"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline110"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Top"
+        android:textColor="@color/OffWhite"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/Checkbox1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline113"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="@+id/guideline112"
+        app:layout_constraintTop_toTopOf="@+id/guideline65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline112"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.055" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline113"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.21375" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="MIddle"
+        android:textColor="#FEFEFE"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline110"
+        app:layout_constraintEnd_toStartOf="@+id/guideline114"
+        app:layout_constraintStart_toStartOf="@+id/guideline115"
+        app:layout_constraintTop_toTopOf="@+id/guideline65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline114"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55875" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline115"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3875" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Bottom"
+        android:textColor="#E4DCDC"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline110"
+        app:layout_constraintEnd_toStartOf="@+id/guideline108"
+        app:layout_constraintStart_toStartOf="@+id/guideline119"
+        app:layout_constraintTop_toTopOf="@+id/guideline65"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline119"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
 
 
     <!-- //Checkboxes

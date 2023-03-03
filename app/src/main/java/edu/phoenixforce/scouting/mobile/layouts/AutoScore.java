@@ -696,8 +696,8 @@ public class AutoScore<Moved> extends AppCompatActivity {
                 else {
                     CheckBox27 = "0";
 
-                }
-            }
+                                                          }
+                                                      }
 
         }
         );
