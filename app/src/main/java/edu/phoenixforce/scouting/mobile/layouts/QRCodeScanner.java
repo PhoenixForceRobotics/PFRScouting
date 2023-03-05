@@ -55,6 +55,7 @@ import java.util.List;
         Button download;
         Button clear;
         public int numberOfMatches = 0;
+        //TODO: Might be an issue if crashes occur.
         public int currentNumberOfMatches = 0;
 
         @Override
@@ -422,6 +423,8 @@ import java.util.List;
                 SDB.gameDao().insertAll(gameData);
             }
 
+            Log.d("totalNum", Integer.toString(numberOfMatches));
+            Log.d("currentNum", Integer.toString(currentNumberOfMatches));
 
         }
 
@@ -499,7 +502,6 @@ import java.util.List;
 
 
                     String[] dataSets = qrCodeData.split("]");
-                    int counter = 1;
 
                     for (String i : dataSets) {
 
@@ -525,6 +527,8 @@ import java.util.List;
                     int g = finalData.size();
                     List<String[]> finalList = new ArrayList<String[]>();
                     Log.d("test", Integer.toString(g));
+
+                    //add new arrays for each match.
                     for (int i = 0; i < numberOfMatches; i++) {
                         arrays.add(new ArrayList<String>());
                     }
