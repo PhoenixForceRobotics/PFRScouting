@@ -10,4 +10,7 @@
     <color name="Orange">#FF3800</color>
     <color name="OffWhite">#E4E3E3</color>
     <color name="Accent2">#AC1626</color>
+    <color name="Cube">#8B1ECF</color>
+    <color name="Cone">#FFC107</color>
+    <color name="Hybrid">#25BAAE</color>
 </resources>

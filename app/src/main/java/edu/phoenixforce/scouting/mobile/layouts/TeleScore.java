@@ -39,6 +39,7 @@ public class TeleScore extends AppCompatActivity {
     TextView cube_counter1;
     TextView cube_counter2;
     TextView cube_counter3;
+    TextView team_number_tele;
     TextView defense_counter;
 
 
@@ -105,7 +106,11 @@ public class TeleScore extends AppCompatActivity {
         cube_counter2 = findViewById(R.id.cube_counter2);
         cube_counter3 = findViewById(R.id.cube_counter3);
 
+        team_number_tele = findViewById(R.id.team_number_tele);
+        team_number_tele.setText(String.valueOf(teamNum));
+
         defense_counter = findViewById(R.id.defense_counter);
+
 
         //Checkboxs
 
