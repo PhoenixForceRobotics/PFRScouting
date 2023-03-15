@@ -152,6 +152,10 @@ public class TeleScore extends AppCompatActivity {
 
         defense_counter.setText("0");
 
+        SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        Constants constants = new Constants();
+        constants.getPrefs(this);
+        String tNumber = scorePrefs.getString(teamNum, "0");
 
         //CheckBox's
         //Might need to be a string instead of an int - as in past apps
