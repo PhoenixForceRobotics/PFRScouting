@@ -409,7 +409,11 @@ import java.util.List;
             String data = scannedTV.getText().toString();
             ArrayList<ArrayList<String>> arrays = parseData(data);
 
+            Log.d("CurrentNumOfMatches", Integer.toString(currentNumberOfMatches));
             for (int i = 0; i < currentNumberOfMatches; i++) {
+                Log.d("arraylist" + i , arrays.get(i).toString());
+                //works with 7 sets on 1 phone, breaks unpredictably with 2 sets of data.
+                //repeats correct ammount of times with correct data.
                 GameData gameData = new GameData(arrays.get(i).get(0), arrays.get(i).get(1), arrays.get(i).get(2), arrays.get(i).get(3),
                         arrays.get(i).get(4), arrays.get(i).get(5), arrays.get(i).get(6), arrays.get(i).get(7), arrays.get(i).get(8),
                         arrays.get(i).get(9), arrays.get(i).get(10), arrays.get(i).get(11), arrays.get(i).get(12), arrays.get(i).get(13),
@@ -425,6 +429,7 @@ import java.util.List;
 
             Log.d("totalNum", Integer.toString(numberOfMatches));
             Log.d("currentNum", Integer.toString(currentNumberOfMatches));
+
 
         }
 
@@ -442,6 +447,7 @@ import java.util.List;
         private void downloadDatabase() {
                 ScoreDataBase Base = ScoreDataBase.getDatabase(this);
                 String scouts = Base.gameDao().getScout().toString();
+                Log.d("scout list", scouts);
                 String devNums = Base.gameDao().getDevNum().toString();
                 String matchNums = Base.gameDao().getMatchNum().toString();
                 String teams = Base.gameDao().getTeamNum().toString();
