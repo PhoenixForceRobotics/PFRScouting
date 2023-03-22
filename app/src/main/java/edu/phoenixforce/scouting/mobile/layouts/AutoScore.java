@@ -119,8 +119,8 @@ public class AutoScore<Moved> extends AppCompatActivity {
 
 
         //TextViews
-
-
+        TextView team_number;
+        team_number = findViewById(R.id.team_number);
 
         //Buttons
 
@@ -171,7 +171,7 @@ public class AutoScore<Moved> extends AppCompatActivity {
         team = myPrefs.getString(teamNum, "No Match Number");
 
         teamnumber = Integer.valueOf(team);
-
+        team_number.setText(String.valueOf(teamnumber));
         //todo Rename reassurance
         //on app launch Text View Must show zero
 

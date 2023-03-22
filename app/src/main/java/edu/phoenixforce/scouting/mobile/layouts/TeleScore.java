@@ -91,6 +91,8 @@ public class TeleScore extends AppCompatActivity {
     int check_counter4;
     int check_counter5;
 
+    public static String team;
+    public static int teamnumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +110,9 @@ public class TeleScore extends AppCompatActivity {
 
         team_number_tele = findViewById(R.id.team_number_tele);
         team_number_tele.setText(String.valueOf(teamNum));
+
+        team_number_tele = findViewById(R.id.team_number_tele);
+        //team_number_tele.setText(String.valueOf(teamNum));
 
         defense_counter = findViewById(R.id.defense_counter);
 
@@ -152,29 +157,27 @@ public class TeleScore extends AppCompatActivity {
 
         defense_counter.setText("0");
 
-        SharedPreferences scorePrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        Constants constants = new Constants();
-        constants.getPrefs(this);
-        String tNumber = scorePrefs.getString(teamNum, "0");
+        SharedPreferences myPrefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+
+        team = myPrefs.getString(teamNum, "No Match Number");
+        team_number_tele.setText(team);
 
         //CheckBox's
         //Might need to be a string instead of an int - as in past apps
         check1_broke = findViewById(R.id.check1_broke);
         check1_broke.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                                                    @Override
-                                                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    check_counter1 = 1;
+                    Log.d("check1", "ran");
+                } else {
+                    check_counter1 = 0;
+                }
+            }
 
-                                                        if (isChecked) {
-                                                            check_counter1 = 1;
-                                                            Log.d("check1", "ran");
-                                                        } else {
-                                                            check_counter1 = 0;
-                                                        }
-                                                    }
-
-                                                }
-        );
+        });
 
         check2_drove.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

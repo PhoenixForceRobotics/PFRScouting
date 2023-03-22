@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,18 +23,26 @@ import edu.phoenixforce.scouting.mobile.common.Constants;
 public class team_select extends AppCompatActivity {
 
 
+
+    Switch toggle;
+
     Button finished;
 
     TextView match, team;
+    TextView team_tag;
 
     public static  String matchNumber = "0";
     public static String teamNumber = "0";
     public static String show1;
     public String show2;
 
+    public static Boolean toggleState;
     public static final String matchNum = "matchNumber";
     public static final String teamNum = "teamNumber";
     Constants constants = new Constants();
+
+
+
 
     @Override
 
@@ -49,12 +58,40 @@ public class team_select extends AppCompatActivity {
 
 
 
-
-
-
         finished = findViewById(R.id.goScout);
         match = findViewById(R.id.matchNum);
         team = findViewById(R.id.teams);
+        toggle = findViewById(R.id.toggle);
+        team_tag = findViewById(R.id.team_tag);
+
+
+        team_tag.setText("Red Team");
+
+        //toggleState = toggle.isChecked();
+
+        toggleState = false;
+        toggle.setChecked(false);
+
+        toggle.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                if (toggleState.equals(false)) {
+                    toggle.setChecked(true);
+                    toggleState = true;
+                    team_tag.setText("Blue Team");
+
+
+                } else {
+                    toggle.setChecked(false);
+                    toggleState = false;
+                    team_tag.setText("Red Team");
+                }
+
+            }
+        });
+
+
 
         mediatorMethod();
 
