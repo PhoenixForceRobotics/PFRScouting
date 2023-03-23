@@ -27,13 +27,13 @@ import edu.phoenixforce.scouting.mobile.database.entities.PitData;
 public class ActivityPitScout extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     String robotInfo;
     String userThoughts;
-    String projectedCycleTime;
+    String DefenseorOffense;
     String projectedClimbLevel;
     String teamNum;
-    EditText robotInfoBox;
-    EditText userThoughtsBox;
-    EditText projectedCycleTimeBox;
-    EditText projectedClimbLevelBox;
+    String DefenseorOffense;
+    String DriveBasedUsedBox;
+    String RobotInfobox;
+    String UsersthoughtsBox;
     EditText teamNumBox;
     Button Finished;
     Button Activate_Camera;
@@ -45,30 +45,32 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
 
     Constants constants = new Constants();
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pitscout);
         imageView = findViewById(R.id.imageView6);
 
-        robotInfoBox = findViewById(R.id.textView9);
-        userThoughtsBox = findViewById(R.id.textView18);
-        projectedCycleTimeBox = findViewById(R.id.textView21);
-        projectedClimbLevelBox = findViewById(R.id.TextView23);
+        View DefenseorOffenseBox = findViewById(R.id.textView9);
+        View DriveBasedUsedBox = findViewById(R.id.textView18);
+        View Robotinfobox = findViewById(R.id.textView21);
+        View UsersthoughtsBox = findViewById(R.id.TextView23);
         teamNumBox = findViewById(R.id.teamNumber1);
         Finished = findViewById(R.id.finished);
         Finished.setOnClickListener(new View.OnClickListener (){
             @Override
             public void onClick(View v) {
-                robotInfo = robotInfoBox.getText().toString();
-                userThoughts = userThoughtsBox.getText().toString();
-                projectedCycleTime = projectedCycleTimeBox.getText().toString();
-                projectedClimbLevel = projectedClimbLevelBox.getText().toString();
+                DefenseorOffense = DefenseorOffenseBox.getText().toString();
+                DriveBasedUsedBox = DriveBasedUsedBox.getText().toString();
+                RobotInfobox = RobotInfoBox.getText().toString();
+                UsersthoughtsBox = UsersthoughtsBox.getText().toString();
                 teamNum = teamNumBox.getText().toString();
-                Log.d("pitscout", "TopRightbox: " + robotInfo);
-                Log.d("pitscout","BottomRightbox: " + userThoughts);
-                Log.d("pitscout", "TopLeftbox: " + projectedCycleTime);
-                Log.d("pitscout","BottomLeftBox: " + projectedClimbLevel);
+                Log.d("pitscout", "TopRightbox: " + DefenseorOffense);
+                Log.d("pitscout","BottomRightbox: " + DriveBasedUsedBox);
+                Log.d("pitscout", "TopLeftbox: " + RobotInfobox);
+                Log.d("pitscout","BottomLeftBox: " + UsersthoughtsBox);
                 Log.d("pitscout", "TeamNumBox" + teamNum);
 
                if(count7 == 1) {
@@ -105,23 +107,23 @@ public class ActivityPitScout extends AppCompatActivity implements ActivityCompa
     public void navigate(){
 
 
-        Log.d("pitData", teamNum + userThoughts + robotInfo + projectedCycleTime + projectedClimbLevel);
+        Log.d("pitData", teamNum + DriveBasedUsedBox + DefenseorOffense + RobotInfobox + UsersthoughtsBox);
 
-        if(robotInfo.length() < 1){
-            robotInfo = "n/a";
+        if(DefenseorOffense.length() < 1){
+            DefenseorOffense = "n/a";
         }
-        if(userThoughts.length() < 1){
-            userThoughts = "n/a";
+        if(DriveBasedUsedBox.length() < 1){
+            DriveBasedUsedBox = "n/a";
         }
-        if(projectedCycleTime.length() < 1){
-            projectedCycleTime = "no projection";
+        if(RobotInfobox.length() < 1){
+            RobotInfobox = "no projection";
         }
-        if(projectedClimbLevel.length() < 1){
-            projectedClimbLevel = "0";
+        if(UsersthoughtsBox.length() < 1){
+            UsersthoughtsBox = "0";
         }
 
         ScoreDataBase SDB = ScoreDataBase.getDatabase(this);
-        PitData pitData = new PitData(teamNum, "Scout's Thoughts: " + userThoughts, byteArray, "Robot Information: " + robotInfo, "Projected Cycle Time (in Secs): " + projectedCycleTime, "Projected Climb Level: " + projectedClimbLevel);
+        PitData pitData = new PitData(teamNum, "Scout's Thoughts: " + DriveBasedUsedBox, byteArray, "Robot Information: " + DefenseorOffense , RobotInfobox, UsersthoughtsBox);
 
         SDB.pitDao().insertAll(pitData);
 
