@@ -616,7 +616,7 @@
         android:textColorLink="#CC0909"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
-        app:layout_constraintEnd_toStartOf="@+id/guideline95"
+        app:layout_constraintEnd_toStartOf="@+id/guideline113"
         app:layout_constraintStart_toStartOf="@+id/guideline67"
         app:layout_constraintTop_toTopOf="@+id/guideline98" />
 
@@ -632,9 +632,9 @@
         android:textIsSelectable="false"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
-        app:layout_constraintEnd_toStartOf="@+id/guideline100"
+        app:layout_constraintEnd_toStartOf="@+id/guideline122"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline121"
+        app:layout_constraintStart_toStartOf="@+id/guideline95"
         app:layout_constraintTop_toTopOf="@+id/guideline98"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -645,12 +645,12 @@
         android:background="@color/colorPrimaryDark"
         android:checked="false"
         android:gravity="center"
-        android:text="Level on charge station"
+        android:text="Level"
         android:textColor="@color/OffWhite"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
-        app:layout_constraintEnd_toStartOf="@+id/guideline102"
-        app:layout_constraintStart_toStartOf="@+id/guideline122"
+        app:layout_constraintEnd_toStartOf="@+id/guideline96"
+        app:layout_constraintStart_toStartOf="@+id/guideline114"
         app:layout_constraintTop_toTopOf="@+id/guideline98"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -880,7 +880,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.77" />
+        app:layout_constraintGuide_percent="0.74" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline99"
@@ -958,13 +958,13 @@
         android:layout_height="0dp"
         android:background="@color/colorPrimaryDark"
         android:gravity="center|center_horizontal"
-        android:text="Not level charge station"
+        android:text="Not level on charge station"
         android:textColor="#FAF0F0"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline103"
-        app:layout_constraintEnd_toStartOf="@+id/guideline108"
+        app:layout_constraintEnd_toStartOf="@+id/guideline75"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline123"
+        app:layout_constraintStart_toStartOf="@+id/guideline102"
         app:layout_constraintTop_toTopOf="@+id/guideline98"
         app:layout_constraintVertical_bias="0.0" />
 
