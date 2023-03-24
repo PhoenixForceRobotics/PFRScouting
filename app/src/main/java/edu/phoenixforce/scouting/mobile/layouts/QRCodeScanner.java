@@ -421,23 +421,28 @@ import java.util.List;
                 Log.d("matchnums", matchnums);
                 //Parses matchnums to be used in the next for loop
                 String[] individualNums = matchnums.split(",");
-                Log.d("split matchnums", individualNums[0]);
                 //Checks that the current matchnum is not equal to any of the ones in the database.
                 for (String f : individualNums){
 
                     //Remove extraneous characters.
                     f = f.replace("[", "");
+                    f = f.replace("]", "");
                     f = f.replace(",", "");
                     f = f.replace(" ", "");
 
-                    Log.d("Current matchNum",f);
-
-                    if(arrays.get(i).get(3) == f){
+                    Log.d("Database matchNum",f);
+                    Log.d("Current matchNum", arrays.get(i).get(2));
+                    boolean same = f.equals(arrays.get(i).get(2));
+                    String str1 = new Boolean(same).toString();
+                    Log.d("Same variable?", str1);
+                    if(same == true){
+                        Log.d("in if statement", f);
                         //set the matchnum to be the match num with the teamnum tacked on
                         //This is to avoid database issues with duplicate keys.
-                        String newNum = arrays.get(i).get(3) + arrays.get(i).get(4);
+                        String newNum = arrays.get(i).get(2) + arrays.get(i).get(3);
+                        Log.d("gabriel is throwing", newNum);
                         //Sets the matchnum in the list equal to a new non redundant element.
-                        arrays.get(i).set(3, newNum);
+                        arrays.get(i).set(2, newNum);
                     }
                 }
 
