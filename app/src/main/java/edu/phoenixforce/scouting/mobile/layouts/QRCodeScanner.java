@@ -106,7 +106,11 @@ import java.util.List;
                     // method is called when camera scans the
                     // qr code and the data from qr code is
                     // stored in data in string format.
-                    scannedTV.setText(data);
+
+                    scannedTV.setText(data); //CORRECT THING
+
+                    String data1 = "12][Ethan, Ethan, Ethan, Ethan, Ethan, Ethan, Ethan, Ethan, Ethan, Ethan, Ethan, Ethan],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[11, 12, 22, 333, 4, 5, 6, 755, 77, 8, 888, 999],[9999, 2222, 3333, 5555, 6666, 7777, 8888, 8888, 9999, 5554, 1111, 1555],[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0],,[2, 2, 3, 0, 5, 6, 0, 1, 1, 0, 1, 1],[2, 2, 3, 3, 0, 3, 3, 1, 1, 3, 1, 3],[2, 2, 3, 4, 0, 4, 0, 8, 4, 3, 2, 2],[0, 2, 3, 4, 0, 4, 0, 1, 1, 3, 3, 1],[0, 2, 0, 0, 3, 3, 3, 1, 5, 3, 3, 2],[0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 2],[0, 2, 3, 3, 0, 3, 4, 4, 4, 3, 0, 4],[1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1],[0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],[1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1],[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],[0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1],[0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0],[0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1],[0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0],[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1],[0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0],[0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0],[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],[0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1],[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0]";
+                    //scannedTV.setText(data1); //FOR TESTING PURPOSES
                 }
             });
             Context context = this;
@@ -411,9 +415,31 @@ import java.util.List;
 
             Log.d("CurrentNumOfMatches", Integer.toString(currentNumberOfMatches));
             for (int i = 0; i < currentNumberOfMatches; i++) {
+                //next two lines get the matchnums from the database.  bn
+                ScoreDataBase Base = ScoreDataBase.getDatabase(this);
+                String matchnums = Base.gameDao().getMatchNum().toString();
+                Log.d("matchnums", matchnums);
+                //Parses matchnums to be used in the next for loop
+                String[] individualNums = matchnums.split(",");
+                Log.d("split matchnums", individualNums[0]);
+                //Checks that the current matchnum is not equal to any of the ones in the database.
+                for (String f : individualNums){
+                    if(arrays.get(i).get(3) == f){
+                        //set the matchnum to be the match num with the teamnum tacked on
+                        //This is to avoid database issues with duplicate keys.
+                        Log.d("Current matchNum",f);
+                        String newNum = arrays.get(i).get(3) + arrays.get(i).get(4);
+                        //Sets the matchnum in the list equal to a new non redundant element.
+                        arrays.get(i).set(3, newNum);
+                    }
+                }
+
                 Log.d("arraylist" + i , arrays.get(i).toString());
                 //works with 7 sets on 1 phone, breaks unpredictably with 2 sets of data.
+                //Breaks unpredictably sometimes with 4-3-3 sometimes 4-4-2 both of which were 4-4-4 sets.
                 //repeats correct ammount of times with correct data.
+                Log.d("Copy database: on", Integer.toString(i));
+
                 GameData gameData = new GameData(arrays.get(i).get(0), arrays.get(i).get(1), arrays.get(i).get(2), arrays.get(i).get(3),
                         arrays.get(i).get(4), arrays.get(i).get(5), arrays.get(i).get(6), arrays.get(i).get(7), arrays.get(i).get(8),
                         arrays.get(i).get(9), arrays.get(i).get(10), arrays.get(i).get(11), arrays.get(i).get(12), arrays.get(i).get(13),
@@ -425,6 +451,9 @@ import java.util.List;
                         arrays.get(i).get(39), arrays.get(i).get(40), arrays.get(i).get(41), arrays.get(i).get(42), arrays.get(i).get(43),
                         arrays.get(i).get(44), arrays.get(i).get(45), arrays.get(i).get(46));
                 SDB.gameDao().insertAll(gameData);
+                //for testing purposes
+                String scouts = Base.gameDao().getScout().toString();
+                Log.d("scout list", scouts);
             }
 
             Log.d("totalNum", Integer.toString(numberOfMatches));
