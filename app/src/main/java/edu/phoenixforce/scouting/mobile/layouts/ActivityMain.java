@@ -129,14 +129,19 @@ public class ActivityMain extends AppCompatActivity implements ActivityCompat.On
             pitView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(text == "PitUser" | text == "Admin"){
-                       pitNav(1);
+                    text = myPrefs.getString(TEXT, "No User");
+                    if(text == "PitUser"){
+                       pitNav(2);
+                    }
+                    else if(text == "Admin"){
+                        pitNav(1);
                     }
                     else{
                         buttonText = ":(";
                         pitView.setText(buttonText);
                         Toast.makeText(ActivityMain.this, "Only For Use in the Pit!", Toast.LENGTH_LONG);
                         Log.v("PitAccess System", "Invalid click detected on pitview button");
+                        Log.d("text =",text);
                     }
                 }
             });
